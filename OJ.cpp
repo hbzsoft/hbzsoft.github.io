@@ -16,14 +16,14 @@ int main(int argc,char *argv[])
 	string compile_cmd="g++ -o check_program "+program_path;
 	system(&compile_cmd[0]);
 	ifstream check_ce("check_program");
-	if(check_ce==0)
+	if(!check_ce)
 	{
 		cout<<"Compile Error"<<endl;
 		return 0;
 	}
 	ofstream output("user.ans");
 	output.close();
-	string check_cmd="./check_program >user.ans ";
+	string check_cmd="./check_program >user.ans <";
 	check_cmd+=argv[2];
 	system(&check_cmd[0]);
 	ofstream user_md5("usermd5");
@@ -41,15 +41,17 @@ int main(int argc,char *argv[])
 	ifstream ans_get("answermd5");
 	string ansmd5;
 	ans_get>>ansmd5;
-	if(user_get==ans_get)
+	if(usermd5==ansmd5)
 	{
 		cout<<"Accepted"<<endl;
-		return 0;
 	}
 	else
 	{
 		cout<<"Wrong Answer"<<endl;
-		return 0;
 	}
+	system("rm check_program");
+	system("rm answermd5");
+	system("rm user.ans");
+	system("rm usermd5");
 	return 0;
 }
