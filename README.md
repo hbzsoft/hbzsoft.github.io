@@ -1,5 +1,5 @@
 # hbzsoft.cf
 
-Bangze Han's personal home page.
+韩邦泽的个人主页。
 
 ![](http://hbzsoft.cf/signature.png)
