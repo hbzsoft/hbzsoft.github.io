@@ -1,0 +1,50 @@
+<h1>[USACO14MAR] Watering the Fields S</h1>
+<h2>题目描述</h2>
+<p>Due to a lack of rain, Farmer John wants to build an irrigation system to</p>
+<p>send water between his N fields (1 &lt;= N &lt;= 2000).</p>
+<p>Each field i is described by a distinct point (xi, yi) in the 2D plane,</p>
+<p>with 0 &lt;= xi, yi &lt;= 1000.  The cost of building a water pipe between two</p>
+<p>fields i and j is equal to the squared Euclidean distance between them:</p>
+<p>(xi - xj)^2 + (yi - yj)^2</p>
+<p>FJ would like to build a minimum-cost system of pipes so that all of his</p>
+<p>fields are linked together -- so that water in any field can follow a</p>
+<p>sequence of pipes to reach any other field.</p>
+<p>Unfortunately, the contractor who is helping FJ install his irrigation</p>
+<p>system refuses to install any pipe unless its cost (squared Euclidean</p>
+<p>length) is at least C (1 &lt;= C &lt;= 1,000,000).  </p>
+<p>Please help FJ compute the minimum amount he will need pay to connect all</p>
+<p>his fields with a network of pipes.</p>
+<p>给定 $n$ 个点，第 $i$ 个点的坐标为 $(x_i,y_i)$，如果想连通第 $i$ 个点与第 $j$ 个点，需要耗费的代价为两点的距离。第 $i$ 个点与第 $j$ 个点之间的距离使用欧几里得距离的平方进行计算，即：
+$$(x_i-x_j)^2+(y_i-y_j)^2$$
+我们规定耗费代价小于 $c$ 的两点无法连通，求使得每两点都能连通下的最小代价，如果无法连通输出 <code>-1</code>。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: The integers N and C.</p>
+<p>* Lines 2..1+N: Line i+1 contains the integers xi and yi.</p>
+<p>第一行两个整数 $n,c$ 代表点数与想要连通代价不能少于的一个数。 <br />
+接下来 $n$ 行每行两个整数 $x_i,y_i$ 描述第 $i$ 个点。</p>
+<h4>输出格式</h4>
+<p>* Line 1: The minimum cost of a network of pipes connecting the</p>
+<p>fields, or -1 if no such network can be built.</p>
+<p>一行一个整数代表使得每两点都能连通下的最小代价，如果无法连通输出 <code>-1</code>。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>3 11
+0 2
+5 0
+4 3</p>
+<h4>输出样例 #1</h4>
+<p>46</p>
+<h2>说明</h2>
+<p>INPUT DETAILS:</p>
+<p>There are 3 fields, at locations (0,2), (5,0), and (4,3).  The contractor</p>
+<p>will only install pipes of cost at least 11.</p>
+<p>OUTPUT DETAILS:</p>
+<p>FJ cannot build a pipe between the fields at (4,3) and (5,0), since its</p>
+<p>cost would be only 10.  He therefore builds a pipe between (0,2) and (5,0)</p>
+<p>at cost 29, and a pipe between (0,2) and (4,3) at cost 17.  </p>
+<p>Source: USACO 2014 March Contest, Silver</p>
+<h3>数据规模与约定</h3>
+<p>对于 $100\%$ 的数据，$1 \le n \le 2000$，$0 \le x_i,y_i \le 1000$，$1 \le c \le 10^6$。</p>
+<h3>说明</h3>
+<p>Translated by 一只书虫仔。</p>

@@ -1,0 +1,40 @@
+<h1>[POI2009] WIE-Hexer</h1>
+<h2>题意翻译</h2>
+<p>大陆上有 $n$ 个村庄，$m$ 条双向道路，$p$ 种怪物，$k$ 个铁匠，每个铁匠会居住在一个村庄里，你到了那个村庄后可以让他给你打造剑，每个铁匠打造的剑都可以对付一些特定种类的怪物。</p>
+<p>每条道路上都可能出现一些特定种类的怪物，每条道路都有一个通过所需要的时间，现在要从 $1$ 走到 $n$，初始的时候你没有剑，要求在经过一条道路的时候，对于任意一种可能出现在这条道路上的的怪物，你都有已经有至少一把剑可以对付他，求从$1$ 走到 $n$ 的最短时间（打造剑不需要时间）</p>
+<h2>题目描述</h2>
+<p>Byteasar has become a hexer - a conqueror of monsters.</p>
+<p>Currently he is to return to his hometown Byteburg. The way home, alas, leads through a land full of beasts. Fortunately the habitants, forced to fight the monsters for centuries, have mastered the art of blacksmithery - they are now capable of making special swords that are very efficient against the beasts.</p>
+<p>The land Byteasar wanders through is quite vast: many towns lie there, and many roads connect them.</p>
+<p>These roads do not cross outside the towns (mostly because some of them are underground passages).</p>
+<p>Byteasar has gathered all practical information about the land (all hexers like to know these things).</p>
+<p>He knows what kind of monsters he may come across each of the roads and how much time he needs to walk it down.</p>
+<p>He also knows in which villages there are blacksmiths and against what kinds of monsters the swords that they make work.</p>
+<p>Byteasar wants to get back to Byteburg as soon as possible.</p>
+<p>As a hexer he is quite ashamed that he does not know the best route, and that he has no sword on him at the moment.</p>
+<p>Help him find the shortest path to Byteburg such that whenever he could meet some king of monster, previously he would have a chance to get an appropriate sword to fight the beast.</p>
+<p>You need not worry about the number or weight of the swords - every hexer is as strong as an ox, so he can carry (virtually) unlimited number of equipment, swords in particular.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input holds four integers: $n,m,p,k$ ($1\le n\le 200,0\le m\le 3000,1\le p\le 13,0\le k\le n$),separated by single spaces, that denote respectively:</p>
+<p>the number of towns, the number of roads connecting them,the number of different kinds of monsters and the number of blacksmiths.</p>
+<p>The towns are numbered from $1$ to $n$ in such a way that $n$ is Byteburg's number and $1$ is the number of the village which Byteasar starts in. The monster kinds are numbered from $1$ to $p$.</p>
+<p>In the following $k$ lines the profiles of successive blacksmiths are given,one per line. The $(i+1)$-st line holds the integers $w_i,q_i,r_{i,1}&lt;r_{i,2}&lt;...&lt;r_{i,q_i}$($1\le w_i\le n,1\le q_i\le p,1\le r_{i,j}\le p$),separated by single spaces, that denote respectively: the number of town in which the blacksmith lives, the number of different kinds of monsters against which his swords are efficient, and the kinds of monsters themselves (in increasing order). Note that a town may have more than one blacksmith.</p>
+<p>Then $m$ lines with roads' descriptions follow.The $(k+i+1)$-th line holds the integers$v_i,w_i,t_i,s_i,u_{i,1}&lt;u_{i,2}&lt;...&lt;u_{i,s_i}$($1\le v_i&lt;w_i\le n,1\le t_i\le 500,0\le s_i\le p,1\le u_{i,j}\le p$)separated by single spaces, that denote respectively: the towns that the road connects, the time needed to walk down the road (same in both directions), the number of different kinds of monsters that may appear on that road, and finally the kinds of monsters themselves (in increasing order). No two roads connect the same pair of towns.</p>
+<h4>输出格式</h4>
+<p>Your programme is to print out one integer to the standard output -  the minimum summary time required to reach Byteburg.</p>
+<p>Should reaching Byteburg be impossible, the number should be $-1$.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>6 7 4 2
+2 1 2
+3 2 1 3
+1 2 2 0
+2 3 9 0
+1 4 2 1 2
+2 5 3 0
+4 5 5 2 2 3
+4 6 18 0
+5 6 3 2 1 2</p>
+<h4>输出样例 #1</h4>
+<p>24</p>

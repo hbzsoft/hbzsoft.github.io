@@ -1,0 +1,27 @@
+<h1>[USACO12JAN] Cow Run G</h1>
+<h2>题目描述</h2>
+<p>Farmer John and Bessie have devised a new exercise game for the cows.  The cows are running on a circular track of length M (2 &lt;= M &lt;= 1,000,000,000) starting from the same position.  The game proceeds in N (1 &lt;= N &lt;= 14) rounds using a deck of 8N cards each with a number X_i (0 &lt;= X_i &lt; M) written on it.</p>
+<p>Each round FJ moves the top 8 cards into a separate pile and selects either the top 4 or bottom 4 cards for Bessie to play with.  Bessie then chooses either the top 2 cards or bottom 2 cards of the 4 cards FJ selected.  After this FJ calls out the number on the top card, X_top, and the cows run a distance of R * X_top, where R is the total distance the cows have run so far.  Bessie then calls out the number on the bottom card, X_bottom, and the cows run a distance of X_bottom.</p>
+<p>FJ is concerned that after the exercise the cows will be too tired to get back to the beginning of the track if they end up too far away.  He believes if the cows end up more than a distance of K (0 &lt;= K &lt;= floor(M/2)) from their starting position they won't be able to get back home.</p>
+<p>It is guaranteed that if FJ plays correctly, he will always be able to ensure the cows can come home, irrespective of the moves made by Bessie! For each round, your task is to determine which half of the cards FJ should choose such that no matter what Bessie does from that point on, FJ can always get the cows home.  Bessie will then make the move provided in the input and you can then continue onto the next round.  Note that even though Bessie's moves are provided to you in the input, you are to specify moves for FJ that would have worked no matter what Bessie chooses (so it is effectively as if FJ does not really know what Bessie will do during her moves).</p>
+<p>FJ和贝茜为奶牛们设计了一个新的跑步游戏。跑道是环行的，长度为(2 &lt;= M &lt;= 1,000,000,000)的环行，奶牛们在相同的起跑位置。这个游戏一共要进行N (1 &lt;= N &lt;= 14)轮，通过一副8N张的纸牌来控制每一轮的跑步距离，每张纸牌都有一个数字X_i (0 &lt;= X_i &lt; M)。</p>
+<p>每一轮，FJ取出最上面的8张纸牌，然后再取出这8张的上面或者底下的4张。接着，贝茜从这4张牌中取出上面或者底下的2张，上面一张的数字为X_top，下面一张的数字是X_bottom，则牛先跑R*X_top的距离（R表示奶牛们已经跑过的距离），再跑X_bottom的距离。</p>
+<p>FJ担心奶牛们太累而回不到起点，游戏结束时，若奶牛们离开起点距离超过K (0 &lt;= K &lt;=floor(M/2))，则他们就回不了起点了。</p>
+<p>问题保证，当FJ选择正确的取牌策略，不论贝西如何取牌，奶牛们都能够回到起点。对于每一轮，你的任务是决定取哪4张纸牌。在输入数据中，贝西的每次选择都是已知的，但FJ的每次取牌时，贝西接着的选择应该被假定为是未知的，即不论贝西怎么选，FJ的选择都是能保证奶牛们能够回到起点。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Three space-separated integers N, M, K</p>
+<p>* Line 2: A string N characters.  If the ith character is 'T' it means Bessie will select the top 2 cards in the ith round.  Otherwise the ith character will be 'B' to indicate Bessie will select the bottom 2 cards in the ith round.</p>
+<p>* Lines 3..2+N: Each line contains eight integers representing the 8 cards to be used that round from top to bottom.</p>
+<h4>输出格式</h4>
+<p>* Line 1: A string of N characters where the ith character is 'T' if FJ should choose the top 4 cards or 'B' if FJ should choose the bottom 4 cards in the ith round.  If there are multiple ways to get the cows home, choose the lexicographically first (that is, the string that is alphabetically smallest).</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>2 2 0 
+TT 
+1 0 0 0 0 0 0 1 
+0 1 1 1 0 0 1 0 </p>
+<h4>输出样例 #1</h4>
+<p>TB </p>
+<h2>说明</h2>
+<p>The cows must end up exactly where they started to be able to come home. Note that FJ is not aware of what choices Bessie is going to make beforehand.  If FJ did know, he could have chosen the bottom half each time.</p>

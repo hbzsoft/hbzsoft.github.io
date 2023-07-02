@@ -1,0 +1,40 @@
+<h1>[USACO10DEC] Apple Delivery S</h1>
+<h2>题意翻译</h2>
+<p>贝西有两个又香又脆的红苹果要送给她的两个朋友。当然她可以走的 $C(1 \le C \le 200000)$ 条“牛路”都被包含在一种常用的图中。这张图同时包含了$P(1 \le P \le 100000)$ 个牧场，分别被标为 $1 \cdots P$。没有“牛路”会从一个牧场又走回它自己。“牛路”是双向的，每条牛路都会被标上一个距离。最重要的是，每个牧场都可以通向另一个牧场。每条牛路都连接着两个不同的牧场 $P1_i$和$P2_i$（$1 \le P1_i,P2_i \le P$)，距离为$D_i$。所有“牛路”的距离之和不大于 $2000000000$。</p>
+<p>现在，贝西要从牧场 $PB$ 开始给 $PA_1$ 和 $PA_2$ 牧场各送一个苹果（$PA_1$ 和 $PA_2$ 顺序可以调换），那么最短的距离是多少呢？当然，$PB$、$PA_1$ 和 $PA_2$ 各不相同。</p>
+<h2>题目描述</h2>
+<p>Bessie has two crisp red apples to deliver to two of her friends in the herd. Of course, she travels the C (1 &lt;= C &lt;= 200,000)</p>
+<p>cowpaths which are arranged as the usual graph which connects P (1 &lt;= P &lt;= 100,000) pastures conveniently numbered from 1..P: no cowpath leads from a pasture to itself, cowpaths are bidirectional, each cowpath has an associated distance, and, best of all, it is always possible to get from any pasture to any other pasture. Each cowpath connects two differing pastures P1_i (1 &lt;= P1_i &lt;= P) and P2_i (1 &lt;= P2_i &lt;= P) with a distance between them of D_i. The sum of all the distances D_i does not exceed 2,000,000,000.</p>
+<p>What is the minimum total distance Bessie must travel to deliver both apples by starting at pasture PB (1 &lt;= PB &lt;= P) and visiting pastures PA1 (1 &lt;= PA1 &lt;= P) and PA2 (1 &lt;= PA2 &lt;= P) in any order. All three of these pastures are distinct, of course.</p>
+<p>Consider this map of bracketed pasture numbers and cowpaths with distances:</p>
+<p><code>cpp
+               3        2       2
+           [1]-----[2]------[3]-----[4]
+             \     / \              /
+             7\   /4  \3           /2
+               \ /     \          /
+               [5]-----[6]------[7]
+                    1       2</code>
+If Bessie starts at pasture [5] and delivers apples to pastures [1] and [4], her best path is:</p>
+<p>5 -&gt; 6-&gt; 7 -&gt; 4* -&gt; 3 -&gt; 2 -&gt; 1*</p>
+<p>with a total distance of 12.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Line 1 contains five space-separated integers: C, P, PB, PA1, and PA2</p>
+<p>* Lines 2..C+1: Line i+1 describes cowpath i by naming two pastures it connects and the distance between them: P1_i, P2_i, D_i</p>
+<h4>输出格式</h4>
+<p>* Line 1: The shortest distance Bessie must travel to deliver both apples</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>9 7 5 1 4 
+5 1 7 
+6 7 2 
+4 7 2 
+5 6 1 
+5 2 4 
+4 3 2 
+1 2 3 
+3 2 2 
+2 6 3 </p>
+<h4>输出样例 #1</h4>
+<p>12 </p>

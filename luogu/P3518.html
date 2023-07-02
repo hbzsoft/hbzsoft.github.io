@@ -1,0 +1,40 @@
+<h1>[POI2011] SEJ-Strongbox</h1>
+<h2>题意翻译</h2>
+<p>有一个密码箱，$0$ 到 $n-1$ 中的某些整数是它的密码。且满足：若 $a$ 和 $b$ 是它的密码，则 $(a+b)\bmod n$ 也是它的密码（$a$，$b$ 可以相等）。某人试了 $k$ 次密码，前 $k-1$ 次都失败了，最后一次成功了。</p>
+<p>问，该密码箱最多有多少种不同的密码。</p>
+<h2>输入格式</h2>
+<p>第一行两个整数 $n$，$k$。</p>
+<p>第二行为 $k$ 个非负整数，表示每次试的密码。</p>
+<h2>输出格式</h2>
+<p>一行一个整数，表示答案。</p>
+<h2>题目描述</h2>
+<p>Byteasar is a famous safe-cracker, who renounced his criminal activity and    got into testing and certifying anti-burglary devices.</p>
+<p>He has just received a new kind of strongbox for tests: a combinatorial safe.</p>
+<p>A combinatorial safe is something different from a combination safe,    even though it is opened with a rotary dial.</p>
+<p>The dial can be set in $n$ different positions, numbered from 0 to $n-1$.</p>
+<p>Setting the dial in some of these positions opens the safe, while in others it does not.</p>
+<p>And here is the combinatorial property, from which the name comes from:</p>
+<p>if $x$ and $y$ are opening positions, then so is $(x+y)\ mod\ n$ too;    note that is holds for $x=y$ as well.</p>
+<p>Byteasar tried $k$ different positions of the dial: $m_1,m_2,\cdots,m_k$.</p>
+<p>The positions $m_1,m_2,\cdots,m_{k-1}$ did not open the safe,only the last position $m_k$ did.</p>
+<p>Byteasar is already tired from checking these $k$ positions and has thus    absolutely no intention of trying the remaining ones.</p>
+<p>He would like to know however, based on what he already knows about the    positions he tried, what is the maximum possible number of positions that    open the safe.</p>
+<p>Help him by writing an appropriate program!</p>
+<p>给定n和k个整数，求mod n加法下的群G的一个子群G'，满足a[1]~a[k-1]都不在群中而a[k]在群中</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input gives two integers $n$ and $k$,      separated by a single space, $1\le k\le 250\ 000$, $k\le n\le 10^{14}$.</p>
+<p>The second line holds $k$ different integers, also separated by single      spaces, $m_1,m_2,\cdots,m_k$, $0\le m_i&lt;n$.</p>
+<p>You can assume that the input data correspond to a certain combinatorial      safe that complies with the description above.</p>
+<p>In tests worth approximately 70% of the points it holds that $k\le 1\ 000$.</p>
+<p>In some of those tests, worth approximately 20% of the points,      the following conditions hold in addition: $n\le 10^8$ and $k\le 100$.</p>
+<h4>输出格式</h4>
+<p>Your program should print out to the first and only line of the standard output a single integer: the maximum number of the dial's positions that can open the safe.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>42 5
+28 31 10 38 24</p>
+<h4>输出样例 #1</h4>
+<p>14</p>
+<h2>说明</h2>
+<p>给定n和k个整数，求mod n加法下的群G的一个子群G'，满足a[1]~a[k-1]都不在群中而a[k]在群中</p>

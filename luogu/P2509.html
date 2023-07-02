@@ -1,0 +1,90 @@
+<h1>[SCOI2008] 警告</h1>
+<h2>题目描述</h2>
+<p>有一个简单的脚本语言，只有赋值语句、条件语句和返回语句三种。变量名必须是单个大写字母，且变量都是32位带符号整数。</p>
+<p>该语言的每条语句必须单独占一行。程序中不含空行，且每行的行首行末均无空格。每行的不同token之间用单个空格隔开。该语言的BNF如下：</p>
+<p>&lt;line&gt; :: &lt;head&gt; | &lt;assignment&gt; | &lt;if&gt; | ELSE | END IF | &lt;return&gt;
+<code>cpp
+&amp;lt;head&amp;gt; :: PARAM &amp;lt;paramlist&amp;gt; | PARAM
+&amp;lt;assignment&amp;gt; :: &amp;lt;variable&amp;gt; = &amp;lt;rvalue&amp;gt;
+&amp;lt;if&amp;gt; :: IF &amp;lt;variable&amp;gt; &amp;lt;relation&amp;gt; &amp;lt;value&amp;gt; THEN
+&amp;lt;return&amp;gt; :: RETURN &amp;lt;value&amp;gt;
+&amp;lt;paramlist&amp;gt; :: &amp;lt;variable&amp;gt; | &amp;lt;variable&amp;gt; &amp;lt;paramlist&amp;gt;
+&amp;lt;rvalue&amp;gt; :: &amp;lt;value&amp;gt; | &amp;lt;value&amp;gt; &amp;lt;operator&amp;gt; &amp;lt;value&amp;gt;
+&amp;lt;value&amp;gt; :: &amp;lt;variable&amp;gt; | &amp;lt;integer&amp;gt;
+&amp;lt;operator&amp;gt; :: + | - | * | /
+&amp;lt;relation&amp;gt; :: &amp;lt; | = | &amp;gt;
+&amp;lt;variable&amp;gt; :: A | B | ... | Z
+&amp;lt;integer&amp;gt; :: 不含前导0的32位带符号整数</code>
+程序的第一行是一条&lt;head&gt;语句，定义了函数的参数，而最后一行一定是&lt;return&gt;语句。&lt;head&gt;语句不能在除了第一行之外的其他任何地方出现，但&lt;return&gt;语句可以在程序中多次出现。行号从1开始编号。
+每条IF语句一定有一个配套的END IF语句，还有一个可选的ELSE语句（注意没有ELSE IF语句）。IF语句可以嵌套，它总是比较一个变量和一个整数或者另一个变量。</p>
+<p>你应该分析一个给定的程序，并输出两类警告信息（格式见样例输出）：</p>
+<p>l 第一类警告：无法到达的代码行。不管各条IF 语句的布尔表达式是真还是假（假设每条IF 语句的布尔表达式都是既可能为真也可能为假，不受其他IF语句结果影响）。</p>
+<p>l 第二类警告：可能未初始化的变量。该语句用到了某个变量的值，但这个变量既不在第一行指定的参数列表里，也没有在此之前由赋值语句赋值过。如果这条语句无法到达，那么不应该给出这类警告。</p>
+<p>注意，语句ELSE和END IF不是可执行语句，因此不应该收到任何警告信息。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>最多包含50行，即你要处理的程序。保证该程序合法。</p>
+<h4>输出格式</h4>
+<p>警告按照行号从小到大排序。如果同一行内有多个可能未初始化的变量，按</p>
+<p>照字母顺序从小到大排列。如果没有任何警告信息，你的输出应该为空。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>PARAM A B</p>
+<p>IF A &gt; 5 THEN</p>
+<p>C = B * A</p>
+<p>END IF</p>
+<p>D = B - C</p>
+<p>Z = Y + X</p>
+<p>E = T</p>
+<p>F = E + E</p>
+<p>V = G + G</p>
+<p>RETURN F</p>
+<h4>输出样例 #1</h4>
+<p>Line 5: variable C might not have been</p>
+<p>initialized</p>
+<p>Line 6: variable X might not have been</p>
+<p>initialized</p>
+<p>Line 6: variable Y might not have been</p>
+<p>initialized</p>
+<p>Line 7: variable T might not have been</p>
+<p>initialized</p>
+<p>Line 9: variable G might not have been</p>
+<p>initialized</p>
+<h4>输入样例 #2</h4>
+<p>PARAM G</p>
+<p>RETURN G</p>
+<p>B = K</p>
+<p>RETURN C</p>
+<h4>输出样例 #2</h4>
+<p>Line 3: unreachable code</p>
+<p>Line 4: unreachable code</p>
+<h4>输入样例 #3</h4>
+<p>PARAM T C</p>
+<p>B = T</p>
+<p>A = 4</p>
+<p>IF A &lt; 4 THEN</p>
+<p>IF B &gt; 3 THEN</p>
+<p>Q = 100 + F</p>
+<p>ELSE</p>
+<p>IF C = -1111111111 THEN</p>
+<p>Q = T - A</p>
+<p>IF Q = 0 THEN</p>
+<p>V = V - 1</p>
+<p>END IF</p>
+<p>ELSE</p>
+<p>RETURN I</p>
+<p>E = A</p>
+<p>END IF</p>
+<p>END IF</p>
+<p>ELSE</p>
+<p>Q = 1</p>
+<p>END IF</p>
+<p>RETURN Q</p>
+<h4>输出样例 #3</h4>
+<p>Line 6: variable F might not have been</p>
+<p>initialized</p>
+<p>Line 11: variable V might not have</p>
+<p>been initialized</p>
+<p>Line 14: variable I might not have</p>
+<p>been initialized</p>
+<p>Line 15: unreachable code</p>

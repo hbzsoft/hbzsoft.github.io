@@ -1,0 +1,30 @@
+<h1>[POI2010] ZAB-Frog</h1>
+<h2>题意翻译</h2>
+<p>有 $n$ 个点，升序给出每个点到起点的距离。有编号为 $1 \sim n$ 的 $n$ 只青蛙分别在第 $1 \sim n$ 个点上，每次它们会跳到距离自己第 $k$ 远的点上。</p>
+<p>如果有相同距离的点，就跳到下标更小的点上。</p>
+<p>求跳 $m$ 次之后，第 $i$ 只的青蛙在哪个点上。</p>
+<p>输入共一行三个整数：代表 $n, k, m$。</p>
+<p>输出共一行 $n$ 个整数，代表每只青蛙最终所处在的点。</p>
+<h2>题目描述</h2>
+<p>On the bed of one particularly long and straight Byteotian brook there lie <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.1.png" /> rocks    jutting above the water level.</p>
+<p>Their distances from the brook's spring are <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.2.png" /> respectively.</p>
+<p>A small frog sitting on one of these is about to begin its leaping training.</p>
+<p>Each time the frog leaps to the rock that is the <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.3.png" />-th closest to the one it is sitting on.</p>
+<p>Specifically, if the frog is sitting on the rock at position <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.4.png" />, then it will leap onto such    <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.5.png" /> that:</p>
+<p><img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.6.png" />      and      <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.7.png" />        If <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.8.png" /> is not unique, then the frog chooses among them the rock that is closest to the spring.</p>
+<p>On which rock the frog will be sitting after <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.9.png" /> leaps depending on the rock is started from?</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input holds three integers,      <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.10.png" />, <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.11.png" /> and <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.12.png" /> (<img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.13.png" />, <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.14.png" />),      separated by single spaces, that denote respectively: the number of rocks,      the parameter <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.15.png" />, and the number of intended leaps.</p>
+<p>The second line holds <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.16.png" /> integers <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.17.png" />      (<img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.18.png" />), separated by single spaces,      that denote the positions of successive rocks on the bed of the brook.</p>
+<h4>输出格式</h4>
+<p>Your program should print a single line on the standard output,      with <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.19.png" /> integers <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.20.png" />      from the interval <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.21.png" /> in it, separated by single spaces.</p>
+<p>The number <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.22.png" /> denotes the number of the rock that the frog ends on      after making <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.23.png" /> leaps starting from the rock no. <img alt="" src="http://main.edu.pl/images/OI17/zab-en-tex.24.png" /> (in the input order).</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 2 4
+1 2 4 7 10</p>
+<h4>输出样例 #1</h4>
+<p>1 1 3 1 1</p>
+<h2>说明</h2>
+<p>$1 \le k \lt n \le 10^6$，$1 \le m \le 10^{18}$，$1 \le p_1 \lt p_2 \lt ... \lt p_n \le 10^{18}$</p>

@@ -1,0 +1,43 @@
+<h1>[POI2010] GIL-Guilds</h1>
+<h2>题目描述</h2>
+<p>King Byteasar faces a serious matter.</p>
+<p>Two competing trade organisations, The Tailors Guild and The Sewers Guild asked,    at the same time, for permissions to open their offices in each town of the kingdom.</p>
+<p>There are <img alt="" src="http://main.edu.pl/images/OI17/gil-en-tex.1.png" /> towns in Byteotia.</p>
+<p>Some of them are connected with bidirectional roads.</p>
+<p>Each of the guilds postulate that every town should:</p>
+<p>have an office of the guild, or           be directly connected to another town that does.</p>
+<p>The king, however, suspects foul play. He fears that if there is just a single    town holding the offices of both guilds, it could lead to a clothing cartel.</p>
+<p>For this reason he asks your help.</p>
+<p>给一张无向图，要求你用黑白灰给点染色，且满足对于任意一个黑点，至少有一个白点和他相邻；对于任意一个白点，至少有一个黑点与他相邻，对于任意一个灰点，至少同时有一个黑点和白点和灰点与他相邻，问能否成功</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>Two integers, n(&lt;=200000) and m(&lt;=500000),      are given in the first line of the standard input. These denote the number      of towns and roads in Byteotia, respectively.</p>
+<p>The towns are numbered from 1 to n.</p>
+<p>Then the roads are given as follows: the input line no. i+1 describes      the i-th road;</p>
+<h4>输出格式</h4>
+<p>Your program should print out one word in the first line of the standard output:</p>
+<p>TAK (yes in Polish) - if the offices can be placed in towns according to these rules, or      NIE (no in Polish) - in the opposite case.</p>
+<p>If the answers is TAK, then the following nlines should give an      exemplary placement of the offices. Thus the line no. i+1 should hold:</p>
+<p>the letter K if there should be an office of The Tailors Guild in the town i, or the letter S if there should be an office of The Sewers Guild in the town i, or                      the letter N if there should be no office in the town i.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>7 8
+1 2
+3 4
+5 4
+6 4
+7 4
+5 6
+5 7
+6 7</p>
+<h4>输出样例 #1</h4>
+<p>TAK
+K
+S
+K
+S
+K
+K
+N</p>
+<h2>说明</h2>
+<p>题目spj贡献者@mengbierr</p>

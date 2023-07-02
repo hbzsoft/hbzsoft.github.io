@@ -1,0 +1,39 @@
+<h1>[USACO14DEC] Marathon S</h1>
+<h2>题意翻译</h2>
+<p>【题目描述】</p>
+<p>由于对他的奶牛的健康状况不佳而感到不满，牧场主约翰让它们参加各种各样的体育健身活动。最让他感到自豪的奶牛是 Bessie，她将参加约翰牧场附近城市里的马拉松比赛！</p>
+<p>马拉松比赛有 $N$ 个检查点 $(3\leq N\leq 500)$ ，需要按顺序访问。检查点 $1$ 是起点，检查点 $N$ 是终点。Bessie 应该按顺序一一访问所有的这些检查点，但由于她是一头懒惰的牛（懒惰竟然还选择跑马拉松！），于是她决定跳过 $K(K&lt;N)$ 个检查点以缩小她的赛程。但她不能跳过第 $1$ 个和第 $N$ 个检查点，因为这样太明显了。</p>
+<p>请你帮助 Bessie 计算出跳过中间的 $K$ 个检查点后她最少要跑多少距离。</p>
+<p>注意：由于街道是网格状的，我们用坐标来表示点的位置。但是 $(x_1,y_1),(x_2,y_2)$ 两点间的距离应为 $|x_1-x_2|+|y_1-y_2|$，这种测量距离的方法被称为“曼哈顿”距离，这是因为在市中心的网格路中，你可以沿平行于 $x$ 轴或 $y$ 轴的方向走，但不能沿直线到达。</p>
+<p>【输入格式】</p>
+<p>第一行：两个正整数 $N$ 和 $K$。</p>
+<p>第 $2$ 行到第 $N+1$ 行，每行两个整数$x,y (-1000\leq x\leq 1000,-1000\leq y\leq 1000)$。</p>
+<p>这里给出了检查点的顺序，她必须按顺序访问。注意：可能会有几个检查点出现在同一位置，Bessie 跳过这样的检查点时，相当于只跳过其中的一个检查点。</p>
+<p>【输出格式】</p>
+<p>输出跳过某一个检查点后 Bessie 可以跑的最短距离。</p>
+<p>感谢@彭骐飞 提供的翻译</p>
+<h2>题目描述</h2>
+<p>Unhappy with the poor health of his cows, Farmer John enrolls them in an assortment of different physical fitness activities. His prize cow Bessie is enrolled in a running class, where she is eventually expected to run a marathon through the downtown area of the city near Farmer John's farm!</p>
+<p>The marathon course consists of N checkpoints (3 &lt;= N &lt;= 500) to be visited in sequence, where checkpoint 1 is the starting location and checkpoint N is the finish. Bessie is supposed to visit all of these checkpoints one by one, but being the lazy cow she is, she decides that she will skip up to K checkpoints (K &lt; N) in order to shorten her total journey. She cannot skip checkpoints 1 or N, however, since that would be too noticeable.</p>
+<p>Please help Bessie find the minimum distance that she has to run if she can skip up to K checkpoints.</p>
+<p>Since the course is set in a downtown area with a grid of streets, the distance between two checkpoints at locations (x1, y1) and (x2, y2) is given by |x1-x2| + |y1-y2|.</p>
+<p>Bessie 参加城市马拉松比赛，要顺序经过 $N (3 \leq N \leq 500)$ 个检查点，其中检查点 $1$ 是起点，检查点 $N$ 是终点。 Bessie尝试略过 $K(K &lt; N)$ 个检查点，以减少总路程，检查点 $1$ 和检查点 $N$ 不能被略过。两个检查点的距离是 $|x_1-x_2| + |y_1-y_2|$。</p>
+<p>输入输出格式</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line gives the values of N and K.</p>
+<p>The next N lines each contain two space-separated integers, x and y,representing a checkpoint (-1000 &lt;= x &lt;= 1000, -1000 &lt;= y &lt;= 1000).</p>
+<p>The checkpoints are given in the order that they must be visited.</p>
+<p>Note that the course might cross over itself several times, with several checkpoints occurring at the same physical location. When Bessie skips such a checkpoint, she only skips one instance of the checkpoint -- she does not skip every checkpoint occurring at the same location.</p>
+<h4>输出格式</h4>
+<p>Output the minimum distance that Bessie can run by skipping up to K checkpoints. In the sample case shown here, skipping the checkpoints at (8, 3) and (10, -5) leads to the minimum total distance of 4.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 2
+0 0
+8 3
+1 1
+10 -5
+2 2</p>
+<h4>输出样例 #1</h4>
+<p>4</p>

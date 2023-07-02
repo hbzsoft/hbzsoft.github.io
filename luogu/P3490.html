@@ -1,0 +1,47 @@
+<h1>[POI2009] FIB-Words 2</h1>
+<h2>题意翻译</h2>
+<h2>题目描述</h2>
+<p>下面的任务是第16届波兰语竞赛第三阶段的任务“单词”的一个明显的难度增强版本。它并没有在比赛中使用，但对于那些解决了“单词”的人来说，它是一个扩展 :) 。</p>
+<p>函数  $h$ 作用于由数字  $0$ 和  $1$ 组成的字符串，其通过将每一个数字  $0$ 替换为  $1$，将每一个数字  $1$ 替换为字符串  $10$ 来独立且同时地变换字符串  $w$。</p>
+<p>例如：</p>
+<p>$$h(<code>1001")=</code>101110"$$
+ $$h(<code>\ ")=</code>\ "$$</p>
+<p>其中例二即把空字符串赋值给空字符串。</p>
+<p>注意， $h$ 是一个一对一的函数。</p>
+<p>我们用  $h^k$ 表示函数  $h$ 使用  $k$ 次。</p>
+<p>特别的， $h^0(w)=w$。 </p>
+<p>我们对  $k = 0, 1, 2, ...$ 的  $h^k(``0")$ 形式的字符串感兴趣，这个序列为:</p>
+<p>$$ <code>0",</code>1", <code>10",</code>101", <code>10110",</code>10110101", \ldots $$</p>
+<p>如果字符串  $x$ 在  $y$ 中以一个连续的（即一个块）子串出现，我们就称  $x$ 为字符串  $y$ 的子串。给出整数  $k_1, k_2, k_3, ..., k_n $ 的序列。你的任务是检查对于一些  $m$ 来说， $h^{k_1}(<code>0") \cdot h^{k_2}(</code>0") \cdot \ldots \cdot h^{k_n}(<code>0") $ 形式的字符串是否是  $h^m(</code>0")$ 的子串，如果有，你应该找到最小的  $m$。 </p>
+<h2>输入内容</h2>
+<p>输入的第一行包含一个整数  $n$， $1 \leq n \leq 1000000$。输入的第二行包含  $n$ 个非负整数  $k_1, k_2, k_3, ..., k_n $，用单个空格分隔。</p>
+<h2>输出内容</h2>
+<p>您的程序应该输出  $t$ 行，每个测试输出一行。你的程序应该输出的最小非负整数  $m$，使  $h^{k_1}(<code>0") \cdot h^{k_2}(</code>0") \cdot \ldots \cdot h^{k_n}(<code>0") $ 是  $h^m(</code>0")$ 的子串。如果不存在  $m$，则输出 <code>NIE</code>（波兰语中的 <em>no</em> ）。</p>
+<p><em>Translated By in_young_ren</em> </p>
+<h2>题目背景</h2>
+<p>征求翻译。如果你能提供翻译或者题意简述，请直接发讨论，感谢你的贡献。</p>
+<h2>题目描述</h2>
+<p>The following task is a significantly harder version of task Words from the third stage of 16th Polish OI. It wasn't used in the contest itself, but is an extension for those who solved "Words" and want more. :-)    Let <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.1.png" /> be a function acting on strings composed of the digits 0    and 1.</p>
+<p>The function <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.2.png" /> transforms the string <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.3.png" /> by replacing (independently    and concurrently) every digit 0 with 1 and every digit    1 with the string <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.4.png" />.</p>
+<p>For example <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.5.png" />, <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.6.png" />    (i.e. <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.7.png" /> assigns an empty string to the empty string).</p>
+<p>Note that <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.8.png" /> is an injection, or a one-to-one function.</p>
+<p>By <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.9.png" /> we denote the function <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.10.png" /> composed with itself <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.11.png" /> times.</p>
+<p>In particular, <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.12.png" /> is the identity function <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.13.png" />.</p>
+<p>We are interested in the strings of the form <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.14.png" />    for <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.15.png" /> This sequence begins with the following strings:</p>
+<p><img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.16.png" />, <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.17.png" />, <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.18.png" />, <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.19.png" />,    <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.20.png" />, <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.21.png" />.</p>
+<p>We call the string <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.22.png" /> a substring of the string <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.23.png" /> if it occurs    in <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.24.png" /> as  a contiguous (i.e. one-block) subsequence.</p>
+<p>A sequence of integers <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.25.png" /> is given.</p>
+<p>Your task is to check whether a string of the form    <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.26.png" />    is a substring of <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.27.png" /> for some <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.28.png" />, and if it is,    you shuold find minimal such <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.29.png" />.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input contains a single integer <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.30.png" />,      <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.31.png" />.</p>
+<p>The second line of standard input holds <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.32.png" /> non-negative integers      <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.33.png" />(<img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.34.png" />), separated by single spaces.</p>
+<h4>输出格式</h4>
+<p>Your programme should print out <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.35.png" /> lines to the standard output,     one for each test unit.</p>
+<p>Your programm should print to standard output minimal non-negative integer <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.36.png" />,     such that <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.37.png" /> is a substring of      <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.38.png" />, or NIE (no in Polish) if such <img alt="" src="http://main.edu.pl/images/OI16/fib-en-tex.39.png" /> doesn't exist.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>2
+1 2</p>
+<h4>输出样例 #1</h4>
+<p>4</p>

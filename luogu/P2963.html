@@ -1,0 +1,31 @@
+<h1>[USACO09NOV] Cow Rescue G</h1>
+<h2>题目描述</h2>
+<p>Bessie is trapped in a triangular maze with N rows (1 &lt;= N &lt;=</p>
+<p>1,000,000). A three row maze is shown below:</p>
+<p>The i'th row of the maze contains 2*i-1 triangles. Numbering from the left, the triangles are named (i,1), (i,2), and so on.</p>
+<p>Bessie can travel to the (often three) triangles which share an edge with her current triangle. For example, if she is at (3, 3), she can travel to (3, 2), (3, 4) and (4, 4). Bessie takes one minute to travel from one triangle to the next.</p>
+<p>FJ has learned the Bessie is trapped and knows by tracking her iPhone that she starts her exit trek at triangle (Si,Sj). FJ's love for Bessie knows no bounds so he wants her back in the minimum possible time.</p>
+<p>The maze has M (1 &lt;= M &lt;= 10,000) exits found in locations throughout the set of triangles. Any one of these will enable Bessie to escape. Once she enters an exit triangle, she leaves the maze in just one more minute.</p>
+<p>Find the minimum time in minutes, T, required for Bessie to exit the maze and report the optimal exit location she uses, (OUTi, OUTj). If more than one location requires only T minutes, output the location with the smallest row. If two optimal rows are the same, output the one with smaller column.</p>
+<p>贝希被困在一个三角形的迷宫之中。这个迷宫有N行（1 &lt;= N &lt;= 1000000）。比如下图是一个3行的迷宫。  迷宫的第i行有2*i-1个三角形，从左到右分别编号为（i，1）、（i，2）等等。</p>
+<p>贝希每次可以从一个三角形走到任意一个一个跟当前的三角形有邻边的三角形。</p>
+<p>比如说，如果她目前处于三角形（3，3），那麽，她可以走到三角形（3，2）、（3，4）和（4，4）。贝希每次需要一分钟的时间来移动到下一个三角形。  农夫约翰发现贝希被困了！于是她跟踪贝希的iPhone手机（可怜的触摸屏～），得知贝希目前处于三角形（Si，Sj）。</p>
+<p>因为约翰对贝希有著无穷无尽的浓浓爱意，所以他希望贝希能尽可能快地回到他的身边。 在迷宫的三角形之中，有M（1 &lt;= M &lt;= 10000）个是出口。在任何一个出口都可以让贝希逃离迷宫。一旦贝希进入一个作为出口的三角形，她用多一分钟就可以逃离这个迷宫。 找到一个可以让贝希逃离迷宫最小时间T，并输出她应该从哪一个出口逃离迷宫，这个出口记为（OUTi，OUTj）。</p>
+<p>如果有多个出口同时需要时间T，输出那个行的编号小的出口，如果仍然有多个出口，输出那个列的编号小的。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Two space-separated integers: N and M</p>
+<p>* Line 2: Two space-separated integers: Si and Sj</p>
+<p>* Lines 3..M+2: Line i+2 contains two space-separated integers that are the triangle location of exit i: Ei and Ej</p>
+<h4>输出格式</h4>
+<p>* Line 1: Two space-separated integers: OUTi and OUTj</p>
+<p>* Line 2: A single integer: T</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 2 
+2 1 
+3 5 
+4 4 </p>
+<h4>输出样例 #1</h4>
+<p>4 4 
+4 </p>

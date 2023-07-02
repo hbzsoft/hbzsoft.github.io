@@ -1,0 +1,33 @@
+<h1>[POI2013] SPA-Walk</h1>
+<h2>题目描述</h2>
+<p>The names of towns in Byteotia are unique sequences of exactly $n$ bits.</p>
+<p>There are $2^n-k$ towns in Byteotia, and thus,only $k$ sequences of $n$ bits do not correspond to any town.</p>
+<p>Some pairs of towns are connected with roads.</p>
+<p>Specifically, two towns are directly linked by a road if and only if their names differ in a single bit.</p>
+<p>The roads do not cross outside of towns.</p>
+<p>Byteasar intends to take a stroll - he intends to walk from the town $x$ to the town $y$, taking the existing roads.</p>
+<p>Your task is to write a program that will determine if such a walk is possible.</p>
+<p>有2^n个长度为n的01串，两个01串之间有边当且仅当这两个01串只有一位不同，现在从这2n个串中拿掉k个，问指定两个串之间能否到达</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>In the first line of the standard input, there are two integers,$n$ and $k$($1\le n\le 60$, $0\le k\le 1\ 000\ 000$, $k\le 2^n-1$, $n\times k\le 5\ 000\ 000$),      separated by a single space.</p>
+<p>These are the length of town names in bits and the the number of $n$-bit sequences that do not correspond to any town, respectively.</p>
+<p>In the second line, there are two strings, separated by a single space,      each consisting of $n$ characters 0 and/or 1.</p>
+<p>These are the names of the towns $x$ and $y$.</p>
+<p>In the $k$ lines that follow, all the sequences of $n$ bits that do not correspond to any town are given, one sequence per line.In the $k$ lines that follow, all the sequences of $n$ bits that do not correspond to any town are given, one sequence per line.Each such sequence is a string of $n$ characters 0 and/or 1.You may assume that $x$ and $y$ are not among those $k$ sequences.</p>
+<h4>输出格式</h4>
+<p>Your program should print to the standard output the word TAK (Polish for yes) if walking from the town x to the town y is possible, and the word NIE (Polish for no) otherwise.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 6
+0000 1011
+0110
+0111
+0011
+1101
+1010
+1001</p>
+<h4>输出样例 #1</h4>
+<p>TAK</p>
+<h2>说明</h2>
+<p>有2^n个长度为n的01串，两个01串之间有边当且仅当这两个01串只有一位不同，现在从这2n个串中拿掉k个，问指定两个串之间能否到达</p>

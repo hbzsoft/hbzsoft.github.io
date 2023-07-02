@@ -1,0 +1,42 @@
+<h1>[POI2010] JED-Ones</h1>
+<h2>题意翻译</h2>
+<p>设x是一个由 01 组成的序列。一个 UFO 指的是序列中第一个 1 或者最后一个 1 且不和任何一个 1 相邻。例如 10001010 有两个 UFO，1101011000 没有 UFO，1000 只有一个 UFO。</p>
+<p>设1到n的数的二进制表示中 UFO 的总数为sks(n)。例如，sks(5)=5, sks(64)=59, sks(128)=122, sks(256)=249.</p>
+<p>我们需要处理非常大的数字。因此 n 会用压缩的形式表示。设 x 是一个正整数 <em><img alt="eHOlD0.png" src="https://s2.ax1x.com/2019/08/09/eHOlD0.png" /></em>  是其二进制表示（最高位为 1），则该数的压缩形式REP(x)为一个序列，表示连续相同数位的数量。例如：</p>
+<p><img alt="eHOfKI.png" src="https://s2.ax1x.com/2019/08/09/eHOfKI.png" /></p>
+<p>已知REP(n)，求REP(sks(n))。</p>
+<h2>输入格式:</h2>
+<p>第一行有一个整数k，表示一个正整数n的压缩形式。 接下来一行有k个整数<img alt="eHXEs1.png" src="https://s2.ax1x.com/2019/08/09/eHXEs1.png" />，用空格分隔，表示n的压缩形式序列。保证<img alt="eHXeZ6.png" src="https://s2.ax1x.com/2019/08/09/eHXeZ6.png" />  ≤1 000 000 000，也就是说0&lt;n&lt;<img alt="eHXMJe.png" src="https://s2.ax1x.com/2019/08/09/eHXMJe.png" />。</p>
+<h2>输出格式:</h2>
+<p>输出两行，第一行有一个正整数 l ，第二行有 l 个正整数<img alt="eHX0zj.png" src="https://s2.ax1x.com/2019/08/09/eHX0zj.png" />，用空格分隔，表示sks(n)的压缩形式。</p>
+<h2>题目描述</h2>
+<p>Let $x$ be a sequence of zeros and ones.</p>
+<p>An utterly forlorn one (UFO) in $x$ is the extreme (either first or last) one    that additionally does not neighbour with any other one.</p>
+<p>For instance, the sequence 10001010 has two UFOs,    while the sequence 1101011000 has no UFO,    and the sequence 1000 has only one UFO.</p>
+<p>Let us denote the total number of UFOs in the binary representations of the numbers    from 1 to $n$ with $sks(n)$.</p>
+<p>For example,    $sks(5)=5$, $sks(64)=59$, $sks(128)=122$, $sks(256)=249$.</p>
+<p>We will be working with very large numbers.</p>
+<p><code>plain
+Therefore, we shall represent them in a succinct way.</code>
+Suppose $x$ is a positive integer and $x_2$ is its binary representation    (starting with 1). Then the succinct representation of $x$ is the sequence    $REP(x)$ consisting of positive integers denoting the lengths of successive    blocks of the same digits.</p>
+<p>For example:</p>
+<p>$REP(460\ 288)=REP(1110000011000000000_2)=(3,5,2,9)$ $REP(408)=REP(110011000_2)=(2,2,2,3)$  </p>
+<p>Your task is to write a program that finds the sequence $REP(sks(n))$ given $REP(n)$.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input holds one integer $k$  ($1\le k\le 1\ 000\ 000$) denoting the length of the succinct representation      of a positive integer $n$.</p>
+<p>The second line of the standard input holds $k$ integers $x_1,x_2,\cdots,x_k$  ($0&lt;x_i\le 1\ 000\ 000\ 000$), separated by single spaces.</p>
+<p>The sequence $x_1,x_2,\cdots,x_k$ forms the succinct representation of the number $n$.</p>
+<p>You may assume that $x_1+x_2+\cdots+x_k\le 1\ 000\ 000\ 000$, i.e., $0&lt;n&lt;2^{1\ 000\ 000\ 000}$.</p>
+<h4>输出格式</h4>
+<p>Your program is to print out two lines to the standard output.</p>
+<p>The first one should contain a single positive integer $l$.</p>
+<p>The second line should hold $l$ positive integers $y_1,y_2,\cdots,y_l$,      separated by single spaces.</p>
+<p>The sequence $y_1,y_2,\cdots,y_l$ is to form the succinct representation of $sks(n)$.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>6
+1 1 1 1 1 1</p>
+<h4>输出样例 #1</h4>
+<p>5
+1 1 2 1 1</p>

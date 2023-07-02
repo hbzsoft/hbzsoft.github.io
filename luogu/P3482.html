@@ -1,0 +1,28 @@
+<h1>[POI2009] SLO-Elephants</h1>
+<h2>题意翻译</h2>
+<p>对于一个  $1-N$ 的排列 $a$，每次你可以交换两个数 $a_x$ 与 $a_y$($x\neq y$)，代价为 $W_{a_x}+W_{a_y}$。若干次交换的代价为每次交换的代价之和。请问将 $a_i$ 变为 $b_i$ 所需的最小代价是多少。</p>
+<p>对于 $100\%$ 的数据，$2\leq N\leq 1000000$，$100\leq w_i\leq 6500$，$1\leq a_i,b_i\leq n$。保证 $a_i$ 各不相等，$b_i$ 各不相等。</p>
+<h2>题目描述</h2>
+<p>A parade of all elephants is to commence soon at the Byteotian zoo.</p>
+<p>The zoo employees have encouraged these enormous animals to form a single line,  as the manager wills it to be the initial figure of the parade.</p>
+<p>Unfortunately, the manager himself came to the parade and did not quite like  what he saw - he had intended an entirely different order of the elephants.</p>
+<p>Therefore he enforced his ordering, claiming the animals would seem most  majestic this way, and made the employees reorder the elephants accordingly.</p>
+<p>As a pack of moving elephants can wreak havoc, the employees decided to have  them rearranged by swapping one pair at a time. Luckily the animals need not  stand next to each other in order to swap positions in the line. Making an elephant  move, however, is not as easy as it sounds. In fact, the effort one has to put  into it is proportional to the animal's mass. Hence, the effort involved in  swapping a pair of elephants of respective masses <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.1.png" /> and <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.2.png" /> can be  estimated by <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.3.png" />. What is the minimum effort involved in rearranging  the elephants according to manager's will?</p>
+<p>Write a programme that:</p>
+<p>reads from the standard input the masses of all elephants from the zoo,        along with their current and desired order in the line,                  determines a sequence of elephant swaps leading from the initial to the        desired order of animals in the line, such that this sequence minimises        the summary effort involved in all the swaps, prints out the summary effort on the standard output.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input contains a single integer <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.4.png" />  (<img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.5.png" />) denoting the number of elephants in the zoo.</p>
+<p>We assume that the elephants are numbered from <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.6.png" /> to <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.7.png" /> to simplify things.</p>
+<p>The second line holds <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.8.png" /> integers <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.9.png" /> (<img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.10.png" /> dla <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.11.png" />)  separated by single spaces and denoting the masses of respective elephants  (in kilogrammes).</p>
+<p>The third line of input contains <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.12.png" /> pairwise different integers <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.13.png" />  (<img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.14.png" />) separated by single spac…</p>
+<h4>输出格式</h4>
+<p>The first and only line of the standard output should contain a single integer  denoting the minimum summary effort involved in reordering the elephants  from the order represented by the sequence to the one represented by <img alt="" src="http://main.edu.pl/images/OI16/slo-en-tex.20.png" />.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>6
+2400 2000 1200 2400 1600 4000
+1 4 5 3 6 2
+5 3 2 4 6 1</p>
+<h4>输出样例 #1</h4>
+<p>11200</p>

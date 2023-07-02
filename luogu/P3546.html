@@ -1,0 +1,35 @@
+<h1>[POI2012] PRE-Prefixuffix</h1>
+<h2>题目描述</h2>
+<p>We consider strings consisting of lowercase letters of the English alphabet in this problem.</p>
+<p>An initial fragment of a given string is called its prefix.</p>
+<p>A final (terminal) fragment of a given string is called its suffix.</p>
+<p>In particular, the empty string is both a prefix and a suffix of any string.</p>
+<p>Two strings are cyclically equivalent if one of them can be obtained from another by    moving its certain suffix from the end of the string to its beginning.</p>
+<p>For example, the strings <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.1.png" /> and <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.2.png" /> are cyclically equivalent, whereas the strings <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.3.png" /> and <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.4.png" /> are not.</p>
+<p>In particular, every string is cyclically equivalent to itself.</p>
+<p>A string <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.5.png" /> consisting of <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.6.png" /> letters is given.</p>
+<p>We are looking for its prefix <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.7.png" /> and suffix <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.8.png" /> of equal length such that:</p>
+<p><img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.9.png" /> and <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.10.png" /> are cyclically equivalent,                  the common length of <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.11.png" /> and <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.12.png" /> does not exceed <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.13.png" />        (i.e., the prefix <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.14.png" /> and the suffix <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.15.png" /> do not overlap in <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.16.png" />), and                  the common length of <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.17.png" /> and <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.18.png" /> is maximized.</p>
+<p>对于两个串 $S_1, S_2$，如果能够将 $S_1$ 的一个后缀移动到开头后变成 $S_2$，就称 $S_1$ 和 $S_2$ 循环相同。例如串 ababba 和串 abbaab 是循环相同的。</p>
+<p>给出一个长度为 $n$ 的串 $S$，求满足下面条件的最大的 $L(L\leq \frac n 2)$：$S$ 的 $L$ 前缀和 $S$ 的 $L$ 后缀是循环相同的。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input contains a single integer <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.19.png" />      (<img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.20.png" />) denoting the length of the string <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.21.png" />.</p>
+<p>The second line of input contains the string <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.22.png" /> itself, consisting of <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.23.png" /> lowercase letters of the English alphabet.</p>
+<p>In tests worth 30% of the points the condition <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.24.png" /> holds in addition.</p>
+<p>In tests worth 50% of the points the condition <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.25.png" /> holds in addition.</p>
+<h4>输出格式</h4>
+<p>Your program should print a single integer in the first and only line of the standard output,      namely the common length of the prefix <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.26.png" /> and the suffix <img alt="" src="http://main.edu.pl/images/OI19/pre-en-tex.27.png" /> that we are looking for.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>15
+ababbabababbaab</p>
+<h4>输出样例 #1</h4>
+<p>6</p>
+<h2>说明</h2>
+<p>数据范围：</p>
+<ul>
+<li>对于 $30\%$ 的数据，保证 $n\le 500$；</li>
+<li>对于 $50\%$ 的数据，保证 $n\le 5000$；</li>
+<li>对于 $100\%$ 数据，保证 $1\le n\le 10^6$。</li>
+</ul>

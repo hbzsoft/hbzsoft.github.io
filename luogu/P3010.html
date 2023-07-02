@@ -1,0 +1,35 @@
+<h1>[USACO11JAN] Dividing the Gold S</h1>
+<h2>题意翻译</h2>
+<p>Bessie 和 Canmuu 发现了一个有 <strong><em>N</em></strong> 个金币的袋子(1 &lt;= N &lt;= 250) 。第i个金币有一个价值 <strong><em>Vi</em></strong>
+(1 &lt;= Vi &lt;= 2000)他们希望尽可能的把这堆金币平均分配，但有时这是不可能的。找出使两堆价值差最小的分配方案。如果不能完全平均分开，Bessie会获得较高价值那一堆。</p>
+<p>举例来说 ： 有一袋5个金币。价值分别是 2,1,8,4,16。
+Bessie 和Canmuu把金币分成两堆，第一堆是价值16的金币，另一堆是剩下的1+2+4+8 = 15 个金币，因此，差是1，这是最优分配方案下的唯一分法（即差最小的唯一分法），所以方案数为1。</p>
+<p>请你找出 <strong>最小的差值</strong> 以及在这个差值下分配的<strong>方案数。</strong></p>
+<p>输入第一行 N</p>
+<p>之后每一行有一个Vi代表第i个金币的价值</p>
+<p>输出第一行是最小差值，</p>
+<p>第二行是分配方案数 ,由于方案数可能很大，输出<strong><em>ans mod 1e6</em></strong>的答案</p>
+<p>感谢@ToBiChi 提供翻译</p>
+<h2>题目描述</h2>
+<p>Bessie and Canmuu found a sack of N (1 &lt;= N &lt;= 250) gold coins that they wish to divide as evenly as possible. Coin i has value v_i (1 &lt;= V_i &lt;= 2,000). The cows would like to split the pile as evenly as they can, but that is not always possible. What is the smallest difference between the values of the two piles?</p>
+<p>In addition, the Bessie and Canmuu have found that there might be multiple ways to split the piles with that minimum difference. They would also like to know the number of ways to split the coins as fairly as possible. If it isn't possible to split the piles evenly, Bessie will get the higher-valued pile.</p>
+<p>By way of example, consider a sack of five coins of values: 2, 1, 8, 4, and 16. Bessie and Canmuu split the coins into two piles, one pile with one coin worth 16, and the other pile with the remaining coins worth 1+2+4+8=15. Therefore the difference is 16-15 = 1.  This is the only way for them to split the coins this way, so the number of ways to split it evenly is just 1.</p>
+<p>Note that same-valued coins can be switched among the piles to increase the number of ways to perform an optimal split. Thus, the set of coins {1, 1, 1, 1} has six different ways to split into two optimal partitions, each with two coins.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: A single integer: N</p>
+<p>* Lines 2..N+1: Line i+1 contains a single integer: V_i</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer that is the smallest difference of two partitions.</p>
+<p>* Line 2: A single integer that is the number of ways to split the coins with the minimum difference printed in line 1. Since this number can get quite large, print the remainder when divided by 1,000,000.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 
+2 
+1 
+8 
+4 
+16 </p>
+<h4>输出样例 #1</h4>
+<p>1 
+1 </p>

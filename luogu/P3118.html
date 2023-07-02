@@ -1,0 +1,32 @@
+<h1>[USACO15JAN] Moovie Mooving G</h1>
+<h2>题目描述</h2>
+<p>Bessie is out at the movies.  Being mischievous as always, she has decided to hide from Farmer John for L (1 &lt;= L &lt;= 100,000,000) minutes, during which time she wants to watch movies continuously. She has N (1 &lt;= N &lt;= 20) movies to choose from, each of which has a certain duration and a set of showtimes during the day.  Bessie may enter and exit a movie at any time during one if its showtimes, but she does not want to ever visit the same movie twice, and she cannot switch to another showtime of the same movie that overlaps the current showtime.</p>
+<p>Help Bessie by determining if it is possible for her to achieve her goal of watching movies continuously from time 0 through time L.  If it is, determine the minimum number of movies she needs to see to achieve this goal (Bessie gets confused with plot lines if she watches too many movies).</p>
+<p>奶牛贝西想连续看L (1 &lt;= L &lt;= 100,000,000)分钟的电影，有 N (1 &lt;= N &lt;= 20)部电影可供选择，每部电影会在一天的不同时段放映。</p>
+<p>贝西可以在一部电影播放过程中的任何时间进入或退出放映厅。但她不愿意重复看到一部电影，所以每部电影她最多看到一次。她也不能在看一部电影的过程中，换到另一个正在播放相同电影的放映厅。</p>
+<p>请帮贝西计算她能够做到从0到L分钟连续不断地观看电影，如果能，请计算她最少看几部电影就行了。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>INPUT: (file movie.in) </p>
+<p>The first line of input contains N and L.</p>
+<p>The next N lines each describe a movie.  They begin with its integer duration, D (1 &lt;= D &lt;= L) and the number of showtimes, C (1 &lt;= C &lt;= 1000).  The remaining C integers on the same line are each in the range 0..L, and give the starting time of one of the showings of the movie.  Showtimes are distinct, in the range 0..L, and given in increasing order.</p>
+<h4>输出格式</h4>
+<p>UTPUT: (file movie.out) </p>
+<p>A single integer indicating the minimum number of movies that Bessie</p>
+<p>needs to see to achieve her goal.  If this is impossible output -1</p>
+<p>instead.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 100 
+50 3 15 30 55 
+40 2 0 65 
+30 2 20 90 
+20 1 0 </p>
+<h4>输出样例 #1</h4>
+<p>3 </p>
+<h2>说明</h2>
+<p>SOLUTION NOTES:</p>
+<p>Bessie should attend the first showing of the fourth movie from time 0</p>
+<p>to time 20.  Then she watches the first showing of the first movie</p>
+<p>from time 20 to time 65.  Finally she watches the last showing of the</p>
+<p>second movie from time 65 to time 100.</p>

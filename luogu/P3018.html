@@ -1,0 +1,76 @@
+<h1>[USACO11MAR] Tree Decoration G</h1>
+<h2>题意翻译</h2>
+<p>题目描述</p>
+<p>约翰正在装饰他家的圣诞树。圣诞树上有个 N 个结点，第一个结点是根，其余结点都有唯一的</p>
+<p>父亲结点，第 i 个结点的父亲是 P i 。由于根没有父亲，所以记 P 1 = −1。</p>
+<p>约翰可以在每个结点上挂载装饰物，但费用是变化。在第 i 个结点上挂载一个装饰物需要花费 C i</p>
+<p>元钱。奶牛对这个圣诞树上每个结点都有特殊的装饰需求，对于第 i 个结点，奶牛要求以它为根的子</p>
+<p>树上必须有 D i 个装饰物。请问约翰在哪些结点上挂载装饰物，才能满足奶牛的要求，并且使得装饰</p>
+<p>费用最少？</p>
+<p>输入 • 第一行：单个整数 N，1 ≤ N ≤ 10 5</p>
+<p>• 第二行到 N 行：第 i+1 行有三个整数：P i ，D i 和 C i ，1 ≤ P i ≤ N, 0 ≤ D i ≤ 10 6 , 1 ≤ C i ≤ 100</p>
+<p>输出 • 单个整数，表示完成所有装饰要求的最少费用</p>
+<p>样例输入</p>
+<p>5 -1 9 3 1 2 2 5 3 2 5 1 4 2 3 3 样例输出</p>
+<p>20 提示 在第四个结点上放一个，花 4 元；在第三个</p>
+<p>结点上放五个，花 10 元；在第二个结点上放三</p>
+<p>个，花 6 元；</p>
+<p>感谢@lushangyin 提供的翻译</p>
+<h2>题目背景</h2>
+<p>征求翻译。如果你能提供翻译或者题意简述，请直接发讨论，感谢你的贡献。</p>
+<h2>题目描述</h2>
+<p>Farmer John is decorating his Spring Equinox Tree (like a Christmas tree but popular about three months later). It can be modeled as a rooted mathematical tree with N (1 &lt;= N &lt;= 100,000) elements, labeled 1...N, with element 1 as the root of the tree. Each tree element e &gt; 1 has a parent, P_e (1 &lt;= P_e &lt;= N). Element 1 has no parent (denoted '-1' in the input), of course, because it is the root of the tree.</p>
+<p>Each element i has a corresponding subtree (potentially of size 1) rooted there. FJ would like to make sure that the subtree corresponding to element i has a total of at least C_i (0 &lt;= C_i &lt;= 10,000,000) ornaments scattered among its members. He would also like to minimize the total amount of time it takes him to place all the ornaments (it takes time K*T_i to place K ornaments at element i (1 &lt;= T_i &lt;= 100)).</p>
+<p>Help FJ determine the minimum amount of time it takes to place ornaments that satisfy the constraints.  Note that this answer might not fit into a 32-bit integer, but it will fit into a signed 64-bit integer.</p>
+<p>For example, consider the tree below where nodes located higher on the display are parents of connected lower nodes (1 is the root):</p>
+<p>```cpp
+For example, consider the tree below where nodes located higher on
+the display are parents of connected lower nodes (1 is the root):</p>
+<pre><code>           1 
+           |
+           2
+           |
+           5
+          / \
+         4   3
+</code></pre>
+<p>Suppose that FJ has the following subtree constraints:</p>
+<pre><code>              Minimum ornaments the subtree requires
+                |     Time to install an ornament
+   Subtree      |       |
+    root   |   C_i  |  T_i
+   --------+--------+-------
+      1    |    9   |   3
+      2    |    2   |   2
+      3    |    3   |   2
+      4    |    1   |   4
+      5    |    3   |   3
+</code></pre>
+<p>Then FJ can place all the ornaments as shown below, for a total
+cost of 20:</p>
+<pre><code>        1 [0/9(0)]     legend: element# [ornaments here/
+        |                      total ornaments in subtree(node install time)]
+        2 [3/9(6)]
+        |
+        5 [0/6(0)]
+       / \
+</code></pre>
+<p>[1/1(4)] 4   3 [5/5(10)]
+```</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: A single integer: N</p>
+<p>* Lines 2..N+1: Line i+1 contains three space-separated integers: P_i, C_i, and T_i</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer: The minimum time to place all the</p>
+<p>ornaments</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 
+-1 9 3 
+1 2 2 
+5 3 2 
+5 1 4 
+2 3 3 </p>
+<h4>输出样例 #1</h4>
+<p>20 </p>

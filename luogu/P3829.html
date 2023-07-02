@@ -1,0 +1,81 @@
+<h1>[SHOI2012] 信用卡凸包</h1>
+<h2>题目背景</h2>
+<p>SHOI2012D1T2</p>
+<h2>题目描述</h2>
+<p>信用卡是一个矩形，唯四个角作了圆滑处理，使它们都是与矩形的两边相切的 1/4 圆，如下图所示。现在平面上有一些规格相同的信用卡，试求其凸包的周长。注意凸包未必是多边形，因为它可能包含若干段圆弧。</p>
+<p><img alt="" src="https://cdn.luogu.com.cn/upload/pic/6549.png" /> </p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>输入的第一行是一个正整数 n，表示信用卡的张数。第二行包含三个实数 a, b, r，分别表示信用卡（圆滑处理前）竖直方向的长度、水平方向的长度，以及 1/4 圆的半径。</p>
+<p>之后 n 行，每行包含三个实数 x, y, θ，分别表示一张信用卡中心（即对角线交点）的横、纵坐标，以及绕中心 逆时针旋转的 弧度。</p>
+<h4>输出格式</h4>
+<p>输出只有一行，包含一个实数，表示凸包的周长，四舍五入精确到小数点后2 位。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>2
+6.0 2.0 0.0
+0.0 0.0 0.0
+2.0 -2.0 1.5707963268</p>
+<h4>输出样例 #1</h4>
+<p>21.66</p>
+<h4>输入样例 #2</h4>
+<p>3
+6.0 6.0 1.0
+4.0 4.0 0.0
+0.0 8.0 0.0
+0.0 0.0 0.0</p>
+<h4>输出样例 #2</h4>
+<p>41.60</p>
+<h4>输入样例 #3</h4>
+<p>3
+6.0 6.0 1.0
+4.0 4.0 0.1745329252
+0.0 8.0 0.3490658504
+0.0 0.0 0.5235987756</p>
+<h4>输出样例 #3</h4>
+<p>41.63</p>
+<h2>说明</h2>
+<p>样例1说明： <img alt="" src="https://cdn.luogu.com.cn/upload/pic/6550.png" /></p>
+<p>本样例中的 2 张信用卡的轮廓在上图中用实线标出，如果视 1.5707963268为pi/2，那么凸包的周长为16+4sqrt(2)</p>
+<p>样例2说明： <img alt="" src="https://cdn.luogu.com.cn/upload/pic/6551.png" /></p>
+<p>样例3说明： <img alt="" src="https://cdn.luogu.com.cn/upload/pic/6552.png" /></p>
+<p>其凸包的周长约为41.628267652。</p>
+<p>本题可能需要使用数学库中的三角函数。不熟悉使用方法的选手，可以参考下面的程序及其输出结果：</p>
+<p><code>cpp
+uses math;
+const Pi = 3.141592653589793;
+begin
+writeln(sin(30.0 / 180.0 * Pi) : 0 : 10);
+writeln(cos(60.0 / 180.0 * Pi) : 0 : 10);
+writeln(tan(45.0 / 180.0 * Pi) : 0 : 10);
+writeln(arcsin(1.0) : 0 : 10);
+writeln(arccos(0.0) : 0 : 10);
+writeln(arctan(1.0) : 0 : 10);
+end.</code>
+```cpp</p>
+<h1>include &lt;iostream&gt;</h1>
+<h1>include &lt;math.h&gt;</h1>
+<p>using namespace std;
+const double Pi = 3.141592653589793;
+int main()
+{
+cout.setf(ios::fixed);
+cout.precision(10);
+cout&lt;&lt;sin(30.0 / 180.0 * Pi)&lt;&lt;endl;
+cout&lt;&lt;cos(60.0 / 180.0 * Pi)&lt;&lt;endl;
+cout&lt;&lt;tan(45.0 / 180.0 * Pi)&lt;&lt;endl;
+cout&lt;&lt;asin(1.0)&lt;&lt;endl;
+cout&lt;&lt;acos(0.0)&lt;&lt;endl;
+cout&lt;&lt;atan(1.0)&lt;&lt;endl;
+return 0;
+}
+```
+输出结果：0.5000000000</p>
+<p>0.5000000000</p>
+<p>1.0000000000</p>
+<p>1.5707963268</p>
+<p>1.5707963268</p>
+<p>0.7853981634</p>
+<p>数据范围：</p>
+<p><img alt="" src="https://cdn.luogu.com.cn/upload/pic/6553.png" /> </p>
+<p><img alt="" src="https://cdn.luogu.com.cn/upload/pic/6554.png" /></p>

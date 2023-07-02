@@ -1,0 +1,26 @@
+<h1>[USACO09OPEN] Work Scheduling G</h1>
+<h2>题意翻译</h2>
+<p>约翰有太多的工作要做。为了让农场高效运转，他必须靠他的工作赚钱，每项工作花一个单位时间。 他的工作日从 $0$ 时刻开始，有 $10^9$ 个单位时间。在任一时刻，他都可以选择编号 $1$ 到 $N$ 的 $N(1 \leq N \leq 10^5)$ 项工作中的任意一项工作来完成。 因为他在每个单位时间里只能做一个工作，而每项工作又有一个截止日期，所以他很难有时间完成所有N个工作，虽然还是有可能。 对于第 $i$ 个工作，有一个截止时间 $D_i(1 \leq D_i \leq 10^9)$，如果他可以完成这个工作，那么他可以获利 $P_i( 1\leq P_i\leq 10^9 )$. 在给定的工作利润和截止时间下，约翰能够获得的利润最大为多少.</p>
+<h2>题目描述</h2>
+<p>Farmer John has so very many jobs to do! In order to run the farm efficiently, he must make money on the jobs he does, each one of which takes just one time unit.</p>
+<p>His work day starts at time 0 and has 1,000,000,000 time units (!).  He currently can choose from any of N (1 &lt;= N &lt;= 100,000) jobs</p>
+<p>conveniently numbered 1..N for work to do. It is possible but</p>
+<p>extremely unlikely that he has time for all N jobs since he can only work on one job during any time unit and the deadlines tend to fall so that he can not perform all the tasks.</p>
+<p>Job i has deadline D_i (1 &lt;= D_i &lt;= 1,000,000,000). If he finishes job i by then, he makes a profit of P_i (1 &lt;= P_i &lt;= 1,000,000,000).</p>
+<p>What is the maximum total profit that FJ can earn from a given list of jobs and deadlines?  The answer might not fit into a 32-bit integer.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: A single integer: N</p>
+<p>* Lines 2..N+1: Line i+1 contains two space-separated integers: D_i and P_i</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single number on a line by itself that is the maximum possible profit FJ can earn.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>3 
+2 10 
+1 5 
+1 7 </p>
+<h4>输出样例 #1</h4>
+<p>17 </p>
+<h2>说明</h2>
+<p>Complete job 3 (1,7) at time 1 and complete job 1 (2,10) at time 2 to maximize the earnings (7 + 10 -&gt; 17).</p>

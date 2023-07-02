@@ -1,0 +1,40 @@
+<h1>[USACO10OCT] Soda Machine G</h1>
+<h2>题意翻译</h2>
+<p><strong>为了满足fj所有的N(1&lt;=n&lt;=50000)头奶牛的需求，fj新买了一台汽水机。他想找到一个最完美的位置来安放它。</strong></p>
+<p><strong>奶牛的牧场可以被表示为一个一维数轴，第i个奶牛被放牧的区间是[Ai...Bi]（包含端点），fj可以把汽水机放在[1..1,000,000,000]。</strong></p>
+<p><strong>因为奶牛们都懒得要死，她们想尽可能的少移动。她们希望汽水机被放在自己的放牧区间内。</strong></p>
+<p><strong>遗憾的是，fj并不总能满足所有奶牛的要求，所以他想请你帮忙算出他能满足的奶牛数目</strong></p>
+<h2>题目描述</h2>
+<p>To meet the ever-growing demands of his N (1 &amp;amp;lt;= N &amp;amp;lt;= 50,000) cows, Farmer John has bought them a new soda machine. He wants to figure out the perfect place to install the machine.</p>
+<p>The field in which the cows graze can be represented as a one-dimensional number line. Cow i grazes in the range A_i..B_i (1 &amp;amp;lt;= A_i &amp;amp;lt;= B_i; A_i &amp;amp;lt;= B_i &amp;amp;lt;= 1,000,000,000) (a range that includes its endpoints), and FJ can place the soda machine at any integer point in the range 1..1,000,000,000.  Since cows are extremely lazy and try to move as little as possible, each cow would like to have the soda machine installed within her grazing range.</p>
+<p>Sadly, it is not always possible to satisfy every cow's desires. Thus FJ would like to know the largest number of cows that can be satisfied.</p>
+<p>To demonstrate the issue, consider four cows with grazing ranges 3..5, 4..8, 1..2, and 5..10; below is a schematic of their grazing ranges:</p>
+<p>```cpp</p>
+<pre><code>     1   2   3   4   5   6   7   8   9  10  11  12  13
+     |---|---|---|---|---|---|---|---|---|---|---|---|-...
+             aaaaaaaaa
+                 bbbbbbbbbbbbbbbbb
+     ccccc           ddddddddddddddddddddd
+</code></pre>
+<p>```
+As can be seen, the first, second and fourth cows share the point 5, but the third cow's grazing range is disjoint.  Thus, a maximum of 3 cows can have the soda machine within their grazing range.</p>
+<p>有N个人要去膜拜JZ，他们不知道JZ会出现在哪里，因此每个人有一个活动范围，只要JZ出现在这个范围内就能被膜拜，</p>
+<p>伟大的JZ当然希望膜拜他的人越多越好，但是JZ不能分身，因此只能选择一个位置出现，他最多可以被多少人膜拜呢，</p>
+<p>这个简单的问题JZ当然交给你了</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: A single integer: N</p>
+<p>* Lines 2..N+1: Line i+1 contains two space-separated integers: A_i and B_i</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer representing the largest number of cows whose grazing intervals can all contain the soda machine.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 
+3 5 
+4 8 
+1 2 
+5 10 </p>
+<h4>输出样例 #1</h4>
+<p>3 </p>
+<h2>说明</h2>
+<p>If the soda machine is placed at location 5, cows 1, 2, and 4 can be satisfied. It is impossible to satisfy all four cows.</p>

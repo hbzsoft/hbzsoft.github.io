@@ -1,0 +1,37 @@
+<h1>[USACO10NOV] Banner S</h1>
+<h2>题目背景</h2>
+<p>题目大意(by:曹彦臣)：</p>
+<p>平面上有(0,0)到(n,m)的(n+1)*(m+1)个点。问有多少点对所连的线段不过其他点，且长度在[l,h]范围内。</p>
+<p>征求翻译。如果你能提供翻译或者题意简述，请直接发讨论，感谢你的贡献。</p>
+<h2>题目描述</h2>
+<p>Bessie is returning from a long trip abroad, and Farmer John wants to erect a nice 'Welcome Home' banner in her pasture for her arrival. The banner will hang between two poles on a wire whose length is in the range L1..L2 (1 &lt;= L1 &lt;= L2; L1 &lt;= L2 &lt;= 1,500).</p>
+<p>The pasture's size is W x H (1 &lt;= W &lt;= 1,000; 1 &lt;= H &lt;= 1,000), and Farmer John has installed a post at every point with integer</p>
+<p>coordinates. Of these (W + 1) * (H + 1) points, Farmer John must pick just two that will hold either end of the wire from which he will hang the banner.</p>
+<p>FJ wants no interference with his banner as it hangs and requires that no post be directly under the tight wire he stretches between the two chosen posts.</p>
+<p>Farmer John needs your help to figure out how many possible ways he can hang the banner. He knows the number is large and that a 32-bit integer might not be sufficient to compute the answer.</p>
+<p>Consider the example pasture below, with W = 2 and H = 1: </p>
+<p>* * *
+* * *
+The banner size is in the range 2..3. This pasture contains (2+1) * (1+1) = 6 points and has (6 take 2) = (6*5)/(2*1) = 15 different potential pairs of points between which the banner-holding wire might stretch:</p>
+<p><code>cpp
+(0,0)-(0,1)   (0,0)-(2,1)   (0,1)-(2,1)   (1,1)-(2,0) 
+(0,0)-(1,0)   (0,1)-(1,0)   (1,0)-(1,1)   (1,1)-(2,1) 
+(0,0)-(1,1)   (0,1)-(1,1)   (1,0)-(2,0)   (2,0)-(2,1) 
+(0,0)-(2,0)   (0,1)-(2,0)   (1,0)-(2,1)</code>
+Of these pairs, only four have a length in the range 2..3:
+Len                       Len</p>
+<p>(0,0)-(2,0) 2.00          (0,1)-(2,0) 2.24 </p>
+<p>(0,0)-(2,1) 2.24          (0,1)-(2,1) 2.00 </p>
+<p>Of these four, the pairs (0,0)-(2,0) and (0,1)-(2,1) both have a post directly on the line between the endpoints, and thus are </p>
+<p>unsuitable.</p>
+<p>So, just two pairs of points out of 15 are acceptable candidates for hanging the banner wire.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Four space-separated integers: W, H, L1, and L2</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer denoting the number of possible banners</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>2 1 2 3 </p>
+<h4>输出样例 #1</h4>
+<p>2 </p>

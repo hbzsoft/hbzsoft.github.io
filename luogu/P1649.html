@@ -1,0 +1,30 @@
+<h1>[USACO07OCT] Obstacle Course S</h1>
+<h2>题意翻译</h2>
+<p>$N\times N\ (1\le N\le 100)$ 方格中，$\verb!x!$ 表示不能行走的格子，$\verb!.!$ 表示可以行走的格子。卡门很胖，故而不好转弯。现在要从 $A$ 点走到 $B$ 点，请问最少要转 $90$ 度弯多少次？</p>
+<h2>题目描述</h2>
+<p>Consider an N x N (1 &lt;= N &lt;= 100) square field composed of 1</p>
+<p>by 1 tiles. Some of these tiles are impassible by cows and are marked with an 'x' in this 5 by 5 field that is challenging to navigate:</p>
+<p><code>cpp
+. . B x . 
+. x x A . 
+. . . x . 
+. x . . . 
+. . x . .</code>
+Bessie finds herself in one such field at location A and wants to move to location B in order to lick the salt block there.  Slow, lumbering creatures like cows do not like to turn and, of course, may only move parallel to the edges of the square field. For a given field, determine the minimum number of ninety degree turns in any path from A to B. The path may begin and end with Bessie facing in any direction. Bessie knows she can get to the salt lick.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>第一行一个整数 $N$,下面 $N$ 行，每行 $N$ 个字符，只出现字符：$\verb!.!,\verb!x!,\verb!A!,\verb!B!$，表示上面所说的矩阵格子，每个字符后有一个空格。</p>
+<h4>输出格式</h4>
+<p>一个整数：最少转弯次数。如果不能到达，输出 $-1$。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>3
+. x A
+. . .
+B x .</p>
+<h4>输出样例 #1</h4>
+<p>2</p>
+<h2>说明</h2>
+<p>只可以上下左右四个方向行走，并且不能走出这些格子之外。开始和结束时的方向可以任意。</p>
+<h3>数据范围及约定</h3>
+<p>对于全部数据，保证 $2\le N\le 100$。</p>

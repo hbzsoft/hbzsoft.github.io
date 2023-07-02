@@ -1,0 +1,32 @@
+<h1>[USACO09HOL] Cattle Bruisers G</h1>
+<h2>题目描述</h2>
+<p>Canmuu is out for revenge after being utterly defeated by Bessie in paintball and has challenged Bessie to a video game.</p>
+<p>In this game, Bessie starts out at point (BX, BY) in the coordinate grid (-1,000 &lt;= BX &lt;= 1,000; -1000 &lt;= BY &lt;= 1,000), and tries to escape, starting at time 0. She moves continuously at a velocity of (BVX, BVY) units/second (-100 &lt;= BVX &lt;= 100; -100 &lt;= BVY &lt;= 100). Thus, at time 1 she will be at point (BX + BVX, BY + BVY); at time 1.5 she will be at (BX + 1.5*BVX, BY + 1.5*BVY).</p>
+<p>Unfortunately, Canmuu has sent N (1 &lt;= N &lt;= 50,000) cattle bruisers to pursue Bessie.  At time t=0, cattle bruiser i is at position (X_i, Y_i) (-1,000 &lt;= X_i &lt;= 1,000; -1,000 &lt;= Y_i &lt;= 1,000) with velocity (VX_i, VY_i) units/second (-1,000 &lt;= VX_i &lt;= 1,000; -1,000 &lt;= VY_i &lt;= 1,000).</p>
+<p>Each cattle bruiser carries a 'proximity' weapon to fire at Bessie; the weapon can hurt Bessie when the cattle bruiser is no further than R (1 &lt;= R &lt;= 2,500) units from her.</p>
+<p>Bessie has a shield to protect herself from these attacks. However, she does not want to waste any of her shield's power, so she would like to know the maximum number of cattle bruisers within firing range for any (potentially non-integer) time t &gt;= 0.</p>
+<p>In order to avoid precision errors with real numbers, it is guaranteed that the answer produced will be the same whether the attack range is decreased to R-0.0001 or increased to R+0.0001.</p>
+<p>FEEDBACK: Your first 50  submissions for this problem will be run on some of the official test data, and you will receive a summary of the results.</p>
+<p>自从卡门在弹珠游戏中被贝茜彻底击败，他一直在想找机会复仇.这会儿，他邀贝茜去玩一 个电脑游戏.</p>
+<p>游戏中，贝茜在（BX,BY）处开始行动，这时时刻为0.她要试图 逃离.她的速度为(BVX，BVY)每秒.</p>
+<p>不幸的是，卡门为了复仇，放出N(l&lt;=N&lt; =50000)个杀手追击贝茜.在t = 0时，杀手i的位置 是Xi, Yi他的速度是Vxi,Vyi每秒.</p>
+<p>由于每个杀手配备了手枪，手枪的射程是R，也就是说贝茜要与这个杀手的距 离保持超过R，否则有性命之虞.</p>
+<p>然而，贝茜还有一件秘密武器，盾.但是，她不想过多地消耗盾的能量.所以，她想知道在 逃脱过程中，某一个时刻她在最多为多少个杀手的射程内.当然这个时刻不一定是整数.</p>
+<p>为了防止出现精度误差，数据保证在R 土 0.0001时也能得出正确结果.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Six space-separated integers: N, R, BX, BY, BVX, and BVY</p>
+<p>* Lines 2..N+1: Line i+1 contains four space-separated integers: X_i, Y_i, VX_i, and VY_i</p>
+<h4>输出格式</h4>
+<p>* Line 1: Print a single integer denoting the maximum number of cattle bruisers within attack range at any point in time.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>3 1 0 0 0 2 
+0 -3 0 4 
+1 2 -1 1 
+1 -2 2 -1 </p>
+<h4>输出样例 #1</h4>
+<p>2 </p>
+<h2>说明</h2>
+<p>Bessie starts at point (0, 0) and is moving at 2 units per second in the (positive) y-direction. There are 3 cattle bruisers, the first of which starts at point (0, -3) and travels 4 units per second in the y-direction. The maximum distance for a cattle bruiser to be in range of Bessie is 1 unit.</p>
+<p>At time 1.5, Bessie is at point (0, 3), and the three bruisers are at points (0, 3), (-0.5, 3.5), and (4, -3.5). The first two cattle bruisers are within 1 unit of Bessie, while the third will never be within 1 unit of Bessie, so 2 is the most achievable.</p>

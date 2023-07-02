@@ -1,0 +1,24 @@
+<h1>[USACO07OPEN] City Horizon S</h1>
+<h2>题意翻译</h2>
+<p>约翰带着奶牛去都市观光。在落日的余晖里，他们看到了一幢接一幢的摩天高楼的轮廓在地平线 上形成美丽的图案。以地平线为 X 轴，每幢高楼的轮廓是一个位于地平线上的矩形，彼此间可能有 重叠的部分。奶牛一共看到了 N 幢高楼，第 i 幢楼的高度是 Hi，两条边界轮廓在地平线上的坐标是 Ai 到 Bi。请帮助奶牛们计算一下，所有摩天高楼的轮廓覆盖的总面积是多少。</p>
+<p>感谢@klzz 提供的翻译</p>
+<h2>题目描述</h2>
+<p>Farmer John has taken his cows on a trip to the city! As the sun sets, the cows gaze at the city horizon and observe the beautiful silhouettes formed by the rectangular buildings.</p>
+<p>The entire horizon is represented by a number line with N (1 ≤ N ≤ 40,000) buildings. Building i's silhouette has a base that spans locations Ai through Bi along the horizon (1 ≤ Ai &lt; Bi ≤ 1,000,000,000) and has height Hi (1 ≤ Hi ≤ 1,000,000,000). Determine the area, in square units, of the aggregate silhouette formed by all N buildings.</p>
+<p>有一个数列，初始值均为0，他进行N次操作，每次将数列[ai,bi)这个区间中所有比Hi小的数改为Hi，他想知道N次操作后数列中所有元素的和。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>第一行一个整数N，然后有N行，每行三个正整数ai、bi、Hi。</p>
+<h4>输出格式</h4>
+<p>一个数，数列中所有元素的和。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4
+2 5 1
+9 10 4
+6 8 2
+4 6 3</p>
+<h4>输出样例 #1</h4>
+<p>16</p>
+<h2>说明</h2>
+<p>N&lt;=40000 , a、b、k&lt;=10^9 。</p>

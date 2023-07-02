@@ -1,0 +1,57 @@
+<h1>[POI2013] GRA-Tower Defense Game</h1>
+<h2>题目描述</h2>
+<p>Bytie is playing the computer game Tower Defense.</p>
+<p>His aim is to construct guard towers, so that they protect all of his domain.</p>
+<p>There are multiple towns in Bytie's domain, some of which are linked by  bidirectional roads.</p>
+<p>If Bytie erects a guard tower in a city, then the tower protects its city and  all the cities directly linked with it by roads.</p>
+<p>Just as Bytie was pondering over the placement of guard towers in his domain,  his elder sister Bytea entered the room.  She glanced at the map displayed on  the screen, and after a moment exclaimed:</p>
+<p>"Oi, what is there to think about, clearly $k$ towers suffice!".</p>
+<p>Angered by his sister spoiling the fun, Bytie showed his sister the door,  and began wondering what to do next.</p>
+<p>Pride will not let him construct more than $k$ towers.</p>
+<p>He has an up his sleeve though:</p>
+<p>he can research a technology that will allow him to construct improved guard towers.</p>
+<p>An improved guard tower protects not only the town it was erected in and its  immediate neighbors but also the towns that are further away.</p>
+<p>Formally, an improved guard tower built in the town $u$ protects the town $v$ if either of the following holds:</p>
+<ul>
+<li>
+<p>$u=v$;</p>
+</li>
+<li>
+<p>there is a direct road from $u$ to $v$;</p>
+</li>
+<li>
+<p>or there is such a town $w$ that there are direct roads from $u$ to $w$ and from $w$ to $v$.</p>
+</li>
+</ul>
+<p>Of course, Bytie still strives to erect at most $k$ towers,  but he has no qualms about making these the improved guard towers.</p>
+<p>有一个n个点m条边的图，每条边距离是1，已知用k个攻击距离为1的塔可以打到整个地图，让构造一个方案使得用小于等于k个攻击距离为2的塔打到整个地图</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>In the first line of the standard input, there are three integers,  $n$, $m$, and $k$ ($2\le n\le 500\ 000$,  $0\le m\le 1\ 000\ 000$, $1\le k\le n$), separated by single spaces,  that specify, respectively, the number of towns and roads in Bytie's domain,  and the number $k$ given by Bytea.</p>
+<p>The towns in Bytie's domain are numbered from 1 to $n$.</p>
+<p>Next,$m$ lines describing the roads follow.</p>
+<p>Each of those lines holds two integers, $a_i$ and $b_i$ ($1\le a_i,b_i\le n$,$a_i\ne b_i$), indicating that the towns no. $a_i$ and $b_i$ are directly linked by a bidirectional road. Each pair of towns is linked by at most a single road.</p>
+<h4>输出格式</h4>
+<p>Your program is to print two lines, describing the placement of improved  guard towers in Bytie's domain, to the standard output.</p>
+<p>The first line is to hold an integer $r$ ($1\le r\le k$), the number of  improved guard towers that Bytie should construct.</p>
+<p>The second line is to specify the placement of these by providing $r$ pairwise disjoint integers that are the numbers of town where the improved  guard towers are to be built.</p>
+<p>The town numbers can be given in an arbitrary order.</p>
+<p>If more than one solution exists, any solution can be printed.</p>
+<p>Let us remind that any placement of no more than $k$ improved towers will do  - you need not minimize their number.</p>
+<p>You may assume that Bytea was correct, i.e., that the whole domain of Bytie  can indeed be protected by $k$ plain (not improved) guard towers. Thus a solution always exists.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>9 8 3
+1 2
+2 3
+3 4
+1 4
+3 5
+4 6
+7 8
+8 9</p>
+<h4>输出样例 #1</h4>
+<p>3
+1 5 7 </p>
+<h2>说明</h2>
+<p>有一个n个点m条边的图，每条边距离是1，已知用k个攻击距离为1的塔可以打到整个地图，让构造一个方案使得用小于等于k个攻击距离为2的塔打到整个地图</p>

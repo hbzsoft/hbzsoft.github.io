@@ -1,0 +1,73 @@
+<h1>[USACO11JAN] Bottleneck G</h1>
+<h2>题意翻译</h2>
+<p>WC正在召集奶牛,他的农场有一个包含 <strong><em>N</em></strong> 块农田的网络，编号为 <strong>1 -- N</strong> ，每个农场里有 $C_i$ 头牛。农场被 <strong>N-1</strong>  条 <strong>单向</strong> 边链接,（每个农场有通向$P_i$的路） 保证从任何点可以到达1号点。WC想让所有奶牛集中到1号农场。 </p>
+<p><strong>时间是离散的</strong> 奶牛可以在1单位时间里走过任意多条道路，但是每条路有一个容纳上限 <em>$M_i$</em>  并且奶牛不会离开1号农场(农场没有容量上限) </p>
+<h3>每一个单位时间，奶牛可以选择如下几种行动</h3>
+<ol>
+<li>留在当前的农场</li>
+<li>经过几条道路，向1号农场移动（需要满足$M_i$）</li>
+</ol>
+<p>WC想要知道有多少牛可以在某个特定的时刻到达1号农场，
+他有一张列着 <strong><em>K</em></strong> 个时间（分别为$T_i$)的单子
+，他想知道在每个$T_i$, 采用最优策略在$T_i$结束最多能有多少牛到1号农场</p>
+<h3>数据范围如下：</h3>
+<p>$1 \le N \le  10^5$</p>
+<p>$1 \le C_i \le  10^9$</p>
+<p>$0 \le M_i \le 10^9$</p>
+<p>$1 \le P_i \le N$</p>
+<p>$1 \le K \le 10^4$</p>
+<p>$1 \le T_i \le 10^9$</p>
+<h2><strong>输入输出格式</strong></h2>
+<ul>
+<li>
+<p>输入格式</p>
+<p>*第一行：两个整数 N 和 K</p>
+<p>*第2—N行，第i行描述一块农场及它的路 $P_i \;C_i\;M_i$</p>
+<p>*第N+1 - N+K行， 第N+i 一个整数 $T_i$
+* 输出格式</p>
+<p>*每行一个答案对应$T_i$</p>
+</li>
+</ul>
+<p>感谢@ToBiChi 提供翻译</p>
+<h2>题目描述</h2>
+<p>Farmer John is gathering the cows. His farm contains a network of N (1 &lt;= N &lt;= 100,000) fields conveniently numbered 1..N and connected by N-1 unidirectional paths that eventually lead to field 1. The fields and paths form a tree.</p>
+<p>Each field i &gt; 1 has a single one-way, exiting path to field P_i, and currently contains C_i cows (1 &lt;= C_i &lt;= 1,000,000,000). In each time unit, no more than M_i (0 &lt;= M_i &lt;= 1,000,000,000) cows can travel from field i to field P_i (1 &lt;= P_i &lt;= N) (i.e., only M_i cows can traverse the path).</p>
+<p>Farmer John wants all the cows to congregate in field 1 (which has no limit on the number of cows it may have). Rules are as follows:</p>
+<p>* Time is considered in discrete units.</p>
+<p>* Any given cow might traverse multiple paths in the same time unit. However, no more than M_i total cows can leave field i (i.e., traverse its exit path) in the same time unit.</p>
+<p>* Cows never move *away* from field #1.</p>
+<p>In other words, every time step, each cow has the choice either to</p>
+<p>a) stay in its current field</p>
+<p>b) move through one or more fields toward field #1, as long as the bottleneck constraints for each path are not violated</p>
+<p>Farmer John wants to know how many cows can arrive in field 1 by certain times. In particular, he has a list of K (1 &lt;= K &lt;= 10,000) times T_i (1 &lt;= T_i &lt;= 1,000,000,000), and he wants to know, for each T_i in the list, the maximum number of cows that can arrive at field 1 by T_i if scheduled to optimize this quantity.</p>
+<p>Consider an example where the tree is a straight line, and the T_i list contains only T_1=5, and cows are distibuted as shown:</p>
+<p><code>cpp
+Locn:      1---2---3---4      &amp;lt;-- Pasture ID numbers 
+C_i:       0   1   12  12     &amp;lt;-- Current number of cows 
+M_i:           5   8   3      &amp;lt;-- Limits on path traversal; field 1 has no limit since it has no exit 
+The solution is as follows; the goal is to move cows to field 1:</code>
+Tree:      1---2---3---4
+```cpp
+t=0        0   1   12  12     &lt;-- Initial state 
+t=1        5   4   7   9      &lt;-- field 1 has cows from field 2 and 3 t=2        10  7   2   6 
+t=3        15  7   0   3 
+t=4        20  5   0   0 
+t=5        25  0   0   0 
+Thus, the answer is 25: all 25 cows can arrive at field 1 by time t=5. </p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Two space-separated integers: N and K</p>
+<p>* Lines 2..N: Line i (not i+1) describes field i with three </p>
+<p>space-separated integers: P_i, C_i, and M_i</p>
+<p>* Lines N+1..N+K: Line N+i contains a single integer: T_i</p>
+<h4>输出格式</h4>
+<p>* Lines 1..K: Line i contains a single integer that is the maximum number of cows that can arrive at field 1 by time T_i.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 1 
+1 1 5 
+2 12 7 
+3 12 3 
+5 </p>
+<h4>输出样例 #1</h4>
+<p>25 </p>

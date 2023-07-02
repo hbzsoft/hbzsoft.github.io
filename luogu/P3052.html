@@ -1,0 +1,24 @@
+<h1>[USACO12MAR] Cows in a Skyscraper G</h1>
+<h2>题目描述</h2>
+<p>A little known fact about Bessie and friends is that they love stair climbing races.  A better known fact is that cows really don't like going down stairs.  So after the cows finish racing to the top of their favorite skyscraper, they had a problem.  Refusing to climb back down using the stairs, the cows are forced to use the elevator in order to get back to the ground floor.</p>
+<p>The elevator has a maximum weight capacity of W (1 &lt;= W &lt;= 100,000,000) pounds and cow i weighs C_i (1 &lt;= C_i &lt;= W) pounds.  Please help Bessie figure out how to get all the N (1 &lt;= N &lt;= 18) of the cows to the ground floor using the least number of elevator rides.  The sum of the weights of the cows on each elevator ride must be no larger than W.</p>
+<p>给出n个物品，体积为w[i]，现把其分成若干组，要求每组总体积&lt;=W，问最小分组。(n&lt;=18)</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: N and W separated by a space.</p>
+<p>* Lines 2..1+N: Line i+1 contains the integer C_i, giving the weight of one of the cows.</p>
+<h4>输出格式</h4>
+<p>* A single integer, R, indicating the minimum number of elevator rides needed.</p>
+<p>one of the R trips down the elevator.  </p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 10 
+5 
+6 
+3 
+7 </p>
+<h4>输出样例 #1</h4>
+<p>3 </p>
+<h2>说明</h2>
+<p>There are four cows weighing 5, 6, 3, and 7 pounds.  The elevator has a maximum weight capacity of 10 pounds.</p>
+<p>We can put the cow weighing 3 on the same elevator as any other cow but the other three cows are too heavy to be combined.  For the solution above, elevator ride 1 involves cow #1 and #3, elevator ride 2 involves cow #2, and elevator ride 3 involves cow #4.  Several other solutions are possible for this input.</p>

@@ -1,0 +1,43 @@
+<h1>[USACO08OCT] Bovine Bones G</h1>
+<h2>题意翻译</h2>
+<p>贝茜喜欢玩棋盘游戏和角色扮演游戏，所以她说服了约翰开车带她去小商店.在那里她买了三个骰子。这三个不同的骰子的面数分别为 $s_1,s_2,s_3$。</p>
+<p>对于一个有 $S$ 个面的骰子每个面上的数字是 $1,2,3,\ldots,S$。每个面（上的数字）出现的概率均等。贝茜希望找出在所有“三个面上的数字的和”中，哪个和的值出现的概率最大。</p>
+<p>现在给出每个骰子的面数，需要求出哪个所有“三个面上的数字的和”出现得最频繁。如果有很多个和出现的概率相同，那么只需要输出最小的那个。</p>
+<p>数据范围： $2\le s_1\leq 20$，$2 \leq s_2\leq 20$，$2 \leq s_3\leq 40$。</p>
+<h2>题目描述</h2>
+<p>Bessie loves board games and role-playing games so she persuaded Farmer John to drive her to the hobby shop where she purchased three dice for rolling. These fair dice have S1, S2, and S3 sides</p>
+<p>respectively (2 &lt;= S1 &lt;= 20; 2 &lt;= S2 &lt;= 20; 2 &lt;= S3 &lt;= 40). </p>
+<p>Bessie rolls and rolls and rolls trying to figure out which three-dice sum appears most often.</p>
+<p>Given the number of sides on each of the three dice, determine which three-dice sum appears most frequently. If more than one sum can appear most frequently, report the smallest such sum.</p>
+<p>POINTS: 70</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Three space-separated integers: S1, S2, and S3</p>
+<h4>输出格式</h4>
+<p>* Line 1: The smallest integer sum that appears most frequently when the dice are rolled in every possible combination.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>3 2 3 </p>
+<h4>输出样例 #1</h4>
+<p>5 </p>
+<h2>说明</h2>
+<p>Here are all the possible outcomes.</p>
+<p><code>1 1 1 -&amp;gt; 3  
+1 2 1 -&amp;gt; 4  
+2 1 1 -&amp;gt; 4  
+2 2 1 -&amp;gt; 5  
+3 1 1 -&amp;gt; 5  
+3 2 1 -&amp;gt; 6 
+1 1 2 -&amp;gt; 4  
+1 2 2 -&amp;gt; 5  
+2 1 2 -&amp;gt; 5  
+2 2 2 -&amp;gt; 6  
+3 1 2 -&amp;gt; 6  
+3 2 2 -&amp;gt; 7 
+1 1 3 -&amp;gt; 5  
+1 2 3 -&amp;gt; 6  
+2 1 3 -&amp;gt; 6  
+2 2 3 -&amp;gt; 7  
+3 1 3 -&amp;gt; 7  
+3 2 3 -&amp;gt; 8</code>
+Both 5 and 6 appear most frequently (five times each), so 5 is the answer.</p>

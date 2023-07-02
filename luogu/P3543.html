@@ -1,0 +1,26 @@
+<h1>[POI2012] WYR-Leveling Ground</h1>
+<h2>题目描述</h2>
+<p>Byteasar has decided to build a house.</p>
+<p>He has chosen a very narrow valley as its location.</p>
+<p>Before Byteasar starts the actual construction work, he has to level the ground first.</p>
+<p>He has two excavators at his disposal: the first one can either increase or decrease the  ground level of any connected area in the valley by exactly <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.1.png" /> meters;  the other can do the same, i.e., either increase or decrease the  ground level of any connected area in the valley, but by exactly <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.2.png" /> meters.</p>
+<p>Notice that neither before such an operation nor after it needs the ground in the affected  area be actually leveled.</p>
+<p>Given a map of the area, determine the minimum number of operations required to  level the ground in the whole valley, i.e., to make the ground level everywhere  equal 0.  While the operations are performed, the ground level at any point in  the valley can have arbitrary value; in particular, it may be negative.</p>
+<p>给定 $n$ 个数和 $a,b$。每次可以选择一段区间 $+a,-a,+b$ 或 $-b$，问最少操作几次能把它们都变成 $0$。如果无解请输出 $-1$。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>In the first line of the standard input there are three integers, <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.3.png" />, <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.4.png" />, <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.5.png" />    (<img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.6.png" />, <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.7.png" />), separated by single spaces.</p>
+<p>The number <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.8.png" /> denotes the valley's length in meters.</p>
+<p>The second line contains <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.9.png" /> integers, <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.10.png" />, separated by single spaces.</p>
+<p>These numbers, all with absolute value no larger than <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.11.png" />, represent the initial ground level in meters    of successive one meter long slices of the valley.</p>
+<p>In tests worth 30% of the points the following conditions hold in addition: <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.12.png" /> and   <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.13.png" />.</p>
+<p>In tests worth 60% of the points the following conditions hold in addition: <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.14.png" /> and   <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.15.png" />.</p>
+<p>In tests worth 90% of the points the condition <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.16.png" /> holds in addition.</p>
+<h4>输出格式</h4>
+<p>In the first and only line of the standard output your program should print a single    integer: the minimum number of operations required to level the ground in the whole valley,    or <img alt="" src="http://main.edu.pl/images/OI19/wyr-en-tex.17.png" /> if leveling the whole valley with given excavators is impossible.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 2 3
+1 2 1 1 -1</p>
+<h4>输出样例 #1</h4>
+<p>5</p>

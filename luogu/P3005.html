@@ -1,0 +1,44 @@
+<h1>[USACO10DEC] The Trough Game S</h1>
+<h2>题目描述</h2>
+<p>Farmer John and Bessie are playing games again. This one has to do with troughs of water.</p>
+<p>Farmer John has hidden N (1 &lt;= N &lt;= 20) troughs behind the barn, and has filled some of them with food. Bessie has asked M (1 &lt;= M &lt;= 100) questions of the form, 'How many troughs from this list (which she recites) are filled?'.</p>
+<p>Bessie needs your help to deduce which troughs are actually filled.</p>
+<p>Consider an example with four troughs where Bessie has asked these questions (and received the indicated answers):</p>
+<p>1) 'How many of these troughs are filled: trough 1' --&gt;  1 trough is filled</p>
+<p>2) 'How many of these troughs are filled: troughs 2 and 3' --&gt;  1 trough is filled</p>
+<p>3) 'How many of these troughs are filled: troughs 1 and 4' --&gt;  1 trough is filled</p>
+<p>4) 'How many of these troughs are filled: troughs 3 and 4' --&gt;  1 trough is filled</p>
+<p>From question 1, we know trough 1 is filled.</p>
+<p>From question 3, we then know trough 4 is empty. </p>
+<p>From question 4, we then know that trough 3 is filled. </p>
+<p>From question 2, we then know that trough 2 is empty. </p>
+<p>农夫约翰和贝西又在玩游戏。这个游戏需要很多个槽。</p>
+<p>农夫约翰在谷仓里藏起来了N（1&lt;=N&lt;=20）个槽，并且他已经把其中的一些装上了食物。贝西以“在这个表里（表由贝西提供）有多少个槽里有食物？”的形式问了M（1&lt;=M&lt;=100）个问题。</p>
+<p>现在，贝西想知道，哪几个槽里有食物？</p>
+<p>这里有一个样例：</p>
+<p>（1）在第一个槽里有多少个槽里有食物？——1个</p>
+<p>（2）在第二个和第三个槽里有多少个槽里有食物？——1个</p>
+<p>（3）在第一个和第四个槽里有多少个槽里有食物？——1个</p>
+<p>（4）在第三个和第四个槽里有多少个槽里有食物？——1个</p>
+<p>从第一个问题可以知道，第一个槽是有食物的。</p>
+<p>从第二个问题可以知道，第四个槽是没有食物的。</p>
+<p>从第三个问题可以知道，第三个槽是有食物的。</p>
+<p>从第四个问题可以知道，第二个槽是没有食物的。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Two space-separated integers: N and M</p>
+<p>* Lines 2..M+1: A subset of troughs, specified as a sequence of contiguous N 0's and 1's, followed by a single integer that is the number of troughs in the specified subset that are filled.</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single line with:</p>
+<p>* The string 'IMPOSSIBLE' if there is no possible set of filled troughs compatible with Farmer John's answers.</p>
+<p>* The string 'NOT UNIQUE' if Bessie cannot determine from the given data exactly what troughs are filled.</p>
+<p>* Otherwise, a sequence of contiguous N 0's and 1's specifying which troughs are filled.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 4 
+1000 1 
+0110 1 
+1001 1 
+0011 1 </p>
+<h4>输出样例 #1</h4>
+<p>1010 </p>

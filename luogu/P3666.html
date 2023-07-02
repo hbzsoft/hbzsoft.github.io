@@ -1,0 +1,75 @@
+<h1>[USACO17OPEN] COWBASIC P</h1>
+<h2>题目描述</h2>
+<p>Bessie has invented a new programming language, but since there is no compiler yet, she needs your help to actually run her programs.</p>
+<p>COWBASIC is a simple, elegant language. It has two key features: addition and MOO loops. Bessie has devised a clever solution to overflow: all addition is done modulo $10^9+7$. But Bessie's real achievement is the MOO loop, which runs a block of code a fixed number of times. MOO loops and addition can, of course, be nested.</p>
+<p>Given a COWBASIC program, please help Bessie determine what number it returns.</p>
+<p>Bessie研制出了一种新的编程语言，但是因为还没有设计编译器的缘故，她需要你的帮助来运行她编的程序。</p>
+<p>COWBASIC语言是一种简单的、优美的语言。它有两个关键功能：变量相加和MOO循环。对于可能的溢出问题，Bessie想出了一个很好的方法，<strong>所有的变量加法都要以10^9+7为模</strong>。但是Bessie设计的COWBASIC语言中真正成功之处是可以运行一段固定数量的代码的MOO循环。<strong>MOO循环和加法是可以嵌套的</strong>。</p>
+<p>给你一段COWBASIC程序，请你帮助Bessie确定这个程序段将会返回什么数值。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>You are given a COWBASIC program at most 100 lines long, with each line being at most 350 characters long. A COWBASIC program is a list of statements.</p>
+<p>```cpp
+&lt;variable&gt; = &lt;expression&gt;</p>
+<p>&lt;literal&gt; MOO {
+&lt;list of statements&gt;
+}</p>
+<p>RETURN &lt;variable&gt;
+```</p>
+<p>```cpp
+&lt;literal&gt;</p>
+<p>&lt;variable&gt;</p>
+<p>( &lt;expression&gt; ) + ( &lt;expression&gt; )
+```</p>
+<p>There are three types of statements:</p>
+<p>There are three types of expressions:</p>
+<p>A literal is a positive integer at most 100,000.</p>
+<p>A variable is a string of at most 10 lowercase English letters.</p>
+<p>It is guaranteed that no variable will be used or RETURNed before it is defined. It is guaranteed that RETURN will happen exactly once, on the last line of the program.</p>
+<p>你将会得到一段<strong>最长为100行的COWBASIC程序，每行的长度最长为350个字符</strong>。COWBASIC语言的结构和类型如下所述：</p>
+<p>这是COWBASIC语言的三种主要结构：</p>
+<p>&lt;变量&gt;=&lt;表达式&gt;          //赋值结构</p>
+<p>&lt;数字（循环次数）&gt;MOO{          //循环结构</p>
+<p>&lt;一系列的表达式（也就是循环部分）&gt;</p>
+<p>}
+RETURN &lt;变量&gt;           //输出结构 把return的变量输出就行了</p>
+<p>这是COWBASIC语言的三种类型（我是这么理解的）</p>
+<p>&lt;数字&gt; 这些数字是<strong>小于100,000正整数</strong></p>
+<p>&lt;变量&gt; 这些变量名字是<strong>一串10个以内的小写英文字母</strong></p>
+<p>(&lt;表达式&gt;)+(&lt;表达式&gt;) //<strong>注意：这是COWBASIC中变量加法的表达方法，详见样例</strong></p>
+<p>我们保证返回的变量是已定义的，<strong>RETURN（输出结构）将只会出现一次且在程序的最后一行</strong>。</p>
+<h4>输出格式</h4>
+<p>Output a single positive integer, giving the value of the RETURNed variable.</p>
+<p>输出返回的变量值（有符号的整形数字）</p>
+<p>说明：</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>x = 1
+10 MOO {
+x = ( x ) + ( x )
+}
+RETURN x</p>
+<h4>输出样例 #1</h4>
+<p>1024</p>
+<h4>输入样例 #2</h4>
+<p>n = 1
+nsq = 1
+100000 MOO {
+100000 MOO {
+nsq = ( nsq ) + ( ( n ) + ( ( n ) + ( 1 ) ) )
+n = ( n ) + ( 1 )
+}
+}
+RETURN nsq</p>
+<h4>输出样例 #2</h4>
+<p>4761</p>
+<h2>说明</h2>
+<p>Scoring</p>
+<p>In 20 percent of all test cases - MOO loops are not nested.</p>
+<p>In another 20 percent of all test cases - The program only has 1 variable. MOO loops can be nested.</p>
+<p>In the remaining test cases, there are no further restrictions.</p>
+<p>评分标准</p>
+<p>20%数据：MOO循环不嵌套</p>
+<p>另外20%数据：程序只有一个变量，MOO循环可嵌套</p>
+<p>其他数据没有多余限制（即最长100行，每行最长350字符）</p>
+<p>感谢@psk2016  提供的翻译</p>

@@ -1,0 +1,88 @@
+<h1>[USACO09OPEN] Cow Line S</h1>
+<h2>题意翻译</h2>
+<p>Farmer John（以下简称 FJ）的 $N$ 头奶牛（用 $1 \dots N$ 编号）在直线上排队。一开始，这条线上没有任何奶牛，随着时间的推移，奶牛们会一个接一个地站到队伍的左边或右边。又过了一会儿，某些奶牛会从队伍里离开，去吃自己最喜欢的草料。</p>
+<p>FJ 无法跟踪每一头奶牛，于是，他想让你来帮助他。</p>
+<p>奶牛以 $1 \dots N$ 的顺序排队，并且离开的奶牛不会再次回来。数据将会给出 $S$（$1 \le S \le 100000$） 条指令，各占一行，分两种：</p>
+<ul>
+<li>$A$ 头奶牛加入了队列（还有一个参数，表示从左加入还是从右加入）；</li>
+<li>$K$ 头奶牛从左边或者右边离开了队列（还有两个参数，分别表示从左离开还是从右离开和离开多少头奶牛）。</li>
+</ul>
+<p>输入的命令一定是可以执行的。</p>
+<p>所有的操作结束后，你的程序应该以从左到右的顺序输出这个奶牛队列。数据保证最后的队列不空。</p>
+<p><strong>【输入格式】</strong></p>
+<ul>
+<li>第 $1$ 行：单独一个整数 $S$。</li>
+<li>第 $2 \dots S+1$ 行：第 $i+1$ 行会有一条命令，有以下几种：</li>
+<li><code>A L</code>：一头奶牛从队列左边加入；</li>
+<li><code>A R</code>：一头奶牛从队列右边加入；</li>
+<li><code>D L K</code>：$K$ 头奶牛从队伍左边离开；</li>
+<li><code>D R K</code>：$K$ 头奶牛从队伍右边离开。</li>
+</ul>
+<p><strong>【输出格式】</strong></p>
+<ul>
+<li>第 $1 \dots ??$ 行：从左到右输出最后的奶牛队列，一个奶牛编号占一行。</li>
+</ul>
+<p><strong>【样例解释】</strong></p>
+<p>以下为输入的命令及对应的队列：</p>
+<ul>
+<li><code>A L</code>：$1$；</li>
+<li><code>A L</code>：$2,1$；</li>
+<li><code>A R</code>：$2,1,3$；</li>
+<li><code>A L</code>：$4,2,1,3$；</li>
+<li><code>D R 2</code>：$4,2$；</li>
+<li><code>A R</code>：$4,2,5$；</li>
+<li><code>A R</code>：$4,2,5,6$；</li>
+<li><code>D L 1</code>：$2,5,6$；</li>
+<li><code>A L</code>：$7,2,5,6$；</li>
+<li><code>A R</code>（最终序列）：$7,2,5,6,8$。</li>
+</ul>
+<h2>题目描述</h2>
+<p>Farmer John's N cows (conveniently numbered 1..N) are forming a line. The line begins with no cows and then, as time progresses, one by one, the cows join the line on the left or right side. Every once in a while, some number of cows on the left or right side of the line all leave the line to go graze in their favorite pasture.</p>
+<p>FJ has trouble keeping track of all the cows in the line. Please help him.</p>
+<p>The cows enter the line in numerical order 1..N, and once a cow leaves the line she never re-enters it. Your program will be given S (1 &lt;= S &lt;= 100,000) input specifications; each appears on a single line and is one of two types:</p>
+<p>* A cow enters the line (a parameter indicates whether on the left or right).</p>
+<p>* K cows leave the line from the left or right side (supplied parameters define both the number of cows and which side).</p>
+<p>Input lines never request an operation that can not be performed.</p>
+<p>After all the input lines have been processed, your program should print the cows in the line in order from left to right. The final line is guaranteed to be non-empty at the end of the input specifications.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: A single integer: S</p>
+<p>* Lines 2..S+1: Line i+1 contains specification i in one of four formats:</p>
+<p>* A L -- a cow arrives on the Left of the line</p>
+<p>* A R -- a cow arrives on the Right of the line</p>
+<p>* D L K -- K cows depart the Left side of the line</p>
+<p>* D R K -- K cows depart the Right side of the line</p>
+<h4>输出格式</h4>
+<p>* Lines 1..??: Print the numbers of the cows in the line in order from left to right, one number per line.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>10 
+A L 
+A L 
+A R 
+A L 
+D R 2 
+A R 
+A R 
+D L 1 
+A L 
+A R </p>
+<h4>输出样例 #1</h4>
+<p>7 
+2 
+5 
+6 
+8 </p>
+<h2>说明</h2>
+<p>Input    Resulting Cow Line</p>
+<p>A L      1</p>
+<p>A L      2 1</p>
+<p>A R      2 1 3</p>
+<p>A L      4 2 1 3</p>
+<p>D R 2    4 2</p>
+<p>A R      4 2 5</p>
+<p>A R      4 2 5 6</p>
+<p>D L 1    2 5 6</p>
+<p>A L      7 2 5 6</p>
+<p>A R      7 2 5 6 8</p>
+<p>感谢@ ws_fuweidong  提供翻译。</p>

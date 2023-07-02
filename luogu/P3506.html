@@ -1,0 +1,34 @@
+<h1>[POI2010] MOT-Monotonicity 2</h1>
+<h2>题目描述</h2>
+<p>This task is a harder version of task Monotonicity from the third stage of 17th Polish OI. It wasn't used in the contest itself.</p>
+<p>For an integer sequence <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.1.png" /> we define its monotonicity scheme as the sequence    <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.2.png" /> of symbols <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.3.png" />, <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.4.png" /> or <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.5.png" />.</p>
+<p>The symbol <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.6.png" /> represents the relation between <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.7.png" /> and <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.8.png" />.</p>
+<p>For example, the monotonicity scheme of the sequence <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.9.png" /> is <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.10.png" />.</p>
+<p>We say that an integer sequence <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.11.png" /> with monotonicity scheme    <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.12.png" />, realizes another monotonicity scheme <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.13.png" />    if for every <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.14.png" /> it holds that <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.15.png" />.</p>
+<p>In other words, the sequence <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.16.png" /> can be obtained by repeating the sequence    <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.17.png" /> and removing appropriate suffix from that repetition.</p>
+<p>For example, the sequence <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.18.png" /> realizes each and every one of the following schemes:</p>
+<p><img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.19.png" />           <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.20.png" />           <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.21.png" />           <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.22.png" />                  as well as many others.</p>
+<p>An integer sequence <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.23.png" /> and a monotonicity scheme <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.24.png" /> are given.</p>
+<p>Your task is to find the longest subsequence <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.25.png" /> (<img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.26.png" />)    of the former that realizes the latter.</p>
+<p>给出N个正整数a[1..N]，再给出K个关系符号（&gt;、&lt;或=）s[1..k]。</p>
+<p>选出一个长度为L的子序列（不要求连续），要求这个子序列的第i项和第i+1项的的大小关系为s[(i-1)mod K+1]。</p>
+<p>求出L的最大值。</p>
+<p>感谢@cn：苏卿念 提供spj</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input holds two integers <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.27.png" /> and <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.28.png" /> (<img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.29.png" />, <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.30.png" />),    separated by a single space, denoting the lengths of the sequences <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.31.png" /> and monotonicity scheme <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.32.png" /> respectively.</p>
+<p>The second input line gives the sequence <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.33.png" />, i.e, it holds <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.34.png" /> integers <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.35.png" /> separated by single spaces (<img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.36.png" />).</p>
+<p>Finally, the third lines gives the monotonicity scheme <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.37.png" />, i.e., it holds <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.38.png" /> s…</p>
+<h4>输出格式</h4>
+<p>In the first line of the standard output your program should print out a single integer <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.40.png" />,    the maximum length of a subsequence of <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.41.png" /> that realizes the scheme <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.42.png" />.</p>
+<p>In the second line it should print out any such subsequence <img alt="" src="http://main.edu.pl/images/OI17/mot-en-tex.43.png" />, separating its elements by single spaces.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>7 3
+2 4 3 1 3 5 3
+&lt; &gt; =</p>
+<h4>输出样例 #1</h4>
+<p>6
+2 4 3 3 5 3</p>
+<h2>说明</h2>
+<p>$1 \le n \le 500000$，$1 \le k \le 500000$，$1 \le a_i \le 10^6$，$s_j \in {&lt;, &gt;, =}$</p>

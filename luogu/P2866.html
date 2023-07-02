@@ -1,0 +1,43 @@
+<h1>[USACO06NOV] Bad Hair Day S</h1>
+<h2>题意翻译</h2>
+<p>农夫约翰有$N (N \leq 80000)$头奶牛正在过乱头发节。每一头牛都站在同一排面朝东方，而且每一头牛的身高为$h_i$。第$N$头牛在最前面，而第$1$头牛在最后面。
+对于第$i$头牛前面的第$j$头牛，如果$h_i&gt;h_{i+1}$并且$h_i&gt;h_{i+2}$ $\cdots$ $h_i&gt;h_j$，那么认为第$i$头牛可以看到第$i+1$到第$j$头牛</p>
+<p>定义$C_i$为第$i$头牛所能看到的别的牛的头发的数量。请帮助农夫约翰求出$\sum_{i=1}^n C_i$</p>
+<h2>题目描述</h2>
+<p>Some of Farmer John's N cows (1 ≤ N ≤ 80,000) are having a bad hair day! Since each cow is self-conscious about her messy hairstyle, FJ wants to count the number of other cows that can see the top of other cows' heads.</p>
+<p>Each cow i has a specified height hi (1 ≤ hi ≤ 1,000,000,000) and is standing in a line of cows all facing east (to the right in our diagrams). Therefore, cow i can see the tops of the heads of cows in front of her (namely cows i+1, i+2, and so on), for as long as these cows are strictly shorter than cow i.</p>
+<p>Consider this example:</p>
+<p>```
+        -
+-       -
+-   -   -
+-   -   -</p>
+<hr />
+<hr />
+<p>1 2 3 4 5 6</p>
+<p>Cows facing right --&gt;</p>
+<p>```</p>
+<p>Cow#1 can see the hairstyle of cows #2, 3, 4</p>
+<p>Cow#2 can see no cow's hairstyle</p>
+<p>Cow#3 can see the hairstyle of cow #4</p>
+<p>Cow#4 can see no cow's hairstyle</p>
+<p>Cow#5 can see the hairstyle of cow 6</p>
+<p>Cow#6 can see no cows at all!</p>
+<p>Let ci denote the number of cows whose hairstyle is visible from cow i; please compute the sum of c1 through cN.For this example, the desired is answer 3 + 0 + 1 + 0 + 1 + 0 = 5.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>Line 1: The number of cows, N.</p>
+<p>Lines 2..N+1: Line i+1 contains a single integer that is the height of cow i.</p>
+<h4>输出格式</h4>
+<p>Line 1: A single integer that is the sum of c1 through cN.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>6
+10
+3
+7
+4
+12
+2</p>
+<h4>输出样例 #1</h4>
+<p>5</p>

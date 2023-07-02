@@ -1,0 +1,45 @@
+<h1>[POI2014] PTA-Little Bird</h1>
+<h2>题意翻译</h2>
+<p>有 $n$ 棵树排成一排，第 $i$ 棵树的高度是 $d_i$。</p>
+<p>有 $q$ 只鸟要从第 $1$ 棵树到第 $n$ 棵树。</p>
+<p>当第 $i$ 只鸟在第 $j$ 棵树时，它可以飞到第 $j+1, j+2, \cdots, j+k_i$ 棵树。</p>
+<p>如果一只鸟飞到一颗高度大于等于当前树的树，那么它的劳累值会增加 $1$，否则不会。</p>
+<p>由于这些鸟已经体力不支，所以它们想要最小化劳累值。</p>
+<h3>输入格式</h3>
+<p>第一行输入 $n$。</p>
+<p>第二行 $n$ 个数，第 $i$ 个数表示 $d_i$。</p>
+<p>第三行输入 $q$。</p>
+<p>接下来 $q$ 行，每一行一个整数，第 $i$ 行的整数为 $k_i$。</p>
+<h3>输出格式</h3>
+<p>共 $q$ 行，每一行输出第 $i$ 只鸟的最小劳累值。</p>
+<h3>数据范围</h3>
+<p>$1 \le n \le 10^6$，$1 \le d_i \le 10^9$，$1 \le q \le 25$，$1 \le k_i \le n - 1$。</p>
+<h2>题目描述</h2>
+<p>In the Byteotian Line Forest there are $n$ trees in a row.</p>
+<p>On top of the first one, there is a little bird who would like to fly over to the top of the last tree.</p>
+<p>Being in fact very little, the bird might lack the strength to fly there without any stop.</p>
+<p>If the bird is sitting on top of the tree no. i, then in a single flight leg it can fly toany of the trees no. $i+1,i+2,\cdots,i+k$, and then has to rest afterward.</p>
+<p>Moreover, flying up is far harder to flying down.  A flight leg is tiresome if it ends in a tree at leastas high as the one where is started.  Otherwise the flight leg is not tiresome.</p>
+<p>The goal is to select the trees on which the little bird will land so that the overall flight is leasttiresome, i.e., it has the minimum number of tiresome legs.</p>
+<p>We note that birds are social creatures, and our bird has a few bird-friends who would also like to getfrom the first tree to the last one.  The stamina of all the birds varies,so the bird's friends may have different values of the parameter $k$.</p>
+<p>Help all the birds, little and big!</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>There is a single integer $n$ ($2\le n\le 1\ 000\ 000$) in the first line of the standard input:</p>
+<p>the number of trees in the Byteotian Line Forest.</p>
+<p>The second line of input holds $n$ integers $d_1,d_2,\cdots,d_n$ ($1\le d_i\le 10^9$)separated by single spaces: $d_i$ is the height of the i-th tree.</p>
+<p>The third line of the input holds a single integer $q$ ($1\le q\le 25$): the number of birds whoseflights need to be planned.</p>
+<p>The following $q$ lines describe these birds: in the $i$-th of these lines, there is an integer $k_i$ ($1\le k_i\le n-1$) specifying the $i$-th bird's stamina. In other words, the maximum number of trees that the $i$-th bird can pass before it has to rest is $k_i-1$.</p>
+<h4>输出格式</h4>
+<p>Your program should print exactly $q$ lines to the standard output.</p>
+<p>In the $i$-th line, it should specify the minimum number of tiresome flight legs of the $i$-th bird.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>9
+4 6 3 6 3 7 2 6 5
+2
+2
+5</p>
+<h4>输出样例 #1</h4>
+<p>2
+1</p>

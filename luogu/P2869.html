@@ -1,0 +1,41 @@
+<h1>[USACO07DEC] Gourmet Grazers G</h1>
+<h2>题意翻译</h2>
+<h3>题目描述</h3>
+<p>约翰的奶牛对食物越来越挑剔了。现在，商店有 $m$ 份牧草可供出售，奶牛食量很大，每份牧草仅能供一头奶牛食用。第 $i$ 份牧草的价格为 $p_i$，口感为 $q_i$。</p>
+<p>约翰一共有 $n$ 头奶牛，他要为每头奶牛订购一份牧草，第 $i$ 头奶牛要求 它的牧草价格不低于 $a_i$，口感不低于 $b_i$。请问，约翰应该如何为每头奶牛选择牧草，才能让他花的钱最少？</p>
+<h3>输入格式</h3>
+<p>第一行，两个整数 $n$ 和 $m$。  </p>
+<p>第 $2\sim n+1$ 行，第 $i+1$ 行两个整数 $a_i$ 和 $b_i$。  </p>
+<p>第 $n+2\sim n+m+1$ 行，第 $i+n+1$ 行两个整数 $c_i$ 和 $d_i$。</p>
+<p>含义见题面所述。</p>
+<h3>输出格式</h3>
+<p>输出仅一行，代表能够满足所有奶牛要求所要花的钱的最小值。如果不能够满足所有奶牛的要求，输出 <code>-1</code>。</p>
+<h3>数据范围</h3>
+<p>对于 $100\%$ 的数据，满足 $1\leqslant n\leqslant 10^5$，$1\leqslant a_i,b_i,c_i,d_i\leqslant 10^9$。</p>
+<h2>题目描述</h2>
+<p>Like so many others, the cows have developed very haughty tastes and will no longer graze on just any grass. Instead, Farmer John must purchase gourmet organic grass at the Green Grass Grocers store for each of his N (1 ≤ N ≤ 100,000) cows.</p>
+<p>Each cow i demands grass of price at least Ai (1 ≤ Ai ≤ 1,000,000,000) and with a greenness score at least Bi (1 ≤ Bi ≤ 1,000,000,000). The GGG store has M (1 ≤ M ≤ 100,000) different types of grass available, each with a price Ci (1 ≤ Ci ≤ 1,000,000,000) and a greenness score of Di (1 ≤ Di ≤ 1,000,000,000). Of course, no cow would sacrifice her individuality, so no two cows can have the same kind of grass.</p>
+<p>Help Farmer John satisfy the cows' expensive gourmet tastes while spending as little money as is necessary.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Two space-separated integers: N and M.</p>
+<p>* Lines 2..N+1: Line i+1 contains two space-separated integers: Ai and Bi</p>
+<p>* Lines N+2..N+M+1: Line i+N+1 contains two space-separated integers: Ci and Di</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer which is the minimum cost to satisfy all the cows. If that is not possible, output -1.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 7
+1 1
+2 3
+1 4
+4 2
+3 2
+2 1
+4 3
+5 2
+5 4
+2 6
+4 4</p>
+<h4>输出样例 #1</h4>
+<p>12</p>

@@ -1,0 +1,39 @@
+<h1>[USACO12NOV] Balanced Cow Breeds G/S</h1>
+<h2>题目描述</h2>
+<p>Farmer John usually brands his cows with a circular mark, but his branding iron is broken, so he instead must settle for branding each cow with a mark in the shape of a parenthesis -- (.  He has two breeds of cows on his farm: Holsteins and Guernseys.  He brands each of his cows with a</p>
+<p>parenthesis-shaped mark.  Depending on which direction the cow is facing, this might look like either a left parenthesis or a right parenthesis.</p>
+<p>FJ's N cows are all standing in a row, each facing an arbitrary direction, so the marks on the cows look like a string of parentheses of length N. Looking at this lineup, FJ sees a remarkable pattern: if he scans from left to right through just the Holsteins (in the order they appear in the sequence), this gives a balanced string of parentheses; moreover, the same is true for the Guernseys!  To see if this is truly a rare event, please help FJ compute the number of possible ways he could assign breeds to his N cows so that this property holds.</p>
+<p>There are several ways to define what it means for a string of parentheses to be "balanced".  Perhaps the simplest definition is that there must be the same total number of ('s and )'s, and for any prefix of the string, there must be at least as many ('s as )'s.  For example, the following strings are all balanced:</p>
+<p>() 
+(()) 
+()(()()) </p>
+<p>while these are not:</p>
+<p>)( 
+())( 
+((()))) </p>
+<p>给一个只有左右括号的字符串，然后用 <code>H</code>、<code>G</code> 两种字符来标记这个序列，所有标记 <code>H</code> 的括号可以组成一个正确的括号序列，所有 <code>G</code> 标记的括号也组成一个正确的括号序列，然后输出这种标记方案的总数 $\operatorname{mod} 2012$ 的值。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: A string of parentheses of length N (1 &lt;= N &lt;= 1000).</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer, specifying the number of ways FJ can assign breeds to cows so that the Holsteins form a balanced subsequence of parentheses, and likewise for the Guernseys. Since the answer might be a very large number, please print the remainder of this number when divided by 2012 (i.e., print the number mod 2012).  Breed assignments involving only one breed type are valid.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>(()) </p>
+<h4>输出样例 #1</h4>
+<p>6 </p>
+<h2>说明</h2>
+<p>The following breed assignments work:</p>
+<p>(()) 
+HHHH
+(()) 
+GGGG
+(()) 
+HGGH
+(()) 
+GHHG
+(()) 
+HGHG
+(()) 
+GHGH</p>
+<p>感谢@CREEPER_ 提供翻译</p>

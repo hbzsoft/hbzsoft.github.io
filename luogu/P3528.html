@@ -1,0 +1,32 @@
+<h1>[POI2011] PAT-Sticks</h1>
+<h2>题目描述</h2>
+<p>Little Johnny was given a birthday present by his grandparents.</p>
+<p>This present is a box of sticks of various lengths and colours.</p>
+<p>Johnny wonders if there are three sticks in the set he has been given    that would form a triangle with different-coloured sides.</p>
+<p>Let us note that Johnny is interested in non-degenerate triangles only, i.e.,    those with positive area.</p>
+<p>给你每根木棍的长度和颜色，求一个能拼成三角形且木棍颜色互不相同的方案</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>In the first line of the standard input an integer $k$ ($3\le k\le 50$) is given, which is the number of different colours of sticks.</p>
+<p>The colours themselves are numbered from $1$ to $k$.</p>
+<p>The following $k$ lines contain descriptions of the sticks of particular      colours.</p>
+<p>The line no. $i+1$ holds integers that describe the sticks of colour $i$,separated by single spaces.</p>
+<p>The first of these numbers, $n_i$ ($1\le n_i\le 1\ 000\ 000$), denotes the number of sticks of colour $i$.</p>
+<p>It is followed, in the same line, by $n_i$ integers denoting the lengths of the sticks of colour $i$.All lengths are positive and do not exceed $1\ 000\ 000\ 000$.Furthermore, the total number of all sticks does not exceed $1\ 000\ 000$.</p>
+<h4>输出格式</h4>
+<p>Your program should print (on the first and only line of the standard output) either:</p>
+<p>six integers, separated by single spaces, that describe the construction          of a triangle with different-coloured sides as follows:</p>
+<p>the colour and the length of the first stick, the colour and the length          of the second stick, and the colour and the length of the third stick,                      or the word NIE (Polish for no) if no such triple of          sticks exists.</p>
+<p>If there are multiple triples of different-coloured sticks that give rise      to a triangle, your program may pick one such triple arbitrarily.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4
+1 42
+2 6 9
+3 8 4 8
+1 12</p>
+<h4>输出样例 #1</h4>
+<p>3 8 4 12 2 9</p>
+<h2>说明</h2>
+<p>给你每根木棍的长度和颜色，求一个能拼成三角形且木棍颜色互不相同的方案</p>
+<p>由@zhouyonglong提供SPJ</p>

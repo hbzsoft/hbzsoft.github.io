@@ -1,0 +1,55 @@
+<h1>[USACO08JAN] Artificial Lake G</h1>
+<h2>题目背景</h2>
+<p>USACO 2008 January Gold</p>
+<h2>题目描述</h2>
+<p>The oppressively hot summer days have raised the cows' clamoring to its highest level. Farmer John has finally decided to build an artificial lake. For his engineering studies, he is modeling the lake as a two-dimensional landscape consisting of a contiguous sequence of N soon-to-be-submerged levels (1 ≤ N ≤ 100,000) conveniently numbered 1..N from left to right.</p>
+<p>Each level i is described by two integers, its width Wi (1 ≤ Wi ≤ 1,000) and height (like a relative elevation) Hi (1 ≤ Hi ≤ 1,000,000). The heights of FJ's levels are unique. An infinitely tall barrier encloses the lake's model on the left and right. One example lake profile is shown below.</p>
+<p><code>cpp
+         *             *  :
+         *             *  :
+         *             *  8
+         *    ***      *  7
+         *    ***      *  6
+         *    ***      *  5
+         *    **********  4 &amp;lt;- height
+         *    **********  3
+         ***************  2
+         ***************  1
+Level    |  1 |2|  3   |</code>
+In FJ's model, he starts filling his lake at sunrise by flowing water into the bottom of the lowest elevation at a rate of 1 square unit of water per minute. The water falls directly downward until it hits something, and then it flows and spreads as room-temperature water always does. As in all good models, assume that falling and flowing happen instantly. Determine the time at which each elevation's becomes submerged by a single unit of water.</p>
+<p>```cpp
+WATER              WATER OVERFLOWS                   <br />
+       |                       |                         <br />
+     * |          *      *     |      *      *            *
+     * V          *      *     V      *      *            *
+     *            *      *    ....    *      <em>~~~~~~~~~~~~</em>
+     *    **      *      <em>~~~~</em><em> :    *      </em>~~~~<strong>~~~~~~<em>
+     *    **      *      <em>~~~~</em><em> :    *      </em>~~~~<strong>~~~~~~<em>
+     *    **      *      </em>~~~~</strong>~~~~~~<em>      </em>~~~~*<em>~~~~~~</em>
+     *    </em></strong><strong><em>*</em><em>      </em>~~~~</strong><strong><em>*</em></strong>      <em>~~~~</em><strong><em>*</em></strong><em>
+     </em>~~~~<strong><em>*</em></strong><strong>      <em>~~~~</em></strong><strong><em>*</em><em>      </em>~~~~</strong><strong><em>*</em></strong>
+     <strong><em>*</em></strong><strong><em>*</em></strong>      <strong><em>*</em></strong><strong><em>*</em></strong>      <strong><em>*</em></strong><strong><em>*</em></strong>
+     <strong><em>*</em></strong><strong><em>*</em></strong>      <strong><em>*</em></strong><strong><em>*</em></strong>      <strong><em>*</em></strong><strong><em>*</em></strong>
+     After 4 mins        After 26 mins       After 50 mins</p>
+<pre><code> Lvl 1 submerged     Lvl 3 submerged     Lvl 2 submerged
+</code></pre>
+<p>```
+Warning: The answer will not always fit in 32 bits.</p>
+<p>夏日那让人喘不过气的酷热将奶牛们的烦躁情绪推到了最高点。最终，FJ决定建一个人工湖供奶牛消暑之用。为了使湖看起来更加真实，FJ决定将湖的横截面建成N(1 &lt;= N &lt;= 100,000)个连续的平台高低错落的组合状，所有的平台从左到右按1..N依次编号。当然咯，在湖中注入水后，这些平台都将被淹没。    平台i在设计图上用它的宽度W_i(1 &lt;= W_i &lt;= 1,000)和高度（你可以理解为该平台顶离FJ挖的地基的高度）H_i(1 &lt;= H_i &lt;= 1,000,000)来描述的。所有平台的高度都是独一无二的。湖的边缘可以视为无限高的平台。下面给出了一张FJ的设计图：</p>
+<p>按FJ的设想，在坑挖好后，他会以1单位/分钟的速度往最低的那个平台上注水。水在离开水管后立即下落，直到撞到平台顶或是更早些时候注入的水。然后，与所有常温下的水一样，它会迅速地流动、扩散。简单起见，你可以认为这些都是在瞬间完成的。FJ想知道，对于每一个平台，它的顶部是从哪个时刻开始，与水面的距离至少为1单位长度。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: A single integer: N</p>
+<p>* Lines 2..N+1: Line i+1 describes level i with two space-separated integers: Wi and Hi</p>
+<h4>输出格式</h4>
+<p>Lines 1..N: Line i contains a single integer that is the number of minutes that since sunrise when level #i is covered by water of height 1.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>3
+4 2
+2 7
+6 4</p>
+<h4>输出样例 #1</h4>
+<p>4
+50
+26</p>

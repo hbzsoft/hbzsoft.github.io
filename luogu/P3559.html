@@ -1,0 +1,39 @@
+<h1>[POI2013] LAB-Maze</h1>
+<h2>题目描述</h2>
+<p>Note:
+During the contest, you can ask for the score of three arbitrarily chosen submissions for this problem.</p>
+<p>Byteasar read an interesting story recently.</p>
+<p>Its protagonist was some Greek crown princewho defeated a monster with a wool yarn,or something like that.</p>
+<p>But something else fascinated Byteasar about the story.</p>
+<p>What he liked most was the fact that the climax took place in a maze.</p>
+<p>From then on Byteasar is crazy about mazes.</p>
+<p>Byteasar sketches mazes on a squared sheet of paper.</p>
+<p>Each sketch is a polygon with sides (representing the walls of the maze)parallel to either of the sheet's edges (i.e., the axes of the Carthesiancoordinate system), and every two successive sides are perpendicular.</p>
+<p>Byteasar observed that if the entrance is placed on one of the sides of sucha maze, then one can traverse the whole maze and return to the entrance byalways keeping the right hand to the wall as one goes.</p>
+<p>Moreover, throughout the maze traversal we can note the turns we take.</p>
+<p>We shall write the letter L if we turn left when we move alongone wall to another, and P if we turn right in such case.</p>
+<p>Byteasar wonders for which words composed of the letters L and Pthere exists a maze whose traversal results in writing this very word.</p>
+<p>用L和P描述一个边与坐标轴平行的简单多边形，其中L表示往左拐，P表示往右拐。给定L，P的描述，请输出这个多边形。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input gives a single <img alt="" src="http://main.edu.pl/images/OI20/lab-en-tex.1.png" />-letter word(<img alt="" src="http://main.edu.pl/images/OI20/lab-en-tex.2.png" />)composed of the letters L and P, describingthe sequence of successive turns made during the maze's traversal.</p>
+<p>In tests worth 50% of the total points an additional constraint <img alt="" src="http://main.edu.pl/images/OI20/lab-en-tex.3.png" /> holds.</p>
+<h4>输出格式</h4>
+<p>If no maze corresponds to the description given as input,then the word NIE (Polish for no) is to be printedon the standard output.</p>
+<p>Otherwise, exactly <img alt="" src="http://main.edu.pl/images/OI20/lab-en-tex.4.png" /> lines should be printed, specifying any maze(consistent with the input) as follows.</p>
+<p>The <img alt="" src="http://main.edu.pl/images/OI20/lab-en-tex.5.png" />-th of these lines is to hold two integers, <img alt="" src="http://main.edu.pl/images/OI20/lab-en-tex.6.png" /> and <img alt="" src="http://main.edu.pl/images/OI20/lab-en-tex.7.png" />(<img alt="" src="http://main.edu.pl/images/OI20/lab-en-tex.8.png" />), separated by a single space,that are the coordinates of the <img alt="" src="http://main.edu.pl/images/OI20/lab-en-tex.9.png" />-th vertex of the maze's sketch.</p>
+<p>The vertices are to be printed in their counterclockwise order on the polygon's perimeter;an arbitrary vertex can be chosen as the first one, and the position of the entrance need not be indicated.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>LLLLPPLL</p>
+<h4>输出样例 #1</h4>
+<p>0 0
+2 0
+2 2
+-1 2
+-1 -2
+1 -2
+1 -1
+0 -1</p>
+<h2>说明</h2>
+<p>用L和P描述一个边与坐标轴平行的简单多边形，其中L表示往左拐，P表示往右拐。给定L，P的描述，请输出这个多边形。</p>

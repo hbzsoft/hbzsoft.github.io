@@ -1,0 +1,29 @@
+<h1>[POI2010] ANT-Antisymmetry</h1>
+<h2>题目描述</h2>
+<p>Byteasar studies certain strings of zeroes and ones.</p>
+<p>Let <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.1.png" /> be such a string. By <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.2.png" /> we will denote the reversed (i.e., "read backwards") string <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.3.png" />,    and by <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.4.png" /> we will denote the string obtained from <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.5.png" /> by changing all the zeroes to ones and ones to zeroes.</p>
+<p>Byteasar is interested in antisymmetry, while all things symmetric bore him.</p>
+<p>Antisymmetry however is not a mere lack of symmetry.</p>
+<p>We will say that a (nonempty) string <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.6.png" /> is antisymmetric if, for every position <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.7.png" /> in <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.8.png" />,    the <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.9.png" />-th last character is different than the <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.10.png" />-th (first) character.</p>
+<p>In particular, a string <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.11.png" /> consisting of zeroes and ones is antisymmetric if and only if    <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.12.png" />.</p>
+<p>For example, the strings 00001111 and 010101 are antisymmetric, while 1001 is not.</p>
+<p>In a given string consisting of zeroes and ones we would like to determine the number of contiguous    nonempty antisymmetric fragments.</p>
+<p>Different fragments corresponding to the same substrings should be counted multiple times.</p>
+<p>对于一个01字符串，如果将这个字符串0和1取反后，再将整个串反过来和原串一样，就称作“反对称”字符串。比如00001111和010101就是反对称的，1001就不是。</p>
+<p>现在给出一个长度为N的01字符串，求它有多少个子串是反对称的。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input contains an integer <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.13.png" /> (<img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.14.png" />) that denotes the length of the string.</p>
+<p>The second line gives a string of 0 and/or 1 of length <img alt="" src="http://main.edu.pl/images/OI17/ant-en-tex.15.png" />.</p>
+<p>There are no spaces in the string.</p>
+<h4>输出格式</h4>
+<p>The first and only line of the standard output should contain a single integer,      namely the number of contiguous (non empty) fragments of the given string      that are antisymmetric.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>8
+11001011</p>
+<h4>输出样例 #1</h4>
+<p>7</p>
+<h2>说明</h2>
+<p>7个反对称子串分别是：01（出现两次），10（出现两次），0101，1100和001011</p>
+<p>$n \le 5 \times 10^5$</p>

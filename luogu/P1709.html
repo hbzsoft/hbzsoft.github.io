@@ -1,0 +1,33 @@
+<h1>[USACO5.5] 隐藏口令 Hidden Password</h1>
+<h2>题目描述</h2>
+<p>有时候程序员有很奇怪的方法来隐藏他们的口令。Binny 会选择一个字符串 $S$（由 $N$ 个小写字母组成，$5 \le N \le 5 \times {10}^6$），然后他把 $S$ 顺时针绕成一个圈，每次取一个做开头字母并顺时针依次取字母而组成一个字符串。这样将得到一些字符串，他把它们排序后取出第一个字符串。把这个字符串的第一个字母在原字符串中的位置减 $1$ 做为口令。</p>
+<p>如字符串 <code>alabala</code>，按操作的到 $7$ 个字符串，排序后得：</p>
+<p><code>aalabal</code></p>
+<p><code>abalaal</code><br />
+<code>alaalab</code><br />
+<code>alabala</code><br />
+<code>balaala</code><br />
+<code>laalaba</code><br />
+<code>labalaa</code></p>
+<p>第一个字符串为 <code>aalabal</code>，这个 <code>a</code> 在原字符串位置为 $7$，$7-1=6$，则 $6$ 为口令。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>第一行：一个数：$N$</p>
+<p>第二行开始：字符串：$S$（每 $72$ 个字符一个换行符）</p>
+<h4>输出格式</h4>
+<p>一行，为得到的口令</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>7
+anabana</p>
+<h4>输出样例 #1</h4>
+<p>6</p>
+<h2>说明</h2>
+<p>题目满足：</p>
+<p>$30 \%$ 的数据 $n \le {10}^4$。<br />
+$70 \%$ 的数据 $n \le {10}^5$。<br />
+$100 \%$ 的数据 $1 \le n \le 5 \times {10}^6$。</p>
+<p>时限 1s</p>
+<p>题目翻译来自NOCOW。</p>
+<p>USACO Training Section 5.5</p>
+<p>// 20170523 新增数据四组</p>

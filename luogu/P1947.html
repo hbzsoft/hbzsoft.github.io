@@ -1,0 +1,55 @@
+<h1>猜数</h1>
+<h2>题目背景</h2>
+<p>这是一道<strong>交互题</strong>。</p>
+<h2>题目描述</h2>
+<p>珂愛给了你一个 $[1,n]$ 之间的整数 $k$，你每次可以询问一个整数 $x$，然后珂愛会告诉你 $x$ 和 $k$ 的大小关系。</p>
+<p>你需要用尽可能少的次数猜出珂愛想的数。</p>
+<p>你需要实现一个函数 <code>int Chtholly(int n,int c)</code>，这个函数的作用是在不超过 $c$ 次询问中猜对 $[1,n]$ 中的一个数，返回值为你最终确定的数。</p>
+<p>你可以调用交互库中一个叫做 <code>Seniorious</code> 的函数，其原型为 <code>int Seniorious(int x)</code>，返回值为：</p>
+<ul>
+<li>若 $k\lt x$，则返回 $1$。</li>
+<li>若 $k\gt x$，则返回 $-1$。</li>
+<li>若 $k=x$，则返回 $0$。</li>
+</ul>
+<p>你调用 <code>Seniorious</code> 函数的次数不超过 $c$ 才能得到这个点的分数，否则这个点为 $0$ 分。有关该函数的调用请参考【说明/提示】部分。</p>
+<p>由于珂愛只会写 C++ 语言的交互库，所以你只能使用 C++ 语言（包括 C++，C++11，C++14，C++17）来解决本题。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>样例输入中三个数分别为 $n,c,k$。这些数据你都<strong>无法读取</strong>。</p>
+<h4>输出格式</h4>
+<p>样例输出中第一个数是你猜的 $k$，第二个数是你调用 <code>Seniorious</code> 函数的次数。这些数据你<strong>不必输出</strong>。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 5 3</p>
+<h4>输出样例 #1</h4>
+<p>3 0</p>
+<h2>说明</h2>
+<h4>样例解释</h4>
+<p>你要猜的 $k$ 为 $3$。</p>
+<p>由于你和珂愛心灵相通，所以在没有调用 <code>Seniorious</code> 的情况下就猜出来了。</p>
+<h4>数据规模与约定</h4>
+<ul>
+<li>对于 $30\%$ 的数据，保证 $c=n-1$。</li>
+<li>对于 $100\%$ 的数据，保证 $2\leq n\leq 10^6$，$\min(20,n-1)\leq c\leq n$。</li>
+</ul>
+<h4>提示</h4>
+<p><a href="https://www.luogu.com.cn/blog/luogu/interactive-problems">关于交互题</a>。</p>
+<p><a href="https://www.luogu.com.cn/paste/uimmq4nj">样例交互库源代码链接</a>。<strong>注意，此交互库仅供测试样例使用，实际评测时的交互库此交互库不同</strong>。</p>
+<p>如果您不知道如何在本地调试您的代码，请参考<a href="https://www.luogu.com.cn/blog/fusu2333/solution-p1947">这篇文章</a>。</p>
+<p>请特别注意，你的答案应该作为函数的返回值给出，<strong>你不需要，也不应该向标准输出输出任何内容，否则将无法获得分数</strong>。</p>
+<p>如果有需要，你可以在选手程序的开头加入一些头文件，当然在本题中这并不是必须的。</p>
+<p>交互库给出的函数 <code>Seniorious</code> 无法直接调用，需要在选手程序中用 <code>extern "C"</code> 关键字声明一次。</p>
+<p>下面给出本题的模板程序</p>
+<p>```cpp</p>
+<h1>include &lt;cstdio&gt;                         // 在本题中并不是必须的</h1>
+<p>extern "C" int Seniorious(int);           // 在这里需要声明一次交互库给出的函数。</p>
+<p>extern "C" int Chtholly(int n, int OvO) { // 在这里实现交互库要求你实现的函数。
+  int ans = 1;
+  for (int l = 1, r = n, mid = (l + r) &gt;&gt; 1; l &lt;= r; mid = (l + r) &gt;&gt; 1) if (Seniorious(mid) &gt;= 0) {
+    r = (ans = mid) - 1;
+  } else {
+    l = mid + 1;
+  }
+  return ans;
+}
+```</p>

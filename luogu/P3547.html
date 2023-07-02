@@ -1,0 +1,44 @@
+<h1>[POI2013] CEN-Price List</h1>
+<h2>题意翻译</h2>
+<p>给定一个 $n$ 个点 $m$ 条边的无向图，边权均为 $a$。</p>
+<p>现在将原来图中满足最短路等于 $2a$ 所有的点对 $(x,y)$ 之间加一条长度为 $b$ 的无向边。</p>
+<p>给定 $k$，求点 $k$ 到所有点的最短路是多少。</p>
+<h2>题目描述</h2>
+<p>Railway has always been the most popular mean of transport in Byteotia.</p>
+<p>Out of $n$ towns in the land, $m$ pairs are connected by track segments    belonging to Byteotian State Railways (BSR).</p>
+<p>The tracks do not cross outside of towns, and may lead through picturesque    bridges and somewhat less picturesque tunnels.</p>
+<p>The ticket for travelling between any two towns    directly connected by rail costs $a$ bythalers.</p>
+<p>Currently the transportation market in Byteotia is changing.</p>
+<p>As of now, BSR faces a new competitor: Byteotian Airlines (BA).</p>
+<p>BA plans to operate flights between some pairs of towns.</p>
+<p>Since Byteotian railways are quite comfortable, the BA board has decided to    operate flights only between pairs of towns that are not directly    connected by rail.  Due to economy, BA will fly only between towns    for which the cheapest railway connection requires exactly one change.</p>
+<p>The ticket for each such flight is going to cost $b$ bythalers.</p>
+<p>To help Byteotian citizens in planning their trips, the Byteotian    Ministry for Transport (BMT) has decided to issue leaflets specifying the    cheapest routes between all possible towns.  A sequence of an    arbitrary number of direct railway or airplane connections is    called a route.  A BMT officer by the name of Byteasar has been    commissioned with the task of preparing the price list for the leaflets.</p>
+<p>Could you help him in writing a program that will determine the right    prices?</p>
+<p>Let us clarify that all the connections in Byteotia, both by railway and    airplane, are bidirectional.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input contains five integers,$n$,$m$,$k$,$a$ and $b$ ($2\le n\le 100\ 000$, $\le m\le 100\ 000$, $1\le k\le n$, $1\le a,b\le 1\ 000$),      separated by single spaces.</p>
+<p>The numbers $n$ and $m$ denote the number of towns and the number of      direct railway connections in Byteotia, respectively.</p>
+<p>For simplicity, we number the towns in Byteotia from $1$ to $n$. The other numbers denote:$k$ - the number of the source town for which the connection prices are to be determined;$a$ - the price of a direct railway connection;$b$ - the price of a direct airplane connection.</p>
+<p>Each of the following $m$ lines contains a pair of integers $u_i$ and $v_i$($1\le u_i,v_i\le n$,$u_i\ne v_i$ for $i=1,2,\cdots,m$), separated by a single space, specifying the number of towns directly connected by tracks.</p>
+<p>You may assume that all towns are reachable by railway from the town no. $k$.</p>
+<h4>输出格式</h4>
+<p>Your program should print $n$ lines to the standard output.</p>
+<p>The line no. $i$ (for $i=1,2,\cdots,n$) should contain a single integer:</p>
+<p>the cost of the cheapest route from town no. $k$ to town no. $i$.</p>
+<p>Among those, the line no. $k$ should contain the number $0$.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 5 1 3 2
+1 2
+2 3
+3 4
+4 5
+3 1</p>
+<h4>输出样例 #1</h4>
+<p>0
+3
+3
+2
+5</p>

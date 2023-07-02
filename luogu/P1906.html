@@ -1,0 +1,46 @@
+<h1>凯撒密码</h1>
+<h2>题目描述</h2>
+<p>在元老院的支持下，Caesar率领罗马军团进攻高卢地区。但是他的军事行动并不顺利，他急需你的支持。</p>
+<p>一天，你突然受到Caesar从前线写来的信。为了防止敌军偷窃情报，Caesar决定用自创的密码来写这封信。但是面对满纸的乱码，你也无从下手。于是你前往元老院询问这种密码的玄机。</p>
+<p>元老们告诉你，这是凯撒移位密码（世界上最早的加密术——编者注），解读它非常的简单：</p>
+<p>对于明文中的每个字母，Caesar会用它后面的第t个字母代替。例如，当t=3时，字母A将变成C，字母B将变成D，……，字母Y将变成A，字母Z将变成B（假设字母表是循环的）。</p>
+<p>这样一来，字母表：A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
+<p>将变成： C D E F G H I J K L M N O P Q R S T U V W X Y Z A B</p>
+<p>明文：  I Need Soldiers  将加密为</p>
+<p>密文：  K Pggf Uqnfkgtu</p>
+<p>如此一来，需要传达的信息在外人看来就如同天书了。加上Caesar会不时更换t的值，使得密码变得更加难以捉摸。</p>
+<p>你的任务是将Caesar的密码翻译为明文。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>你将得到若干段Caesar的密码，我们保证这是一句成文的英文句子。输入文件将保证小于50KB。</p>
+<p>每个句子以一行“START”开始，下一行描述这个句子，再下一行以“END”结束。整个输入文件以“ENDOFINPUT”结束。</p>
+<h4>输出格式</h4>
+<p>对于每个句子，输出翻译后的明文</p>
+<p>输出全部转为大写！</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>START</p>
+<p>NS BFW, JAJSYX TK NRUTWYFSHJ FWJ YMJ WJXZQY TK YWNANFQ HFZXJX</p>
+<p>END</p>
+<p>START</p>
+<p>N BTZQI WFYMJW GJ KNWXY NS F QNYYQJ NGJWNFS ANQQFLJ YMFS XJHTSI NS WTRJ</p>
+<p>END</p>
+<p>START</p>
+<p>IFSLJW PSTBX KZQQ BJQQ YMFY HFJXFW NX RTWJ IFSLJWTZX YMFS MJ</p>
+<p>END</p>
+<p>ENDOFINPUT</p>
+<h4>输出样例 #1</h4>
+<p>IN WAR, EVENTS OF IMPORTANCE ARE THE RESULT OF TRIVIAL CAUSES</p>
+<p>I WOULD RATHER BE FIRST IN A LITTLE IBERIAN VILLAGE THAN SECOND IN ROME</p>
+<p>DANGER KNOWS FULL WELL THAT CAESAR IS MORE DANGEROUS THAN HE</p>
+<h2>说明</h2>
+<p>1.如果你有看过《福尔摩斯探案集》的话，请回忆“跳舞娃娃”密码破译第一步；</p>
+<p>2.我想这些可能会对你有帮助：</p>
+<p>e 0.1268</p>
+<p>t 0.0978</p>
+<p>a 0.0788</p>
+<p>o 0.0766</p>
+<p>i 0.0707</p>
+<p>n 0.0706</p>
+<p>s 0.0634</p>
+<p>r 0.0594</p>

@@ -1,0 +1,32 @@
+<h1>[USACO06JAN] The Grove S</h1>
+<h2>题目描述</h2>
+<p>The pasture contains a small, contiguous grove of trees that has no 'holes' in the middle of the it.  Bessie wonders: how far is it to walk around that grove and get back to my starting position? She's just sure there is a way to do it by going from her start location to successive locations by walking horizontally, vertically, or diagonally and counting each move as a single step. Just looking at it, she doesn't think you could pass 'through' the grove on a tricky diagonal. Your job is to calculate the minimum number of steps she must take.</p>
+<p>Happily, Bessie lives on a simple world where the pasture is represented by a grid with R rows and C columns (1 &lt;= R &lt;= 50, 1 &lt;= C &lt;= 50). Here's a typical example where '.' is pasture (which Bessie may traverse), 'X' is the grove of trees, '*' represents Bessie's start and end position, and '+' marks one shortest path she can walk to circumnavigate the grove (i.e., the answer):</p>
+<p><code>cpp
+...+...
+..+X+..
+.+XXX+.
+..+XXX+
+..+X..+
+...+++*</code>
+The path shown is not the only possible shortest path; Bessie might have taken a diagonal step from her start position and achieved a similar length solution. Bessie is happy that she's starting 'outside' the grove instead of in a sort of 'harbor' that could complicate finding the best path.</p>
+<p>牧场里有树林，林子里没有坑，贝茜很想知道，最少几步能绕树林走一圈，最后回到起点.她能上下左右走，也能走对角线格子.</p>
+<p>牧场被分成 $R$ 行 $C$ 列 $(1\leq R\leq 50,\ 1\leq C\leq 50)$ 。下面是一张样例的地图，其中 <code>.</code> 表示贝茜可以走的空地， <code>X</code> 表示树林，表示起点.而贝茜走的最近的路已经特别地用 <code>+</code> 表示 出来.</p>
+<p>题目<strong>保证存在最短路径</strong>，且森林形成一个联通块。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>Line 1: Two space-separated integers: R and C</p>
+<p>Lines 2..R+1: Line i+1 describes row i with C characters (with no spaces between them).</p>
+<h4>输出格式</h4>
+<p>Line 1: The single line contains a single integer which is the smallest number of steps required to circumnavigate the grove.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>6 7
+.......
+...X...
+..XXX..
+...XXX.
+...X...
+...*...</p>
+<h4>输出样例 #1</h4>
+<p>11</p>

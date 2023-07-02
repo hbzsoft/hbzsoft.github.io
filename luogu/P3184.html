@@ -1,0 +1,36 @@
+<h1>[USACO16DEC] Counting Haybales S</h1>
+<h2>题目描述</h2>
+<p>Farmer John has just arranged his $N$ haybales ($1 \leq N \leq 100,000$) at various points along the one-dimensional road running across his farm.  To make sure they are spaced out appropriately, please help him answer $Q$ queries ($1 \leq Q \leq 100,000$), each asking for the number of haybales within a specific interval along the road.</p>
+<p>农夫John在一条穿过他的农场的路上（直线）放了N个干草垛（1&lt;=N&lt;=100,000），每个干草垛都在不同的点上。为了让每个干草垛之间都隔着一定的距离，请你回答农夫John的Q个问题（1&lt;=Q&lt;=100,000），每个问题都会给出一个范围，询问在这个范围内有多少个干草垛。</p>
+<p>（其实就是有一条数轴上有N个不重复的点，再问Q个问题，每个问题是给出一个范围，问此范围内有多少个点？）</p>
+<p>（在给出范围的边界上也算）</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line contains $N$ and $Q$.</p>
+<p>The next line contains $N$ distinct integers, each in the range $0 \ldots 1,000,000,000$, indicating that there is a haybale at each of those locations.</p>
+<p>Each of the next $Q$ lines contains two integers $A$ and $B$($0 \leq A \leq B \leq 1,000,000,000$) giving a query for the number of haybales between $A$ and $B$, inclusive.</p>
+<p>第一行包括N和Q</p>
+<p>第二行有N个数字，每个数字的范围在0~1,000,000,000，表示此位置有一个干草垛。</p>
+<p>接下来的Q行，每行包括两个数字，A和B（0&lt;=A&lt;=B&lt;=1,000,000,000）表示每个询问的范围</p>
+<h4>输出格式</h4>
+<p>You should write $Q$ lines of output.  For each query, output the number of haybales in its respective interval.</p>
+<p>总共Q行，每行输出此范围内的干草垛数量</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 6
+3 2 7 5
+2 3
+2 4
+2 5
+2 7
+4 6
+8 10</p>
+<h4>输出样例 #1</h4>
+<p>2
+2
+3
+4
+1
+0</p>
+<h2>说明</h2>
+<p>感谢@2014nhc 提供翻译</p>

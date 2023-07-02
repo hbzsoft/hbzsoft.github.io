@@ -1,0 +1,63 @@
+<h1>[POI2008] POC-Trains</h1>
+<h2>题目描述</h2>
+<p>The Trains of Colour Parade begins tomorrow in Byteotia.</p>
+<p>Intense preparations are already in progress at the station's auxiliary tracks. There are $n$ parallel tracks at the station, numbered from $1$ to $n$. The train no. $i$ occupies the $i^{th}$ track.</p>
+<p>Every train consists of $l$ cars and each car is painted with one of 26 colours (denoted by non-capital letters of the English alphabet).</p>
+<p>We say that two trains look the same, if their corresponding cars are painted the same colour.</p>
+<p>Throughout the parade a crane will switch places of certain pairs of cars. The real parade, however, will take place tomorrow.</p>
+<p>Today the train dispatcher, Byteasar, watched the general rehearsal    closely. He even wrote down the sequence of car swaps.</p>
+<p>Byteasar particularly dislikes many trains looking the same.</p>
+<p>For each train $p$ he would like to calculate the maximum number    of trains that at some moment look the same as the train $p$ at the very same moment.</p>
+<h2>Task</h2>
+<p>Write a programme that:</p>
+<ul>
+<li>
+<p>reads descriptions of the trains occupying tracks and the sequence of car swaps,</p>
+</li>
+<li>
+<p>for each train determines the maximum number of trains that look the same as it at certain moment,</p>
+</li>
+<li>
+<p>writes out the result.</p>
+</li>
+</ul>
+<p>给出n个字符串，长度均为len；</p>
+<p>有m次操作，每次将两个字符交换；</p>
+<p>求每个字符串在任何时点上，与相同的它最多的字符串个数；</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the input contains three integers $n$, $l$ and $m$ ($2 \le n \le 1000$, $1 \le l \le 100$, $0 \le m \le 100\ 000$), denoting respectively the number of trains, their common length and the number of car swaps. The following $n$ lines contain descriptions of the trains on successive tracks. The</p>
+<p>$k^{th}$ line consists of $l$ small letters of the English alphabet denoting the colours of successive cars of the $k^{th}$ train. Then $m$ lines describing the car swaps follow, in the order of the swaps. The $r^{th}$ line contains four integers $p_1$, $w_1$, $p_2$, $w_2$ ($1 \le p_1, p_2, \le n$, $1 \le w_1, w_2 \le l$, $p_1 \ne p_2$ or $w_1 \ne w_2$) denoting the $r^{th}$ car swap-the car no. $w_1$ of the train no. $p_1$ is swapped with the car no. $w_2$ of the train no. $p_2$.</p>
+<h4>输出格式</h4>
+<p>Your programme should write out exactly $n$ lines. The $k^[th}$ line should contain one integer-the number of trains looking the same as the train no. $k$ at certain moment.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 6 7
+ababbd
+abbbbd
+aaabad
+caabbd
+cabaad
+2 3 5 4
+5 3 5 5
+3 5 2 2
+1 2 4 3
+2 2 5 1
+1 1 3 3
+4 1 5 6</p>
+<h4>输出样例 #1</h4>
+<p>3
+3
+3
+2
+3</p>
+<h2>说明</h2>
+<p>The figure presents the successive car swaps:</p>
+<p><code>cpp
+track 1:  ababbd    ababbd    ababbd    ababbd    aaabbd    aaabbd    aaabbd    aaabbd
+track 2:  abbbbd    ababbd    ababbd    aaabbd    aaabbd    acabbd    acabbd    acabbd
+track 3:  aaabad -&amp;gt; aaabad -&amp;gt; aaabad -&amp;gt; aaabbd -&amp;gt; aaabbd -&amp;gt; aaabbd -&amp;gt; aaabbd -&amp;gt; aaabbd
+track 4:  caabbd    caabbd    caabbd    caabbd    cabbbd    cabbbd    cabbbd    dabbbd
+track 5:  cabaad    cabbad    caabbd    caabbd    caabbd    aaabbd    aaabbd    aaabbc
+           (0)       (1)       (2)       (3)       (4)       (5)       (6)       (7)</code></p>
+<p>The number of trains looking the same as either of the trains no. 1, 2 or 3 was maximal at time (4) (when all three looked the same). The number of trains looking the same as the train no. 5 was maximal at time (5) and (6). The number of trains looking the same as the train no. 4 was maximal at time (2).</p>

@@ -1,0 +1,30 @@
+<h1>[USACO10OCT] Lake Counting S</h1>
+<h2>题意翻译</h2>
+<p>由于近期的降雨，雨水汇集在农民约翰的田地不同的地方。我们用一个 $N\times M(1\leq N\leq 100, 1\leq M\leq 100)$ 的网格图表示。每个网格中有水（<code>W</code>） 或是旱地（<code>.</code>）。一个网格与其周围的八个网格相连，而一组相连的网格视为一个水坑。约翰想弄清楚他的田地已经形成了多少水坑。给出约翰田地的示意图，确定当中有多少水坑。</p>
+<p>输入第 $1$ 行：两个空格隔开的整数：$N$ 和 $M$。</p>
+<p>第 $2$ 行到第 $N+1$ 行：每行 $M$ 个字符，每个字符是 <code>W</code> 或 <code>.</code>，它们表示网格图中的一排。字符之间没有空格。</p>
+<p>输出一行，表示水坑的数量。</p>
+<h2>题目描述</h2>
+<p>Due to recent rains, water has pooled in various places in Farmer John's field, which is represented by a rectangle of N x M (1 &lt;= N &lt;= 100; 1 &lt;= M &lt;= 100) squares. Each square contains either water ('W') or dry land ('.'). Farmer John would like to figure out how many ponds have formed in his field. A pond is a connected set of squares with water in them, where a square is considered adjacent to all eight of its neighbors. Given a diagram of Farmer John's field, determine how many ponds he has.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>Line 1: Two space-separated integers: N and M * Lines 2..N+1: M characters per line representing one row of Farmer John's field. Each character is either 'W' or '.'. The characters do not have spaces between them.</p>
+<h4>输出格式</h4>
+<p>Line 1: The number of ponds in Farmer John's field.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>10 12
+W........WW.
+.WWW.....WWW
+....WW...WW.
+.........WW.
+.........W..
+..W......W..
+.W.W.....WW.
+W.W.W.....W.
+.W.W......W.
+..W.......W.</p>
+<h4>输出样例 #1</h4>
+<p>3</p>
+<h2>说明</h2>
+<p>OUTPUT DETAILS: There are three ponds: one in the upper left, one in the lower left, and one along the right side.</p>

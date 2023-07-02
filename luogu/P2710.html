@@ -1,0 +1,48 @@
+<h1>数列</h1>
+<h2>题目描述</h2>
+<p>维护一个数列,共 $7$ 种操作:</p>
+<p>I. <code>INSERT x n a1 a2 .. an</code> 在第 $x$ 个数后插入 $n$ 个数分别为 $a_1\dots a_n$。</p>
+<p>II. <code>DELETE x n</code> 删除第 $x$ 个数开始的 $n$ 个数。</p>
+<p>III. <code>REVERSE x n</code> 翻转第 $x$ 个数开始的 $n$ 个数的区间。</p>
+<p>IV. <code>MAKE-SAME x n t</code> 将第 $x$ 个数开始的 $n$ 个数统一改为 $t$。</p>
+<p>V. <code>GET-SUM x n</code> 输出第 $x$ 个数开始的 $n$ 个数的和。</p>
+<p>VI. <code>GET x</code> 输出第 $x$ 个数的值。</p>
+<p>VII. <code>MAX-SUM x n</code> 输出第 $x$ 个数开始的 $n$ 个数的最大连续子序列和。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>第一行为 $N$，$M$，$N$ 表示初始序列中数的个数，$M$ 表示操作的个数。</p>
+<p>第二行为 $N$ 个数 $A_1\dots A_n$，表示初始序列。</p>
+<p>第三行到第 $M+2 $行，每行一个操作。</p>
+<h4>输出格式</h4>
+<p>输出每个<code>GET-SUM</code>，<code>GET</code>，<code>MAX-SUM</code>操作的结果。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>9 8
+2 -6 3 5 1 -5 -3 6 3
+GET-SUM 5 4
+MAX-SUM 1 9
+INSERT 8 3 -5 7 2
+DELETE 12 1
+MAKE-SAME 3 3 2
+REVERSE 3 6
+GET 5
+MAX-SUM 1 11</p>
+<h4>输出样例 #1</h4>
+<p>-1
+10
+-5
+10</p>
+<h2>说明</h2>
+<p>共 $20$ 组数据，每组数据随机生成，<br />
+保证每个时刻数列里的数不超过 $200000$ 个，<br />
+任何一个输入的数字均在 $-1000\sim1000$之间，结果不超过 $2^{30}$。</p>
+<p>第 $1\sim2$ 组 $\quad1\le N\le 5$，$1\le M\le 10$。</p>
+<p>第 $3\sim4$ 组 $\quad1\le N\le 10$，$1\le M\le 20$。</p>
+<p>第 $5\sim6$ 组 $\quad1\le N \le 20$，$1\le M\le 50$。</p>
+<p>第 $7\sim8$ 组 $\quad1\le N\le 50$，$1\le M\le 100$。</p>
+<p>第 $9\sim10$ 组 $\quad1\le N\le 100$，$1\le M\le 500$。</p>
+<p>第 $11\sim12$ 组 $\quad 1\le N\le 1000$，$1\le M\le 1000$。</p>
+<p>第 $13\sim14$ 组 $\quad1\le N\le 5000$，$1\le M\le 2000$。</p>
+<p>第 $15\sim16$ 组 $\quad1\le N\le 10^4$，$1\le M\le 5000$。</p>
+<p>第 $17\sim18$ 组 $\quad1\le N\le 10^5$，$1\le M\le 10^4$。</p>
+<p>第 $19\sim20$ 组 $\quad1\le N\le 2\times 10^5$，$1\le M\le 2\times 10^4$。</p>

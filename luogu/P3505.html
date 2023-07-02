@@ -1,0 +1,39 @@
+<h1>[POI2010] TEL-Teleportation</h1>
+<h2>题目描述</h2>
+<p>King Byteasar is the ruler of the whole solar system that contains <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.1.png" /> planets.</p>
+<p>This number is so large that people have abandoned the silly custom of naming the planets    and use numbers instead. The planets are thus conveniently numbered from 1 to <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.2.png" />.</p>
+<p>Byteasar's palace is on the planet no. 1, while his military base on the planet no. 2.</p>
+<p>A long time ago Byteasar had a teleportation portal established between these two planets,    which allows travelling from either planet to another in two hundred and fifty minutes    (slightly over four hours).</p>
+<p>Nowadays the teleportation technology is more mature, and the recent teleportation devices shorten    the travel time to just a single hour. Let us note here, that all the portals, both the Byteasar's old one    and the new ones available on the market, are of course bidirectional, and that the teleportation    travel time is irrespective of the distance travelled.</p>
+<p>Some planets of the system are already connected with these new teleportation portals.</p>
+<p>In fact, it is already possible to travel between the planets no. 1 and 2 without using the king's private portal,    though this involves several other portals and is thus no faster than the king's portal.</p>
+<p>Byteasar finds this rather fortunate, as he believes that such possibility would be a security breach.</p>
+<p>The technology itself is increasingly available, and as everyone realises its economic significance,    each pair of planets that are not currently directly connected with a portal are petitioning for establishing    such a connection. Being a wise ruler, Byteasar intends to give his consent to as many constructions as possible,    though keeping himself secure, i.e., not allowing the travel between planets 1 and 2 faster than with his private portal.</p>
+<p>Help the king determine how many portals he can agree to.</p>
+<p>给一张图，要求你再尽可能的多连边，使得从1到2至少要经过5条边</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>Two integers are given in the first line of the standard input, <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.3.png" /> and <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.4.png" />      (<img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.5.png" />, <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.6.png" />), separated by a single space,      denoting the number of planets in Byteasar's realm and the number of new portals      that already exist.</p>
+<p>These teleportation portals are described in the <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.7.png" /> lines that follow.</p>
+<p>Each such line contains two integers <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.8.png" /> and <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.9.png" /> (<img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.10.png" />),      separated by a single space, denoting that there is a teleportation portal of the new kind      connecting <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.11.png" /> and <img alt="" src="http://main.edu.pl/images/OI17/tel-en-tex.12.png" />.</p>
+<p>No pair of numbers appears twice.</p>
+<p>You may assume that the existing network of new portals allows travel from      planet no. 1 to planet no. 2, but in no less than 250 minutes.</p>
+<h4>输出格式</h4>
+<p>Your program should print out just a single integer, namely the maximum number of portals      Byteasar can agree to without breaching his security.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>10 10
+1 3
+3 5
+5 7
+7 9
+2 9
+1 4
+4 6
+6 8
+8 10
+2 10</p>
+<h4>输出样例 #1</h4>
+<p>10</p>
+<h2>说明</h2>
+<p>$2\le n\le 40\ 000$，$0\le m\le 10^6$，$1\le u_i,v_i\le n$，保证只考虑已有的边时， $1$ 号点与 $2$ 号点联通，且最短路长度大于 $250\min$ 。</p>

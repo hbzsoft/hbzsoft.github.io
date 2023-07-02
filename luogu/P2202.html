@@ -1,0 +1,26 @@
+<h1>[USACO13JAN] Square Overlap S</h1>
+<h2>题目描述</h2>
+<p>Farmer John is planning to build N (2 &lt;= N &lt;= 50,000) square fenced-in pastures on his farm, each of size exactly K x K (1 &lt;= K &lt;= 1,000,000). Pasture i is centered at point (x_i, y_i) with integer coordinates in the range -1,000,000...1,000,000.  However, in his haste to complete his plans, FJ realizes that he may have accidentally placed two pastures in locations that overlap (by overlap, this means the two pastures share a positive area in common).  No two pastures share the exact same center point.</p>
+<p>Given the locations of each of the planned square pastures, please help FJ compute the area shared by the two overlapping pastures.  Output zero if no two squares overlap, and -1 if overlap occurs between more than a single pair of pastures.</p>
+<p>在一个直角坐标系中，有N个边长为K的正方形。</p>
+<p>给出每一个正方形的中心，请判断所有的正方形是否有重叠。</p>
+<p>输入数据保证每一个正方形的中心不重合</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* 第1行 ：两个正整数： N , K</p>
+<p>其中：2 &lt;= N &lt;= 50 000 ，1 &lt;= K &lt;= 1 000 000 ，K保证是偶数</p>
+<p>*第2 .. i+1行：每行有两个整数xi，yi，描述了第i个正方形的中心。</p>
+<p>其中：xi，yi均在[-1 000 000，1 000 000]内</p>
+<h4>输出格式</h4>
+<p>只输出一行：</p>
+<p>如果没有正方形重叠，输出“0”；如果有且只有一对正方形重叠，输出它们重叠的面积；如果有两对及以上的正方形重合，输出"-1";</p>
+<p>注意：在输出答案后一定要输换行符！</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 6
+0 0
+8 4
+-2 1
+0 7</p>
+<h4>输出样例 #1</h4>
+<p>20</p>

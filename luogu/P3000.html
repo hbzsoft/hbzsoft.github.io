@@ -1,0 +1,32 @@
+<h1>[USACO10DEC] Cow Calisthenics G</h1>
+<h2>题目描述</h2>
+<p>Farmer John continues his never-ending quest to keep the cows fit by having them exercise on various cow paths that run through the pastures. These cow paths can be represented as a set of vertices connected with bidirectional edges so that each pair of vertices has exactly one simple path between them. In the abstract, their layout bears a remarkable resemblance to a tree. Surprisingly, each edge (as it winds its way through the pastures) has the same length.</p>
+<p>For any given set of cow paths, the canny cows calculate the longest possible distance between any pair of vertices on the set of cowpaths and call it the pathlength. If they think this pathlength is too large, they simply refuse to exercise at all.</p>
+<p>Farmer John has mapped the paths and found V (2 &lt;= V &lt;= 100,000) vertices, conveniently numbered from 1..V. In order to make shorter cowpaths, he can block the path between any two vertices, thus creating more sets of cow paths while reducing the pathlength of both cowpath sets.</p>
+<p>Starting from a single completely connected set of paths (which have the properties of a tree), FJ can block S (1 &lt;= S &lt;= V-1) paths, creating S+1 sets of paths. Your goal is to compute the best paths he can create so that the largest pathlength of all those sets is minimized.</p>
+<p>Farmer John has a list of all V-1 edges in his tree, each described by the two vertices A_i (1 &lt;= A_i &lt;= V) and B_i (1 &lt;= B_i &lt;= V; A_i != B_i) that it connects.</p>
+<p>Consider this rather linear cowpath set (a tree with 7 vertices):</p>
+<p>1---2---3---4---5---6---7</p>
+<p>If FJ can block two paths, he might choose them to make a map like this:</p>
+<p>1---2 | 3---4 | 5---6---7 
+where the longest pathlength is 2, which would be the answer in this case. He can do no better than this.</p>
+<p>TIME LIMIT: 2 seconds</p>
+<p>MEMORY LIMIT: 32 MB</p>
+<p>Farmer John为了保持奶牛们的健康，让可怜的奶牛们不停在牧场之间 的小路上奔跑。这些奶牛的路径集合可以被表示成一个点集和一些连接 两个顶点的双向路，使得每对点之间恰好有一条简单路径。简单的说来， 这些点的布局就是一棵树，且每条边等长，都为1。 对于给定的一个奶牛路径集合，精明的奶牛们会计算出任意点对路径的最大值， 我们称之为这个路径集合的直径。如果直径太大，奶牛们就会拒绝锻炼。 Farmer John把每个点标记为1..V (2 &lt;= V &lt;= 100,000)。为了获得更加短 的直径，他可以选择封锁一些已经存在的道路，这样就可以得到更多的路径集合， 从而减小一些路径集合的直径。 我们从一棵树开始，FJ可以选择封锁S (1 &lt;= S &lt;= V-1)条双向路，从而获得 S+1个路径集合。你要做的是计算出最佳的封锁方案，使得他得到的所有路径集合 直径的最大值尽可能小。 Farmer John告诉你所有V-1条双向道路，每条表述为：顶点A_i (1 &lt;= A_i &lt;= V) 和 B_i (1 &lt;= B_i &lt;= V; A_i!= B_i)连接。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Two space separated integers: V and S</p>
+<p>* Lines 2..V: Two space separated integers: A_i and B_i</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer that is the best maximum pathlength FJ can achieve with S blocks</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>7 2 
+6 7 
+3 4 
+6 5 
+1 2 
+3 2 
+4 5 </p>
+<h4>输出样例 #1</h4>
+<p>2 </p>

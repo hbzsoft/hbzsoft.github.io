@@ -1,0 +1,30 @@
+<h1>[USACO12FEB] Cow Coupons G</h1>
+<h2>题目背景</h2>
+<p>Subtask 0 为原数据，Subtask 1 为 hack 数据。</p>
+<h2>题目描述</h2>
+<p>Farmer John needs new cows! There are N cows for sale (1 &lt;= N &lt;= 50,000), and FJ has to spend no more than his budget of M units of money (1 &lt;= M &lt;= 10^14).  Cow i costs P_i money (1 &lt;= P_i &lt;= 10^9), but FJ has K coupons (1 &lt;= K &lt;= N), and when he uses a coupon on cow i, the cow costs C_i instead (1 &lt;= C_i &lt;= P_i). FJ can only use one coupon per cow, of course.</p>
+<p>What is the maximum number of cows FJ can afford? </p>
+<p>FJ 准备买一些新奶牛。市场上有 $N$ 头奶牛，第 $i$ 头奶牛价格为 $P_i$。FJ 有 $K$ 张优惠券，使用优惠券购买第 $i$ 头奶牛时价格会降为 $C_i$，当然每头奶牛只能使用一次优惠券。FJ 想知道花不超过 $M$ 的钱最多可以买多少奶牛？</p>
+<ul>
+<li>$1 \le K \le N \le 5 \times 10^4$</li>
+<li>$1 \le C_i \le P_i \le 10^9$</li>
+<li>$1 \le M \le 10^{14}$</li>
+</ul>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Three space-separated integers: N, K, and M.</p>
+<p>* Lines 2..N+1: Line i+1 contains two integers: P_i and C_i.</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer, the maximum number of cows FJ can afford.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 1 7 
+3 2 
+2 2 
+8 1 
+4 3 </p>
+<h4>输出样例 #1</h4>
+<p>3 </p>
+<h2>说明</h2>
+<p>FJ has 4 cows, 1 coupon, and a budget of 7.</p>
+<p>FJ uses the coupon on cow 3 and buys cows 1, 2, and 3, for a total cost of 3 + 2 + 1 = 6.</p>

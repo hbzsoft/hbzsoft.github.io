@@ -1,0 +1,34 @@
+<h1>[USACO06JAN] Roping the Field G</h1>
+<h2>题目描述</h2>
+<p>Farmer John is quite the nature artist: he often constructs large works of art on his farm. Today, FJ wants to construct a giant "field web". FJ's field is large convex polygon with fences along the boundary and fence posts at each of the N corners (1 &lt;= N &lt;= 150). To construct his field web, FJ wants to run as many ropes as possible in straight lines between pairs of non-adjacent fence posts such that no two ropes cross.</p>
+<p>There is one complication: FJ's field is not completely usable. Some evil aliens have created a total of G (0 &lt;= G &lt;= 100) grain circles in the field, all of radius R (1 &lt;= R &lt;= 100,000). FJ is afraid to upset the aliens, and therefore doesn't want the ropes to pass through, or even touch the very edge of a grain circle. Note that although the centers of all the circles are contained within the field, a wide radius may make it extend outside of the field, and both fences and fence posts may be within a grain circle.</p>
+<p>Given the locations of the fence posts and the centers of the circles, determine the maximum number of ropes that FJ can use to create his field web.</p>
+<p>FJ's fence pots and the circle centers all have integer coordinates X and Y each of which is in the range 0..1,000,000.</p>
+<p>约翰真是一个自然派艺术大师，他常常在他的田地上创作一些巨大的艺术杰作.今天，他想 在麦田上创作一幅由绳索构成的巨画.他的麦田是一个多边形，由N(l&lt;N&lt; 150)个篱笆粧和之 间的篱笆围成.为了创作他的巨画，他打算用尽量多的数量的绳索，笔直地连接两个不相邻的篱 笆粧.但是为了画作的优美，任意两根绳索不得交叉.</p>
+<p>约翰有一个难处：一些邪恶的外星人在他的麦田上整出了100)个怪圈.这些怪圈 都有一定的半径丑(1&lt;丑&lt; 100000).他不敢惹外星人，所以不想有任何绳索通过这些怪圈，即使 碰到怪圈的边际也不行.这些怪圈的圆心都在麦田之内，但一些怪圈可能有部分在麦田之外.一 些篱笆或者篱笆粧都有可能在某一个怪圈里.</p>
+<p>给出篱笆粧和怪圈的坐标，计算最多的绳索数.所有的坐标都是[0，10^6]内的整数.</p>
+<p>输入说明</p>
+<p>第1行输入三个整数接下来N行每行输入两个整数表示篱笆粧的坐标.接下来G行每 行输入两个整数表示一个怪圈的圆心坐标.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>Line 1: Three space-separated integers: N, G, and R</p>
+<p>Lines 2..N+1: Each line contains two space-separated integers that are the X,Y position of a fence post on the boundary of FJ's field.</p>
+<p>Lines N+2..N+G+1: Each line contains two space-separated integers that are the X,Y position of a circle's center inside FJ's field.</p>
+<h4>输出格式</h4>
+<p>Line 1: A single integer that is the largest number of ropes FJ can use for his artistic creation.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 3 1
+6 10
+10 7
+9 1
+2 0
+0 3
+2 2
+5 6
+8 3</p>
+<h4>输出样例 #1</h4>
+<p>1</p>
+<h2>说明</h2>
+<p>Explanation of the sample:</p>
+<p>A pentagonal field, in which all possible ropes are blocked by three grain circles, except for the rope between fenceposts 2 and 4.</p>

@@ -1,0 +1,41 @@
+<h1>[POI2008] BBB-BBB</h1>
+<h2>题意翻译</h2>
+<p>给定一个由 $+1$ 和 $-1$ 构成的长度为 $n$ 的序列，提供两种操作：</p>
+<ol>
+<li>将某一位取反，花销为 $x$；</li>
+<li>将最后一位移动到第一位，花销为 $y$。</li>
+</ol>
+<p>要求最终 $p+S_n=q$，且 $p+S_i≥0\ (1≤i≤n)$，求最小花销。其中 $S_i=a_1+a_2+\cdots+a_i$。</p>
+<h2>题目描述</h2>
+<p>Byteasar has an account at The Byteotian Bit Bank (BBB in short).</p>
+<p>At the beginning there were <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.1.png" /> and at the end <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.2.png" /> bythalers in the   account.</p>
+<p>Each transaction was either a deposit or a withdrawal of one bythaler.</p>
+<p>The account's balance was never negative.</p>
+<p>A bank teller has prepared a bank statement: a strip of paper with   a sequence of pluses and minuses in it   (a plus denotes a deposit while minus a withdrawal of one bythaler).</p>
+<p>Soon it turned out, that some transactions were not entered correctly.</p>
+<p>The bank teller cannot print another statement, but has to correct the   one already printed instead.</p>
+<p>The statement needs not be consistent with the truth, it will suffice   if the sequence of transactions satisfies the following two conditions:</p>
+<p>the final balance is consistent with the initial balance       and the sequence of transactions in the statement,                according to the sequence of transactions in the statement, the       account's balance was never negative.</p>
+<p>You are to calculate the minimum amount of time the bank teller needs to   correct the bank statement.</p>
+<p>The bank teller can:</p>
+<p>in <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.3.png" /> seconds turn an arbitrarily chosen transaction to its       opposite, or                in <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.4.png" /> seconds remove the last transaction and put it at the beginning of the statement.</p>
+<p>If, for example, <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.5.png" />, then --++-+-++-+-+ is a correct   statement.</p>
+<p>On the other hand the statement ---++++++ is incorrect,   because the account's balance would become negative after the third   transaction, and furthermore the final balance should be 3, not 5.</p>
+<p>It can be, however, corrected by turning the second to last symbol to its   opposite and placing the last transaction at the beginning of the statement.</p>
+<p>Task     Write a programme that:</p>
+<p>reads the current bank statement for Byteasar's account         (a sequence of pluses and minuses) as well as the numbers         <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.6.png" />, <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.7.png" />, <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.8.png" /> and <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.9.png" /> from the standard input.</p>
+<p>writes out to the standard output the minimum number of seconds         needed to correct the statement in a way such that the initial         and final balance are consistent and that the balance is never         negative.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line contains 5 integers <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.10.png" />, <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.11.png" />, <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.12.png" />, <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.13.png" /> and <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.14.png" />     (<img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.15.png" />, <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.16.png" />, <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.17.png" />),          separated by single spaces and denoting respectively:</p>
+<p>the number of transactions done by Byteasar, initial and final account     balance and the number of seconds needed to perform a single turn     (change of sign) and move of transaction to the beginning.</p>
+<p>The second line contains a sequence of <img alt="" src="http://main.edu.pl/images/OI15/bbb-en-tex.18.png" /> signs (each a plus     or a minus), with no spaces in-between.</p>
+<h4>输出格式</h4>
+<p>The first and last output line should contain one integer,     the minimum number of seconds needed to correct the statement. If no     corrections are necessary, the number is zero.</p>
+<p>You may assume that a proper sequence of modifications exists for each     test data.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>9 2 3 2 1
+---++++++</p>
+<h4>输出样例 #1</h4>
+<p>3</p>

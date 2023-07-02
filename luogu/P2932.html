@@ -1,0 +1,28 @@
+<h1>[USACO09JAN] Earthquake Damage G</h1>
+<h2>题目描述</h2>
+<p>Wisconsin has had an earthquake that has struck Farmer John's farm! The earthquake has damaged some of the pastures so that they are unpassable. Remarkably, none of the cowpaths was damaged.</p>
+<p>As usual, the farm is modeled as a set of P (1 &lt;= P &lt;= 30,000) pastures conveniently numbered 1..P which are connected by a set of C (1 &lt;= C &lt;= 100,000) non-directional cowpaths conveniently numbered 1..C. Cowpath i connects pastures a_i and b_i (1 &lt;= a_i &lt;= P; 1 &lt;= b_i &lt;= P). Cowpaths might connect a_i to itself or perhaps might connect two pastures more than once.  The barn is located in pasture 1.</p>
+<p>A total of N (1 &lt;= N &lt;= P) cows (in different pastures) sequentially contact Farmer John via moobile phone with an integer message</p>
+<p>report_j (2 &lt;= report_j &lt;= P) that indicates that pasture report_j is undamaged but that the calling cow is unable to return to the barn from pasture report_j because she could not find a path that does not go through damaged pastures.</p>
+<p>After all the cows report in, determine the minimum number of</p>
+<p>pastures (including ones that are uncrossable) from which it is not possible to return to the barn.</p>
+<p>Note: Feedback on some of the test data will be provided on the first 50 submissions</p>
+<p>农夫John的农场遭受了一场地震.有一些牛棚遭到了损坏,但幸运地,所有牛棚间的路经都还能使用. FJ的农场有P(1 &lt;= P &lt;= 30,000)个牛棚,编号1..P. C(1 &lt;= C &lt;= 100,000)条双向路经联接这些牛棚,编号为1..C. 路经i连接牛棚a_i和b_i (1 &lt;= a_i&lt;= P;1 &lt;= b_i &lt;= P).路经可能连接a_i到它自己,两个牛棚之间可能有多条路经.农庄在编号为1的牛棚. N (1 &lt;= N &lt;= P)头在不同牛棚的牛通过手机短信report_j(2 &lt;= report_j &lt;= P)告诉FJ它们的牛棚(report_j)没有损坏,但是它们无法通过路经和没有损坏的牛棚回到到农场. 当FJ接到所有短信之后,找出最小的不可能回到农庄的牛棚数目.这个数目包括损坏的牛棚. 注意:前50次提交将提供在一些测试数据上的运行结果.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Three space-separated integers: P, C, and N</p>
+<p>* Lines 2..C+1: Line i+1 describes cowpath i with two integers: a_i and b_i</p>
+<p>* Lines C+2..C+N+1: Line C+1+j contains a single integer: report_j</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer that is the minimum count of pastures from which a cow can not return to the barn (including the damaged pastures themselves)</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 3 1 
+1 2 
+2 3 
+3 4 
+3 </p>
+<h4>输出样例 #1</h4>
+<p>3 </p>
+<h2>说明</h2>
+<p>Pasture 2 is damaged, resulting in cows in pastures 2, 3, 4 not being able to return to the barn.</p>

@@ -1,0 +1,39 @@
+<h1>排序</h1>
+<h2>题目描述</h2>
+<p>一个不同的值的升序排序数列指的是一个从左到右元素依次增大的序列，例如，一个有序的数列 $A,B,C,D$ 表示$A&lt;B,B&lt;C,C&lt;D$。在这道题中，我们将给你一系列形如 $A&lt;B$ 的关系，并要求你判断是否能够根据这些关系确定这个数列的顺序。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>第一行有两个正整数 $n,m$，$n$ 表示需要排序的元素数量，$2\leq n\leq 26$，第 $1$ 到 $n$ 个元素将用大写的 $A,B,C,D\dots$ 表示。$m$ 表示将给出的形如 $A&lt;B$ 的关系的数量。</p>
+<p>接下来有 $m$ 行，每行有 $3$ 个字符，分别为一个大写字母，一个 <code>&amp;lt;</code> 符号，一个大写字母，表示两个元素之间的关系。</p>
+<h4>输出格式</h4>
+<p>若根据前 $x$ 个关系即可确定这 $n$ 个元素的顺序 <code>yyy..y</code>（如 <code>ABC</code>），输出</p>
+<p><code>Sorted sequence determined after xxx relations: yyy...y.</code></p>
+<p>若根据前 $x$ 个关系即发现存在矛盾（如 $A&lt;B,B&lt;C,C&lt;A$），输出</p>
+<p><code>Inconsistency found after x relations.</code></p>
+<p>若根据这 $m$ 个关系无法确定这 $n$ 个元素的顺序，输出</p>
+<p><code>Sorted sequence cannot be determined.</code></p>
+<p>（提示：确定 $n$ 个元素的顺序后即可结束程序，可以不用考虑确定顺序之后出现矛盾的情况）</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 6
+A&lt;B
+A&lt;C
+B&lt;C
+C&lt;D
+B&lt;D
+A&lt;B</p>
+<h4>输出样例 #1</h4>
+<p>Sorted sequence determined after 4 relations: ABCD.</p>
+<h4>输入样例 #2</h4>
+<p>3 2
+A&lt;B
+B&lt;A</p>
+<h4>输出样例 #2</h4>
+<p>Inconsistency found after 2 relations.</p>
+<h4>输入样例 #3</h4>
+<p>26 1
+A&lt;Z</p>
+<h4>输出样例 #3</h4>
+<p>Sorted sequence cannot be determined.</p>
+<h2>说明</h2>
+<p>$2 \leq n \leq 26,1 \leq m \leq 600$。</p>

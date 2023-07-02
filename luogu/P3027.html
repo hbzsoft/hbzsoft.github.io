@@ -1,0 +1,45 @@
+<h1>[USACO10OCT] Making Money G</h1>
+<h2>题目背景</h2>
+<p>FJ又经营起了古董生意，买卖一些像奶牛圣诞树上的装饰之类的小玩意。他知道他会将他能存储的N(1&lt;=N&lt;=100)件不同的奶牛古董每件都卖出。</p>
+<p>而且如果他的钱足够多他可以买他想要的任意数量的古董（即他可以购买的古董数量没有限制）。他只有M(1&lt;=M&lt;=100,000)元钱来买古董，但他想要在他经商的第一年年末最大化他的利润（这有点难以解释）。</p>
+<p>第i种古董采购需要花费Ci(1&lt;=Ci&lt;=100,000)元钱，每卖掉一件可以获得Ri(1&lt;=Ri&lt;=100,000)元钱(每卖一件的利润为Ri-Ci)。FJ可以以任意顺序卖出他的货物。他并不需要花光他所有的钱来购买古董。</p>
+<p>FJ在他经商的第一年年末能得到的最大总利润（利润=初始钱数-总花费+总收入）是多少呢？输入数据保证这个数字不会超过1,000,000,000.</p>
+<p>假设FJ只有3种古董而且开始时有M=17元钱。下面是三种古董的花费和收入。</p>
+<p>古董 花费 收入</p>
+<p>1 2 4</p>
+<p>2 5 6</p>
+<p>3 3 7</p>
+<p>在这种情况下，FJ应该花15元购买5个3号古董，再花2元购买1个1号古董，总共17元。他的利润是5*(7-3)+1*(4-2)=5*4+1*2=22元。他不能获得比这更多的利润了。</p>
+<p>提示：第二个样例很有挑战性，但我们的答案是正确的。</p>
+<p>输入格式：</p>
+<p>第1行：两个以空格分开的整数：N和M</p>
+<p>第2行到第N+1行：第i+1行包括两个以空格分开的整数：Ci和Ri</p>
+<p>输出格式</p>
+<p>第1行：FJ能获得的最大利润</p>
+<h2>题目描述</h2>
+<p>FJ has gone into the curio business, buying and selling knickknacks like cow Christmas tree ornaments. He knows he will sell every single curio he can stock from a catalog of N (1 &lt;= N &lt;= 100)</p>
+<p>different cow curios, and he can buy as many of each kind of curio as his heart desires. He has only M (1 &lt;= M &lt;= 100,000) money to invest but wants to maximize his profit (which has a slightly unusual definition) at the end of his first year in business.</p>
+<p>Curio type i costs C_i (1 &lt;= C_i &lt;= 100,000) money to purchase and yields R_i (1 &lt;= R_i &lt;= 100,000) revenue for each curio sold (a profit of R_i-C_i). FJ can mix and match the curios he sells in any way he wishes. He need not spend all his money when purchasing curios.</p>
+<p>What is the greatest amount of total profit (profit = initial_cash - all_costs + all_sales) FJ can have at the end of his first year? This number is guaranteed to be less than 1,000,000,000.</p>
+<p>Consider the situation when FJ has just 3 kinds of curios and starts with M=17. Below are the cost and revenue numbers for each curio:</p>
+<p>Curio     Cost     Revenue</p>
+<h1>C_i       R_i</h1>
+<p>1         2         4</p>
+<p>2         5         6</p>
+<p>3         3         7</p>
+<p>In this case, FJ should purchase 5 curios of type 3 for 15 money and 1 more curio of type 1 for 2 money, a total of 17 money. His profit will be 5 * (7-3) + 1 * (4-2) = 5*4 + 1*2 = 22 money. He can do no better than this given the cost and revenue structure.</p>
+<p>NOTE: The second test case is challenging -- but our answer is correct.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Two space-separated integers: N and M</p>
+<p>* Lines 2..N+1: Line i+1 contains two space-separated integers: C_i and R_i</p>
+<h4>输出格式</h4>
+<p>* Line 1: The maximum profit FJ can generate given the costs and revenues</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>3 17 
+2 4 
+5 6 
+3 7 </p>
+<h4>输出样例 #1</h4>
+<p>22 </p>

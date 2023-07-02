@@ -1,0 +1,30 @@
+<h1>黑白棋子的移动</h1>
+<h2>题目描述</h2>
+<p>有 $2n$ 个棋子排成一行，开始为位置白子全部在左边，黑子全部在右边，如下图为 $n=5$ 的情况：</p>
+<p>○○○○○●●●●●</p>
+<p>移动棋子的规则是：每次必须同时移动相邻的两个棋子，颜色不限，可以左移也可以右移到空位上去，但不能调换两个棋子的左右位置。每次移动必须跳过若干个棋子（不能平移），要求最后能移成黑白相间的一行棋子。如 $n=5$ 时，成为：</p>
+<p>○●○●○●○●○●</p>
+<p>任务：编程打印出移动过程。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>一个整数 $n$。</p>
+<h4>输出格式</h4>
+<p>若干行，表示初始状态和每次移动的状态，用"o"表示白子，"*"表示黑子，"-"表示空行。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>7</p>
+<h4>输出样例 #1</h4>
+<p>ooooooo<strong><em>*</em></strong>--
+oooooo--<strong><em>*</em><em>o</em>
+oooooo</strong><strong><em>*--o</em>
+ooooo--</strong><strong><em>o</em>o*
+ooooo</strong><strong><em>--o</em>o*
+oooo--</strong><strong>o<em>o<em>o</em>
+oooo</em></strong><em>--o</em>o<em>o</em>
+ooo--<strong><em>o</em>o<em>o</em>o<em>
+ooo</em>o</strong>--<em>o</em>o<em>o</em>
+o--<em>o</em><em>oo</em>o<em>o</em>o<em>
+o</em>o<em>o</em>--o<em>o</em>o<em>o</em>
+--o<em>o</em>o<em>o</em>o<em>o</em>o*</p>
+<h2>说明</h2>
+<p>$ 4\leq n\leq 100$ </p>

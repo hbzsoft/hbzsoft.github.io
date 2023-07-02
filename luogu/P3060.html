@@ -1,0 +1,70 @@
+<h1>[USACO12NOV] Balanced Trees G</h1>
+<h2>题目描述</h2>
+<p>Fascinated by his experience with balanced parentheses so far, Farmer John is curious if you can help him solve one final problem.  As it turns out, FJ's farm is in the shape of a giant tree of N pastures (1 &lt;= N &lt;= 40,000), each of which he has labeled with either ( or ).  For example:</p>
+<p>'('--'('--')'--'('--')' </p>
+<p>|         |</p>
+<p>')'       ')'--'('--'(' </p>
+<p>|              |</p>
+<p>')'            '('--')'--')'--')'--'(' </p>
+<p>Recall that since his farm is a tree, this means that certain pairs of pastures are connected by corridors so that there is one unique path between any given pair of pastures.  FJ believes that some of these paths represent balanced strings of parentheses.  In particular, he would like to know, among all such balanced strings represented by paths through the tree, what is the maximum nesting depth one can find.  The nesting depth of a balanced string of parentheses is the maximum, over all prefixes of the string, of the excess number of ('s within the prefix.  For example, the string ()()() has nesting depth 1, but the string ((()))() has nesting depth 3, as we can see clearly if we count excess ('s for every prefix of the string: </p>
+<p>((()))() </p>
+<p>12321010</p>
+<p>For the example farm above, the deepest string is ((())) with a depth of 3, and can be obtained by taking the path from A to B below:</p>
+<p><code>cpp
+'('--'('--')'--'('--')' 
+|         | 
+')'       ')'--'('--'(' &amp;lt; A 
+|              | 
+')'            '('--')'--')'--')'--'(' 
+^C                            ^B</code>
+Note that this is different than the longest balanced string; for instance (())(()), starting at A and ending at C, has length 8.</p>
+<p>Your task is to output the nesting depth of the deepest balanced path in the tree.</p>
+<p>给出一棵树，每个结点上有一个括号。问在所有括号平衡的路径中，最大嵌套层数为多少。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: A single integer N, the number of nodes in the tree.</p>
+<p>* Lines 2..N: Line i+1: A single integer p_(i+1) (1 &lt;= p_(i+1) &lt;= i), denoting an edge between nodes i+1 and p_{i+1} in the tree.</p>
+<p>* Lines N+1..2N: Line N+i: Either ( or ), the label of node i.</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer, giving the maximum nesting depth of a balanced path.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>15 
+1 
+2 
+1 
+4 
+4 
+6 
+7 
+5 
+9 
+9 
+11 
+12 
+13 
+14 
+( 
+) 
+) 
+( 
+) 
+) 
+( 
+) 
+( 
+( 
+( 
+) 
+) 
+) 
+( </p>
+<h4>输出样例 #1</h4>
+<p>3 </p>
+<h2>说明</h2>
+<p>This is the example from the problem description, with the following node labels:</p>
+<p>1'('--4'('--6')'--7'('--8')' </p>
+<p>|     |</p>
+<p>2')'  5')'--9'('--10'(' </p>
+<p>|           |</p>
+<p>3')'       11'('--12')'--13')'--14')'--15'(' </p>

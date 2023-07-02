@@ -1,0 +1,62 @@
+<h1>[USACO17OPEN] Where's Bessie? S</h1>
+<h2>题目背景</h2>
+<p>农夫John正在测试一个他新发明的全自动寻找奶牛无人机，它能够照一张农场的图片然后自动找出奶牛的位置。</p>
+<p>不幸的是，这个相机并不包含一个优秀的寻找奶牛函数，所以农夫John需要你来写一个。</p>
+<p>农场的俯瞰图被定义为一个n * n的字符矩阵。矩阵由大写字母A到Z组成，每个字母表示一种可行</p>
+<p>的颜色。农夫John发现一个可能是奶牛的位置（以下简称PCL）的最好定义如下：</p>
+<p>一个PCL是一个矩阵（可能是整张图），矩阵的边与图像的边缘平行，且不能被其他PCL所包含（因此PCL内部不可能有PCL）</p>
+<p>更多的，一个PCL必须满足以下特性：</p>
+<p>1、矩阵有且只能有2种颜色构成。</p>
+<p>2、这两种颜色一种构成一个连通块，另一种形成两个或两个以上的连通块。</p>
+<p>举个例子：</p>
+<p>AAAAA ABABA AAABB 这个矩阵就是一个PCL，其中颜色A构成一个连通块，B构成两个连通块，描述了一只可能以A为底色，B为花纹的奶牛。</p>
+<p>在这里连通块被定义为：从其中的任何一个点，你能仅通过上下左右移动，到达另外任何一个点</p>
+<p>（即上下左右相邻）</p>
+<p>给定农场的照片，请你计算图中有几个PCL。</p>
+<p>输入格式：</p>
+<p>第一行包含一个正整数N，表示矩阵的边长。</p>
+<p>接下来的N行每行N个字符，描述了这个矩阵的颜色。</p>
+<p>输出格式：</p>
+<p>输出PCL的个数</p>
+<p>说明：</p>
+<p>在这个样例里，两个PCL分别是：</p>
+<p>(如下)</p>
+<h2>题目描述</h2>
+<p>Always known for being quite tech-savy, Farmer John is testing out his new automated drone-mounted cow locator camera, which supposedly can take a picture of his field and automatically figure out the location of cows. Unfortunately, the camera does not include a very good algorithm for finding cows, so FJ needs your help developing a better one.</p>
+<p>The overhead image of his farm taken by the camera is described by an $N \times N$ grid of characters, each in the range $A \ldots Z$, representing one of 26 possible colors. Farmer John figures the best way to define a potential cow location (PCL) is as follows: A PCL is a rectangular sub-grid (possibly the entire image) with sides parallel to the image sides, not contained within any other PCL (so no smaller subset of a PCL is also a PCL).  Furthermore, a PCL must satisfy the following property: focusing on just the contents of the rectangle and ignoring the rest of the image, exactly two colors must be present, one forming a contiguous region and one forming two or more contiguous regions.</p>
+<p><code>cpp
+AAAAA
+ABABA
+AAABB</code></p>
+<p>For example, a rectangle with contents</p>
+<p>would constitute a PCL, since the A's form a single contiguous region and the B's form more than one contiguous region. The interpretation is a cow of color A with spots of color B. </p>
+<p>A region is "contiguous" if you can traverse the entire region by moving repeatedly from one cell in the region to another cell in the region taking steps up, down, left, or right. </p>
+<p>Given the image returned by FJ's camera, please count the number of PCLs.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of input contains $N$, the size of the grid ($1 \leq N \leq 20$).</p>
+<p>The next $N$ lines describe the image, each consisting of $N$ characters.</p>
+<h4>输出格式</h4>
+<p>Print a count of the number of PCLs in the image.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4
+ABBC
+BBBC
+AABB
+ABBC</p>
+<h4>输出样例 #1</h4>
+<p>2</p>
+<h2>说明</h2>
+<p>In this example, the two PCLs are the rectangles with contents</p>
+<p>```cpp
+ABB
+BBB
+AAB
+ABB</p>
+<p>and</p>
+<p>BC
+BC
+BB
+BC
+``</p>

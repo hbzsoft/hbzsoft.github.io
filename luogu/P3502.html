@@ -1,0 +1,39 @@
+<h1>[POI2010] CHO-Hamsters</h1>
+<h2>题意翻译</h2>
+<p>给出 $n$ 个互不包含的字符串，要求你求出一个最短的字符串 $S$，使得这 $n$ 个字符串在 $S$ 中总共至少出现 $m$ 次，问 $S$ 最短是多少。</p>
+<h2>题目描述</h2>
+<p>Byteasar breeds hamsters.</p>
+<p>Each hamster has a unique name,    consisting of lower case letters of the English alphabet.</p>
+<pre><code>The hamsters have a vast and comfortable cage.
+
+Byteasar intends to place a display under the cage to visualize the names of his hamsters.
+
+This display is simply a sequence of letters, each of which can be either lit or not independently.
+</code></pre>
+<p>Only one name will be displayed simultaneously.</p>
+<p>The lit letters forming the name have to stand next to each other,    i.e., form a contiguous subsequence.</p>
+<p>Byteasar wants to be able to display the names of the hamsters on at least <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.1.png" /> different positions.</p>
+<p>However, he allows displaying the same name on multiple different positions,    and does not require to be able to display each and every hamster's name.</p>
+<p>Note that the occurrences of the names on the display can overlap.</p>
+<p>You can assume that no hamster's name occurs (as a contiguous fragment) in any other hamster's name.</p>
+<p>Bytesar asks your help in determining the minimum number of letters the display has to have.</p>
+<p>In other words, you are to determine the minimum length of a string    (consisting of non-capital letters of the English alphabet)    that has at least <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.2.png" /> total occurrences of the hamsters' names (counting multiplicities).</p>
+<p>(We say that a string <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.3.png" /> occurs in the string <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.4.png" /> if <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.5.png" /> forms a contiguous fragment of <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.6.png" />.)</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input holds two integers <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.7.png" /> and <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.8.png" />      (<img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.9.png" />, <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.10.png" />), separated by a single space, that denote      the number of Byteasar's hamsters and the minimum number of occurrences of the hamsters' names on the display.</p>
+<p>Each of the following <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.11.png" /> lines contains a non-empty string of non-capital letters of the English alphabet      that is the hamster's name.</p>
+<p>The total length of all names does not exceed <img alt="" src="http://main.edu.pl/images/OI17/cho-en-tex.12.png" /> letters.</p>
+<h4>输出格式</h4>
+<p>The first and only line of the standard output should hold a single integer      - the minimum number of letters the display has to have.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 5
+monika
+tomek
+szymon
+bernard</p>
+<h4>输出样例 #1</h4>
+<p>23</p>
+<h2>说明</h2>
+<p>$1\le n\le 200$，$1\le m\le 10^9$ ，所有字符串的总长 $\le 10^5$。</p>

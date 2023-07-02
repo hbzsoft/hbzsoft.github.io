@@ -1,0 +1,36 @@
+<h1>[USACO06JAN] Corral the Cows G</h1>
+<h2>题目描述</h2>
+<p>Farmer John wishes to build a corral for his cows. Being finicky beasts, they demand that the corral be square and that the corral contain at least C (1 &lt;= C &lt;= 500) clover fields for afternoon treats. The corral's edges must be parallel to the X,Y axes.</p>
+<p>FJ's land contains a total of N (C &lt;= N &lt;= 500) clover fields, each a block of size 1 x 1 and located at with its lower left corner at integer X and Y coordinates each in the range 1..10,000. Sometimes more than one clover field grows at the same location; such a field would have its location appear twice (or more) in the input. A corral surrounds a clover field if the field is entirely located inside the corral's borders.</p>
+<p>Help FJ by telling him the side length of the smallest square containing C clover fields.</p>
+<p>Farmer John 希望为他的奶牛们建立一个畜栏。</p>
+<p>这些挑剔的奶牛要求畜栏必须是正方形的，而且至少要包含 $C$ 片三叶草，来当做它们的下午茶。</p>
+<p>约翰的土地里一共包含 $N$ 片三叶草，每单位三叶草位于一个 $1\times 1$ 的土地区域内。坐标都为整数，范围在 $1$ 到 $10000$ 以内。</p>
+<p><strong>多片的三叶草可能会位于同一个 $1\times 1$ 的区域内，所以在输入内，同一个区域坐标可能出现多次。</strong></p>
+<p>请你帮 Farmer John 计算一下，在能包含至少 $C$ 片三叶草的情况下，畜栏的最小边长是多少。</p>
+<p>$1\le C\le N\le 500$。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>Line 1: Two space-separated integers: C and N</p>
+<p>Lines 2..N+1: Each line contains two space-separated integers that are the X,Y coordinates of a clover field.</p>
+<h4>输出格式</h4>
+<p>Line 1: A single line with a single integer that is length of one edge of the minimum size square that contains at least C clover fields.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>3 4
+1 2
+2 1
+4 1
+5 2</p>
+<h4>输出样例 #1</h4>
+<p>4</p>
+<h2>说明</h2>
+<p>Explanation of the sample:</p>
+<p>|*   *</p>
+<p>| * *</p>
+<p>+------Below is one 4x4 solution (C's show most of the corral's area); many others exist.</p>
+<p>|CCCC</p>
+<p>|CCCC</p>
+<p>|*CCC*</p>
+<p>|C*C*</p>
+<p>+------</p>

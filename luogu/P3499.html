@@ -1,0 +1,28 @@
+<h1>[POI2010] NAJ-Divine Divisor</h1>
+<h2>题目描述</h2>
+<p>An integer <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.1.png" /> is given.</p>
+<p>We say that an integer <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.2.png" /> is a divisor of <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.3.png" /> with multiplicity <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.4.png" />    (<img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.5.png" /> is integer) if <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.6.png" /> and <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.7.png" /> does not divide <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.8.png" />.</p>
+<p>For example, the number <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.9.png" /> has the following divisors:</p>
+<p>2 with multiplicity 4, 3 with multiplicity 1, 4 with multiplicity 2, 6 with multiplicity 1, and so on.</p>
+<p>We say that a number <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.10.png" /> is a  divine divisor of the number <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.11.png" />    if <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.12.png" /> is a divisor of <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.13.png" /> with multiplicity <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.14.png" /> and <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.15.png" /> has no divisors    with multiplicities greater than <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.16.png" />.</p>
+<p>For example, the sole divine divisor of 48 is 2 (with multiplicity 4),    and the divine divisors of 6 are: 2, 3 and 6 (each with multiplicity 1).</p>
+<p>Your task is to determine the multiplicity of divine divisors of <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.17.png" />    and the number of its divine divisors.</p>
+<p>给定一个正整数 $m$ 以及长度为 $m$ 的正整数序列  $a$ ,同时给出  $n = \prod_{i=1}^{m}{a_i}$。你需要找出一个最大的 $k$ 使得存在一个 $d$ , $d &gt; 1$ 并且 $d^k | n$。求这个最大的 $k$ 以及在 $k$ 最大的情况下有多少个 $d$ 满足条件。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The number <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.18.png" /> is given on the standard input, though in a somewhat unusual way.</p>
+<p>The first line holds a single integer <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.19.png" /> (<img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.20.png" />).</p>
+<p>The second line holds <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.21.png" /> integers <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.22.png" /> (<img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.23.png" />)    separated by single spaces.</p>
+<p>These denote that <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.24.png" />.</p>
+<h4>输出格式</h4>
+<p>The first line of the standard output should hold the maximum integer <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.25.png" />    such that there exists a divisor <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.26.png" /> of <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.27.png" /> such that <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.28.png" />.</p>
+<p>The second line should hold a single integer <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.29.png" /> that is the number of    (divine) divisors of <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.30.png" /> with multiplicity <img alt="" src="http://main.edu.pl/images/OI17/naj-en-tex.31.png" />.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>3
+4 3 4</p>
+<h4>输出样例 #1</h4>
+<p>4
+1</p>
+<h2>说明</h2>
+<p>$1\le m\le 600$，且$\forall 1\le i\le m$，有$1\le a_i\le 10^{18}$</p>

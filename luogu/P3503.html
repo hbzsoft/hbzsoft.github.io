@@ -1,0 +1,38 @@
+<h1>[POI2010] KLO-Blocks</h1>
+<h2>题意翻译</h2>
+<p>给出 $n$ 个正整数 $a_1,a_2,\cdots,a_n$，再给出一个正整数 $k$，现在可以进行如下操作：</p>
+<ul>
+<li>每次选择一个大于 $k$ 的正整数 $a_i$，将 $a_i$ 减去 $1$ ，选择 $a_{i-1}$ 或 $a_{i+1}$ 中的一个加上 $1$。</li>
+</ul>
+<p>经过一定次数的操作后，问最大能够选出多长的一个连续子序列，使得这个子序列的每个数都不小于 $k$。$m$ 组询问。</p>
+<h2>题目描述</h2>
+<pre><code>Bytie has got a set of wooden blocks for his birthday.
+</code></pre>
+<p>The blocks are indistinguishable from one another, as they are all cubes of the same size.</p>
+<pre><code>Bytie forms piles by putting one block atop another.
+</code></pre>
+<p>Soon he had a whole rank of such piles, one next to another in a straight line.</p>
+<p>Of course, the piles can have different heights.</p>
+<p>Bytie's father, Byteasar, gave his son a puzzle.</p>
+<p>He gave him a number <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.1.png" /> and asked to rearrange the blocks in such a way that    the number of successive piles of height at least <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.2.png" /> is maximised.</p>
+<p>However, Bytie is only ever allowed to pick the top block from a pile strictly    higher than <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.3.png" /> and place it atop one of the piles next to it.</p>
+<p>Further, Bytie is not allowed to form new piles, he can only move blocks    between those already existing.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>In the first line of the standard input there are two integers separated by a single space:</p>
+<p><img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.4.png" /> (<img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.5.png" />), denoting the number of piles, and <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.6.png" /> (<img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.7.png" />),      denoting the number of Byteasar's requests.</p>
+<p>The piles are numbered from <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.8.png" /> to <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.9.png" />.</p>
+<p>In the second line there are <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.10.png" /> integers <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.11.png" />      separated by single spaces (<img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.12.png" />).</p>
+<p>The number <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.13.png" /> denotes the height of the <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.14.png" />-th pile.</p>
+<p>The third line holds ![](http://main.edu.pl…</p>
+<h4>输出格式</h4>
+<p>Your program should print out <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.21.png" /> integers, separated by single spaces,      to the standard output - the <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.22.png" />-th of which should be the answer to the puzzle      for the given initial piles set-up and the parameter <img alt="" src="http://main.edu.pl/images/OI17/klo-en-tex.23.png" />.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 6
+1 2 1 1 5
+1 2 3 4 5 6</p>
+<h4>输出样例 #1</h4>
+<p>5 5 2 1 1 0</p>
+<h2>说明</h2>
+<p>$1\le n\le 10^6$，$1\le m\le 50$，$1\le a_i,k\le 10^9$</p>

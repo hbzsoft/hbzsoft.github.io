@@ -1,0 +1,23 @@
+<h1>[POI2013] BAJ-Bytecomputer</h1>
+<h2>题意翻译</h2>
+<p>给定一个长度为 $n$ 的只包含 $-1,0,1$ 的数列 $a$，每次操作可以使 $a_i\gets a_i+a_{i-1}$，求最少操作次数使得序列单调不降。如果不可能通过该操作使得序列单调不降，请输出 <code>BRAK</code>。</p>
+<p>数据范围：$1\le n\le 10^6$。</p>
+<h2>题目描述</h2>
+<p>A sequence of <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.1.png" /> integers <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.2.png" /> from the set <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.3.png" /> is given.</p>
+<p>The bytecomputer is a device that allows the following operation on the sequence:</p>
+<p>incrementing <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.4.png" /> by <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.5.png" /> for any <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.6.png" />.</p>
+<p>There is no limit on the range of integers the bytecomputer can store, i.e.,    each <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.7.png" /> can (in principle) have arbitrarily small or large value.</p>
+<p>Program the bytecomputer so that it transforms the input sequence into a non-decreasing sequence    (i.e., such that <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.8.png" />) with the minimum number of operations.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>The first line of the standard input holds a single integer <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.9.png" /> (<img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.10.png" />),      the number of elements in the (bytecomputer's) input sequence.</p>
+<p>The second line contains <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.11.png" /> integers <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.12.png" /> (<img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.13.png" />)      that are the successive elements of the (bytecomputer's) input sequence, separated by single spaces.</p>
+<p>In tests worth 24% of the total points it holds that <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.14.png" />,      and in tests worth 48% of the total points it holds that <img alt="" src="http://main.edu.pl/images/OI20/baj-en-tex.15.png" />.</p>
+<h4>输出格式</h4>
+<p>The first and only line of the standard output should give one integer,      the minimum number of operations the bytecomputer has to perform to make its input sequence non-decreasing,      of the single word BRAK (Polish for none) if obtaining such a sequence is impossible.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>6
+-1 1 0 -1 0 1</p>
+<h4>输出样例 #1</h4>
+<p>3</p>

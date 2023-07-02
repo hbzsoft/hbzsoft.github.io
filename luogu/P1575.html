@@ -1,0 +1,20 @@
+<h1>正误问题</h1>
+<h2>题目描述</h2>
+<p>小 bobo 迷上了逻辑值运算。但小 bobo 算的头都晕了，也没算出个所以然。他只好找到你，让你帮他解决这个问题。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>一个字符串表达逻辑式子，内只包含 <code>true</code>，<code>false</code>，<code>or</code>，<code>and</code>，<code>not</code> 和空格，(不包含括号和 <code>xor</code>)，优先级同 pascal。(从高到低依次为 <code>not</code>，<code>and</code>，<code>or</code>)，同级左边先算，如果逻辑式有误则输出 <code>error</code>。</p>
+<h4>输出格式</h4>
+<p>输出一行表示运算结果：<code>true</code> 或者 <code>false</code>，如果无法得到结果的输出 <code>error</code>。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>true or false and false</p>
+<h4>输出样例 #1</h4>
+<p>true</p>
+<h2>说明</h2>
+<p>对于全部数据，保证输入数据串长小于 $255$。</p>
+<p>本题结果为 <code>true</code>，<code>false</code>，<code>error</code> 各占 $\dfrac{1}{3}$，允许“骗分”，但不值得，因为是“水题”。</p>
+<hr />
+<ul>
+<li>$\text{upd 2022.7.21}$：新增加 $5$ 组 <a href="https://www.luogu.com.cn/discuss/459823">Hack 数据</a>。</li>
+</ul>

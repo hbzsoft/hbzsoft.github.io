@@ -1,0 +1,39 @@
+<h1>[USACO11FEB] Cowlphabet G</h1>
+<h2>题目描述</h2>
+<p>Like all bovines, Farmer John's cows speak the peculiar 'Cow'</p>
+<p>language. Like so many languages, each word in this language comprises a sequence of upper and lowercase letters (A-Z and a-z).  A word is valid if and only if each ordered pair of adjacent letters in the word is a valid pair.</p>
+<p>Farmer John, ever worried that his cows are plotting against him, recently tried to eavesdrop on their conversation. He overheard one word before the cows noticed his presence. The Cow language is spoken so quickly, and its sounds are so strange, that all that Farmer John was able to perceive was the total number of uppercase letters, U (1 &lt;= U &lt;= 250) and the total number of lowercase</p>
+<p>letters, L (1 &lt;= L &lt;= 250) in the word. </p>
+<p>Farmer John knows all P (1 &lt;= P &lt;= 200) valid ordered pairs of adjacent letters.  He wishes to know how many different valid </p>
+<p>words are consistent with his limited data.  However, since</p>
+<p>this number may be very large, he only needs the value modulo</p>
+<p>97654321.</p>
+<p>约翰家的奶牛用别人听不懂的“牛语”联络。牛语采用英文字母，而且区分大小写。牛 语中的语法中，前后字母的衔接非常重要，存在P个基本组合，每个字母之后只能接固定的 几个字母。 约翰担心奶牛正在密谋反对他，于是最近一直在偷听她们的对话。可是牛语太复杂了， 他只模模糊糊地听到了一个单词，并确定了这个单词中有U个大写字母，L个小写字母。约 翰对这个单词很在意，他想知道，有多少牛语词汇拥有U个大写字母，L个小写字母。由于 这个数字太大了，你只要输出答案取 97654321 的余数就可以了。 输入格式 ? ? 第一行：三个用空格隔开的整数：U，L和P，1 ≤ U, L ≤ 250，1 ≤ P ≤ 200 第二行到P + 1行：第i + 1有两个字母Ai和Bi，表示字母Ai后面可以接Bi，没有一对Ai和 Bi是完全相同的</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Three space-separated integers: U, L and P</p>
+<p>* Lines 2..P+1: Two letters (each of which may be uppercase or lowercase), representing one valid ordered pair of adjacent letters in Cow.</p>
+<h4>输出格式</h4>
+<p>* Line 1: A single integer, the number of valid words consistent with Farmer  John's data mod 97654321.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>2 2 7 
+AB 
+ab 
+BA 
+ba 
+Aa 
+Bb 
+bB </p>
+<h4>输出样例 #1</h4>
+<p>7 </p>
+<h2>说明</h2>
+<p>The word Farmer John overheard had 2 uppercase and 2 lowercase letters.  The valid pairs of adjacent letters are AB, ab, BA, ba, Aa, Bb and bB.</p>
+<p>The possible words are:</p>
+<p>AabB
+ABba
+abBA
+BAab
+BbBb
+bBAa
+bBbB</p>

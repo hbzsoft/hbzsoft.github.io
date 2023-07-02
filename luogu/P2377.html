@@ -1,0 +1,48 @@
+<h1>三角形图</h1>
+<h2>题目背景</h2>
+<p>模拟赛一道难过到我的题</p>
+<h2>题目描述</h2>
+<p>一个三角形网格上，每个小三角形的面积都为1。你可以从某个点开始，沿着边走出一个多边形来，使得围成一定的面积。我们可以给每个点定义5个方向：</p>
+<p>a    左转120°</p>
+<p>b    左转60°</p>
+<p>c    直走</p>
+<p>d    右转60°</p>
+<p>e    右转120°</p>
+<p>这样的话，一个图形就能被一组字母表示出来。 <img alt="" src="https://cdn.luogu.com.cn/upload/pic/1430.png" />  <img alt="" src="https://cdn.luogu.com.cn/upload/pic/1423.png" /> 比如左边的图，从A点开始顺时针走，则可以表示为dcddeaddd；从B点开始顺时针走，则可以表示ddeaddddc；……。右图显示的是左图翻折后的情况。</p>
+<p>左图和右图是本质相同的图形。为了惟一地表示一类全等的图形，我们在这类图形的所有表示方法中找字典序最小的表示方法来代表这一类全等的图形。左图和右图的最小表示方法相同，都是addddcdde。</p>
+<p>现在告诉你一个图形的某个表示法（不一定是最小表示方法），请你求出在这个图形的基础上加一个小三角形后合法图形的个数，以及他们的最小表示方法。</p>
+<p>一个图形是合法的，当且仅当组成它的所有小三角形均有至少一条与其他三角形公共的边，且不存在中空。</p>
+<p>下面的图形都是不合法的： <img alt="" src="https://cdn.luogu.com.cn/upload/pic/1425.png" />  <img alt="" src="https://cdn.luogu.com.cn/upload/pic/1426.png" />  <img alt="" src="https://cdn.luogu.com.cn/upload/pic/1427.png" />  <img alt="" src="https://cdn.luogu.com.cn/upload/pic/1428.png" /></p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>第一行1个数字T，表示数据组数。</p>
+<p>接下来T行每行一个字符串，表示某个图形的某个表示方法。</p>
+<p>读入数据保证一定合法，且一定是顺时针的表示方法。</p>
+<h4>输出格式</h4>
+<p>对于每组数据：</p>
+<p>第一行1个整数K，表示加一个小三角形后的不全等的图形的个数。</p>
+<p>接下来一行K个字符串，表示这K个不同图形的最小表示方法（按字典序排序），字符串两两之间用一个空格隔开，最小表示方法必须是顺时针的。</p>
+<p>两组数据间用一个空行隔开。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>2
+eee
+cedde</p>
+<h4>输出样例 #1</h4>
+<p>1
+dede</p>
+<p>3
+beddde cdecde cecece</p>
+<h4>输入样例 #2</h4>
+<p>2
+adeccecced
+dddddd</p>
+<h4>输出样例 #2</h4>
+<p>5
+acedccecced addebcecced adebebecced adecbedcced cceccecce</p>
+<p>1
+cddddce</p>
+<h2>说明</h2>
+<p>样例解释</p>
+<p>Sample 1 的解释：</p>
+<p><img alt="" src="https://cdn.luogu.com.cn/upload/pic/1429.png" /></p>

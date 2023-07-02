@@ -1,0 +1,53 @@
+<h1>[USACO11OPEN] Corn Maze S</h1>
+<h2>题意翻译</h2>
+<p>奶牛们去一个 $N\times M$ 玉米迷宫，$2 \leq N \leq 300,2 \leq M \leq300$。</p>
+<p>迷宫里有一些传送装置，可以将奶牛从一点到另一点进行瞬间转移。这些装置可以双向使用。</p>
+<p>如果一头奶牛处在这个装置的起点或者终点，这头奶牛就<strong>必须</strong>使用这个装置。</p>
+<p>玉米迷宫除了唯一的一个出口都被玉米包围。</p>
+<p>迷宫中的每个元素都由以下项目中的一项组成：</p>
+<ol>
+<li>玉米，<code>#</code> 表示，这些格子是不可以通过的。</li>
+<li>草地，<code>.</code> 表示，可以简单的通过。</li>
+<li>传送装置，每一对大写字母 $\tt{A}$ 到 $\tt{Z}$ 表示。</li>
+<li>出口，<code>=</code> 表示。</li>
+<li>起点， <code>@</code> 表示</li>
+</ol>
+<p>奶牛能在一格草地上可能存在的四个相邻的格子移动，花费 $1$ 个单位时间。从装置的一个结点到另一个结点不花时间。</p>
+<h2>题目描述</h2>
+<p>This past fall, Farmer John took the cows to visit a corn maze. But this wasn't just any corn maze: it featured several gravity-powered teleporter slides, which cause cows to teleport instantly from one point in the maze to another. The slides work in both directions: a cow can slide from the slide's start to the end instantly, or from the end to the start. If a cow steps on a space that hosts either end of a slide, she must use the slide.</p>
+<p>The outside of the corn maze is entirely corn except for a single exit.</p>
+<p>The maze can be represented by an N x M (2 &lt;= N &lt;= 300; 2 &lt;= M &lt;= 300) grid. Each grid element contains one of these items:</p>
+<p>* Corn (corn grid elements are impassable) </p>
+<p>* Grass (easy to pass through!) </p>
+<p>* A slide endpoint (which will transport a cow to the other endpoint) </p>
+<p>* The exit</p>
+<p>A cow can only move from one space to the next if they are adjacent and neither contains corn. Each grassy space has four potential neighbors to which a cow can travel. It takes 1 unit of time to move from a grassy space to an adjacent space; it takes 0 units of time to move from one slide endpoint to the other.</p>
+<p>Corn-filled spaces are denoted with an octothorpe (#). Grassy spaces are denoted with a period (.). Pairs of slide endpoints are denoted with the same uppercase letter (A-Z), and no two different slides have endpoints denoted with the same letter. The exit is denoted with the equals sign (=).</p>
+<p>Bessie got lost. She knows where she is on the grid, and marked her current grassy space with the 'at' symbol (@). What is the minimum time she needs to move to the exit space?</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>第一行：两个用空格隔开的整数 $N$ 和 $M$。</p>
+<p>第 $2\sim N+1$ 行：第 $i+1$ 行描述了迷宫中的第 $i$ 行的情况（共有$M$个字符，每个字符中间没有空格）。</p>
+<h4>输出格式</h4>
+<p>一个整数，表示起点到出口所需的最短时间。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 6</p>
+<h3>=</h3>
+<h1>.W.</h1>
+<h1>.</h1>
+<h1>.@W</h1>
+<h6></h6>
+<h4>输出样例 #1</h4>
+<p>3</p>
+<h2>说明</h2>
+<p>例如以下矩阵，$N=5,M=6$。</p>
+<p>```plain</p>
+<h3>=</h3>
+<h1>.W.</h1>
+<h1>.</h1>
+<h1>.@W</h1>
+<h6></h6>
+<p>```</p>
+<p>唯一的一个装置的结点用大写字母 $\tt{W}$ 表示。</p>
+<p>最优方案为：先向右走到装置的结点，花费一个单位时间，再到装置的另一个结点上，花费 $0$ 个单位时间，然后再向右走一个，再向上走一个，到达出口处，总共花费了 $3$ 个单位时间。</p>

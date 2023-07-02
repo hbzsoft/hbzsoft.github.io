@@ -1,0 +1,29 @@
+<h1>[USACO12MAR] Flowerpot S</h1>
+<h2>题目描述</h2>
+<p>Farmer John has been having trouble making his plants grow, and needs your help to water them properly.  You are given the locations of N raindrops (1 &lt;= N &lt;= 100,000) in the 2D plane, where y represents vertical height of the drop, and x represents its location over a 1D number line:</p>
+<p><img alt="" src="https://cdn.luogu.com.cn/upload/pic/9174.png" /> </p>
+<p>Each drop falls downward (towards the x axis) at a rate of 1 unit per second.  You would like to place Farmer John's flowerpot of width W somewhere along the x axis so that the difference in time between the first raindrop to hit the flowerpot and the last raindrop to hit the flowerpot is at least some amount D (so that the flowers in the pot receive plenty of water).  A drop of water that lands just on the edge of the flowerpot counts as hitting the flowerpot. </p>
+<p>Given the value of D and the locations of the N raindrops, please compute the minimum possible value of W.</p>
+<p>老板需要你帮忙浇花。给出 $N$ 滴水的坐标，$y$ 表示水滴的高度，$x$ 表示它下落到 $x$ 轴的位置。</p>
+<p>每滴水以每秒 $1$ 个单位长度的速度下落。你需要把花盆放在 $x$ 轴上的某个位置，使得从被花盆接着的第 $1$ 滴水开始，到被花盆接着的最后 $1$ 滴水结束，之间的时间差至少为 $D$。</p>
+<p>我们认为，只要水滴落到 $x$ 轴上，与花盆的边沿对齐，就认为被接住。给出 $N$ 滴水的坐标和 $D$ 的大小，请算出最小的花盆的宽度 $W$。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>第一行 $2$ 个整数 $N$ 和 $D$。</p>
+<p>接下来 $N$ 行每行 $2$ 个整数，表示水滴的坐标 $(x,y)$。</p>
+<h4>输出格式</h4>
+<p>仅一行 $1$ 个整数，表示最小的花盆的宽度。如果无法构造出足够宽的花盆，使得在 $D$ 单位的时间接住满足要求的水滴，则输出 $-1$。</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>4 5
+6 3
+2 4
+4 10
+12 15</p>
+<h4>输出样例 #1</h4>
+<p>2</p>
+<h2>说明</h2>
+<p>有 $4$ 滴水，$(6,3)$ ，$(2,4)$ ，$(4,10)$ ，$(12,15)$ 。水滴必须用至少 $5$ 秒时间落入花盆。花盆的宽度为 $2$ 是必须且足够的。把花盆放在 $x=4\dots6$ 的位置，它可以接到 $1$ 和 $3$ 水滴, 之间的时间差为 $10-3=7$ 满足条件。</p>
+<p><strong>【数据范围】</strong></p>
+<p>$40\%$ 的数据：$1 \le N \le 1000$ ，$1 \le D \le 2000$ 。</p>
+<p>$100\%$ 的数据：$1 \le N \le 10 ^ 5$ ，$1 \le D \le 10 ^ 6$ ，$0\le x,y\le10^6$ 。</p>

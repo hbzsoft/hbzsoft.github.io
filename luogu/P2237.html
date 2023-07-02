@@ -1,0 +1,57 @@
+<h1>[USACO14FEB] Auto-complete S</h1>
+<h2>题意翻译</h2>
+<h3>题目描述</h3>
+<p>有 $w$ 个由小写字符构成的字典和 $n$ 个询问。每个询问由一个字符串 $s$ 和一个整数 $k$ 构成，求在字典序排序下字典内由 $s$ 为前缀的第 $k$ 字符串在输入字典的位置。若不存在，则输出 $-1$</p>
+<h3>输入格式</h3>
+<p>第 $1$ 行是两个整数 $w$ 和 $n$ </p>
+<p>第 $2$ 行到第 $w$ + $1$ 行为字典中的第 $i$ - $1$ 个，每行由字符串构成（$i$ 指输入的第 $i$ 行）</p>
+<p>第 $w$ + $2$ 行到第 $w$ + $n$ + $1$ 行由一个整数 $k$ 和一个字符串 $s$ 构成</p>
+<h3>输出格式</h3>
+<p>第 $1$ 行到第 $n$ 行是对于每个询问的结果，由一个整数构成</p>
+<h3>说明/提示</h3>
+<p>对于 $100\%$ 的数据，$w \le 30000$，$1\le n \le 1000$，字典内每个字符串的长度均小于等于 $1000$</p>
+<p>样例解释：</p>
+<p>对于第 $1$ 个询问，含义为在字典中找到以 <code>a</code> 为前缀且按字典序排序后第 $4$ 个字符串，而字典中以 <code>a</code> 为前缀且按字典序排序后为 ${$  <code>aa</code>，<code>aaa</code>，<code>aab</code>，<code>ab</code>，<code>abc</code>，<code>ac</code> $}$，第 $4$ 个是 <code>ab</code>，其在输入中为第 $3$ 个，故输出为 $3$</p>
+<p>同理，对于第 $2$ 个和第 $3$ 个询问是在字典中找到以 <code>da</code> 为前缀且按字典序排序后的第 $2$ 和第 $4$ 个字符串。而以 <code>da</code> 为前缀的字符串按字典序排序后为 ${$<code>daa</code>，<code>dab</code>，<code>dadba</code> $}$，故第 $2$ 个为 <code>dab</code> ，其在输入中为第 $1$ 个，故第 $2$ 个输出为 $1$，而该序列中没有第 $4$ 个，故第 $3$ 个询问无解，输出 $-1$</p>
+<p>来源：USACO 2014 Feburary Contest Silver</p>
+<p>翻译：@<a href="/user/289296">zymooll</a></p>
+<h2>题目描述</h2>
+<p>Bessie the cow has a new cell phone and enjoys sending text messages, although she keeps making spelling errors since she has trouble typing on such a small screen with her large hooves.  Farmer John has agreed to help her by writing an auto-completion app that takes a partial word and suggests how to complete it.</p>
+<p>The auto-completion app has access to a dictionary of W words, each consisting of lowercase letters in the range a..z, where the total number of letters among all words is at most 1,000,000.  The app is given as input a list of N partial words (1 &lt;= N &lt;= 1000), each containing at most 1000 lowercase letters.  Along with each partial word i, an integer K_i is also provided, such that the app must find the (K_i)th word in alphabetical order that has partial word i as a prefix.  That is, if one ordered all of the valid completions of the ith partial word, the app should output the completion that is (K_i)th in this sequence.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>* Line 1: Two integers: W and N.</p>
+<p>* Lines 2..W+1: Line i+1: The ith word in the dictionary.</p>
+<p>* Lines W+2..W+N+1: Line W+i+1: A single integer K_i followed by a    partial word.</p>
+<h4>输出格式</h4>
+<p>* Lines 1..N: Line i should contain the index within the dictionary</p>
+<p>(an integer in the range 1..W) of the (K_i)th completion (in</p>
+<p>alphabetical order) of the ith partial word, or -1 if there</p>
+<p>are less than K_i completions.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>10 3
+dab
+ba
+ab
+daa
+aa
+aaa
+aab
+abc
+ac
+dadba
+4 a
+2 da
+4 da</p>
+<h4>输出样例 #1</h4>
+<p>3
+1
+-1</p>
+<h2>说明</h2>
+<p>OUTPUT DETAILS:</p>
+<p>The completions of a are {aa,aaa,aab,ab,abc,ac}. The 4th is ab, which</p>
+<p>is listed on line 3 of the dictionary.  The completions of da are</p>
+<p>{daa,dab,dadba}. The 2nd is dab, listed on line 1 of the dictionary.</p>
+<p>There is no 4th completion of da.</p>
+<p>Source: USACO 2014 Feburary Contest, Silver</p>

@@ -1,0 +1,37 @@
+<h1>[USACO14DEC] Cow Jog S</h1>
+<h2>题目描述</h2>
+<p>The cows are out exercising their hooves again!  There are N cows</p>
+<p>jogging on an infinitely-long single-lane track (1 &lt;= N &lt;= 100,000).</p>
+<p>Each cow starts at a distinct position on the track, and some cows jog</p>
+<p>at different speeds.</p>
+<p>With only one lane in the track, cows cannot pass each other.  When a</p>
+<p>faster cow catches up to another cow, she has to slow down to avoid</p>
+<p>running into the other cow, becoming part of the same running group.</p>
+<p>The cows will run for T minutes (1 &lt;= T &lt;= 1,000,000,000).  Please</p>
+<p>help Farmer John determine how many groups will be left at this time.</p>
+<p>Two cows should be considered part of the same group if they are at</p>
+<p>the same position at the end of T minutes. </p>
+<p>有N (1 &lt;= N &lt;= 100,000)头奶牛在一个单人的超长跑道上慢跑，每头牛的起点位置都不同。由于是单人跑道，所有他们之间不能相互超越。当一头速度快的奶牛追上另外一头奶牛的时候，他必须降速成同等速度。我们把这些跑走同一个位置而且同等速度的牛看成一个小组。</p>
+<p>请计算T (1 &lt;= T &lt;= 1,000,000,000)时间后，奶牛们将分为多少小组。</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>INPUT: (file cowjog.in) </p>
+<p>The first line of input contains the two integers N and T.</p>
+<p>The following N lines each contain the initial position and speed of a</p>
+<p>single cow.  Position is a nonnegative integer and speed is a positive</p>
+<p>integer; both numbers are at most 1 billion.  All cows start at</p>
+<p>distinct positions, and these will be given in increasing order in</p>
+<p>the input.</p>
+<h4>输出格式</h4>
+<p>OUTPUT: (file cowjog.out) </p>
+<p>A single integer indicating how many groups remain after T minutes.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5 3 
+0 1 
+1 2 
+2 3 
+3 2 
+6 1 </p>
+<h4>输出样例 #1</h4>
+<p>3 </p>

@@ -1,0 +1,26 @@
+<h1>[POI2008] TRO-Triangles</h1>
+<h2>题目描述</h2>
+<p><img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.1.png" /> pairwise disjoint points in the plane are given (<img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.2.png" />).</p>
+<p>There are <img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.3.png" /> triangles whose    vertices are some pairwise different points among them    (including degenerate triangles, i.e. ones whose vertices are collinear).</p>
+<p>We want to calculate the sum of areas of all the triangles with vertices    in the given points.</p>
+<p>Those parts of the plane that belong to many triangles are to be calculated    multiple times. We assume that the area of degenerate triangles (i.e. those    with collinear vertices) is zero.</p>
+<p>Task    Write a programme that:</p>
+<p>reads from the standard input the coordinates of the points in the plane,                 determines the sum of the areas of all the triangles with vertices in       the given points,                  prints out the result to the standard output.</p>
+<p>给定平面上的一些点，求这些点能组成的所有三角形的面积之和</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>In the first line of the standard input there is one integer <img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.4.png" />   (<img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.5.png" />) denoting the number of selected points.</p>
+<p>Each of the following <img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.6.png" /> lines contains two integers <img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.7.png" /> and <img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.8.png" />   (<img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.9.png" />) separated by a single space and denoting   the coordinates of the <img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.10.png" /> point (for <img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.11.png" />).</p>
+<p>No pair (ordered) of coordinates appears more than once.</p>
+<h4>输出格式</h4>
+<p>In the first and only line of the standard output there should be one   real number equal to the sum of the areas of all the triangles with   vertices in the given points. The outcome should be printed out with   exactly one digit after dot and should not differ from the correct value   by more than <img alt="" src="http://main.edu.pl/images/OI15/tro-en-tex.12.png" />.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>5
+0 0
+1 2
+0 2
+1 0
+1 1</p>
+<h4>输出样例 #1</h4>
+<p>7.0</p>

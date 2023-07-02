@@ -1,0 +1,37 @@
+<h1>[POI2011] Lightning Conductor</h1>
+<h2>题意翻译</h2>
+<p>给定一个长度为 $n$ 的序列 ${a_n}$，对于每个 $i\in [1,n]$ ，求出一个最小的非负整数 $p$ ，使得 $\forall j\in[1,n]$，都有 $a_j\le a_i+p-\sqrt{|i-j|}$</p>
+<p>$1 \le n \le 5\times 10^{5}$，$0 \le a_i \le 10^{9}$ 。</p>
+<h2>题目描述</h2>
+<p>Progressive climate change has forced the Byteburg authorities to build a huge lightning conductor    that would protect all the buildings within the city.</p>
+<p>These buildings form a row along a single street, and are numbered from <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.1.png" /> to <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.2.png" />.</p>
+<p>The heights of the buildings and the lightning conductor are non-negative integers.</p>
+<p>Byteburg's limited funds allow construction of only a single lightning conductor.</p>
+<p>Moreover, as you would expect, the higher it will be, the more expensive.</p>
+<p>The lightning conductor of height <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.3.png" /> located on the roof of the building <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.4.png" /> (of height <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.5.png" />)    protects the building <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.6.png" /> (of height <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.7.png" />) if the following inequality holds:</p>
+<p><img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.8.png" />        where <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.9.png" /> denotes the absolute value of the difference between <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.10.png" /> and <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.11.png" />.</p>
+<p>Byteasar, the mayor of Byteburg, asks your help.</p>
+<p>Write a program that, for every building <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.12.png" />, determines the minimum height    of a lightning conductor that would protect all the buildings if it were put    on top of the building <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.13.png" />.</p>
+<h2>输入输出格式</h2>
+<h4>输入格式</h4>
+<p>In the first line of the standard input there is a single integer    <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.14.png" /> (<img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.15.png" />) that denotes the number of buildings in Byteburg.</p>
+<p>Each of the following <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.16.png" /> lines holds a single integer <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.17.png" /> (<img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.18.png" />)    that denotes the height of the <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.19.png" />-th building.</p>
+<h4>输出格式</h4>
+<p>Your program should print out exactly <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.20.png" /> lines to the standard output.</p>
+<p>The <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.21.png" />-th line should give a non-negative integer <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.22.png" /> denoting the minimum    height of the lightning conductor on the <img alt="" src="http://main.edu.pl/images/OI18/pio-en-tex.23.png" />-th building.</p>
+<h2>输入输出样例</h2>
+<h4>输入样例 #1</h4>
+<p>6
+5
+3
+2
+4
+2
+4</p>
+<h4>输出样例 #1</h4>
+<p>2
+3
+5
+3
+5
+4</p>
