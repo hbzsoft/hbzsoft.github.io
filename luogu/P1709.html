@@ -1,4 +1,16 @@
-<h1>[USACO5.5] 隐藏口令 Hidden Password</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO5.5] 隐藏口令 Hidden Password</h1>
 <h2>题目描述</h2>
 <p>有时候程序员有很奇怪的方法来隐藏他们的口令。Binny 会选择一个字符串 $S$（由 $N$ 个小写字母组成，$5 \le N \le 5 \times {10}^6$），然后他把 $S$ 顺时针绕成一个圈，每次取一个做开头字母并顺时针依次取字母而组成一个字符串。这样将得到一些字符串，他把它们排序后取出第一个字符串。把这个字符串的第一个字母在原字符串中的位置减 $1$ 做为口令。</p>
 <p>如字符串 <code>alabala</code>，按操作的到 $7$ 个字符串，排序后得：</p>

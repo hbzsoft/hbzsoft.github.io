@@ -1,4 +1,16 @@
-<h1>旅行计划</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>旅行计划</h1>
 <h2>题目描述</h2>
 <p>小明要去一个国家旅游。这个国家有 $N$ 个城市，编号为 $1$ 至 $N$，并且有 $M$ 条道路连接着，小明准备从其中一个城市出发，并只往东走到城市 $i$ 停止。</p>
 <p>所以他就需要选择最先到达的城市，并制定一条路线以城市 $i$ 为终点，使得线路上除了第一个城市，每个城市都在路线前一个城市东面，并且满足这个前提下还希望游览的城市尽量多。</p>

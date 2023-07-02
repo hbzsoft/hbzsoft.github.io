@@ -1,4 +1,16 @@
-<h1>[USACO12NOV] Concurrently Balanced Strings G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO12NOV] Concurrently Balanced Strings G</h1>
 <h2>题目描述</h2>
 <p>Farmer John's cows are all of a very peculiar breed known for its distinctive appearance -- each cow is marked with a giant spot on its hide in the shape of a parenthesis (depending on the direction the cow is facing, this could look like either a left or a right parenthesis).</p>
 <p>One morning, Farmer John arranges his cows into K lines each of N cows (1 &lt;= K &lt;= 10, 1 &lt;= N &lt;= 50,000).  The cows are facing rather arbitrary directions, so this lineup can be described by K length-N strings of parentheses S_1,..., S_k.  Farmer John notes with great excitement that some ranges of his cows are "concurrently balanced", where a range i...j of cows is concurrently balanced only if each of the strings S_1,..., S_k is balanced in that range (we define what it means for a single string of parentheses to be balanced below). For instance, if K = 3, and we have</p>

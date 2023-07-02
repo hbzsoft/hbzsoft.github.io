@@ -1,4 +1,16 @@
-<h1>[USACO06JAN] The Grove S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO06JAN] The Grove S</h1>
 <h2>题目描述</h2>
 <p>The pasture contains a small, contiguous grove of trees that has no 'holes' in the middle of the it.  Bessie wonders: how far is it to walk around that grove and get back to my starting position? She's just sure there is a way to do it by going from her start location to successive locations by walking horizontally, vertically, or diagonally and counting each move as a single step. Just looking at it, she doesn't think you could pass 'through' the grove on a tricky diagonal. Your job is to calculate the minimum number of steps she must take.</p>
 <p>Happily, Bessie lives on a simple world where the pasture is represented by a grid with R rows and C columns (1 &lt;= R &lt;= 50, 1 &lt;= C &lt;= 50). Here's a typical example where '.' is pasture (which Bessie may traverse), 'X' is the grove of trees, '*' represents Bessie's start and end position, and '+' marks one shortest path she can walk to circumnavigate the grove (i.e., the answer):</p>

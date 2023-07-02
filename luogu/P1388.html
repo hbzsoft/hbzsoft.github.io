@@ -1,4 +1,16 @@
-<h1>算式</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>算式</h1>
 <h2>题目描述</h2>
 <p>给出 $n$ 个数字，不改变它们的相对位置，在中间加入 $k$ 个乘号和 $(n-k-1)$ 个加号，括号随便加，使最终结果尽量大。因为乘号和加号一共就是 $n-1$ 个了，所以恰好每两个相邻数字之间都有一个符号。例如：</p>
 <p>$n=5$，$k=2$，$5$ 个数字分别为 $1$，$2$，$3$，$4$，$5$，可以加成：</p>

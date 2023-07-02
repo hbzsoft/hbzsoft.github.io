@@ -1,4 +1,16 @@
-<h1>[HNOI2003] 操作系统</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2003] 操作系统</h1>
 <h2>题目描述</h2>
 <p>写一个程序来模拟操作系统的进程调度。假设该系统只有一个 CPU，每一个进程的到达时间，执行时间和运行优先级都是已知的。其中运行优先级用自然数表示，数字越大，则优先级越高。</p>
 <p>如果一个进程到达的时候 CPU 是空闲的，则它会一直占用 CPU 直到该进程结束。除非在这个过程中，有一个比它优先级高的进程要运行。在这种情况下，这个新的（优先级更高的）进程会占用 CPU，而老的只有等待。</p>

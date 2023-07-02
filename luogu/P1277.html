@@ -1,4 +1,16 @@
-<h1>拼字游戏</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>拼字游戏</h1>
 <h2>题目描述</h2>
 <p>有一个未知的 $4 \times 4$ 的拼盘 $M$，它的每个元素都是正整数。给出 $4$ 行元素的总和，$4$ 列元素的总和以及两条对角线元素总和。另外还给出了拼盘中任意 $4$ 个位置的元素值，它们的位置在输入文件中给定。</p>
 <p>编写一个程序求出拼盘中另外 $12$ 个位置的正整数的值，要求这些元素的行之和，列之和以及对角线之和与输入文件中给定的值相一致。</p>

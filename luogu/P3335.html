@@ -1,4 +1,16 @@
-<h1>[ZJOI2013] 蚂蚁寻路</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[ZJOI2013] 蚂蚁寻路</h1>
 <h2>题目描述</h2>
 <p>在一个 n*m 的棋盘上，每个格子有一个权值，初始时，在某个格子的顶点处一只面朝北的蚂蚁，我们只知道它的行走路线是如何转弯，却不知道每次转弯前走了多长。</p>
 <p>蚂蚁转弯是有一定特点的，即它的转弯序列一定是如下的形式：右转，右转，左转，左转，右转，右转…左转，左转，右转，右转，右转。即两次右转和两次左转交替出现的形式，最后两次右转（最后两次一定是右转）后再多加一次右转。我们还知道，蚂蚁不会在同一个位置连续旋转两次，并且蚂蚁行走的路径除了起点以外，不会到达同一个点多次，它最后一定是回到起点然后结束自己的行程，而且蚂蚁只会在棋盘格子的顶点处转弯。</p>

@@ -1,4 +1,16 @@
-<h1>[POI2009] SLO-Elephants</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[POI2009] SLO-Elephants</h1>
 <h2>题意翻译</h2>
 <p>对于一个  $1-N$ 的排列 $a$，每次你可以交换两个数 $a_x$ 与 $a_y$($x\neq y$)，代价为 $W_{a_x}+W_{a_y}$。若干次交换的代价为每次交换的代价之和。请问将 $a_i$ 变为 $b_i$ 所需的最小代价是多少。</p>
 <p>对于 $100\%$ 的数据，$2\leq N\leq 1000000$，$100\leq w_i\leq 6500$，$1\leq a_i,b_i\leq n$。保证 $a_i$ 各不相等，$b_i$ 各不相等。</p>

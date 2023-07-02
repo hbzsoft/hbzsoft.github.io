@@ -1,4 +1,16 @@
-<h1>删数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>删数</h1>
 <h2>题目描述</h2>
 <p>有 $N$ 个不同的正整数 $x_1$, $x_2$, ..., $x_N$ 排成一排，我们可以从左边或右边去掉连续的 $i$ $(1 \le i \le n)$ 个数（只能从两边删除数），剩下 $N-i$ 个数，再把剩下的数按以上操作处理，直到所有的数都被删除为止。</p>
 <p>每次操作都有一个操作价值，比如现在要删除从 $i$ 位置到 $k$ 位置上的所有的数。操作价值为 $|x_i-x_k| \times (k-i+1)$ ，如果只去掉一个数，操作价值为这个数的值。

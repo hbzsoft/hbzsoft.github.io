@@ -1,4 +1,16 @@
-<h1>[USACO15FEB] Fencing the Herd G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO15FEB] Fencing the Herd G</h1>
 <h2>题目描述</h2>
 <p>Farmer John 需要你帮助他决定在哪里建造形状是一条无限长的直线的栅栏来限制他的牛的活动。他选出了几个可能的建造栅栏的位置，你需要帮助他判断哪些栅栏是有用的。一个栅栏是有用的当且仅当所有奶牛都在栅栏的同一侧。（如果有牛群在栅栏所在的直线上，那么栅栏是没用的），Farmer John 将会多次询问你一个栅栏是否有用，如果这个栅栏是有用的，需要输出 <code>YES</code>，反之输出 <code>NO</code>。</p>
 <p>另外，Farmer John 也可能会带来一些新的奶牛加入这个牛群。一头牛加入之后，以后的所有询问中，这头牛也需要与其它的牛在栅栏的同一侧。</p>

@@ -1,4 +1,16 @@
-<h1>点和线</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>点和线</h1>
 <h2>题目描述</h2>
 <p>平面上有一些点，你可以用直线将两点连接起来。那么有多少种方法可以把这些点连续地连起来，使得任何两个线都不交叉。</p>
 <p>显然，三个点只有一种方法。四个点最多只有$3$种方法。写一个程序计算方法总数。</p>

@@ -1,4 +1,16 @@
-<h1>[USACO06JAN] Roping the Field G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO06JAN] Roping the Field G</h1>
 <h2>题目描述</h2>
 <p>Farmer John is quite the nature artist: he often constructs large works of art on his farm. Today, FJ wants to construct a giant "field web". FJ's field is large convex polygon with fences along the boundary and fence posts at each of the N corners (1 &lt;= N &lt;= 150). To construct his field web, FJ wants to run as many ropes as possible in straight lines between pairs of non-adjacent fence posts such that no two ropes cross.</p>
 <p>There is one complication: FJ's field is not completely usable. Some evil aliens have created a total of G (0 &lt;= G &lt;= 100) grain circles in the field, all of radius R (1 &lt;= R &lt;= 100,000). FJ is afraid to upset the aliens, and therefore doesn't want the ropes to pass through, or even touch the very edge of a grain circle. Note that although the centers of all the circles are contained within the field, a wide radius may make it extend outside of the field, and both fences and fence posts may be within a grain circle.</p>

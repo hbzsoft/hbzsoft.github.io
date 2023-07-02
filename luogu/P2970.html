@@ -1,4 +1,16 @@
-<h1>[USACO09DEC] Selfish Grazing S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO09DEC] Selfish Grazing S</h1>
 <h2>题目描述</h2>
 <p>Each of Farmer John's N (1 &lt;= N &lt;= 50,000) cows likes to graze in a certain part of the pasture, which can be thought of as a large one-dimeensional number line. Cow i's favorite grazing range starts at location S_i and ends at location E_i (1 &lt;= S_i &lt; E_i; S_i &lt; E_i &lt;= 100,000,000).</p>
 <p>Most folks know the cows are quite selfish; no cow wants to share any of its grazing area with another. Thus, two cows i and j can only graze at the same time if either S_i &gt;= E_j or E_i &lt;= S_j. FJ would like to know the maximum number of cows that can graze at the same time for a given set of cows and their preferences.</p>

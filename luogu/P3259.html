@@ -1,4 +1,16 @@
-<h1>[JLOI2014] 路径规划</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[JLOI2014] 路径规划</h1>
 <h2>题目描述</h2>
 <p>相信大家都用过地图上的路径规划功能，只要输入起点终点就能找出一条最优路线。现在告诉你一张地图的信息，请你找出最优路径（即最短路径）。考虑到实际情况，一辆车加满油能开的时间有限，<strong>为limit</strong>，所以在地图上增加了几个加油站。</p>
 <p>地图由点和双向边构成，每个点代表一个路口，也有可能是加油站或起点终点。有些路口还装有红绿灯。由于经过太多的红绿灯会让人感到不爽，所以请求在经过不超过k个红绿灯的情况下，最少平均花费多少时间能从起点到终点。保证起点终点和加油站没有红绿灯。（题目不考虑最坏情况下能否加到油，只考虑平均花费时间的前提下，车能否到达加油站加油）。</p>

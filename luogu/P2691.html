@@ -1,4 +1,16 @@
-<h1>逃离</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>逃离</h1>
 <h2>题目描述</h2>
 <p><strong>译自 CLRS Problem 26-1 Escape problem</strong></p>
 <p>在一个 $n\times n$ 的网格中有 $m$ 个起始点 $(x_1, y_1),$ $(x_2, y_2),$ $\dots,$ $(x_m, y_m)$，试问：能否为这些结点分别找一条到边界的路径，且这 $m$ 条路径互不相交（即任意两条路径上没有一个相同的结点）。</p>

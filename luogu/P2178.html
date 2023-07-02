@@ -1,4 +1,16 @@
-<h1>[NOI2015] 品酒大会</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[NOI2015] 品酒大会</h1>
 <h2>题目描述</h2>
 <p>一年一度的“幻影阁夏日品酒大会”隆重开幕了。大会包含品尝和趣味挑战 两个环节，分别向优胜者颁发“首席品酒家”和“首席猎手”两个奖项，吸引了众多品酒师参加。</p>
 <p>在大会的晚餐上，调酒师 Rainbow 调制了 $n$ 杯鸡尾酒。这 $n$ 杯鸡尾酒排成一行，其中第 $n$ 杯酒 ($1 ≤ i ≤ n$) 被贴上了一个标签 $s_i$ ，每个标签都是 $26$ 个小写 英文字母之一。设 $str(l, r)$ 表示第 $l$ 杯酒到第 $r$ 杯酒的 $r - l + 1$ 个标签顺次连接构成的字符串。若 $str(p, p_0) = str(q, q_0)$，其中 $1 ≤ p ≤ p_0 ≤ n$, $1 ≤ q ≤ q_0 ≤ n$, $p ≠ q$，$p_0-p+1 = q_0 - q + 1 = r$ ，则称第 $p$ 杯酒与第 $q$ 杯酒是“ $r$ 相似” 的。当然两杯“ $r$ 相似”($r &gt; 1$)的酒同时也是“ $1$ 相似”、“ $2$ 相似”、……、“ $(r - 1)$ 相似”的。特别地，对于任意的 $1 ≤ p ,q ≤ n,p  ≠  q$，第 $p$ 杯酒和第 $q$ 杯酒都 是“ $0$ 相似”的。</p>

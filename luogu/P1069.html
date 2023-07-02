@@ -1,4 +1,16 @@
-<h1>[NOIP2009 普及组] 细胞分裂</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[NOIP2009 普及组] 细胞分裂</h1>
 <h2>题目描述</h2>
 <p>Hanks 博士是 BT（Bio-Tech，生物技术）领域的知名专家。现在，他正在为一个细胞实验做准备工作：培养细胞样本。</p>
 <p>Hanks 博士手里现在有 $N$ 种细胞，编号从 $1 \sim N$，一个第 $i$ 种细胞经过 $1$ 秒钟可以分裂为 $S_i$ 个同种细胞（$S_i$ 为正整数）。现在他需要选取某种细胞的一个放进培养皿，让其自由分裂，进行培养。一段时间以后，再把培养皿中的所有细胞平均分入 $M$ 个试管，形成 $M$ 份样本，用于实验。Hanks 博士的试管数 $M$ 很大，普通的计算机的基本数据类型无法存储这样大的 $M$ 值，但万幸的是，$M$ 总可以表示为 $m_1$ 的 $m_2$ 次方，即 $M = m_1^{m_2}$，其中 $m_1,m_2$ 均为基本数据类型可以存储的正整数。</p>

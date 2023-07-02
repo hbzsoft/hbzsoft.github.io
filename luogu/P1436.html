@@ -1,4 +1,16 @@
-<h1>棋盘分割</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>棋盘分割</h1>
 <h2>题目描述</h2>
 <p>将一个 $8\times 8$ 的棋盘进行如下分割：将原棋盘割下一块矩形棋盘并使剩下部分也是矩形，再将剩下的两部分中的任意一块继续如此分割，这样割了 $(n-1)$ 次后，连同最后剩下的矩形棋盘共有 $n$ 块矩形棋盘。（每次切割都只能沿着棋盘格子的边进行）。</p>
 <p><img alt="" src="https://cdn.luogu.com.cn/upload/image_hosting/a05myun2.png" /></p>

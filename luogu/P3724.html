@@ -1,4 +1,16 @@
-<h1>[AHOI2017/HNOI2017] 大佬</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[AHOI2017/HNOI2017] 大佬</h1>
 <h2>题目描述</h2>
 <p>人们总是难免会碰到大佬。他们趾高气昂地谈论凡人不能理解的算法和数据结构，走到任何一个地方，大佬的气场就能让周围的人吓得瑟瑟发抖，不敢言语。你作为一个 OIer，面对这样的事情非常不开心，于是发表了对大佬不敬的言论。 大佬便对你开始了报复，你也不示弱，扬言要打倒大佬。现在给你讲解一下什么是大佬，大佬除了是神犇以外，还有着强大的自信心，自信程度可以被量化为一个正整数 $C$，想要打倒一个大佬的唯一方法是摧毁 Ta 的自信心，也就是让大佬的自信值<strong>等于</strong> $0$（恰好等于 $0$，不能小于 $0$）。由于你被大佬盯上了，所以你需要准备好 $n$ 天来和大佬较量，因为这 $n$ 天大佬只会嘲讽你动摇你的自信，到了第 $n+1$ 天，如果大佬发现你还不服，就会直接虐到你服，这样你就丧失斗争的能力了。</p>
 <p>你的自信程度同样也可以被量化，我们用 $\mathrm{mc}$ 来表示你的自信值<strong>上限</strong>。在第 $i \ (i\ge 1)$ 天，大佬会对你发动一次嘲讽，使你的自信值减小 $a_i$，如果这个时刻你的自信值<strong>小于</strong> $0$ 了，那么你就丧失斗争能力，也就<strong>失败</strong>了（特别注意你的自信值为 $0$ 的时候还可以继续和大佬斗争）。 在这一天，大佬对你发动嘲讽之后，如果你的自信值仍大于等于 $0$，你<strong>能且仅能</strong>选择如下的行为<strong>之一</strong>：</p>

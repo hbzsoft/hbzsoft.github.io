@@ -1,4 +1,16 @@
-<h1>[HNOI2014] 画框</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2014] 画框</h1>
 <h2>题目描述</h2>
 <p>小 T 准备在家里摆放几幅画，为此他买来了 $N$ 幅画和 $N$ 个画框。为了体现他的品味，小 T 希望能合理地搭配画与画框，使得其显得既不过于平庸也不太违和。</p>
 <p>对于第 $i$ 幅画与第 $j$ 个画框的配对，小 T 都给出了这个配对的平凡度 $A_{i, j}$ 与违和度 $B_{i, j}$ 。整个搭配方案的总体不和谐度为每对画与画框平凡度之和与每对画与画框违和度的乘积。具体来说，设搭配方案中第 $i$ 幅画与第 $P_i$ 个画框配对，则总体不和谐度为</p>

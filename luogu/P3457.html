@@ -1,4 +1,16 @@
-<h1>[POI2007] POW-The Flood</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[POI2007] POW-The Flood</h1>
 <h2>题意翻译</h2>
 <p>Description 你手头有一张该市的地图。这张地图是边长为 m∗n 的矩形,被划分为m∗n个1∗1的小正方形。对于每个小正方形,地图上已经标注了它的海拔高度以及它是否是该市的一个组成部分。地图上的所有部分都被水淹没了。并且,由于这张地图描绘的地面周围都被高山所环绕,洪水不可能自动向外排出。显然,我们没有必要抽干那些非该市的区域。</p>
 <p>每个巨型抽水机可以被放在任何一个1∗1正方形上。这些巨型抽水机将持续地抽水直到这个正方形区域里的水被彻底抽干为止。当然,由连通器原理,所有能向这个格子溢水的格子要么被抽干,要么水位被降低。每个格子能够向相邻的格子溢水,“相邻的”是指(在同一高度水平面上的射影)有公共边。</p>

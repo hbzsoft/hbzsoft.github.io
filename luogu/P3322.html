@@ -1,4 +1,16 @@
-<h1>[SDOI2015] 排序</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SDOI2015] 排序</h1>
 <h2>题目描述</h2>
 <p>小A有一个$1-2^N$的排列$A[1..2^N]$,他希望将A数组从小到大排序,小A可以执行的操作有N种,每种操作最多可以执行一次,对于所有的$i(1&lt;=i&lt;=N)$,第i中操作为将序列从左到右划分为$2^{N-i+1}$段,每段恰好包括$2^{i-1}$个数,然后整体交换其中两段.</p>
 <p>小A想知道可以将数组A从小到大排序的不同的操作序列有多少个,小A认为两个操作序列不同,当且仅当操作个数不同,或者至少一个操作不同(种类不同或者操作位置不同).</p>

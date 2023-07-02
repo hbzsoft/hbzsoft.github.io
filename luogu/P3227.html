@@ -1,4 +1,16 @@
-<h1>[HNOI2013] 切糕</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2013] 切糕</h1>
 <h2>题目描述</h2>
 <p>经过千辛万苦小 A 得到了一块切糕，切糕的形状是长方体，小 A 打算拦腰将切糕切成两半分给小 B。出于美观考虑，小 A 希望切面能尽量光滑且和谐。于是她找到你，希望你能帮她找出最好的切割方案。</p>
 <p>出于简便考虑，我们将切糕视作一个长 $P$、宽 $Q$、高 $R$ 的长方体点阵。我们将位于第 $z$ 层中第 $x$ 行、第 $y$ 列上的点称 $(x,y,z)$，它有一个非负的不和谐值 $v(x,y,z)$。一个合法的切面满足以下两个条件：</p>

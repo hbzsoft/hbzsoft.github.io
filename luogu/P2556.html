@@ -1,4 +1,16 @@
-<h1>[AHOI2002] 黑白图像压缩</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[AHOI2002] 黑白图像压缩</h1>
 <h2>题目描述</h2>
 <p>选修基础生物基因学的时候， 小可可在家里做了一次图像学试验。 她知道：整个图像其实就是若干个图像点(称作像素)的序列，假定序列中像素的个数总是 8 的倍数， 于是每八个像素可以转换成一个叫做字节的数， 从而这个表示图像的像素序列就被转换成了字节的序列。</p>
 <p>所谓的字节就是一个八位的二进制数(当然，为了便于书写，人们经常用它的十进制形式来表示)。这八个像素从前向后依次对应于字节从高位到低位的八个位， 用 0 来表示白色像素、 1 来表示黑色像素。 这种表示方法叫做位图法。 例如字节序列 210、 0、255 表示了 8*3=24 个像素， 由于对应的二进制形式是 11010010、 00000000、11111111， 所以这 24 个像素的颜色依次是黑、 黑、 白、 黑、 白、 白、 黑、 白、白、白、白、白、白、白、白、白、黑、黑、黑、黑、黑、黑、黑、黑。</p>

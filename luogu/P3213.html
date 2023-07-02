@@ -1,4 +1,16 @@
-<h1>[HNOI2011] 勾股定理</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2011] 勾股定理</h1>
 <h2>题目描述</h2>
 <p>沫沫最近在研究勾股定理。对于两个正整数 A 与 B，若存在正整数 C 使得 A2+B2=C2，且 A 与 B 互质，则称(A,B)为一个互质勾股数对。</p>
 <p>有一天，沫沫得到了 N 根木棍，其长度都是正整数，她准备从中挑选出若干根木棍来玩拼图游戏，为了使拼出的图案有凌乱美，她希望挑选出的木棍中任意两根的长度均不是互质勾股数对。现在，沫沫想知道有多少种满足要求的挑选木棍的方案。由于答案可能很大，你只要输出答案对 $10^9+7$ 取模的结果。</p>

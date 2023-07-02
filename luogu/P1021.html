@@ -1,4 +1,16 @@
-<h1>[NOIP1999 提高组] 邮票面值设计</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[NOIP1999 提高组] 邮票面值设计</h1>
 <h2>题目描述</h2>
 <p>给定一个信封，最多只允许粘贴 $N$ 张邮票，计算在给定 $K$（$N+K \le 15$）种邮票的情况下（假定所有的邮票数量都足够），如何设计邮票的面值，能得到最大值 $MAX$，使在 $1$ 至 $MAX$ 之间的每一个邮资值都能得到。</p>
 <p>例如，$N=3$，$K=2$，如果面值分别为 $1$ 分、$4$ 分，则在 $1\sim 6$ 分之间的每一个邮资值都能得到（当然还有 $8$ 分、$9$ 分和 $12$ 分）；如果面值分别为 $1$ 分、$3$ 分，则在 $1\sim 7$ 分之间的每一个邮资值都能得到。可以验证当 $N=3$，$K=2$ 时，$7$ 分就是可以得到的连续的邮资最大值，所以 $MAX=7$，面值分别为 $1$ 分、$3$ 分。</p>

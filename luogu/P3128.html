@@ -1,4 +1,16 @@
-<h1>[USACO15DEC] Max Flow P</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO15DEC] Max Flow P</h1>
 <h2>题目描述</h2>
 <p>Farmer John has installed a new system of $N-1$ pipes to transport milk between the $N$ stalls in his barn ($2 \leq N \leq 50,000$), conveniently numbered $1 \ldots N$.  Each pipe connects a pair of stalls,  and all stalls are connected to each-other via paths of pipes.</p>
 <p>FJ is pumping milk between $K$ pairs of stalls ($1 \leq K \leq 100,000$).  For the $i$th such pair,  you are told two stalls $s_i$ and $t_i$, endpoints of a path along which milk is being pumped at a unit rate.  FJ is concerned that some stalls might end up overwhelmed with all the milk being pumped through them, since a stall can serve as a waypoint along many of the $K$ paths along which milk is being pumped.  Please help him determine the maximum amount of milk being pumped through any stall.  If milk is being pumped along a path from $s_i$ to $t_i$, then it counts as being pumped through the endpoint stalls $s_i$ and</p>

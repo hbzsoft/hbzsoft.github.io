@@ -1,4 +1,16 @@
-<h1>[JLOI2014] 镜面通道</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[JLOI2014] 镜面通道</h1>
 <h2>题目描述</h2>
 <p>在一个二维平面上，有一个镜面通道，由镜面 $AC, BD$ 组成，$AC, BD$ 长度相等，且都平行于 $x$ 轴，$B$ 位于 $(0,0)$。</p>
 <p>通道中有 $n$ 个外表面为镜面的光学元件，光学元件 $\alpha$ 为圆形，光学元件 $\beta$ 为矩形（这些元件可以与其他元件和通道有交集，具体看下图）。光线可以在 $AB$ 上任一点以任意角度射入通道，光线不会发生削弱。当出现元件与元件，元件和通道刚好接触的情况视为光线无法透过（比如两圆相切）。</p>

@@ -1,4 +1,16 @@
-<h1>[USACO09NOV] Who Brings the Cookies? G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO09NOV] Who Brings the Cookies? G</h1>
 <h2>题意翻译</h2>
 <p>农夫约翰的 $N(1 \le N \le 1000)$ 只奶牛（编号为 $1$ 到 $N$）决定成立 $M(1 \le M \le 100)$ 个学习小组。在学习小组 $G_i$ 中有 $S_i$ 只牛，分别为牛$G_{i1},G_{i2},\cdots$，一头牛可能会参加多个小组。</p>
 <p>对于每个学习小组，有一只牛必须在每次聚会的时候带饼乾饮料请大家吃（衰～）。因为买这些零食会消耗牛们那为数不多的零花钱，还会花费牛们宝贵的时间，所以牛们希望尽可能公平地分摊带零食的责任。 牛们决定。如果一只牛参加了 $K$ 个学习小组，$K$ 个学习小组的大小分别为 $c_1,c_2, \cdots c_K$，那麽她最多负责为 $\lceil \frac{1}{c_1} + \frac {1}{c_2} + \cdots + \frac{1}{c_K} \rceil$ 个学习小组的聚会带零食。其中 $\lceil \rceil$为上取整函数。 请计算出一个方案，决定每个学习小组的聚会由哪一头牛负责带零食。如果没有一种方案可行，输出 <code>-1</code>。</p>

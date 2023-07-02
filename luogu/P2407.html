@@ -1,4 +1,16 @@
-<h1>[SDOI2009] 地图复原</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SDOI2009] 地图复原</h1>
 <h2>题目描述</h2>
 <p>很久以前，有一个传说中的“EWF”部族，他们世代生活在一个N×M的矩形大地上。虽然，生活的地区有高山、有沼泽，但通过勤劳勇敢，渐渐地，他们在自己的地盘上修筑了一条回路。</p>
 <p>后来，“EWF”部族神秘地消失了。不过，考古学家在那片他们曾经生活过的地方找到了一份地图。地图是N×M的矩阵，左上角的坐标为(0, 0)，右下角的坐标为(N, M)。矩阵中的每个格子，表示高山、沼泽、平地、房屋或是道路其中之一。如果一个格子表示道路，那么经过这个格子的道路要么是直走，要么是拐弯。如下图，左边2幅表示直走格子的，右边4幅表示需要拐弯的格子。一个表示道路的格子只能表示下列情况之一。</p>

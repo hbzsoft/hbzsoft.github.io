@@ -1,4 +1,16 @@
-<h1>[NOIP2006 普及组] Jam 的计数法</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[NOIP2006 普及组] Jam 的计数法</h1>
 <h2>题目描述</h2>
 <p>Jam 是个喜欢标新立异的科学怪人。他不使用阿拉伯数字计数，而是使用小写英文字母计数，他觉得这样做，会使世界更加丰富多彩。</p>
 <p>在他的计数法中，每个数字的位数都是相同的（使用相同个数的字母），英文字母按原先的顺序，排在前面的字母小于排在它后面的字母。我们把这样的“数字”称为 Jam 数字。在 Jam 数字中，每个字母互不相同，而且从左到右是严格递增的。每次，Jam 还指定使用字母的范围，例如，从 $2\sim 10$，表示只能使用 ${b,c,d,e,f,g,h,i,j}$ 这些字母。如果再规定位数为 $5$，那么，紧接在 Jam 数字 $\texttt{bdfij}$ 之后的数字应该是 $\texttt{bdghi}$。（如果我们用 $U$ 、 $V$ 依次表示 Jam 数字 $\texttt{bdfij}$ 与 $\texttt{bdghi}$，则 $U&lt;V$，且不存在 Jam 数字 $P$，使 $U&lt;P&lt;V$）。</p>

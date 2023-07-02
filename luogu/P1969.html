@@ -1,4 +1,16 @@
-<h1>[NOIP2013 提高组] 积木大赛</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[NOIP2013 提高组] 积木大赛</h1>
 <h2>题目描述</h2>
 <p>春春幼儿园举办了一年一度的“积木大赛”。今年比赛的内容是搭建一座宽度为 $n$ 的大厦，大厦可以看成由 $n$ 块宽度为 $1$ 的积木组成，第 $i$ 块积木的最终高度需要是 $h_i$。</p>
 <p>在搭建开始之前，没有任何积木（可以看成 $n$ 块高度为 $0$ 的积木）。接下来每次操作，小朋友们可以选择一段连续区间 $[l, r]$，然后将第 $L$ 块到第 $R$ 块之间（含第 $L$ 块和第 $R$ 块）所有积木的高度分别增加 $1$。</p>

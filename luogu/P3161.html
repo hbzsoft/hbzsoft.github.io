@@ -1,4 +1,16 @@
-<h1>[CQOI2012] 模拟工厂</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[CQOI2012] 模拟工厂</h1>
 <h2>题目描述</h2>
 <p>有一个称为“模拟工厂”的游戏是这样的：在时刻 $0$，工厂的生产力等于 $1$。在每个时刻，你可以提高生产力或者生产商品。如果选择提高生产力，在下一个时刻时工厂的生产力加 $1$；如果选择生产商品，则下一个时刻你所拥有的商品数量增加 $p$，其中 $p$ 是本时刻工厂的生产力。  </p>
 <p>有 $n$ 个订单，可以选择接受或者不接受。第 $i$ 个订单 $(t_i, g_i, m_i)$ 要求在时刻 $t_i$ 给买家提供 $g_i$ 个商品，事成之后商品数量减少 $g_i$，而收入增加 $m_i$ 元。如果接受订单 $i$，则必须恰好在时刻 $t_i$ 交易，不能早也不能晚。同一时刻可以接受多个订单，但每个订单只能被接受一次。要求最后的总收入最大。  </p>

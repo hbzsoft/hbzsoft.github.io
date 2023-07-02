@@ -1,4 +1,16 @@
-<h1>变幻数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>变幻数</h1>
 <h2>题目描述</h2>
 <p>给定一个十进制正整数n，它的递归变幻数定义如下：</p>
 <p>1．如果n的位数多于1位（忽略前置的0），将n的各个位上的数相乘，乘积为m。称m为n的子变幻数，n称为m的父变幻数。求一个数的变幻数等于求其子变幻数。即求n的变幻数等于求m的变幻数。</p>

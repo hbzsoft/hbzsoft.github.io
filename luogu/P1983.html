@@ -1,4 +1,16 @@
-<h1>[NOIP2013 普及组] 车站分级</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[NOIP2013 普及组] 车站分级</h1>
 <h2>题目描述</h2>
 <p>一条单向的铁路线上，依次有编号为 $1, 2, …, n $的 $n $个火车站。每个火车站都有一个级别，最低为 $1$ 级。现有若干趟车次在这条线路上行驶，每一趟都满足如下要求：如果这趟车次停靠了火车站 $x$，则始发站、终点站之间所有级别大于等于火车站$ x$ 的都必须停靠。（注意：起始站和终点站自然也算作事先已知需要停靠的站点）</p>
 <p>例如，下表是$ 5 $趟车次的运行情况。其中，前$ 4$ 趟车次均满足要求，而第 $5$ 趟车次由于停靠了 $3$ 号火车站（$2$ 级）却未停靠途经的 $6$ 号火车站（亦为 $2$ 级）而不满足要求。</p>

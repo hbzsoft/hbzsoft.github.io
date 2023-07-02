@@ -1,4 +1,16 @@
-<h1>[APIO2012] 守卫</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[APIO2012] 守卫</h1>
 <h2>题目描述</h2>
 <p>APIO 王国正被忍者攻击！忍者非常厉害，因为他们在进攻的时候可以躲在 阴影里面使得其他人看不到他们。整个王国除了国王居住的 APIO 城堡以外都已 经被占领了。在城堡前，有 N 个灌木丛，从 1 到 N 编号，有 K 个忍者躲在恰好 K 个灌木丛后面。APIO 城堡里有 M 个守卫。守卫 i 监视着编号从 Ai到 Bi的连续 的一段灌木丛。每个守卫都向国王报告在他所监视范围内是否有忍者出现。作为 国王的仆人，你需要告诉国王，基于守卫的报告，哪些灌木丛后面一定躲着一个 忍者，即对于任何和守卫报告不矛盾的忍者排列方式，在这个灌木丛后面都躲着 一个忍者。</p>
 <p>你需要写一个程序来输出所有的这些灌木丛的编号。</p>

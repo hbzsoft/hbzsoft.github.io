@@ -1,4 +1,16 @@
-<h1>[USACO11NOV] Tile Exchanging S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO11NOV] Tile Exchanging S</h1>
 <h2>题意翻译</h2>
 <p>有 $N$ 个正方形，依次给出它们的边长，要求可以换掉一些正方形：如果边长为 $A_i$ 的正方形换成边长为 $B_i$ 的正方形所需代价为：$|A_i-B_i| \times |A_i-B_i|$。问至少花费多少代价使得这 $N$ 个正方形面积总和为 $M$？若无论如何也不可能使这 $N$ 个正方形面积总和为 $M$ 则输出 $-1$。</p>
 <h2>题目描述</h2>

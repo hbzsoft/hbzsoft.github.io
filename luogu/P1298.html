@@ -1,4 +1,16 @@
-<h1>最接近的分数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>最接近的分数</h1>
 <h2>题目描述</h2>
 <p>给出一个正小数，找出分子（分子 $ \ge 0$）不超过 $M$，分母不超过 $N$ 的最简分数或整数，使其最接近给出的小数。“最接近”是指在数轴上该分数距离给出的小数最近，如果这个分数不唯一，输出 <code>TOO MANY</code>。</p>
 <h2>输入输出格式</h2>

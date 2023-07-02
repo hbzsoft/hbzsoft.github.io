@@ -1,4 +1,16 @@
-<h1>象棋比赛</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>象棋比赛</h1>
 <h2>题目描述</h2>
 <p>有N个人要参加国际象棋比赛，该比赛要进行K场对弈。每个人最多参加两场对弈，最少参加零场对弈。每个人都有一个与其他人不相同的等级（用一个正整数来表示）。</p>
 <p>在对弈中，等级高的人必须用黑色的棋子，等级低的人必须用白色的棋子。每个人最多只能用一次黑色的棋子和一次白色的棋子。为增加比赛的可观度，观众希望K场对弈中双方的等级差的总和最小。</p>

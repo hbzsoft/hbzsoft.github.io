@@ -1,4 +1,16 @@
-<h1>[USACO10DEC] Apple Delivery S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO10DEC] Apple Delivery S</h1>
 <h2>题意翻译</h2>
 <p>贝西有两个又香又脆的红苹果要送给她的两个朋友。当然她可以走的 $C(1 \le C \le 200000)$ 条“牛路”都被包含在一种常用的图中。这张图同时包含了$P(1 \le P \le 100000)$ 个牧场，分别被标为 $1 \cdots P$。没有“牛路”会从一个牧场又走回它自己。“牛路”是双向的，每条牛路都会被标上一个距离。最重要的是，每个牧场都可以通向另一个牧场。每条牛路都连接着两个不同的牧场 $P1_i$和$P2_i$（$1 \le P1_i,P2_i \le P$)，距离为$D_i$。所有“牛路”的距离之和不大于 $2000000000$。</p>
 <p>现在，贝西要从牧场 $PB$ 开始给 $PA_1$ 和 $PA_2$ 牧场各送一个苹果（$PA_1$ 和 $PA_2$ 顺序可以调换），那么最短的距离是多少呢？当然，$PB$、$PA_1$ 和 $PA_2$ 各不相同。</p>

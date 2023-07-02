@@ -1,4 +1,16 @@
-<h1>排序集合</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>排序集合</h1>
 <h2>题目描述</h2>
 <p>对于集合 $N={1,2,\cdots,n}$ 的子集，定义一个称之为“小于”的关系：</p>
 <p>设 $S1={X_1,X_2,\cdots,X_i}$，$(X_1&lt;X_2&lt;\cdots&lt;X_i)$，$S2={Y_1,Y_2,\cdots,Y_j}$，$(Y_1&lt;Y_2&lt;\cdots&lt;Y_j)$，如果存在一个 $k$，$(0\leq k\leq\min(i,j))$，使得 $X_1=Y_1,\cdots,X_k=Y_k$，且 $k=i$ 或 $X_{k+1}&lt;Y_{k+1}$，则称 $S1$ “小于” $S2$。</p>

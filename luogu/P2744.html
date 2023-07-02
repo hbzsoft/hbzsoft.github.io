@@ -1,4 +1,16 @@
-<h1>[USACO5.3] 量取牛奶Milk Measuring</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO5.3] 量取牛奶Milk Measuring</h1>
 <h2>题目描述</h2>
 <p>农夫约翰要量取 Q（1 &lt;= Q &lt;= 20,000）夸脱（译注：即 quarts，容积单位） 他的最好的牛奶，并把它装入一个大瓶子中卖出。消费者要多少，他就给多少，从不有任何误差。</p>
 <p>农夫约翰总是很节约。他现在在奶牛五金商店购买一些桶，用来从他的巨大的牛奶池中量出 Q 夸脱的牛奶。每个桶的价格一样。你的任务是计算出一个农夫约翰可以购买的最少的桶的集合，使得能够刚好用这些桶量出 Q 夸脱的牛奶。另外，由于农夫约翰必须把这些桶搬回家，对于给出的两个极小桶集合，他会选择“更小的”一个，即：把这两个集合按升序排序，比较第一个桶，选择第一个桶容积较小的一个。如果第一个桶相同，比较第二个桶，也按上面的方法选择。否则继续这样的工作，直到相比较的两个桶不一致为止。例如，集合 {3，5，7，100} 比集合 {3，6，7，8} 要好。</p>

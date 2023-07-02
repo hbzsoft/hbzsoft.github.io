@@ -1,4 +1,16 @@
-<h1>[HNOI2005] 虚拟内存</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2005] 虚拟内存</h1>
 <h2>题目描述</h2>
 <p>操作系统中一种重要的存储管理技术就是虚拟内存技术。操作系统中允许进程同时运行，也就是并行。每个进程都有其相对独立的数据块（进程运行的过程中将对其进行读写操作）。理想的情况下，这些数据块都应该存放在内存中，这样才能实现高效的读写操作。但事实上，内存的容量有限，每个进程只能把一部分数据放在内存中，为了解决这个矛盾，提出了虚拟内存技术。</p>
 <p>虚拟内存技术的基本原理是：对进程而言，内存空间是无限大的，进程可以随意地读写数据，而对操作系统内部而言，利用外存来模拟扩充的内存空间，进程要求访问某个内存单元时，交由操作系统处理，操作系统首先在内存中查找该单元是否存在，如果存在，查找成功，否则转入外存查找（一定存在于外存中）。</p>

@@ -1,4 +1,16 @@
-<h1>染色计数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>染色计数</h1>
 <h2>题目描述</h2>
 <p>有一颗$N$个节点的树，节点用$1,2,\cdots,N$编号。你要给它染色，使得相邻节点的颜色不同。有$M$种颜色，用$1,2,\cdots,M$编号。每个节点可以染$M$种颜色中的若干种，求不同染色方案的数量除以($10^9 + 7$)的余数。</p>
 <h2>输入输出格式</h2>

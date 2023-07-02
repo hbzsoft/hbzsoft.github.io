@@ -1,4 +1,16 @@
-<h1>对撞机</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>对撞机</h1>
 <h2>题目描述</h2>
 <p>在2312年，宇宙中发现了 $n$ 台巨型对撞机，这些对撞机分别用 $1 \sim n$ 的自然数标识。科学家们不知道启动这些对撞机会发生什么危险事故，所以这些机器，刚开始都是出于关闭的状态。</p>
 <p>随着科学家们的研究发现，第 $i$ 台对撞机启动是安全的，当且仅当其他已经启动的对撞机的标识数都跟这台对撞机标识数互质。（例如假设前面启动的对撞机标识数是 $j$，如果 $i$ 能启动，那么 $i,j$ 互质，即 $\gcd(i,j) = 1$）。如果两台对撞机的标识数不为互质数就启动，那么就会发生爆炸事故。</p>

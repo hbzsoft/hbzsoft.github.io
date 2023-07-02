@@ -1,4 +1,16 @@
-<h1>[POI2014] SUP-Supercomputer</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[POI2014] SUP-Supercomputer</h1>
 <h2>题意翻译</h2>
 <p>给定一棵 $n$ 个节点的有根树，根节点为 $1$。$q$ 次询问，每次给定一个 $k$，用最少的操作次数遍历完整棵树，输出最少操作次数。每次操作可以选择访问不超过 $k$ 个未访问的点，且这些点的父亲必须在这次操作之前被访问过。</p>
 <p>$n, q \leq 10^6$。</p>

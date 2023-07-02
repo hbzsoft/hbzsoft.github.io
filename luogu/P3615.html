@@ -1,4 +1,16 @@
-<h1>如厕计划</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>如厕计划</h1>
 <h2>题目描述</h2>
 <p>竞赛比完之后，水箱里充满水的选手们鱼贯而出。凡华中学的厕所规划的很糟，只有两个厕位，于是厕所门前排起了长长的队伍。</p>
 <p>厕所有两个，一个是女生专用厕所，另一个是男女混用厕所。<strong>一共有2N个选手正在排队</strong>，男女生数量可能不同。如果队头的是妹子，只要某个厕所是空的就可以进入，但是如果两个厕所都是空的，那么优先进入女性专用厕所。而如果队头是个绅♂士，只有在男女混用厕所是空的时候才能使用；如果只有女性专用厕所是空的，那么队伍中最靠前的妹子就可以不用继续等直接如厕。我们假设所有人如厕都需要花1分钟，不考虑切换的时间。</p>

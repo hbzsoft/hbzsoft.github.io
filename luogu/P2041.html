@@ -1,4 +1,16 @@
-<h1>分裂游戏</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>分裂游戏</h1>
 <h2>题目描述</h2>
 <p>有一个无限大的棋盘，棋盘左下角有一个大小为 $n$ 的阶梯形区域，其中最左下角的那个格子里有一枚棋子。你每次可以把一枚棋子“分裂”成两枚棋子，分别放在原位置的上边一格和右边一格。（但如果目标位置已有棋子，则不能这样做）你的目的是通过有限次的操作，让整个阶梯里不再有任何棋子。下图所示的是 $n = 2$ 时的一种解法。</p>
 <p><img alt="" src="https://cdn.luogu.com.cn/upload/pic/1116.png" /> </p>

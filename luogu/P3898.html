@@ -1,4 +1,16 @@
-<h1>[湖南集训] 大新闻</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[湖南集训] 大新闻</h1>
 <h2>题目描述</h2>
 <p>有一个在 [0,n) 内等概率随机选择的整数，记其为 x。我们需要在 [0,n)内找到某一个整数 y，使得 x ⊕ y 达到最大值。这里 ⊕ 代表异或。</p>
 <p>问题在于，有可能对 x 进行了加密。情报显示，没有被加密的概率为 p。我们决定采取这样的策略：如果 x 没有被加密，那么我们选出使得 x ⊕ y 最大的 y；否则，我们在 [0,n) 内等概率随机选择一个整数作为 y。</p>

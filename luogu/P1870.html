@@ -1,4 +1,16 @@
-<h1>公交车</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>公交车</h1>
 <h2>题目描述</h2>
 <p>某城市有个能容纳 $n$ 辆公交车的停车场。每一天，这些公交车都要依次有序离开停车库去另一个终点站。这终点站距离停车场有 $d$ 米的路程。当然第 $i$ 辆公交车离开停车场的时间是 $t_i$ 秒，并以最大速度不超过 $v_i$ 米/秒行驶，加速度最大值为 $a$。一辆公交车能瞬间减速，也能瞬间改变它的加速度。当然每辆车的最大加速度都一样为 $a$。</p>
 <p>不管有多大的马力，一辆公交车都不能超过其他另外的公交车，如果一辆公交车追上另一辆公交车，那么后面追上的车跟前面被追的车一起并排行驶同时到达终点站。当然司机都是尽可能快的驾车到达终点站的。</p>

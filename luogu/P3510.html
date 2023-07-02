@@ -1,4 +1,16 @@
-<h1>[POI2010] JED-Ones</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[POI2010] JED-Ones</h1>
 <h2>题意翻译</h2>
 <p>设x是一个由 01 组成的序列。一个 UFO 指的是序列中第一个 1 或者最后一个 1 且不和任何一个 1 相邻。例如 10001010 有两个 UFO，1101011000 没有 UFO，1000 只有一个 UFO。</p>
 <p>设1到n的数的二进制表示中 UFO 的总数为sks(n)。例如，sks(5)=5, sks(64)=59, sks(128)=122, sks(256)=249.</p>

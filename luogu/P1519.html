@@ -1,4 +1,16 @@
-<h1>[USACO2.4] 穿越栅栏 Overfencing</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO2.4] 穿越栅栏 Overfencing</h1>
 <h2>题目描述</h2>
 <p>Farmer John 在外面的田野上搭建了一个巨大的用栅栏围成的迷宫。幸运的是，他在迷宫的边界上留出了两段栅栏作为迷宫的出口。更幸运的是，他所建造的迷宫是一个“完美的”迷宫：即你能从迷宫中的任意一点找到一条走出迷宫的路。</p>
 <p>给定迷宫的宽度 $W$（$1 \leq W \leq 38$）及高度 $H$（$1 \leq H \leq 100$）。$2 \times H+1$ 行，每行 $2 \times W+1$ 的字符以下面给出的格式表示一个迷宫。然后计算从迷宫中最“糟糕”的那一个点走出迷宫所需的步数（即使从这一点以最优的方式走向最靠近的出口，它仍然需要最多的步数）。</p>

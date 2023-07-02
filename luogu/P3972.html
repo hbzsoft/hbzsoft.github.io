@@ -1,4 +1,16 @@
-<h1>[TJOI2014] 电影评分</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[TJOI2014] 电影评分</h1>
 <h2>题目描述</h2>
 <p>小Z发明了一套新的电影评分系统。这套系统有三种操作:发布新电影、对电影评分、以及询问电影评分的排名。具体是这样运作的:如果是发布新电影,并且这部电影的有所主演之前均没有出现过,那么这部新电影的评分为0,否则这部电影的评分为<strong>最近一部</strong>与该电影<strong>至少有一个共同主演</strong>的电影的评分;如果是对电影进行评分,那么这部电影的评分就变成之前评分与新的评分的平均数;如果是查询排名,则根据评分输出相应排名。评分最高的为第一名。如果有多部电影分数相同,那么输出最早的一部。电影的评分在0到5之间。</p>
 <h2>输入输出格式</h2>

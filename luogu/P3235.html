@@ -1,4 +1,16 @@
-<h1>[HNOI2014] 江南乐</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2014] 江南乐</h1>
 <h2>题目描述</h2>
 <p>小A是一个名副其实的狂热的回合制游戏玩家。在获得了许多回合制游戏的世界级奖项之后，小A有一天突然想起了他小时候在江南玩过的一个回合制游戏。</p>
 <p>游戏的规则是这样的，首先给定一个数F，然后游戏系统会产生T组游戏。每一组游戏包含N堆石子，小A和他的对手轮流操作。每次操作时，操作者先选定一个不小于2的正整数M (M是操作者自行选定的，而且每次操作时可不一样)，然后将任意一堆数量不小于F的石子分成M堆，并且满足这M堆石子中石子数最多的一堆至多比石子数最少的一堆多1（即分的尽量平均，事实上按照这样的分石子万法，选定M和一堆石子后，它分出来的状态是固定的）。当一个玩家不能操作的时候，也就是当每一堆石子的数量都严格小于F时，他就输掉。(补充：先手从N堆石子中选择一堆数量不小于F的石子分成M堆后，此时共有N+M-1)堆石子，接下来小A从这N+M-1堆石子中选择一堆数量不小于F的石子，依此类推。</p>

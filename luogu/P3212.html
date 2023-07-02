@@ -1,4 +1,16 @@
-<h1>[HNOI2011] 任务调度</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2011] 任务调度</h1>
 <h2>题目描述</h2>
 <p>有 $n$ 个任务和两台机器 A 与 B。每个任务都需要既在机器 A 上执行，又在机器 B 上执行，</p>
 <p>第 $i$ 个任务需要在机器 A 上执行时间 $a_i$，且需要在机器 B 上执行时间 $b_i$。最终的目标是所有任务在 A 和 B 上都执行完，且希望执行完所有任务的总时间尽量少。当然问题没有这么简单，有些任务对于先在机器 A 上执行还是先在机器 B 上执行有一定的限制。据此可将所有任务分为三类：</p>

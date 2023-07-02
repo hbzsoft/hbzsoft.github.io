@@ -1,4 +1,16 @@
-<h1>[POI2010] MOS-Bridges</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[POI2010] MOS-Bridges</h1>
 <h2>题意翻译</h2>
 <p>给定一个图，边有权值且正着走和逆着走有不同权值，在这个图上求一条最大边权最小的欧拉回路，从点  $1$ 出发，要求输出方案。</p>
 <p>第一行包括两个整数  $n$ 和  $m$，分别代表点的个数和边的个数。接下来  $m$ 行每行包括  $4$ 个整数  $a,b,l,p$，分别代表边的两个端点和正着走的权值和逆着走的权值。</p>

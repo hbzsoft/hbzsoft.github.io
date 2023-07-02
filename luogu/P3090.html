@@ -1,4 +1,16 @@
-<h1>[USACO13NOV] Empty Stalls G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO13NOV] Empty Stalls G</h1>
 <h2>题目描述</h2>
 <p>Farmer John's new barn consists of a huge circle of N stalls (2 &lt;= N &lt;= 3,000,000), numbered 0..N-1, with stall N-1 being adjacent to stall 0.</p>
 <p>At the end of each day, FJ's cows arrive back at the barn one by one, each with a preferred stall they would like to occupy.  However, if a cow's preferred stall is already occupied by another cow, she scans forward sequentially from this stall until she finds the first unoccupied stall, which she then claims.  If she scans past stall N-1, she continues scanning from stall 0.</p>

@@ -1,4 +1,16 @@
-<h1>消息传递</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>消息传递</h1>
 <h2>题目描述</h2>
 <p>巴蜀国的社会等级森严，除了国王之外，每个人均有且只有一个直接上级，当然国王没有上级。如果A是B的上级，B是C的上级，那么A就是C的上级。绝对不会出现这样的关系：A是B的上级，B也是A的上级。</p>
 <p>最开始的时刻是0，你要做的就是用1单位的时间把一个消息告诉某一个人，让他们自行散布消息。在任意一个时间单位中，任何一个已经接到消息的人，都可以把消息告诉他的一个直接上级或者直接下属。</p>

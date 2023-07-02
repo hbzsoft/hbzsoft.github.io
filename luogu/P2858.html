@@ -1,4 +1,16 @@
-<h1>[USACO06FEB] Treats for the Cows G/S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO06FEB] Treats for the Cows G/S</h1>
 <h2>题目描述</h2>
 <p>FJ has purchased N (1 &lt;= N &lt;= 2000) yummy treats for the cows who get money for giving vast amounts of milk. FJ sells one treat per day and wants to maximize the money he receives over a given period time.</p>
 <p>The treats are interesting for many reasons:The treats are numbered 1..N and stored sequentially in single file in a long box that is open at both ends. On any day, FJ can retrieve one treat from either end of his stash of treats.Like fine wines and delicious cheeses, the treats improve with age and command greater prices.The treats are not uniform: some are better and have higher intrinsic value. Treat i has value v(i) (1 &lt;= v(i) &lt;= 1000).Cows pay more for treats that have aged longer: a cow will pay v(i)*a for a treat of age a.Given the values v(i) of each of the treats lined up in order of the index i in their box, what is the greatest value FJ can receive for them if he orders their sale optimally?</p>

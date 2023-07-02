@@ -1,4 +1,16 @@
-<h1>[BJOI2017] 开车</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[BJOI2017] 开车</h1>
 <h2>题目描述</h2>
 <p>有 $n$ 辆车，分别在 $a_1, a_2, \ldots , a_n$ 位置和 $n$ 个加油站，分别在 $b_1, b_2, \ldots ,b_n$ 位置。</p>
 <p>每个加油站只能支持一辆车的加油，所以你要把这些车开到不同的加油站加油。一个车从 $x$ 位置开到 $y$ 位置的代价为 $|x-y|$，问如何安排车辆，使得代价之和最小。</p>

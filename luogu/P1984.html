@@ -1,4 +1,16 @@
-<h1>[SDOI2008] 烧水问题</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SDOI2008] 烧水问题</h1>
 <h2>题目描述</h2>
 <p>把总质量为1kg的水分装在n个杯子里，每杯水的质量均为(1/n)kg，初始温度均为0℃。现需要把每一杯水都烧开。我们可以对任意一杯水进行加热。把一杯水的温度升高t℃所需的能量为(4200*t/n)J，其中，“J”是能量单位“焦耳”。如果一旦某杯水的温度达到100℃，那么这杯水的温度就不能再继续升高，此时我们认为这杯水已经被烧开。显然地，如果直接把水一杯一杯地烧开，所需的总能量为(4200*100)J。</p>
 <p>在烧水的过程中，我们随时可以在两杯温度不同的水之间进行热传递操作。热量只能从温度较高的那杯水传递到温度较低的那杯水。由于两杯水的质量相同，所以进行热传递操作之后，原来温度较高的那杯水所降低的温度总是等于原来温度较低的那杯水所升高的温度。</p>

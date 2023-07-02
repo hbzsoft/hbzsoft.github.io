@@ -1,4 +1,16 @@
-<h1>魔鬼杀手</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>魔鬼杀手</h1>
 <h2>题目描述</h2>
 <p>你生活在一个怪兽世界里。你需要用魔法反抗这些怪兽。</p>
 <p>每个怪兽都有一定的 hit points，表示他们的生命值。你可以靠施魔法，降低怪兽的 hit points。每个魔法都会有一定的 damage，表示会减少被攻击者 damage 的 hit point。一个怪兽被击败了当前仅当它的 hitpoint 小于等于 0。另一方面，魔法是要消耗魔力的。因为你的魔力是有限的，你希望用最少的魔力击败所有的怪兽。写一个程序完成这个任务。</p>

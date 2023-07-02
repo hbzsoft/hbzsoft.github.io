@@ -1,4 +1,16 @@
-<h1>遥远的国度</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>遥远的国度</h1>
 <h2>题目描述</h2>
 <p><code>zcwwzdjn</code> 在追杀 <code>zhx</code> ，而 <code>zhx</code> 逃入了一个遥远的国度。当 <code>zcwwzdjn</code> 准备进入遥远的国度继续追杀时，守护神 <code>RapiD</code> 阻拦了 <code>zcwwzdjn</code> 的去路，他需要 <code>zcwwzdjn</code> 完成任务后才能进入遥远的国度继续追杀。</p>
 <p>问题是这样的：遥远的国度有 $n$ 个城市，这些城市之间由一些路连接且这些城市构成了一颗树。这个国度有一个首都，我们可以把这个首都看做整棵树的根，但遥远的国度比较奇怪，首都是随时有可能变为另外一个城市的。遥远的国度的每个城市有一个防御值，第 $i$ 个的防御值为 $val_i$，有些时候 <code>RapiD</code> 会使得某两个城市之间的路径上的所有城市的防御值都变为某个值。</p>

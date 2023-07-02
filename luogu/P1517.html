@@ -1,4 +1,16 @@
-<h1>高精求小数幂</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>高精求小数幂</h1>
 <h2>题意翻译</h2>
 <p>计算量非常大、精度要求非常高的问题是很常见的。举个例子，计算国家债务就是这么一项对于许多计算机系统来说非常繁重的工作。</p>
 <p>现在有这么一个任务要求编写一个程序来计算R^n的精确值，其中R是一个实数(0.0 &lt; R &lt;= 9999.9)而n是一个整数（0 &lt; n &lt;= 250）。</p>

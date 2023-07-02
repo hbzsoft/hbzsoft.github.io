@@ -1,4 +1,16 @@
-<h1>[SDOI2005] 区间</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SDOI2005] 区间</h1>
 <h2>题目描述</h2>
 <p>现给定 $n$ 个闭区间 $[a_i, b_i]$（$1 \le i \le n$）。这些区间的并可以表示为一些不相交的闭区间的并。你的任务就是在这些表示方式中找出包含最少区间的方案。你的输出应该按照区间的升序排列。这里如果说两个区间 $[a, b]$ 和 $[c, d]$ 是按照升序排列的，那么我们有 $a \le b &lt; c \le d$。</p>
 <p>请写一个程序：</p>

@@ -1,4 +1,16 @@
-<h1>[JLOI2015] 战争调度</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[JLOI2015] 战争调度</h1>
 <h2>题目描述</h2>
 <p>脸哥最近来到了一个神奇的王国，王国里的公民每个公民有两个下属或者没有下属，这种关系刚好组成一个 $n$ 层的完全二叉树。公民 $i$ 的下属是 $2i$ 和 $2i +1$。最下层的公民即叶子节点的公民是平民，平民没有下属，最上层的是国王，中间是各级贵族。</p>
 <p>现在这个王国爆发了战争，国王需要决定每一个平民是去种地以供应粮食还是参加战争，每一个贵族（包括国王自己）是去管理后勤还是领兵打仗。一个平民会对他的所有直系上司有贡献度，若一个平民 $i$ 参加战争，他的某个直系上司 $j$ 领兵打仗，那么这个平民对上司的作战贡献度为 $w_{ij}$。若一个平民 $i$ 种地，他的某个直系上司 $j$ 管理后勤，那么这个平民对上司的后勤贡献度为 $f_{ij}$，若 $i$ 和 $j$ 所参加的事务不同，则没有贡献度。为了战争需要保障后勤，国王还要求不多于 $m$ 个平民参加战争。</p>

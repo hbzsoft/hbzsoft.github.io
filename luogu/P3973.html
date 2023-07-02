@@ -1,4 +1,16 @@
-<h1>[TJOI2015] 线性代数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[TJOI2015] 线性代数</h1>
 <h2>题目描述</h2>
 <p>为了提高智商，ZJY 开始学习线性代数。</p>
 <p>她的小伙伴菠萝给她出了这样一个问题：给定一个 $n \times n$ 的矩阵 $B$ 和一个 $1 \times n$ 的矩阵 $C$。求出一个 $1×n$ 的 01 矩阵 $A$，使得 $D=(A×B-C)×A^{\sf T}$ 最大，其中$A^{\sf T}$为$A$的转置，输出$D$。</p>

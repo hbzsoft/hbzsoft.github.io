@@ -1,4 +1,16 @@
-<h1>[JLOI2016/SHOI2016] 侦察守卫</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[JLOI2016/SHOI2016] 侦察守卫</h1>
 <h2>题目描述</h2>
 <p>小R和B神正在玩一款游戏。这款游戏的地图由N个点和N-1条无向边组成，每条无向边连接两个点，且地图是连通的。换句话说，游戏的地图是一棵有N个节点的树。</p>
 <p>游戏中有一种道具叫做侦查守卫，当一名玩家在一个点上放置侦查守卫后，它可以监视这个点以及与这个点的距离在D以内的所有点。这里两个点之间的距离定义为它们在树上的距离，也就是两个点之间唯一的简单路径上所经过边的条数。在一个点上放置侦查守卫需要付出一定的代价，在不同点放置守卫的代价可能不同。</p>

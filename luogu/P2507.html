@@ -1,4 +1,16 @@
-<h1>[SCOI2008] 配对</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SCOI2008] 配对</h1>
 <h2>题目描述</h2>
 <p>你有 $n$ 个整数 $A_i$ 和 $n$ 个整数 $B_i$。你需要把它们配对，即每个 $A_i$ 恰好对应一个 $B_{p[i]}$。要求所有配对的整数差的绝对值之和尽量小，但不允许两个相同的数配对。例如 $A = {5, 6, 8}$，$B = {5, 7, 8 }$，则最优配对方案是 $5 \sim 8$、$6 \sim 5$、$8 \sim 7$，配对整数的差的绝对值分别为 $3, 1, 1$，和为 $5$。注意，$5 \sim 5$、$6 \sim 7$、$8 \sim 8$ 是不允许的，因为相同的数不许配对。</p>
 <h2>输入输出格式</h2>

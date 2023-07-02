@@ -1,4 +1,16 @@
-<h1>太空飞行计划问题</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>太空飞行计划问题</h1>
 <h2>题目描述</h2>
 <p>W 教授正在为国家航天中心计划一系列的太空飞行。每次太空飞行可进行一系列商业性实验而获取利润。现已确定了一个可供选择的实验集合 $ E = { E_1, E_2, \cdots, E_m } $，和进行这些实验需要使用的全部仪器的集合 $ I = { I_1, I_2, \cdots, I_n } $。实验 $ E_j $ 需要用到的仪器是 $ I $ 的子集 $ R_j \subseteq I $。</p>
 <p>配置仪器 $ I_k $ 的费用为 $ c_k $ 美元。实验 $ E_j $ 的赞助商已同意为该实验结果支付 $ p_j $ 美元。W 教授的任务是找出一个有效算法，确定在一次太空飞行中要进行哪些实验并因此而配置哪些仪器才能使太空飞行的净收益最大。这里净收益是指进行实验所获得的全部收入与配置仪器的全部费用的差额。</p>

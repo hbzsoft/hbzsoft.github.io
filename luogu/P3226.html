@@ -1,4 +1,16 @@
-<h1>[HNOI2012] 集合选数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2012] 集合选数</h1>
 <h2>题目描述</h2>
 <p>《集合论与图论》这门课程有一道作业题，要求同学们求出 ${ 1, 2, 3, 4, 5 }$ 的所有满足以下条件的子集：若 $x$ 在该子集中，则 $2x$ 和 $3x$ 不能在该子集中。</p>
 <p>同学们不喜欢这种具有枚举性质的题目，于是把它变成了以下问题：对于任意一个正整数 $n \le 10^5$，如何求出 ${1,2,\ldots ,n}$ 的满足上述约束条件的子集的个数（只需输出对 $10^9+1$ 取模的结果），现在这个问题就交给你了。</p>

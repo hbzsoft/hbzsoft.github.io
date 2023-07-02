@@ -1,4 +1,16 @@
-<h1>[CERC2016] 关键的膝盖 Key Knocking</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[CERC2016] 关键的膝盖 Key Knocking</h1>
 <h2>题目描述</h2>
 <p>Goran正在从他的膝盖手术中恢复，并正在试验用于存储的智能卡加密密钥。在这个问题中，一个密钥是指一个长度为3n的二进制序列，其中n是正整数。序列的每一位从左往右依次被编号为1到3n。一个密钥的权值是指相邻位不同的位置个数再加上1。比如：“000”的权值是1，“011010100”的权值是7。</p>
 <p>他发现他可以发送小型脉冲电流来修改智能卡的电路，从而修改密钥。确切地说，他可以不断进行下面的操作：选择任意两个相邻的位，然后同时取反它们。比如他可以通过一次操作把“000”修改为“110”。</p>

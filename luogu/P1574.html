@@ -1,4 +1,16 @@
-<h1>超级数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>超级数</h1>
 <h2>题目描述</h2>
 <p>设x的约数个数为 $f(x)$，若 $\forall i\in [1,n)\cap \mathbb{Z^+},f(n)&gt;f(i)$，就把 $n$ 称作 <code>supernumber</code>。</p>
 <p>给出 $m$ 个数 $a_1,a_2,\ldots,a_m$，请分别输出不大于 $a_1$，不大于 $a_2$，...，不大于 $a_m$ 的最大 <code>supernumber</code>。</p>

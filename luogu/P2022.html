@@ -1,4 +1,16 @@
-<h1>有趣的数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>有趣的数</h1>
 <h2>题目描述</h2>
 <p>让我们来考虑1到N的正整数集合。让我们把集合中的元素按照字典序排列，例如当N=11时，其顺序应该为：1,10,11,2,3,4,5,6,7,8,9。</p>
 <p>定义K在N个数中的位置为Q(N,K)，例如Q(11,2)=4。现在给出整数K和M，要求找到最小的N，使得Q(N,K)=M。</p>

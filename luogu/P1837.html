@@ -1,4 +1,16 @@
-<h1>单人纸牌</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>单人纸牌</h1>
 <h2>题目描述</h2>
 <p>单人纸牌游戏，共36张牌分成9叠，每叠4张牌面向上。每次，游戏者可以从某两个不同的牌堆最顶上取出两张牌面相同的牌（如黑桃10和梅花10）并且一起拿走。如果最后所有纸牌都被取走，则游戏者就赢了，否则游戏者就输了。 </p>
 <p>George很热衷于玩这个游戏，但是一旦有时有多种选择的方法，George就不知道取哪一种好了，George会从中随机地选择一种走，例如：顶上的9张牌为KS，KH，KD，9H，8S，8D，7C，7D，6H，显然有5种取法：(KS，KH),(KS,KD),(KH,KD),(8S,8D),(7C,7D),当然George取到每一种取法的概率都是1/5。 </p>

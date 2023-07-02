@@ -1,4 +1,16 @@
-<h1>PASTE</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>PASTE</h1>
 <h2>题目描述</h2>
 <p>我们用文本处理器来处理一个特殊的文本文件，该文本文件共有N行文本，每一行文本仅包含一个自然数，第一行为$1$、第二行为$2$，以此类推至N行为自然数$N$。</p>
 <p>假设对该文本文件执行一次“剪切和粘贴”操作含义如下：首先选定连续的若干行文本，“剪切”操作将选定的文本从文件中剪下，而“粘贴”操作将剪切下来的文本插入到文件中的其他地方。</p>

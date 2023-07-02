@@ -1,4 +1,16 @@
-<h1>[HNOI2007] 分裂游戏</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2007] 分裂游戏</h1>
 <h2>题目描述</h2>
 <p>聪聪和睿睿最近迷上了一款叫做分裂的游戏。</p>
 <p>该游戏的规则是： 共有 $n$ 个瓶子， 标号为 $0, 1, \ldots, n-1$，第 $i$ 个瓶子中装有 $p_i$ 颗巧克力豆，两个人轮流取豆子，每一轮每人选择 $3$ 个瓶子，标号为 $i,j,k$, 并要保证 $i \lt j, j \leq k$，且第 $i$ 个瓶子中至少要有 $1$ 颗巧克力豆，随后这个人从第 $i$ 个瓶子中拿走一颗豆子并在 $j,k$ 中各放入一粒豆子（$j$ 可能等于 $k$） 。如果轮到某人而他无法按规则取豆子，那么他将输掉比赛。胜利者可以拿走所有的巧克力豆！</p>

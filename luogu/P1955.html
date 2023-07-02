@@ -1,4 +1,16 @@
-<h1>[NOI2015] 程序自动分析</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[NOI2015] 程序自动分析</h1>
 <h2>题目描述</h2>
 <p>在实现程序自动分析的过程中，常常需要判定一些约束条件是否能被同时满足。</p>
 <p>考虑一个约束满足问题的简化版本：假设 $x_1,x_2,x_3,\cdots$ 代表程序中出现的变量，给定 $n$ 个形如 $x_i=x_j$ 或 $x_i\neq x_j$ 的变量相等/不等的约束条件，请判定是否可以分别为每一个变量赋予恰当的值，使得上述所有约束条件同时被满足。例如，一个问题中的约束条件为：$x_1=x_2,x_2=x_3,x_3=x_4,x_4\neq x_1$，这些约束条件显然是不可能同时被满足的，因此这个问题应判定为不可被满足。</p>

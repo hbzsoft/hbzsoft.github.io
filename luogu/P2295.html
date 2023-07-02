@@ -1,4 +1,16 @@
-<h1>MICE</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>MICE</h1>
 <h2>题目描述</h2>
 <p>S国的动物园是一个N*M的网格图，左上角的坐标是(1,1)，右下角的坐标是(N,M)。</p>
 <p>小象在动物园的左上角，它想回到右下角的家里去睡觉，但是动物园中有一些老鼠，而小象又很害怕老鼠。动物园里的老鼠是彼此互不相同的。小象的害怕值定义为他回家的路径上可以看见的不同的老鼠的数量。若小象当前的位置为(x1,y1)，小象可以看见老鼠，当且仅当老鼠的位置(x2,y2)满足|x1-x2|+|y1-y2|&lt;=1。由于小象很困了，所以小象只会走一条最近的路回家，即小象只会向下或者向右走。现在你需要帮小象确定一条回家的路线，使得小象的害怕值最小。</p>

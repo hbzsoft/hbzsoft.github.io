@@ -1,4 +1,16 @@
-<h1>[ZJOI2014] 力</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[ZJOI2014] 力</h1>
 <h2>题目描述</h2>
 <p>给出 $n$ 个数 $q_1,q_2, \dots q_n$，定义</p>
 <p>$$F_j~=~\sum_{i = 1}^{j - 1} \frac{q_i \times q_j}{(i - j)^2}~-~\sum_{i = j + 1}^{n} \frac{q_i \times q_j}{(i - j)^2}$$</p>

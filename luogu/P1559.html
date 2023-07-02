@@ -1,4 +1,16 @@
-<h1>运动员最佳匹配问题</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>运动员最佳匹配问题</h1>
 <h2>题目描述</h2>
 <p>羽毛球队有男女运动员各 $n$ 人。给定 $2$ 个 $n \times n$ 矩阵 $P$ 和 $Q$。$P_{i,j}$ 是男运动员 $i$ 和女运动员 $j$ 配对组成混合双打的男运动员竞赛优势；$Q_{i,j}$ 是女运动员 $i$ 和男运动员 $j$ 配合的女运动员竞赛优势。</p>
 <p>但是，由于技术配合和心理状态等各种因素影响，$P_{i,j}$ 不一定等于 $Q_{j,i}$。男运动员 $i$ 和女运动员 $j$ 配对组成混合双打的男女双方竞赛优势为 $\bm{P_{i,j} \times Q_{j,i}}$。</p>

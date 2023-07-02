@@ -1,4 +1,16 @@
-<h1>[POI2011] Lightning Conductor</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[POI2011] Lightning Conductor</h1>
 <h2>题意翻译</h2>
 <p>给定一个长度为 $n$ 的序列 ${a_n}$，对于每个 $i\in [1,n]$ ，求出一个最小的非负整数 $p$ ，使得 $\forall j\in[1,n]$，都有 $a_j\le a_i+p-\sqrt{|i-j|}$</p>
 <p>$1 \le n \le 5\times 10^{5}$，$0 \le a_i \le 10^{9}$ 。</p>

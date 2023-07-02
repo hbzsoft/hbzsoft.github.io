@@ -1,4 +1,16 @@
-<h1>无边的网格</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>无边的网格</h1>
 <h2>题目描述</h2>
 <p>在一个 R 行 C 列的表格中，每个单元格都是正方形。这种表格便被称为“网格”，每个单元格的四个顶点都叫做“格点”。四个顶点都在格点上的正方形叫做“格点正方形”；类似地，三个顶点都在格点上的正三角形叫做“格点正三角形”。</p>
 <p>对于给定的正整数 R 和 C（R, C ≤ 10），请计算出网格中格点正方形和格点正三角形的个数。</p>

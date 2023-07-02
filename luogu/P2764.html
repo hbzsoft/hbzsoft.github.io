@@ -1,4 +1,16 @@
-<h1>最小路径覆盖问题</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>最小路径覆盖问题</h1>
 <h2>题目描述</h2>
 <p>给定有向图 $G=(V,E)$ 。设 $P$ 是 $G$ 的一个简单路（顶点不相交）的集合。如果 $V$ 中每个定点恰好在 $P$ 的一条路上，则称 $P$ 是 $G$ 的一个路径覆盖。$P$ 中路径可以从 $V$ 的任何一个定点开始，长度也是任意的，特别地，可以为 $0$。$G$ 的最小路径覆盖是 $G$ 所含路径条数最少的路径覆盖。设计一个有效算法求一个 DAG（有向无环图）$G$ 的最小路径覆盖。</p>
 <h2>输入输出格式</h2>

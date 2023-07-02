@@ -1,4 +1,16 @@
-<h1>双调序列</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>双调序列</h1>
 <h2>题目描述</h2>
 <p>电脑组的童鞋们经常玩一些智力 PK 小游戏，某月某日，发源于小朋友又发明了一种新的序列：双调序列，所谓的双调呢主要是满足如下条件描述：</p>
 <p>假定有 $n$（$n \le 1000$）个整数（都在 <code>long int</code> 范围内，即 $-2147483648 \sim 2147483647$），双调序列的第一个数是 $n$ 个整数中的最大数，第二个数是 $n$ 个整数中的最小数，第三个数是 $n$ 个数中的第二大数，第四个数是 $n$ 个数中的第二小数……取过的数不能再取，依次类推，直到结束。</p>

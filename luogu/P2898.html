@@ -1,4 +1,16 @@
-<h1>[USACO08JAN] Haybale Guessing G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO08JAN] Haybale Guessing G</h1>
 <h2>题意翻译</h2>
 <p>给一个长度为 $n$ 的数组 $q$ 个条件，数组中的数字互不相同，每个条件格式形如  $l_i,r_i,x_i$ 表示这个数组的区间 $[l_i,r_i]$ 内的最小值为  $x_i$，输出最早与前面的条件有矛盾的条件的编号，如果所有条件都不发生矛盾，输出 $0$。</p>
 <h3>输入格式</h3>

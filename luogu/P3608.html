@@ -1,4 +1,16 @@
-<h1>[USACO17JAN] Balanced Photo G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO17JAN] Balanced Photo G</h1>
 <h2>题目描述</h2>
 <p>Farmer John is arranging his $N$ cows in a line to take a photo ($1 \leq N \leq 100,000$). The height of the $i$th cow in sequence is $h_i$, and the heights of all cows are distinct.</p>
 <p>As with all photographs of his cows, FJ wants this one to come out looking as nice as possible. He decides that cow $i$ looks "unbalanced" if $L_i$ and $R_i$ differ by more than factor of 2, where $L_i$ and $R_i$ are the number of cows taller than $i$ on her left and right, respectively. That is, $i$ is unbalanced if the larger of $L_i$ and $R_i$ is strictly more than twice the smaller of these two numbers. FJ is hoping that not too many of his cows are unbalanced.</p>

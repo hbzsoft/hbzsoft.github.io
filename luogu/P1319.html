@@ -1,4 +1,16 @@
-<h1>压缩技术</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>压缩技术</h1>
 <h2>题目描述</h2>
 <p>设某汉字由 $N \times N$ 的 $\texttt 0$ 和 $\texttt 1$ 的点阵图案组成。</p>
 <p>我们依照以下规则生成压缩码。连续一组数值：从汉字点阵图案的第一行第一个符号开始计算，按书写顺序从左到右，由上至下。第一个数表示连续有几个 $\texttt 0$，第二个数表示接下来连续有几个 $\texttt 1$，第三个数再接下来连续有几个 $\texttt 0$，第四个数接着连续几个 $\texttt 1$，以此类推……</p>

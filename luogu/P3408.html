@@ -1,4 +1,16 @@
-<h1>恋爱</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>恋爱</h1>
 <h2>题目描述</h2>
 <p>小 A 爱上了小 B！！！可是小 A 相对小 B 太弱，所以她当然不会同意小 A 的请求。小 A 苦苦追求，最终小 B 就提这样的条件：</p>
 <p>小 B 有 $n$ 个下属（不包括小 B）组成了树状结构，小 B 在顶端，其他人都有一个直属上司。小 B 编号 $0$，其他人编号 $1 \sim n$。对于第 $i$ 人，如果这个人没有下属，那么小 A 可以给他 $A_i$ 元钱，则他会向他的直属上司写一封信，表示小 A 向小 B 求爱，如果他的直属下属有不小于 $A_i / T$ 的人写信表示小 A 向小 B 求爱，那么他也会向他的直属上司写一封信，表示小 A 向小 B 求爱。如果小 B 的直属下属有不小于 $C / T$ 的人写信表示小 A 向小 B 求爱，那么她会同意小 A 的请求。</p>

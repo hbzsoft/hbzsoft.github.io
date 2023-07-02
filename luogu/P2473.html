@@ -1,4 +1,16 @@
-<h1>[SCOI2008] 奖励关</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SCOI2008] 奖励关</h1>
 <h2>题目描述</h2>
 <p>你正在玩你最喜欢的电子游戏，并且刚刚进入一个奖励关。在这个奖励关里，系统将依次随机抛出 $k$ 次宝物，每次你都可以选择吃或者不吃（必须在抛出下一个宝物之前做出选择，且现在决定不吃的宝物以后也不能再吃）。</p>
 <p>宝物一共有 $n$ 种，系统每次抛出这 $n$ 种宝物的概率都相同且相互独立。也就是说，即使前 $(k-1)$ 次系统都抛出宝物 $1$（这种情况是有可能出现的，尽管概率非常小），第 $k$ 次抛出各个宝物的概率依然均为 $\frac 1 n $。</p>

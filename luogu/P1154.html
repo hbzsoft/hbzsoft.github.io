@@ -1,4 +1,16 @@
-<h1>奶牛分厩</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>奶牛分厩</h1>
 <h2>题目描述</h2>
 <p>农夫约翰有$N(1 \le N \le 5000)$头奶牛，每头奶牛都有一个唯一的不同于其它奶牛的编号$s_i$，所有的奶牛都睡在一个有$K$个厩的谷仓中，厩的编号为$0$到$K-1$。每头奶牛都知道自己该睡在哪一个厩中，因为约翰教会了它们做除法，$S_i  \bmod  K$的值就是第$i$头奶年所睡的厩的编号。</p>
 <p>给出一组奶牛的编号，确定最小的Ｋ使得没有二头或二头以上的奶牛睡在同一厩中。</p>

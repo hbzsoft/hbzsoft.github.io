@@ -1,4 +1,16 @@
-<h1>杠杆数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>杠杆数</h1>
 <h2>题目描述</h2>
 <p>如果把一个数的某一位当成支点，且左边的数字到这个点的力矩和等于右边的数字到这个点的力矩和，那么这个数就可以被叫成杠杆数。</p>
 <p>比如4139就是杠杆数，把3当成支点，我们有这样的等式：4 * 2 + 1 * 1 = 9 * 1。</p>

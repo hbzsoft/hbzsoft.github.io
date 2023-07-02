@@ -1,4 +1,16 @@
-<h1>[CQOI2014] 排序机械臂</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[CQOI2014] 排序机械臂</h1>
 <h2>题目描述</h2>
 <p>为了把工厂中高低不等的物品按从低到高排好序，工程师发明了一种排序机械臂。它遵循一个简单的排序规则，第一次操作找到高度最低的物品的位置 $P_1$ ，并把左起第一个物品至 $P_1$  间的物品 (即区间 $[1,P_1]$  间的物品) 反序；第二次找到第二低的物品的位置 $P_2$ ，并把左起第二个至 $P_2$  间的物品 (即区间 $[2,P_2]$  间的物品) 反序……最终所有的物品都会被排好序。</p>
 <p><img alt="样例说明" src="https://cdn.luogu.com.cn/upload/pic/15642.png" /></p>

@@ -1,4 +1,16 @@
-<h1>鸿山洞的灯</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>鸿山洞的灯</h1>
 <h2>题目描述</h2>
 <p>已知 $n$ 盏灯以及每盏灯的位置 $p_i$，$p_i$ 均不相等，当两盏灯之间的距离小于 $dist$ 时，若这个安全距离里面还有灯是亮着时，就可以关掉这些灯（即若第 $i-1$ 盏与第 $i+1$ 盏的距离 $\leq dist$，则可以关掉第 $i$ 盏）。</p>
 <p>求在保证洞里的光线是充足的情况下，一段区域里能删除的灯的最大值。</p>

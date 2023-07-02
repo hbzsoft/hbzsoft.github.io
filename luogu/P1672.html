@@ -1,4 +1,16 @@
-<h1>[USACO05FEB] Feed Accounting S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO05FEB] Feed Accounting S</h1>
 <h2>题目描述</h2>
 <p>约翰想知道上一船饲料是什么时候运到的。在饲料运到之前，他的牛正好把仓库里原来的饲料全吃光了。他收到运来的 $F1(1\le F1\le 10^6)$ 千克饲料。遗憾的是，他已经不记得这是哪一天的事情了。到第 $D(1\le D\le 2\times 10^3)$ 天为止，仓库里还剩下 $F2(1\le F2\le F1)$ 千克饲料。</p>
 <p>约翰养了 $C(1\le C\le 100)$ 头牛，每头牛每天都吃掉恰好 $1$ 千克饲料。由于不同的原因，牛们从某一天开始在仓库吃饲料，又在某一天离开仓库，所以不同的两天可能会有差距很大的饲料消耗量。每头牛在来的那天和离开的那天都在仓库吃饲料。给出今天的日期 $D$，写一个程序，判断饲料最近一次运到是在什么时候。今天牛们已经吃过饲料了，并且饲料运到的那天牛们还没有吃过饲料。</p>

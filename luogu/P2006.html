@@ -1,4 +1,16 @@
-<h1>赵神牛的游戏</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>赵神牛的游戏</h1>
 <h2>题目描述</h2>
 <p>在 DNF 中，赵神牛有一个缔造者，他一共有 $k$ 点法力值，一共有 $m$ 个技能，每个技能耗费的法力值为 $a_i$，可以造成的伤害为 $b_i$，而 boss 的体力值为 $n$，请你求出它放哪个技能，才可以打死 boss。</p>
 <p>当然，赵神牛技术很菜，他一局只放一个技能,不过每个技能都可以放无数次。</p>

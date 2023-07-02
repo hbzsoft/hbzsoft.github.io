@@ -1,4 +1,16 @@
-<h1>不等数列</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>不等数列</h1>
 <h2>题目描述</h2>
 <p>将 $1$ 到 $n$ 任意排列，然后在排列的每两个数之间根据他们的大小关系插入<code>&amp;gt;</code> 和 <code>&amp;lt;</code>。问在所有排列中，有多少个排列恰好有 $k$ 个 <code>&amp;lt;</code>。答案对 $2015$ 取模。</p>
 <p>注：$1 \sim n$ 的排列指的是 $1 \sim n$ 这 $n$ 个数各出现且仅出现一次的数列。</p>

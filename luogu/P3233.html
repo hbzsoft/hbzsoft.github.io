@@ -1,4 +1,16 @@
-<h1>[HNOI2014] 世界树</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2014] 世界树</h1>
 <h2>题目描述</h2>
 <p>世界树是一棵无比巨大的树，它伸出的枝干构成了整个世界。在这里，生存着各种各样的种族和生灵，他们共同信奉着绝对公正公平的女神艾莉森，在他们的信条里，公平是使世界树能够生生不息、持续运转的根本基石。</p>
 <p>世界树的形态可以用一个数学模型来描述：世界树中有 $n$ 个种族，种族的编号分别从 $1$ 到 $n$，分别生活在编号为 $1$ 到 $n$ 的聚居地上，种族的编号与其聚居地的编号相同。有的聚居地之间有双向的道路相连，道路的长度为 $1$。保证连接的方式会形成一棵树结构，即所有的聚居地之间可以互相到达，并且不会出现环。定义两个聚居地之间的距离为连接他们的道路的长度；例如，若聚居地 $a$ 和 $b$ 之间有道路，$b$ 和 $c$ 之间有道路，因为每条道路长度为 $1$ 而且又不可能出现环，所以 $a$ 与 $c$ 之间的距离为 $2$。</p>

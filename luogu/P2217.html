@@ -1,4 +1,16 @@
-<h1>[HAOI2007] 分割矩阵</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HAOI2007] 分割矩阵</h1>
 <h2>题目描述</h2>
 <p>将一个a*b的数字矩阵进行如下分割：将原矩阵沿某一条直线分割成两个矩阵，再将生成的两个矩阵继续如此分割（当然也可以只分割其中的一个），这样分割了（n-1)次后，原矩阵被分割成了n个矩阵。（每次分割都只能沿着数字间的缝隙进行）</p>
 <p>原矩阵中每一位置上有一个分值，一个矩阵的总分为其所含各位置上分值之和。现在需要把矩阵按上述规则分割成n个矩阵，并使各矩阵总分的均方差最小。</p>

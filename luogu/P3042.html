@@ -1,4 +1,16 @@
-<h1>[USACO12JAN] Cow Run G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO12JAN] Cow Run G</h1>
 <h2>题目描述</h2>
 <p>Farmer John and Bessie have devised a new exercise game for the cows.  The cows are running on a circular track of length M (2 &lt;= M &lt;= 1,000,000,000) starting from the same position.  The game proceeds in N (1 &lt;= N &lt;= 14) rounds using a deck of 8N cards each with a number X_i (0 &lt;= X_i &lt; M) written on it.</p>
 <p>Each round FJ moves the top 8 cards into a separate pile and selects either the top 4 or bottom 4 cards for Bessie to play with.  Bessie then chooses either the top 2 cards or bottom 2 cards of the 4 cards FJ selected.  After this FJ calls out the number on the top card, X_top, and the cows run a distance of R * X_top, where R is the total distance the cows have run so far.  Bessie then calls out the number on the bottom card, X_bottom, and the cows run a distance of X_bottom.</p>

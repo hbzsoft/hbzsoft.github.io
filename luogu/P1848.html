@@ -1,4 +1,16 @@
-<h1>[USACO12OPEN] Bookshelf G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO12OPEN] Bookshelf G</h1>
 <h2>题意翻译</h2>
 <p>当农夫约翰闲的没事干的时候，他喜欢坐下来看书。多年过去，他已经收集了 $N$ 本书 $(1 \le N \le 100,000)$ ， 他想造一个新的书架来装所有书。</p>
 <p>每本书 $i$ 都有宽度 $W_i$ 和高度 $H_i$ 。书需要按顺序添加到一组书架上；比如说，第一层架子应该包含书籍 $1  ... k$ ，第二层架子应该以第 $k + 1$ 本书开始，以下如此。每层架子的总宽度最大为 $L(1 \le L \le 1,000,000,000)$ 。每层的高度等于该层上最高的书的高度，并且整个书架的高度是所有层的高度的总和，因为它们都垂直堆叠。</p>

@@ -1,4 +1,16 @@
-<h1>Play with Power</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>Play with Power</h1>
 <h2>题目描述</h2>
 <p>Masha 和 Stas 正在玩一个游戏。在游戏的开始，给出一个数  $n$，同时有两个正整数  $a,b$，初始时满足 $a^b\le n$。</p>
 <p>Masha 先手。每一回合，玩家要将 $a,b$ 的其中一个数加上  $1$，但不能使 $a^b&gt;n$，否则该玩家输。</p>

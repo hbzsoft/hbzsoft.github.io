@@ -1,4 +1,16 @@
-<h1>[USACO08NOV] Cheering up the Cow G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO08NOV] Cheering up the Cow G</h1>
 <h2>题目描述</h2>
 <p>Farmer John has grown so lazy that he no longer wants to continue maintaining the cow paths that currently provide a way to visit each of his N (5 &lt;= N &lt;= 10,000) pastures (conveniently numbered 1..N). Each and every pasture is home to one cow. FJ plans to remove as many of the P (N-1 &lt;= P &lt;= 100,000) paths as possible while keeping the pastures connected. You must determine which N-1 paths to keep.</p>
 <p>Bidirectional path j connects pastures S_j and E_j (1 &lt;= S_j &lt;= N; 1 &lt;= E_j &lt;= N; S_j != E_j) and requires L_j (0 &lt;= L_j &lt;= 1,000) time to traverse. No pair of pastures is directly connected by more than one path.</p>

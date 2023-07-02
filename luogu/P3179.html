@@ -1,4 +1,16 @@
-<h1>[HAOI2015] 数组游戏</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HAOI2015] 数组游戏</h1>
 <h2>题目描述</h2>
 <p>有一个长度为 $n$ 的数组，甲乙两人在上面进行这样一个游戏：首先，数组上有一些格子是白的，有一些是黑的。然后两人轮流进行操作。</p>
 <p>每次操作选择一个白色的格子，假设它的下标为 $x$。接着，选择一个大小在 $1\ldots \dfrac{n}{x}$ 之间的整数 $k$，然后将下标为 $x,2\times x,\ldots ,k\times x$ 的格子都进行颜色翻转。不能操作的人输。</p>

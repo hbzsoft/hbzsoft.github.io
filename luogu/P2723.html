@@ -1,4 +1,16 @@
-<h1>[USACO3.1] 丑数 Humble Numbers</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO3.1] 丑数 Humble Numbers</h1>
 <h2>题目描述</h2>
 <p>对于一给定的素数集合 $S = { p_1, p_2, ..., p_k }$, 考虑一个正整数集合，该集合中任一元素的质因数全部属于 $S$。这个正整数集合包括，$p_1$、$p_1 \times p_2$、$p_1 \times p_1$、$p_1 \times p_2 \times p_3$ ...(还有其它)。该集合被称为 $S$ 集合的“丑数集合”。注意：我们认为 $1$不是一个丑数。</p>
 <p>你的工作是对于输入的集合 $S$ 去寻找“丑数集合”中的第 $n$ 个“丑数”。</p>

@@ -1,4 +1,16 @@
-<h1>蠕虫游戏</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>蠕虫游戏</h1>
 <h2>题目描述</h2>
 <p>蠕虫是一个古老的电脑游戏，它有许多版本。但所有版本都有一个共同的规则：操纵一条蠕虫在屏幕上转圈，并试着去避免撞到自己或障碍物。</p>
 <p>这里我们将模拟一个简单的版本。游戏将在 $50 \times 50$ 的棋盘上进行，棋盘的左上角为 $(1,1)$，蠕虫在初始时是一串 $20$ 个相连的方格。所谓相连是指方格在水平或垂直方向上相接。蠕虫开始时是水平地伸展开的，从 $(25,11)$ 到 $(25,30)$。其中 $(25,30)$ 是它的头。蠕虫只能向东 $\verb!E!$、西 $\verb!W!$、南 $\verb!S!$、北 $\verb!N!$ 四个方向移动，但不能向自己移动，因此在开始时向西 $\verb!W!$ 是不允许的。每次移动时，蠕虫向给定的方向移动，一次只移一格，并且保持它的长度不变。因此只有蠕虫的头和尾所占据的方格在移动一步后被改变。注意：蠕虫的头能移动到虫尾刚刚让出的空格。</p>

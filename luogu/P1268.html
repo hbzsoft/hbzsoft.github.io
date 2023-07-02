@@ -1,4 +1,16 @@
-<h1>树的重量</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>树的重量</h1>
 <h2>题目描述</h2>
 <p>树可以用来表示物种之间的进化关系。一棵“进化树”是一个带边权的树，其叶节点表示一个物种，两个叶节点之间的距离表示两个物种的差异。现在，一个重要的问题是，根据物种之间的距离，重构相应的“进化树”。</p>
 <p>令 $N={1,2,3,\cdots ,n}$，用一个 $N$ 上的矩阵 $M$ 来定义树 $T$。其中，矩阵 $M$ 满足：对于任意的 $i$，$j$，$k$，有 $M[i,j]+M[j,k] \ge M[i,k]$。树 $T$ 满足：</p>

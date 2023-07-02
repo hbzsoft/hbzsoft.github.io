@@ -1,4 +1,16 @@
-<h1>[CTSC2017] 最长上升子序列</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[CTSC2017] 最长上升子序列</h1>
 <h2>题目描述</h2>
 <p>猪小侠最近学习了最长上升子序列的相关知识。对于一个整数序列 $A =(a_1, a_2,\ldots , a_k)$，定义 $A$ 的子序列为：从 $A$ 中删除若干个元素后（允许不删，也允许将所有 $k$ 个元素都删除），剩下的元素按照原来的顺序所组成的序列。如果这个子序列的元素从左到右严格递增，则称它为 $A$ 的一个上升子序列。其中包含元素数量最多的上升子序列称为 $A$ 的最长上升子序列。例如，$(2, 4, 5, 6)$ 和 $(1, 4, 5, 6)$ 都是 $(2, 1, 1, 4, 7, 5, 6)$ 的最长上升子序列，长度都为 $4$。</p>
 <p>现在猪小侠遇到了这样一个问题：给定一个序列 $B_m = (b_1, b_2, \ldots, b_m)$，设 $C$ 是 $B_m$ 的子序列，且 $C$ 的最长上升子序列的长度不超过 $k$，则 $C$ 的长度最大能是多少？</p>

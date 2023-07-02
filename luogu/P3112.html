@@ -1,4 +1,16 @@
-<h1>[USACO14DEC] Guard Mark G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO14DEC] Guard Mark G</h1>
 <h2>题意翻译</h2>
 <p>FJ将飞盘抛向身高为H(1 &lt;= H &lt;= 1,000,000,000)的Mark，但是Mark被N(2 &lt;= N &lt;= 20)头牛包围。牛们可以叠成一个牛塔，如果叠好后的高度大于或者等于Mark的高度，那牛们将抢到飞盘。</p>
 <p>每头牛都一个身高，体重和耐力值三个指标。耐力指的是一头牛最大能承受的叠在他上方的牛的重量和。请计算牛们是否能够抢到飞盘。若是可以，请计算牛塔的最大稳定强度，稳定强度是指，在每头牛的耐力都可以承受的前提下，还能够在牛塔最上方添加的最大重量。</p>

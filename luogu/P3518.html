@@ -1,4 +1,16 @@
-<h1>[POI2011] SEJ-Strongbox</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[POI2011] SEJ-Strongbox</h1>
 <h2>题意翻译</h2>
 <p>有一个密码箱，$0$ 到 $n-1$ 中的某些整数是它的密码。且满足：若 $a$ 和 $b$ 是它的密码，则 $(a+b)\bmod n$ 也是它的密码（$a$，$b$ 可以相等）。某人试了 $k$ 次密码，前 $k-1$ 次都失败了，最后一次成功了。</p>
 <p>问，该密码箱最多有多少种不同的密码。</p>

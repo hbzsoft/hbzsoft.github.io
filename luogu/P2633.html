@@ -1,4 +1,16 @@
-<h1>Count on a tree</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>Count on a tree</h1>
 <h2>题目描述</h2>
 <p>给定一棵 $n$ 个节点的树，每个点有一个权值。有 $m$ 个询问，每次给你 $u,v,k$，你需要回答 $u \text{ xor last}$ 和 $v$ 这两个节点间第 $k$ 小的点权。  </p>
 <p>其中 $\text{last}$ 是上一个询问的答案，定义其初始为 $0$，即第一个询问的 $u$ 是明文。</p>

@@ -1,4 +1,16 @@
-<h1>最长k可重区间集问题</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>最长k可重区间集问题</h1>
 <h2>题目描述</h2>
 <p>给定实直线 $\text{L}$ 上 $n$ 个开区间组成的集合 $\mathbf{I}$，和一个正整数 $k$，试设计一个算法，从开区间集合 $\mathbf{I}$ 中选取出开区间集合 $\mathbf{S}\subseteq\mathbf{I}$，使得在实直线 $\text{L}$ 上的任意一点 $x$，$\text{S}$ 中包含 $x$ 的开区间个数不超过 $k$，且 $\sum_{z\in\text{S}}\lvert z\rvert$ 达到最大（$\lvert z\rvert$ 表示开区间 $z$ 的长度）。</p>
 <p>这样的集合 $\mathbf{S}$ 称为开区间集合 $\mathbf{I}$ 的最长 $k$ 可重区间集。$\sum_{z\in\text{S}}\lvert z\rvert$ 称为最长 $k$ 可重区间集的长度。</p>

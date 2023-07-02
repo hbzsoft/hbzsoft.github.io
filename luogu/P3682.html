@@ -1,4 +1,16 @@
-<h1>[CERC2016] 自由的套娃 Free Figurines</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[CERC2016] 自由的套娃 Free Figurines</h1>
 <h2>题目描述</h2>
 <p>俄罗斯套娃是一些尺寸递增的木制雕像，它们可以嵌套在一起。每个套娃可以放进一个更大的套娃，也可以被放入一个更小的套娃。每个套娃内部最多只能直接嵌套一个套娃，但是那个套娃内部还可以继续嵌套。</p>
 <p>给定n个尺寸互不相同的套娃，按尺寸从小到大依次编号为1到n。如果套娃a被直接嵌入套娃b，那么我们称b是a的父亲，如果一个套娃没有父亲，那么我们称它是自由的。一组镶嵌方案可以用每个套娃的父亲来表示。</p>

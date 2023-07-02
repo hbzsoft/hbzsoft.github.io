@@ -1,4 +1,16 @@
-<h1>区间运算</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>区间运算</h1>
 <h2>题目描述</h2>
 <p>区间运算是数学的一个领域。在区间运算中，常量和变量并不表示为一个单独、精确的值，而是表示为一个有着上界和下界的区间或范围。在普通的运算中，一个数量可以表示为数轴上的一个点；而在区间运算中，一个数量表示数轴上的一段，例如 $[3,5]$ 表示数轴上从 $3$ 到 $5$ 的一段。当精确的数值表示为区间时，上界与下界是相同的，如 $5$ 表示为区间即为 $[5,5]$。</p>
 <p>两个区间的运算，是指一个区间中的每个点与另一个区间中的每个点所做的运算，通过运算所得的所有点的集合即为运算的结果。例如，$[3,5]+[-10,1]=[-7,6]$。你的任务是写一个可以根据单行表达式进行取相反数、加、减、乘、除等基本的区间运算的程序。下面是一些运算的例子：</p>

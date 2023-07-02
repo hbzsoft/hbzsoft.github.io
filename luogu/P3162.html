@@ -1,4 +1,16 @@
-<h1>[CQOI2012] 组装</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[CQOI2012] 组装</h1>
 <h2>题目描述</h2>
 <p>数轴上有 $m$ 个生产车间可以生产零件。一共有 $n$ 种零件，编号为 $1\sim n$。第 $i$ 个车间的坐标为 $x_i$ ，生产第 $p_i$ 种零件（$1\le p_i\le n$）。你需要在数轴上的某个位置修建一个组装车间，把这些零件组装起来。为了节约运输成本，你需要最小化 $cost_1+cost_2+\ldots+cost_n$，其中 $cost_x$ 表示生产第 $x$ 种零件的车间中，到组装车间距离的平方的最小值。</p>
 <h2>输入输出格式</h2>

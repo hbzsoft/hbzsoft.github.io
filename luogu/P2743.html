@@ -1,4 +1,16 @@
-<h1>[USACO5.1] 乐曲主题Musical Themes</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO5.1] 乐曲主题Musical Themes</h1>
 <h2>题目描述</h2>
 <p>我们用N(1 &lt;= N &lt;=5000)个音符的序列来表示一首乐曲，每个音符都是1..88范围内的整数，每个数表示钢琴上的一个键。很不幸这种表示旋律的方法忽略了音符的时值，但这项编程任务是关于音高的，与时值无关。</p>
 <p>许多作曲家围绕一个重复出现的“主题”来构建乐曲。在我们的乐曲表示法中，“主题”是整个音符序列的一个子串，它需要满足如下条件：</p>

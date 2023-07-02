@@ -1,4 +1,16 @@
-<h1>血缘关系</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>血缘关系</h1>
 <h2>题目描述</h2>
 <p>我们正在研究妖怪家族的血缘关系。每个妖怪都有相同数量的基因，但是不同的妖怪的基因可能是不同的。我们希望知道任意给定的两个妖怪之间究竟有多少相同的基因。由于基因数量相当庞大，直接检测是行不通的。但是，我们知道妖怪家族的家谱，所以我们可以根据家谱来估算两个妖怪之间相同基因的数量。</p>
 <p>妖怪之间的基因继承关系相当简单：如果妖怪 $C$ 是妖怪 $A$ 和 $B$ 的孩子，则 $C$ 的任意一个基因只能是继承 $A$ 或 $B$ 的基因，继承 $A$ 或 $B$ 的概率各占 $50\%$。所有基因可认为是相互独立的，每个基因的继承关系不受别的基因影响。</p>

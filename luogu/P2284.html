@@ -1,4 +1,16 @@
-<h1>[HNOI2003] 密室之门</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2003] 密室之门</h1>
 <h2>题目描述</h2>
 <p>最近，我国考古学家在秦陵兵马俑的新墓坑中发现了若干个密室，每个密室都可以由一个奇特的门进入。那么怎样才能进入密室呢？</p>
 <p>第 $i$ 个密室的门上有 $a_i$ 个转盘，该密室的第 $j$ 个转盘被均匀的分成 $b_{i,j}$ 格，这 $b_{i,j}$ 个格子按顺时针方向依次编号为 $0,1,\dots,b_{i,j}-1$，并且每一个转盘上面都有一个指针（结构类似于钟表），指针大约每过 $1.53$ 秒就会从原来指向编号为 $x$ 的格子变成指向编号为 $(x+1)\mod b_{i,j}$ 的格子。当一扇门上所有的转盘上的指针都指向编号为 $0$ 的格子的时候，那么这扇门就会被开启。</p>

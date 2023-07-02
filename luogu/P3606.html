@@ -1,4 +1,16 @@
-<h1>[USACO17JAN] Building a Tall Barn P</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO17JAN] Building a Tall Barn P</h1>
 <h2>题目描述</h2>
 <p>Farmer John is building a brand new, $N$-story barn, with the help of his $K$ cows ($1 \leq N \leq K \leq 10^{12}$ and $N \leq 10^5$). To build it as quickly as possible, he needs your help to figure out how to allocate work among the cows.</p>
 <p>Each cow must be assigned to work on exactly one specific floor out of the $N$ total floors in the barn, and each floor must have at least one cow assigned to it. The $i$th floor requires $a_i$ units of total work, and each cow completes one unit of work per hour, so if $c$ cows work on floor $i$, it will be completed in $a_i / c$ units of time. For safety reasons, floor $i$ must be completed before construction can begin on floor $i+1$.</p>

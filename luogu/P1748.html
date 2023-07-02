@@ -1,4 +1,16 @@
-<h1>H数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>H数</h1>
 <h2>题目描述</h2>
 <p>所谓 H 数，是指只含有 $2,3,5,7$ 这些质因数的数，如 $630$ 是 H 数，而 $22$ 不是。</p>
 <p>现在要求输出第 $n$ 个 H 数，为了方便起见将 $H[1]$ 定为 $1$。已知 $n$ 不超过 $10000$，最后数据在 int64 范围之内。</p>

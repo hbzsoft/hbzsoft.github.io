@@ -1,4 +1,16 @@
-<h1>[HNOI2008] 遥远的行星</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2008] 遥远的行星</h1>
 <h2>题目描述</h2>
 <p>直线上 $N$ 颗行星，$X=i$ 处有行星 $i$，行星 $J$ 受到行星 $I$ 的作用力，当且仅当 $i \le A_J$，此时 $J$ 受到作用力的大小为$F_{i-&gt;j}=\frac{M_i \times M_j}{j-i}$。</p>
 <p>其中 $A$ 为很小的常量，故直观上说每颗行星都只受到距离遥远的行星的作用。

@@ -1,4 +1,16 @@
-<h1>矩形分割</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>矩形分割</h1>
 <h2>题目描述</h2>
 <p>出于某些方面的需求，我们要把一块 $N \times M$ 的木板切成一个个 $1 \times 1$ 的小方块。</p>
 <p>对于一块木板，我们只能从某条横线或者某条竖线（要在方格线上），而且这木板是不均匀的，从不同的线切割下去要花不同的代价。而且，对于一块木板，切割一次以后就被分割成两块，而且不能把这两块木板拼在一起然后一刀切成四块，只能两块分别再进行一次切割。</p>

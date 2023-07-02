@@ -1,4 +1,16 @@
-<h1>[HAOI2017] 八纵八横</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HAOI2017] 八纵八横</h1>
 <h2>题目描述</h2>
 <p>Anihc 国有 $n$ 个城市，这 $n$ 个城市从 $1$ 到 $n$ 编号，$1$ 号城市为首都。城市间初始时有 $m$ 条高速公路，每条高速公路都有一个非负整数的经济影响因子，每条高速公路的两端都是城市（可能两端是同一个城市），保证任意两个城市都可以通过高速公路互达。</p>
 <p>国正在筹划“八纵八横”的高铁建设计划，计划要修建一些高速铁路，每条高速铁路两端也都是城市（可能两端是同一个城市)，也都有一个非负整数的经济影响因子。国家还计划在“八纵八横”计划建成之后，将“一带一路”扩展为“一带一路一环”，增加“内陆城市经济环”即选择一条从首都出发沿若一系列高铁与高速公路走的路径，每条高铁或高速公路可以经过多次，每座城市也可以经过多次，最后路径又在首都结束。令“内陆城市经济环”的 GDP 为依次将这条路径上所经过的高铁或高速公路的经济影响因子异或起来（一条路经过多次则会被计算多次）。</p>

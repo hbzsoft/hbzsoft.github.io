@@ -1,4 +1,16 @@
-<h1>[HNOI2001] 软件开发</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2001] 软件开发</h1>
 <h2>题目描述</h2>
 <p>某软件公司正在规划一项 $n$ 天的软件开发计划，根据开发计划第 $i$ 天需要 $n_i$ 个软件开发人员，为了提高软件开发人员的效率，公司给软件人员提供了很多的服务，其中一项服务就是要为每个开发人员每天提供一块消毒毛巾，这种消毒毛巾使用一天后必须再做消毒处理后才能使用。</p>
 <p>消毒方式有两种，$A$ 种方式的消毒需要 $a$ 天时间，$B$ 种方式的消毒需要 $b$ 天，$A$ 种消毒方式的费用为每块毛巾 $f_A$, $B$ 种消毒方式的费用为每块毛巾 $f_B$，而买一块新毛巾的费用为 $f$（新毛巾是已消毒的，当天可以使用）。公司经理正在规划在这 $n$ 天中，每天买多少块新毛巾、每天送多少块毛巾进行 $A$ 种消毒和每天送多少块毛巾进行 $B$ 种消毒。当然，公司经理希望费用最低。</p>

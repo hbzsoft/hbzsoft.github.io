@@ -1,4 +1,16 @@
-<h1>[USACO11MAR] Brownie Slicing G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO11MAR] Brownie Slicing G</h1>
 <h2>题意翻译</h2>
 <p>Bessie烘焙了一块巧克力蛋糕。这块蛋糕是由 $R\times C(1\leq R,C\leq 500)$ 个小的巧克力蛋糕组成的。第 $i$ 行，第 $j$ 列的蛋糕有 $N_{i,j}(N_{i,j}\leq 4000)$ 块巧克力碎屑。</p>
 <p>Bessie想把蛋糕分成 $A\times B(1\leq A\leq R,1\leq B\leq C)$ 块，:给 $A\times B$ 只奶牛。蛋糕先水平地切 $A-1$ 刀（只能切沿整数坐标切）来把蛋糕划分成 $A$ 块。然后再把剩下来的每一块独立地切 $B-1$ 刀，也只能切沿整数坐标切。其他 $A\times B-1$ 只奶牛就每人选一块，留下一块给Bessie。由于贪心，他们只会留给Bessie巧克力碎屑最少的那块。求出Bessie最优情况下会获得多少巧克力碎屑。</p>

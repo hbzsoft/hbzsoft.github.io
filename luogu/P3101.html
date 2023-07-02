@@ -1,4 +1,16 @@
-<h1>[USACO14JAN] Ski Course Rating G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO14JAN] Ski Course Rating G</h1>
 <h2>题目描述</h2>
 <p>The cross-country skiing course at the winter Moolympics is described by an M x N grid of elevations (1 &lt;= M,N &lt;= 500), each elevation being in the range 0 .. 1,000,000,000.</p>
 <p>Some of the cells in this grid are designated as starting points for the course.  The organizers of the Moolympics want to assign a difficulty rating to each starting point.  The difficulty level of a starting point P should be the minimum possible value of D such that a cow can successfully reach at least T total cells of the grid (1 &lt;= T &lt;= MN), if she starts at P and can only move from cell to adjacent cell if the absolute difference in elevation between the cells is at most D.  Two cells are adjacent if one is directly north, south, east, or west of the other.</p>

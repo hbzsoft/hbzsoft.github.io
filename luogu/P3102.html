@@ -1,4 +1,16 @@
-<h1>[USACO14FEB] Secret Code S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO14FEB] Secret Code S</h1>
 <h2>题目描述</h2>
 <p>Farmer John has secret message that he wants to hide from his cows; the message is a string of length at least 2 containing only the characters A..Z.</p>
 <p>To encrypt his message, FJ applies a sequence of "operations" to it, where an operation applied to a string S first shortens S by removing either some (but not all) of the initial characters or some (but not all) of the final characters from S, after which the original string S is attached either at the beginning or end.  For example, a single operation to the string ABC could result in eight possible strings:</p>

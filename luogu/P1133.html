@@ -1,4 +1,16 @@
-<h1>教主的花园</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>教主的花园</h1>
 <h2>题目描述</h2>
 <p>教主有着一个环形的花园，他想在花园周围均匀地种上 $n$ 棵树，但是教主花园的土壤很特别，每个位置适合种的树都不一样，一些树可能会因为不适合这个位置的土壤而损失观赏价值。</p>
 <p>教主最喜欢 $3$ 种树，这 $3$ 种树的高度分别为 $10,20,30$。教主希望这一圈树种得有层次感，所以任何一个位置的树要比它相邻的两棵树的高度都高或者都低，并且在此条件下，教主想要你设计出一套方案，使得观赏价值之和最高。</p>

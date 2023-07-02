@@ -1,4 +1,16 @@
-<h1>欢乐的跳</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>欢乐的跳</h1>
 <h2>题目描述</h2>
 <p>一个 $n$ 个元素的整数数组，如果数组两个连续元素之间差的绝对值包括了 $[1,n-1]$ 之间的所有整数，则称之符合“欢乐的跳”，如数组 ${1,4,2,3}$ 符合“欢乐的跳”，因为差的绝对值分别为：$3,2,1$。</p>
 <p>给定一个数组，你的任务是判断该数组是否符合“欢乐的跳”。</p>

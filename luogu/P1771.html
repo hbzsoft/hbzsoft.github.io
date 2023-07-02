@@ -1,4 +1,16 @@
-<h1>方程的解</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>方程的解</h1>
 <h2>题目描述</h2>
 <p>佳佳碰到了一个难题，请你来帮忙解决。对于不定方程 $a_1+a_2+\cdots +a_{k-1}+a_k=g(x)$，其中 $k\ge 2$ 且 $k\in \mathbb{N}^*$，$x$ 是正整数，$g(x)=x^x \bmod 1000$（即 $x^x$ 除以 $1000$ 的余数），$x,k$ 是给定的数。我们要求的是这个不定方程的正整数解组数。</p>
 <p>举例来说，当 $k=3,x=2$ 时，方程的解分别为：

@@ -1,4 +1,16 @@
-<h1>[POI2006] EST-Aesthetic Text</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[POI2006] EST-Aesthetic Text</h1>
 <h2>题意翻译</h2>
 <p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;现在, 我们有一个由$n$个单词组成的英文文本. 但是它们都挤在一行里, 单词间以一个半角空格分隔, 就像丑陋的压行代码. 你可以把他们通过$k-1$次换行分割成$k$行的文本并去除行首行末空格. 为方便题意表述, 我们以一个长度为$k-1$的数列${a_1,a_2,...,a_{k-1}}$, 表示第$1$到第$a_1$个单词放在第$1$行, 第$a_1+1$到第$a_2$个单词放在第$2$行, 以此类推.  </p>
 <p>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;不过, 为了让新的文本更加美妙, 你希望<strong>在满足每一行的长度不大于$m$的情况下相邻行长度之差的和最小</strong>. 具体地, 令$length(i)$表示第$i$个单词的长度, $line(i)$表示第$i$行的长度, 则:</p>

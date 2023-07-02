@@ -1,4 +1,16 @@
-<h1>套利</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>套利</h1>
 <h2>题目描述</h2>
 <p>套利是利用汇率差异实现货币增值。例如，1美元可以兑换0.5英镑、1英镑可以兑换10法郎、1法郎可以兑换0.21美元。接下来，一个聪明的交易商就可以从1美元开始，0.5 * 10.0 * 0.21 =1.05美元，获得了5%的利润。</p>
 <p>你的任务是写一个程序，从输入文件读入汇率清单，然后决定套利是有可能的或没有可能的。</p>

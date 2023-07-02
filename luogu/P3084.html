@@ -1,4 +1,16 @@
-<h1>[USACO13OPEN] Photo G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO13OPEN] Photo G</h1>
 <h2>题目描述</h2>
 <p>Farmer John has decided to assemble a panoramic photo of a lineup of his N cows (1 &lt;= N &lt;= 200,000), which, as always, are conveniently numbered from 1..N.  Accordingly, he snapped M (1 &lt;= M &lt;= 100,000) photos, each covering a contiguous range of cows: photo i contains cows a_i through b_i inclusive.  The photos collectively may not necessarily cover every single cow.</p>
 <p>After taking his photos, FJ notices a very interesting phenomenon: each photo he took contains exactly one cow with spots!  FJ was aware that he had some number of spotted cows in his herd, but he had never actually counted them.  Based on his photos, please determine the maximum possible number of spotted cows that could exist in his herd.  Output -1 if there is no possible assignment of spots to cows consistent with FJ's photographic results.</p>

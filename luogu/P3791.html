@@ -1,4 +1,16 @@
-<h1>普通数学题</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>普通数学题</h1>
 <h2>题目背景</h2>
 <p>一天zzq没有题可以出了。于是他随便写了一个式子，求$\sum_{i=0}^n \sum_{j=0}^m i~xor~j~xor~x$，其中xor表示异或。</p>
 <p>zzy一看，这不是水题吗，就随便加了一个函数：$\sum_{i=0}^n \sum_{j=0}^m d(i~xor~j~xor~x)$，其中xor表示异或，d(x)表示x的约数个数。<strong>注意d(0)=0。</strong></p>

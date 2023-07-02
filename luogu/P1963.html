@@ -1,4 +1,16 @@
-<h1>[NOI2009] 变换序列</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[NOI2009] 变换序列</h1>
 <h2>题目描述</h2>
 <p>对于$N$个整数$0, 1, \cdots, N-1$，一个变换序列$T$可以将$i$变成$T_i$，其中 $T_i \in { 0,1,\cdots, N-1}$ 且 $\bigcup_{i=0}^{N-1} {T_i} = {0,1,\cdots , N-1}$。 ，$\forall x,y \in  {0,1,\cdots , N-1}$，定义x和y之间的距离$D(x,y)=min{|x-y|,N-|x-y|}$ 。给定每个$i$和$T_i$之间的距离$D(i,T_i)$，你需要求出一个满足要求的变换序列T。如果有多个满足条件的序列，输出其中字典序最小的一个。</p>
 <p>说明：对于两个变换序列$S$和$T$，如果存在$p&lt;N$，满足对于$i=0,1,\cdots p-1$，$S_i=T_i$且$S_p&lt;T_p$，我们称$S$比$T$字典序小。</p>

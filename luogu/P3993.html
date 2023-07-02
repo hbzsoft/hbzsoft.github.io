@@ -1,4 +1,16 @@
-<h1>[BJOI2017] 同构</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[BJOI2017] 同构</h1>
 <h2>题目描述</h2>
 <p>你有 $n$ 个点，你可以在这 $n$ 个点之间连无向边，两个点之间至多只能连一条边，也不允许连自环，问至多能连多少条边。</p>
 <p>但这个问题的答案显然是 $\dfrac{n(n-1)}{2}$ 条。所以有一个额外的限制，要求这个图不存在非平凡的自同构。</p>

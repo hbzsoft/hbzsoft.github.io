@@ -1,4 +1,16 @@
-<h1>[ZJOI2016] 线段树</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[ZJOI2016] 线段树</h1>
 <h2>题目描述</h2>
 <p>小 Yuuka 遇到了一个题目：有一个序列 $a_1,a_2,\ldots,a_n$，$q$ 次操作。每次操作把一个区间内的数改成区间内的最大值，问最后每个数是多少。小 Yuuka 很快地就使用了线段树解决了这个问题。</p>
 <p>于是充满智慧的小 Yuuka 想，如果操作是随机的，即在这 $q$ 次操作中每次等概率随机地选择一个区间 $[l,r]$（$1 \leq l \leq r \leq n$），然后将这个区间内的数改成区间内最大值（注意这样的区间共有 $\frac{n(n+1)}{2}$ 个），最后每个数的期望大小是多少呢？</p>

@@ -1,4 +1,16 @@
-<h1>[USACO14MAR] Sabotage G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO14MAR] Sabotage G</h1>
 <h2>题目描述</h2>
 <p>Farmer John's arch-nemesis, Farmer Paul, has decided to sabotage Farmer John's milking equipment!</p>
 <p>The milking equipment consists of a row of N (3 &lt;= N &lt;= 100,000) milking machines, where the ith machine produces M_i units of milk (1 &lt;= M_i &lt;= 10,000).  Farmer Paul plans to disconnect a contiguous block of these machines -- from the ith machine up to the jth machine (2 &lt;= i &lt;= j &lt;= N-1); note that Farmer Paul does not want to disconnect either the first or the last machine, since this will make his plot too easy to discover.  Farmer Paul's goal is to minimize the average milk production of the remaining machines.  Farmer Paul plans to remove at least 1 cow, even if it would be better for him to avoid sabotage entirely.</p>

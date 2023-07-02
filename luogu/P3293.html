@@ -1,4 +1,16 @@
-<h1>[SCOI2016] 美味</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SCOI2016] 美味</h1>
 <h2>题目描述</h2>
 <p>一家餐厅有 $n$ 道菜，编号 $1, 2, \ldots, n$，大家对第 $i$ 道菜的评价值为 $a_i$。有 $m$ 位顾客，第 $i$ 位顾客的期望值为 $b_i$，而他的偏好值为 $x_i$。因此，第 $i$ 位顾客认为第 $j$ 道菜的美味度为 $b_i\oplus (a_j + x_i)$，$\oplus$ 表示异或运算。</p>
 <p>第 $i$ 位顾客希望从这些菜中挑出他认为最美味的菜，即美味值最大的菜，但由于价格等因素，他只能从第 $l_i$ 道到第 $r_i$ 道中选择。请你帮助他们找出最美味的菜。</p>

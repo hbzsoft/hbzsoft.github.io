@@ -1,4 +1,16 @@
-<h1>[APIO2008] DNA</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[APIO2008] DNA</h1>
 <h2>题目描述</h2>
 <p>分析如DNA序列这样的生命科学数据是计算机的一个有趣应用。从生物学的角度上说，DNA是一种由腺嘌呤、胞嘧啶、鸟嘌呤和胸腺嘧啶这四种核苷酸组成的链式结构。这四种核苷酸分别用大写字母A、C、G、T表示。这样，一条DNA单链可以被表示为一个只含以上四种字符的字符串。我们将这样的字符串称作一个DNA序列。</p>
 <p>有时生物学家可能无法确定一条DNA单链中的某些核苷酸。在这种情况下，字符N将被用来表示一个不确定的核苷酸。换句话说，N可以用来表示A、C、G、T中的任何一个字符。我们称包含一个或者多个N的DNA序列为未完成序列；反之，就称作完成序列。如果一个完成序列可以通过将一个未完成序列中的个N任意替换成A、C、G、T得到的话，就称完成序列适合这个未完成序列。举例来说，ACCCT适合ACNNT，但是AGGAT不适合。</p>

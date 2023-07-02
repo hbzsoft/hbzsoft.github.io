@@ -1,4 +1,16 @@
-<h1>魔法指纹</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>魔法指纹</h1>
 <h2>题目描述</h2>
 <p>对于任意一个至少两位的正整数n，按如下方式定义magic(n)：将n按十进制顺序写下来，依次对相邻两个数写下差的绝对值。这样，得到了一个新数，去掉前导0，则定义为magic(n)。若n为一位数，则magic(n)=n。</p>
 <p>例如：magic(5913)=482，magic(1198)=081=81，magic(666)=00=0。</p>

@@ -1,4 +1,16 @@
-<h1>最多因子数</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>最多因子数</h1>
 <h2>题目描述</h2>
 <p>数学家们喜欢各种类型的有奇怪特性的数。例如，他们认为 $945$ 是一个有趣的数，因为它是第一个所有约数之和大于本身的奇数。</p>
 <p>为了帮助他们寻找有趣的数，你将写一个程序扫描一定范围内的数，并确定在此范围内约数个数最多的那个数。不幸的是，这个数和给定的范围的都比较大，用简单的方法寻找可能需要较多的运行时间。所以请确定你的算法能在几秒内完成最大范围内的扫描。</p>

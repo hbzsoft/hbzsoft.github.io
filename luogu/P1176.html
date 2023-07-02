@@ -1,4 +1,16 @@
-<h1>路径计数2</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>路径计数2</h1>
 <h2>题目描述</h2>
 <p>一个$N \times N$的网格，你一开始在$(1,1)$，即左上角。每次只能移动到下方相邻的格子或者右方相邻的格子，问到达$(N,N)$，即右下角有多少种方法。</p>
 <p>但是这个问题太简单了，所以现在有$M$个格子上有障碍，即不能走到这$M$个格子上。</p>

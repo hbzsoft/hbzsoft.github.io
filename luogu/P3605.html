@@ -1,4 +1,16 @@
-<h1>[USACO17JAN] Promotion Counting P</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO17JAN] Promotion Counting P</h1>
 <h2>题目描述</h2>
 <p>The cows have once again tried to form a startup company, failing to remember from past experience that cows make terrible managers!</p>
 <p>The cows, conveniently numbered $1 \ldots N$ ($1 \leq N \leq 100,000$), organize the company as a tree, with cow 1 as the president (the root of the tree). Each cow except the president has a single manager (its "parent" in the tree). Each cow $i$ has a distinct proficiency rating, $p(i)$, which describes how good she is at her job. If cow $i$ is an ancestor (e.g., a manager of a manager of a manager) of cow $j$, then we say $j$ is a subordinate of $i$.</p>

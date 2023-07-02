@@ -1,4 +1,16 @@
-<h1>排序</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>排序</h1>
 <h2>题目描述</h2>
 <p>有 $n$ 个人依次站在小 A 面前。小 A 会依次对这 $n$ 个人进行 $m$ 次操作。</p>
 <p>每次操作选择一个位置 $k$，将这 $n$ 个人中的所有身高小于等于当前 $k$ 位置的人的身高的人从队伍里拎出，然后按照身高从矮到高的顺序从左到右依次插入到 这些人原本的位置当中。</p>

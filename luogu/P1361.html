@@ -1,4 +1,16 @@
-<h1>小M的作物</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>小M的作物</h1>
 <h2>题目描述</h2>
 <p>小 M 在 MC 里开辟了两块巨大的耕地 $A$ 和 $B$（你可以认为容量是无穷），现在，小 P 有 $n$ 种作物的种子，每种作物的种子有 $1$ 个（就是可以种一棵作物），编号为 $1$ 到 $n$。</p>
 <p>现在，第 $i$ 种作物种植在 $A$ 中种植可以获得 $a_i$ 的收益，在 $B$ 中种植可以获得 $b_i$ 的收益，而且，现在还有这么一种神奇的现象，就是某些作物共同种在一块耕地中可以获得额外的收益，小 M 找到了规则中共有 $m$ 种作物组合，第 $i$ 个组合中的作物共同种在 $A$ 中可以获得 $c_{1,i}$ 的额外收益，共同种在 $B$ 中可以获得 $c_{2,i}$ 的额外收益。</p>

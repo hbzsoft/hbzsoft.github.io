@@ -1,4 +1,16 @@
-<h1>[CQOI2015] 任务查询系统</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[CQOI2015] 任务查询系统</h1>
 <h2>题目描述</h2>
 <p>最近实验室正在为其管理的超级计算机编制一套任务管理系统，而你被安排完成其中的查询部分。  </p>
 <p>超级计算机中的任务用三元组 $(s_i, e_i, p_i)$ 描述，$(s_i, e_i, p_i)$ 表示任务从第 $s_i$ 秒开始，在第 $e_i$ 秒后结束（第 $s_i$ 秒和 $e_i$ 秒任务也在运行），其优先级为 $p_i$。同一时间可能有多个任务同时执行，它们的优先级可能相同，也可能不同。  </p>

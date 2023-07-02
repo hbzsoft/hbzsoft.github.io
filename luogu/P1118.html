@@ -1,4 +1,16 @@
-<h1>[USACO06FEB] Backward Digit Sums G/S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO06FEB] Backward Digit Sums G/S</h1>
 <h2>题意翻译</h2>
 <p>有这么一个游戏：</p>
 <p>写出一个 $1\sim n$ 的排列 $a$，然后每次将相邻两个数相加，构成新的序列，再对新序列进行这样的操作，显然每次构成的序列都比上一次的序列长度少 $1$，直到只剩下一个数字位置。</p>

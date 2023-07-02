@@ -1,4 +1,16 @@
-<h1>[HNOI2011] 赛车游戏</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2011] 赛车游戏</h1>
 <h2>题目描述</h2>
 <p>名歌手LAALA最近迷上了一款赛车游戏，游戏中开车的玩家在不同的路段需要选择不同的速度，使得自己在最短的时间内到达终点。开始游戏时，车内的初始油量为f，所以游戏的关键是如何在速度和耗油量之间实现平衡。</p>
 <p>LAALA 经过一段时间的研究后，发现这款游戏可以用一个简单的数学模型来描述，具体来说：从起点到终点的路线可以被简化成折线段，每条线段代表一个上坡或者下坡，若在一段斜率为 s(s&gt;0 代表上坡，s=0 代表平地，s&lt;0 代表下坡)的道路上以速度 v km/h 行驶，则每公里的耗油量为 max(0,av+bs)，其中 a 和 b 为游戏的内置参数，分别表示在平地行驶时的耗油率及斜坡对耗油量的影响(b 恒为正)。这里假设，加速和减速不耗油，且看成是瞬间完成的，所以即使在同一条线段上也可采取以不同的速度行驶的策略来缩短耗费的时间。</p>

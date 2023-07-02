@@ -1,4 +1,16 @@
-<h1>[TJOI2013] 循环格</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[TJOI2013] 循环格</h1>
 <h2>题目背景</h2>
 <p>一个循环格就是一个矩阵,其中所有元素为箭头,指向相邻四个格子。每个元素有一个坐标(行,列),其中左上角元素坐标为(0,0)。给定一个起始位(r,c),你可以沿着箭头方向在格子间行走。即:如果(r,c)是一个左箭头，那么走到(r,c-1);如果是一个右箭头,走到(r,c+1);如果是上箭头,走到(r-1,c);如果是下箭头,走到(r+1,c)。每一行和每一列都是循环的,即如果走出边界,你会出现在另一侧。比如在一个5*5的循环格里,从(3,0)向左走会出现在(3,4)。</p>
 <h2>题目描述</h2>

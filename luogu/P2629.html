@@ -1,4 +1,16 @@
-<h1>好消息，坏消息</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>好消息，坏消息</h1>
 <h2>题目描述</h2>
 <p>Uim 在公司里面当秘书，现在有 $n$ 条消息要告知老板。每条消息有一个好坏度，这会影响老板的心情。告知完一条消息后，老板的心情等于老板之前的心情加上这条消息的好坏度。最开始老板的心情是 $0$，一旦老板心情到了 $0$ 以下就会勃然大怒，炒了 Uim 的鱿鱼。</p>
 <p>Uim 为了不被炒，提前知道了这些消息（已经按时间的发生顺序进行了排列）的好坏度，希望知道如何才能不让老板发怒。</p>

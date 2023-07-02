@@ -1,4 +1,16 @@
-<h1>[APIO2013] 出题人</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[APIO2013] 出题人</h1>
 <h2>题目描述</h2>
 <p>当今世界上各类程序设计竞赛层出不穷。而设计一场好比赛绝非易事，比如给题目设计测试数据就是一项挑战。一组好的测试数据需要对不同的程序有区分度：满足所有要求的程序自然应该得到满分，而那些貌似正确的程序则会在某些特殊数据上出错。</p>
 <p>在本题中，你在比赛中的角色反转啦！作为一名久经百战的程序员，你将帮助 Happy Programmer Contest 的命题委员会设计这次比赛的测试数据。本次比赛命题委员会选择了两个图论问题，分为 $8$ 个子任务。委员会写了一些貌似可以解决这些子任务的代码。在给任务设计数据的时候，命题委员会期望其中的一些源程序能够得到满分，而另外的一些则只能得到 $0$ 分或者少许的部分分。现在你将会获得这些源程序（C, C++, Pascal 版本）。对于每个子任务，你需要去产生一组数据 $X$ 使得它能将该任务给定的 $2$ 种源程序 $A$ 和 $B$ 区分开来。更具体地说，生成的数据必须满足如下两个条件:</p>

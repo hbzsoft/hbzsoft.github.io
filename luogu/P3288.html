@@ -1,4 +1,16 @@
-<h1>[SCOI2014] 方伯伯运椰子</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SCOI2014] 方伯伯运椰子</h1>
 <h2>题目描述</h2>
 <p>四川的方伯伯为了致富，决定引进海南的椰子树。方伯伯的椰子园十分现代化，椰子园中有一套独特的交通系统。</p>
 <p>现在用点来表示交通节点，边来表示道路。这样，方伯伯的椰子园就可以看作一个有  $N+2$ 个交通节点， $M$ 条边的有向无环图。 $N +1$ 号点为入口， $N +2$ 号点为出口。每条道路都有  $6$ 个参数， $u_i,v_i,a_i,b_i,c_i,d_i$。分别表示，该道路从  $u_i$ 号点通向  $v_i$ 号点，将它的容量压缩一次要  $a_i$ 的花费，容量扩大一次要  $b_i$ 的花费，该条道路当前的运输容量上限为  $c_i$，并且每单位运输量通过该道路要  $d_i$ 的费用。</p>

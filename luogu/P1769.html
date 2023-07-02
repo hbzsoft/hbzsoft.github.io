@@ -1,4 +1,16 @@
-<h1>淘汰赛制</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>淘汰赛制</h1>
 <h2>题目描述</h2>
 <p>淘汰赛制是一种极其残酷的比赛制度。$2^n$ 名选手分别标号 $1,2,3,\cdots,2^n-1,2^n$，他们将要参加 $n$ 轮的激烈角逐。每一轮中，将所有参加该轮的选手按标号从小到大排序后，第 $1$ 位与第 $2$ 位比赛，第 $3$ 位与第 $4$ 位比赛，第 $5$ 位与第 $6$ 位比赛……只有每场比赛的胜者才有机会参加下一轮的比赛（不会有平局）。这样，每轮将淘汰一半的选手。$n$ 轮过后，只剩下一名选手，该选手即为最终的冠军。</p>
 <p>现在已知每位选手分别与其他选手比赛获胜的概率，请你预测一下谁夺冠的概率最大。</p>

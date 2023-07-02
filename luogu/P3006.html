@@ -1,4 +1,16 @@
-<h1>[USACO11JAN] Bottleneck G</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO11JAN] Bottleneck G</h1>
 <h2>题意翻译</h2>
 <p>WC正在召集奶牛,他的农场有一个包含 <strong><em>N</em></strong> 块农田的网络，编号为 <strong>1 -- N</strong> ，每个农场里有 $C_i$ 头牛。农场被 <strong>N-1</strong>  条 <strong>单向</strong> 边链接,（每个农场有通向$P_i$的路） 保证从任何点可以到达1号点。WC想让所有奶牛集中到1号农场。 </p>
 <p><strong>时间是离散的</strong> 奶牛可以在1单位时间里走过任意多条道路，但是每条路有一个容纳上限 <em>$M_i$</em>  并且奶牛不会离开1号农场(农场没有容量上限) </p>

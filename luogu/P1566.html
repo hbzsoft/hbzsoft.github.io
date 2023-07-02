@@ -1,4 +1,16 @@
-<h1>加等式</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>加等式</h1>
 <h2>题目描述</h2>
 <p>对于一个整数集合，我们定义“加等式”如下：集合中的某一个元素可以表示成集合内其他元素之和。如集合 ${1,2,3}$ 中就有一个加等式：$3=1+2$。而且 $3=1+2$ 和 $3=2+1$ 是相同的加等式，也是这个集合唯一的加等式。给定一个整数集合，编程找出其加等式的个数。</p>
 <h2>输入输出格式</h2>

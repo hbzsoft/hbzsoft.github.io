@@ -1,4 +1,16 @@
-<h1>[USACO13DEC] The Bessie Shuffle S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO13DEC] The Bessie Shuffle S</h1>
 <h2>题目描述</h2>
 <p>Bessie is practicing her card tricks.  She has already mastered the Bessie- shuffle -- a shuffle on M (2 &lt;= M &lt;= 100,000) cards that reorganizes the cards so the i-th card from the top is now the P[i]-th card from the top.</p>
 <p>Now Bessie is practicing shuffles on larger decks.  She has a deck of N cards (M &lt;= N &lt;= 100,000) conveniently labeled 1 to N.  She shuffles this deck by taking the first M cards and performing the Bessie-shuffle on them, placing the shuffled cards back on top of the deck.  She then removes the top card from the deck and places it face down.  She repeats this process, placing the top cards successively on top of each other, until she is out of cards.  When Bessie has less than M cards left, she no longer performs the Bessie-shuffle, but continues to place the top card on top of the others.</p>

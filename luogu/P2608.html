@@ -1,4 +1,16 @@
-<h1>[ZJOI2010] 任务安排</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[ZJOI2010] 任务安排</h1>
 <h2>题目描述</h2>
 <p>小 Y 最近遇到了一个棘手的问题。她有两项任务需要完成，其中第一项任务是重复操作 $1$（下文称作 op1）共 $S_1$ 次，第二项任务是重复操作 $2$（下文称作 op2）共 $S_2$ 次。为了完成这些任务，小 Y 雇佣了 $N$ 名工人。其中，第 $i$ 个工人完成 op1 所需时间为 $T_{1,i}$，完成 op2 所需时间为 $T_{2,i}$。每个 op1 和 op2 都只能被一名工人完成，每名工人在任意时刻都只能做一项工作。</p>
 <p>所有的工人从第 $0$ 秒开始工作。每当一个工人开始执行一项操作（op1 或 op2），他必须一直执行下去直到完成而不能被打断。我们记第一项任务完成的时间为 $E_1$，第二项任务完成的时间为 $E_2$，你的任务就是安排这些工人的工作，使得 $E_1+E_2$ 最小。</p>

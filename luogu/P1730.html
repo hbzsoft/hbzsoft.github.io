@@ -1,4 +1,16 @@
-<h1>最小密度路径</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>最小密度路径</h1>
 <h2>题目描述</h2>
 <p>给出一张有 $N$ 个点 $M$ 条边的加权有向无环图，接下来有 $Q$ 个询问，每个询问包括 $2$ 个节点 $X$ 和 $Y$，要求算出从 $X$ 到 $Y$ 的一条路径，使得密度最小（密度的定义为，路径上边的权值和除以边的数量）。</p>
 <h2>输入输出格式</h2>

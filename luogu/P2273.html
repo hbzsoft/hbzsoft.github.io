@@ -1,4 +1,16 @@
-<h1>[HNOI2002] 交换</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HNOI2002] 交换</h1>
 <h2>题目描述</h2>
 <p>给定 $n$ 个整数寄存器 $r_1,r_2,\cdots,r_n$。我们定义一个比较交换指令 $\text{CE}(a,b)$ 如下：如果 $r_a$ 中的值大于 $r_b$ 中的值，则交换寄存器 $r_a$ 和 $r_b$ 中的值。其中，$1\leq a&lt;b\leq n$。</p>
 <p>一个比较交换程序（简称为 CE-程序）就是一个有限交换指令序列。称一个 CE-程序为 MIN-程序，如果在该程序执行之后，寄存器 $r_1$ 中的值是所有寄存器中的值的最小者；如果一个 CE-程序在删除其中任意一条交换指令后，仍然是一个 MIN-程序，则称该 CE-程序是可靠的 MIN-程序。</p>

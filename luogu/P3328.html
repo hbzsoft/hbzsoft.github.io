@@ -1,4 +1,16 @@
-<h1>[SDOI2015] 音质检测</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SDOI2015] 音质检测</h1>
 <h2>题目描述</h2>
 <p>万老板希望在新的智能音乐播放设备$\operatorname{IPOOD}$中，实现对波文件音质性能的评定。离散的波文件被考虑为长度为 $N$ 的整数序列：$A_1,A_2,\cdots,A_N$。所谓的音质性能检测，可以评定任何的一个区间范围 $[L,R]$ ，音质性能取决于下述评分：</p>
 <p>$$\sum_{L&lt;i&lt;R}F[A_{i-1}+1]F[A_{i+1}-1] \operatorname{mod}\;(10^9+7)$$</p>

@@ -1,4 +1,16 @@
-<h1>[ZJOI2014] 消棋子</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[ZJOI2014] 消棋子</h1>
 <h2>题目描述</h2>
 <p>消棋子是一个有趣的游戏。游戏在一个 $r \times c$ 的棋盘上进行。棋盘的每个格子，要么是空，要么是一种颜色的棋子。同一种颜色的棋子恰好有两个。</p>
 <p>每一轮，玩家可以选择一个空格子 $(x, y)$，并选择上下左右四个方向中的两个方向，如果在这两个方向上均存在有棋子的格子，而且沿着这两个方向上第一个遇到的棋子颜色相同，那么，我们将这两个棋子拿走，并称之为合法的操作。否则称这个操作不合法，游戏不会处理这个操作。游戏的目的是消除尽量多的棋子。</p>

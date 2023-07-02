@@ -1,4 +1,16 @@
-<h1>[HAOI2011] Problem c</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[HAOI2011] Problem c</h1>
 <h2>题目描述</h2>
 <p>给 $n$ 个人安排座位，先给每个人一个 $1\thicksim n$ 的编号，设第 $i$ 个人的编号为 $a_i$（不同人的编号可以相同）。</p>
 <p>接着从第一个人开始，大家依次入座，第 $i$ 个人来了以后尝试坐到 $a_i$，如果 $a_i$ 被占据了，就尝试 $a_i+1$，$a_i+1$ 也被占据了的话就尝试 $a_i+2$……，如果一直尝试到第 $n$ 个都不行，该安排方案就不合法。</p>

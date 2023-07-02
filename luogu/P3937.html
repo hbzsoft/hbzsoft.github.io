@@ -1,4 +1,16 @@
-<h1>Changing</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>Changing</h1>
 <h2>题目描述</h2>
 <p>有 $n$ 盏灯环形排列，顺时针依次标号为 $1\cdots n$。初始时刻为 $0$，初始时刻第 $i$ 盏灯的亮灭 $a_i$ 给定，$0$ 表示灭，$1$ 表示亮。下一时刻每盏灯的亮灭取决于当前时刻这盏灯与顺时针方向下一盏灯的亮灭。若两盏灯状态相同，则下一时刻该灯灭，否则该灯亮。</p>
 <p>试求时刻 $t$ 第 $k$ 盏灯的状态。</p>

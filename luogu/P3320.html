@@ -1,4 +1,16 @@
-<h1>[SDOI2015] 寻宝游戏</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[SDOI2015] 寻宝游戏</h1>
 <h2>题目描述</h2>
 <p>小 B 最近正在玩一个寻宝游戏，这个游戏的地图中有 $N$ 个村庄和 $N-1$ 条道路，并且任何两个村庄之间有且仅有一条路径可达。游戏开始时，玩家可以任意选择一个村庄，瞬间转移到这个村庄，然后可以任意在地图的道路上行走，若走到某个村庄中有宝物，则视为找到该村庄内的宝物，直到找到所有宝物并返回到最初转移到的村庄为止。</p>
 <p>小 B 希望评测一下这个游戏的难度，因此他需要知道玩家找到所有宝物需要行走的最短路程。但是这个游戏中宝物经常变化，有时某个村庄中会突然出现宝物，有时某个村庄内的宝物会突然消失，因此小 B 需要不断地更新数据，但是小 B 太懒了，不愿意自己计算，因此他向你求助。为了简化问题，我们认为最开始时所有村庄内均没有宝物。</p>

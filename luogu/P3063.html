@@ -1,4 +1,16 @@
-<h1>[USACO12DEC] Milk Routing S</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>[USACO12DEC] Milk Routing S</h1>
 <h2>题意翻译</h2>
 <p>农民约翰的农场有一套老旧的管网，管网由M条管道(1&lt;=M&lt;=500)构成，用于将牛奶从谷仓运到储奶罐。 他想在明年移除和更新大部分管道，但他想原封不动地保留一条完整的路径，这样他仍然可以把牛奶从谷仓输送到储罐。</p>
 <p>管网由N个节点(1&lt;=N&lt;=500)组成，每个点都可以作为一组管道的端点。结点1是谷仓，结点N是储罐。M条双向管道中的每一条都连接一对节点，并且都有一个延迟值(牛奶达到管的另一端的用时)和容量值(单位时间内可以稳定通过管道的牛奶量)。多条管道可以连接同一对节点。</p>

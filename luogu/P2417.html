@@ -1,4 +1,16 @@
-<h1>课程</h1>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\(','\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
+</head><h1>课程</h1>
 <h2>题目描述</h2>
 <p>有 $n$ 个人与 $m$ 个教室。其中，可以在第 $i$ 个教室上课的学生有 $k_i$ 个，编号分别为 $p_{i,j}$。每个学生都有至少一个教室<strong>可以</strong>上课，并且每个学生<strong>只能</strong>在一个教室上课。</p>
 <p>现在询问是否存在一种方案，使得每个教室里至少有一名学生。若可以满足要求，输出 <code>YES</code>，否则输出 <code>NO</code>。</p>
