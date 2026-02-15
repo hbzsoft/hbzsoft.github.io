@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="韩邦泽的小站" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的应用 - 韩邦泽的小站</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft YaHei", sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    body {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      position: relative;
+    }
+
+    /* 半透明遮罩 */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    header {
+      background-color: rgba(44, 62, 80, 0.7);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .site-title {
+      color: #ecf0f1;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #3498db;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 3rem 2rem 2rem;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    .apps-grid {
+      display: grid;
+      gap: 1.6rem;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .app-card {
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(8px);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: left;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .app-card:hover {
+      background: rgba(0, 0, 0, 0.45);
+      transform: translateY(-3px);
+    }
+
+    .app-card h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+      color: #ecf0f1;
+    }
+
+    .app-card p {
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      opacity: 0.92;
+    }
+
+    .app-links {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .app-link {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .app-link:hover {
+      color: #5dade2;
+      text-decoration: underline;
+    }
+
+    .github-icon::before {
+      content: "🐙";
+    }
+
+    .download-icon::before {
+      content: "📦";
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      main {
+        padding-top: 2.5rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 复用 index.html 的导航栏 -->
+  <header>
+    <div class="site-title">韩邦泽的小站</div>
+    <nav>
+      <ul>
+        <li><a href="/">首页</a></li>
+        <li><a href="/about.html">关于我</a></li>
+        <li><a href="/downloads/">下载</a></li>
+        <li><a href="/apps.html">应用</a></li>
+        <li><a href="/blog.html">博客</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>我的开源应用</h1>
+    <div class="apps-grid" id="apps-container"></div>
+  </main>
+
+  <script>
+    // === Cookie 工具函数 ===
+    function setCookie(name, value, days) {
+      const expires = new Date(Date.now() + days * 864e5).toUTCString();
+      document.cookie = name + '=' + encodeURIComponent(value) + '; expires=' + expires + '; path=/';
+    }
+    function getCookie(name) {
+      return document.cookie.split('; ').reduce((r, v) => {
+        const parts = v.split('=');
+        return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+      }, '');
+    }
+
+    // === 背景图数组（与 index.html 完全一致）===
+    const images = [
+      "bing-wallpaper/2025-10-10.jpg",
+      "bing-wallpaper/2025-10-11.jpg",
+      "bing-wallpaper/2025-10-12.jpg",
+      "bing-wallpaper/2025-10-13.jpg",
+      "bing-wallpaper/2025-10-14.jpg",
+      "bing-wallpaper/2025-10-15.jpg",
+      "bing-wallpaper/2025-10-16.jpg",
+      "bing-wallpaper/2025-10-17.jpg",
+      "bing-wallpaper/2025-10-18.jpg",
+      "bing-wallpaper/2025-10-19.jpg",
+      "bing-wallpaper/2025-10-1.jpg",
+      "bing-wallpaper/2025-10-20.jpg",
+      "bing-wallpaper/2025-10-21.jpg",
+      "bing-wallpaper/2025-10-22.jpg",
+      "bing-wallpaper/2025-10-23.jpg",
+      "bing-wallpaper/2025-10-24.jpg",
+      "bing-wallpaper/2025-10-25.jpg",
+      "bing-wallpaper/2025-10-26.jpg",
+      "bing-wallpaper/2025-10-27.jpg",
+      "bing-wallpaper/2025-10-28.jpg",
+      "bing-wallpaper/2025-10-29.jpg",
+      "bing-wallpaper/2025-10-2.jpg",
+      "bing-wallpaper/2025-10-30.jpg",
+      "bing-wallpaper/2025-10-31.jpg",
+      "bing-wallpaper/2025-10-3.jpg",
+      "bing-wallpaper/2025-10-4.jpg",
+      "bing-wallpaper/2025-10-5.jpg",
+      "bing-wallpaper/2025-10-6.jpg",
+      "bing-wallpaper/2025-10-7.jpg",
+      "bing-wallpaper/2025-10-8.jpg",
+      "bing-wallpaper/2025-10-9.jpg",
+      "bing-wallpaper/2025-11-10.jpg",
+      "bing-wallpaper/2025-11-11.jpg",
+      "bing-wallpaper/2025-11-12.jpg",
+      "bing-wallpaper/2025-11-13.jpg",
+      "bing-wallpaper/2025-11-14.jpg",
+      "bing-wallpaper/2025-11-15.jpg",
+      "bing-wallpaper/2025-11-16.jpg",
+      "bing-wallpaper/2025-11-17.jpg",
+      "bing-wallpaper/2025-11-18.jpg",
+      "bing-wallpaper/2025-11-19.jpg",
+      "bing-wallpaper/2025-11-1.jpg",
+      "bing-wallpaper/2025-11-20.jpg",
+      "bing-wallpaper/2025-11-21.jpg",
+      "bing-wallpaper/2025-11-22.jpg",
+      "bing-wallpaper/2025-11-23.jpg",
+      "bing-wallpaper/2025-11-24.jpg",
+      "bing-wallpaper/2025-11-25.jpg",
+      "bing-wallpaper/2025-11-26.jpg",
+      "bing-wallpaper/2025-11-27.jpg",
+      "bing-wallpaper/2025-11-28.jpg",
+      "bing-wallpaper/2025-11-29.jpg",
+      "bing-wallpaper/2025-11-2.jpg",
+      "bing-wallpaper/2025-11-30.jpg",
+      "bing-wallpaper/2025-11-3.jpg",
+      "bing-wallpaper/2025-11-4.jpg",
+      "bing-wallpaper/2025-11-5.jpg",
+      "bing-wallpaper/2025-11-6.jpg",
+      "bing-wallpaper/2025-11-7.jpg",
+      "bing-wallpaper/2025-11-8.jpg",
+      "bing-wallpaper/2025-11-9.jpg",
+      "bing-wallpaper/2025-12-10.jpg",
+      "bing-wallpaper/2025-12-11.jpg",
+      "bing-wallpaper/2025-12-12.jpg",
+      "bing-wallpaper/2025-12-13.jpg",
+      "bing-wallpaper/2025-12-14.jpg",
+      "bing-wallpaper/2025-12-15.jpg",
+      "bing-wallpaper/2025-12-16.jpg",
+      "bing-wallpaper/2025-12-17.jpg",
+      "bing-wallpaper/2025-12-18.jpg",
+      "bing-wallpaper/2025-12-19.jpg",
+      "bing-wallpaper/2025-12-1.jpg",
+      "bing-wallpaper/2025-12-20.jpg",
+      "bing-wallpaper/2025-12-21.jpg",
+      "bing-wallpaper/2025-12-22.jpg",
+      "bing-wallpaper/2025-12-23.jpg",
+      "bing-wallpaper/2025-12-24.jpg",
+      "bing-wallpaper/2025-12-25.jpg",
+      "bing-wallpaper/2025-12-26.jpg",
+      "bing-wallpaper/2025-12-27.jpg",
+      "bing-wallpaper/2025-12-28.jpg",
+      "bing-wallpaper/2025-12-29.jpg",
+      "bing-wallpaper/2025-12-2.jpg",
+      "bing-wallpaper/2025-12-3.jpg",
+      "bing-wallpaper/2025-12-4.jpg",
+      "bing-wallpaper/2025-12-5.jpg",
+      "bing-wallpaper/2025-12-6.jpg",
+      "bing-wallpaper/2025-12-7.jpg",
+      "bing-wallpaper/2025-12-8.jpg",
+      "bing-wallpaper/2025-12-9.jpg",
+      "bing-wallpaper/2025-5-30.jpg",
+      "bing-wallpaper/2025-5-31.jpg",
+      "bing-wallpaper/2025-6-10.jpg",
+      "bing-wallpaper/2025-6-11.jpg",
+      "bing-wallpaper/2025-6-12.jpg",
+      "bing-wallpaper/2025-6-13.jpg",
+      "bing-wallpaper/2025-6-14.jpg",
+      "bing-wallpaper/2025-6-15.jpg",
+      "bing-wallpaper/2025-6-16.jpg",
+      "bing-wallpaper/2025-6-17.jpg",
+      "bing-wallpaper/2025-6-18.jpg",
+      "bing-wallpaper/2025-6-19.jpg",
+      "bing-wallpaper/2025-6-1.jpg",
+      "bing-wallpaper/2025-6-20.jpg",
+      "bing-wallpaper/2025-6-21.jpg",
+      "bing-wallpaper/2025-6-22.jpg",
+      "bing-wallpaper/2025-6-23.jpg",
+      "bing-wallpaper/2025-6-24.jpg",
+      "bing-wallpaper/2025-6-25.jpg",
+      "bing-wallpaper/2025-6-26.jpg",
+      "bing-wallpaper/2025-6-27.jpg",
+      "bing-wallpaper/2025-6-28.jpg",
+      "bing-wallpaper/2025-6-29.jpg",
+      "bing-wallpaper/2025-6-2.jpg",
+      "bing-wallpaper/2025-6-30.jpg",
+      "bing-wallpaper/2025-6-3.jpg",
+      "bing-wallpaper/2025-6-4.jpg",
+      "bing-wallpaper/2025-6-5.jpg",
+      "bing-wallpaper/2025-6-6.jpg",
+      "bing-wallpaper/2025-6-7.jpg",
+      "bing-wallpaper/2025-6-8.jpg",
+      "bing-wallpaper/2025-6-9.jpg",
+      "bing-wallpaper/2025-7-10.jpg",
+      "bing-wallpaper/2025-7-11.jpg",
+      "bing-wallpaper/2025-7-12.jpg",
+      "bing-wallpaper/2025-7-13.jpg",
+      "bing-wallpaper/2025-7-14.jpg",
+      "bing-wallpaper/2025-7-15.jpg",
+      "bing-wallpaper/2025-7-16.jpg",
+      "bing-wallpaper/2025-7-17.jpg",
+      "bing-wallpaper/2025-7-18.jpg",
+      "bing-wallpaper/2025-7-19.jpg",
+      "bing-wallpaper/2025-7-1.jpg",
+      "bing-wallpaper/2025-7-20.jpg",
+      "bing-wallpaper/2025-7-21.jpg",
+      "bing-wallpaper/2025-7-22.jpg",
+      "bing-wallpaper/2025-7-23.jpg",
+      "bing-wallpaper/2025-7-24.jpg",
+      "bing-wallpaper/2025-7-25.jpg",
+      "bing-wallpaper/2025-7-26.jpg",
+      "bing-wallpaper/2025-7-27.jpg",
+      "bing-wallpaper/2025-7-28.jpg",
+      "bing-wallpaper/2025-7-29.jpg",
+      "bing-wallpaper/2025-7-2.jpg",
+      "bing-wallpaper/2025-7-30.jpg",
+      "bing-wallpaper/2025-7-31.jpg",
+      "bing-wallpaper/2025-7-3.jpg",
+      "bing-wallpaper/2025-7-4.jpg",
+      "bing-wallpaper/2025-7-5.jpg",
+      "bing-wallpaper/2025-7-6.jpg",
+      "bing-wallpaper/2025-7-7.jpg",
+      "bing-wallpaper/2025-7-8.jpg",
+      "bing-wallpaper/2025-7-9.jpg",
+      "bing-wallpaper/2025-8-10.jpg",
+      "bing-wallpaper/2025-8-11.jpg",
+      "bing-wallpaper/2025-8-12.jpg",
+      "bing-wallpaper/2025-8-13.jpg",
+      "bing-wallpaper/2025-8-14.jpg",
+      "bing-wallpaper/2025-8-15.jpg",
+      "bing-wallpaper/2025-8-16.jpg",
+      "bing-wallpaper/2025-8-17.jpg",
+      "bing-wallpaper/2025-8-18.jpg",
+      "bing-wallpaper/2025-8-19.jpg",
+      "bing-wallpaper/2025-8-1.jpg",
+      "bing-wallpaper/2025-8-20.jpg",
+      "bing-wallpaper/2025-8-21.jpg",
+      "bing-wallpaper/2025-8-22.jpg",
+      "bing-wallpaper/2025-8-23.jpg",
+      "bing-wallpaper/2025-8-24.jpg",
+      "bing-wallpaper/2025-8-25.jpg",
+      "bing-wallpaper/2025-8-26.jpg",
+      "bing-wallpaper/2025-8-27.jpg",
+      "bing-wallpaper/2025-8-28.jpg",
+      "bing-wallpaper/2025-8-29.jpg",
+      "bing-wallpaper/2025-8-2.jpg",
+      "bing-wallpaper/2025-8-30.jpg",
+      "bing-wallpaper/2025-8-31.jpg",
+      "bing-wallpaper/2025-8-3.jpg",
+      "bing-wallpaper/2025-8-4.jpg",
+      "bing-wallpaper/2025-8-5.jpg",
+      "bing-wallpaper/2025-8-6.jpg",
+      "bing-wallpaper/2025-8-7.jpg",
+      "bing-wallpaper/2025-8-8.jpg",
+      "bing-wallpaper/2025-8-9.jpg",
+      "bing-wallpaper/2025-9-10.jpg",
+      "bing-wallpaper/2025-9-11.jpg",
+      "bing-wallpaper/2025-9-12.jpg",
+      "bing-wallpaper/2025-9-13.jpg",
+      "bing-wallpaper/2025-9-14.jpg",
+      "bing-wallpaper/2025-9-15.jpg",
+      "bing-wallpaper/2025-9-16.jpg",
+      "bing-wallpaper/2025-9-17.jpg",
+      "bing-wallpaper/2025-9-18.jpg",
+      "bing-wallpaper/2025-9-19.jpg",
+      "bing-wallpaper/2025-9-1.jpg",
+      "bing-wallpaper/2025-9-20.jpg",
+      "bing-wallpaper/2025-9-21.jpg",
+      "bing-wallpaper/2025-9-22.jpg",
+      "bing-wallpaper/2025-9-23.jpg",
+      "bing-wallpaper/2025-9-24.jpg",
+      "bing-wallpaper/2025-9-25.jpg",
+      "bing-wallpaper/2025-9-26.jpg",
+      "bing-wallpaper/2025-9-27.jpg",
+      "bing-wallpaper/2025-9-28.jpg",
+      "bing-wallpaper/2025-9-29.jpg",
+      "bing-wallpaper/2025-9-2.jpg",
+      "bing-wallpaper/2025-9-30.jpg",
+      "bing-wallpaper/2025-9-3.jpg",
+      "bing-wallpaper/2025-9-4.jpg",
+      "bing-wallpaper/2025-9-5.jpg",
+      "bing-wallpaper/2025-9-6.jpg",
+      "bing-wallpaper/2025-9-7.jpg",
+      "bing-wallpaper/2025-9-8.jpg",
+      "bing-wallpaper/2025-9-9.jpg"
+    ];
+
+    // === 应用数据 ===
+    const apps = [
+        {
+          name: "局域网信息传输系统(LMTS)",
+          description: "该项目允许用户通过局域网向接收端发布用弹窗显示的通知。",
+          github: "https://github.com/hbzsoft/lan_message_transmission_system",
+          download: "/downloads/软件下载/LAN%20Message%20Transmission%20System（LMTS）/"
+        }
+        // 👉 添加更多应用时，请确保包含 download 字段
+      ];
+
+    // === 设置背景图（优先 Cookie）===
+    let bg = getCookie('selectedBg');
+    if (!bg || !images.includes(bg)) {
+      bg = images[Math.floor(Math.random() * images.length)];
+      setCookie('selectedBg', bg, 7);
+    }
+    document.body.style.backgroundImage = `url('${bg}')`;
+
+    // === 渲染应用卡片 ===
+    const container = document.getElementById('apps-container');
+    apps.forEach(app => {
+      const card = document.createElement('div');
+      card.className = 'app-card';
+      card.innerHTML = `
+        <h2>${app.name}</h2>
+        <p>${app.description}</p>
+        <div class="app-links">
+          <a href="${app.github}" target="_blank" rel="noopener noreferrer" class="app-link">
+            <span class="github-icon"></span> GitHub 仓库
+          </a>
+          <a href="${app.download}" class="app-link">
+            <span class="download-icon"></span> 站内下载
+          </a>
+        </div>
+      `;
+      container.appendChild(card);
+    });
+  </script>
+</body>
+</html>
