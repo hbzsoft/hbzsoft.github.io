@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title id="page-title">加载中... - 韩邦泽的小站</title>
+  <!-- Font Awesome 图标 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- 代码高亮样式（Atom One Dark） -->
+  <link rel="stylesheet" href="/lib/atom-one-dark.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+    }
+    body, html {
+      height: 100%;
+    }
+    body {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: white;
+      position: relative;
+    }
+    /* 深色半透明遮罩 */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+
+    /* 顶部导航栏 */
+    header {
+      background-color: rgba(44, 62, 80, 0.7);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(5px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .site-title {
+      color: #ecf0f1;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #3498db;
+    }
+
+    /* 博客内容区 */
+    main {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+      z-index: 1;
+    }
+    .post-header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+        background: rgba(15, 20, 25, 0.8);
+        padding: 1.5rem;
+        border-radius: 12px;
+        backdrop-filter: blur(4px);
+    }
+    .post-title {
+      font-size: 2.4rem;
+      margin-bottom: 0.8rem;
+      color: #ecf0f1;
+    }
+    .post-meta {
+      color: #bbb;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .post-content {
+        line-height: 1.7;
+        font-size: 1.05rem;
+        color: #f1f1f1; /* 稍微提亮文字 */
+        background: rgba(20, 25, 30, 0.85); /* 深灰蓝底衬，高可读性 */
+        padding: 2rem;
+        border-radius: 12px;
+        backdrop-filter: blur(4px); /* 毛玻璃效果（可选） */
+        margin-top: 1rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+    .post-content h1,
+    .post-content h2,
+    .post-content h3 {
+      margin: 1.8rem 0 1rem;
+      color: #3498db;
+    }
+    .post-content p {
+      margin-bottom: 1.2rem;
+    }
+    .post-content a {
+      color: #3498db;
+      text-decoration: underline;
+    }
+    .post-content img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1.2rem 0;
+    }
+    .post-content blockquote {
+      border-left: 4px solid #3498db;
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      color: #aaa;
+      font-style: italic;
+    }
+    .post-content pre {
+      background: #1e1e1e !important;
+      border-radius: 8px;
+      overflow-x: auto;
+      padding: 1.2rem !important;
+      margin: 1.5rem 0;
+    }
+    .post-content code:not(pre > code) {
+      background: rgba(255,255,255,0.1);
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    /* 代码块字体设置 */
+    /* 强制所有代码块及其子元素使用 Fira Code */
+    pre,
+    code,
+    pre code,
+    .hljs,
+    .hljs * {
+      font-family: "Fira Code", monospace !important;
+      font-feature-settings: "liga" 1; /* 启用连字（可选） */
+    }
+    @media (max-width: 600px) {
+      .post-title { font-size: 1.8rem; }
+      main { padding: 0 1rem; }
+      header { flex-direction: column; gap: 1rem; }
+      nav ul { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+  <link rel="stylesheet" href="/lib/katex/katex.min.css">
+  <script defer src="/lib/katex/katex.min.js"></script>
+  <script defer src="/lib/katex/contrib/auto-render.min.js"></script>
+</head>
+<body>
+
+<!-- 顶部导航栏（与主页一致） -->
+<header>
+  <div class="site-title">韩邦泽的小站</div>
+  <nav>
+    <ul>
+      <li><a href="/">首页</a></li>
+      <li><a href="/about.html">关于我</a></li>
+      <li><a href="/downloads/">下载</a></li>
+      <li><a href="/apps.html">应用</a></li>
+      <li><a href="/blog.html">博客</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <article>
+    <header class="post-header">
+      <h1 class="post-title" id="post-title">正在加载...</h1>
+      <div class="post-meta" id="post-meta">发布于 ...</div>
+    </header>
+    <div class="post-content" id="post-content">
+      <p>正在加载文章内容...</p>
+    </div>
+  </article>
+</main>
+
+<!-- 引入外部库（CDN） -->
+<script src="/lib/marked.min.js"></script>
+<script src="/lib/purify.min.js"></script>
+<script src="/lib/highlight.min.js"></script>
+
+<!-- 第三方库：按顺序加载 -->
+<script src="/lib/marked.min.js"></script>
+<script src="/lib/purify.min.js"></script>
+<script src="/lib/highlight.min.js"></script>
+
+<!-- KaTeX（使用国内 CDN，无 integrity） -->
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+
+<!-- 主逻辑脚本 -->
+<script>
+  // === 配置 Marked.js ===
+  marked.setOptions({
+    highlight: function(code, lang) {
+      const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+      return hljs.highlight(code, { language }).value;
+    },
+    breaks: true,
+    gfm: true
+  });
+
+  // === 获取 URL 参数并加载文章 ===
+  const urlParams = new URLSearchParams(window.location.search);
+  const slug = urlParams.get('slug') || 'example';
+
+  fetch(`/blog/posts/${slug}.md`)
+    .then(response => {
+      if (!response.ok) throw new Error('文章未找到');
+      return response.text();
+    })
+    .then(mdText => {
+      const lines = mdText.split('\n');
+      let title = '无标题';
+      let date = '未知时间';
+      let contentStart = 0;
+
+      if (lines[0]?.startsWith('# ')) {
+        title = lines[0].substring(2).trim();
+        contentStart = 1;
+        if (/^\d{4}-\d{2}-\d{2}$/.test(lines[1]?.trim())) {
+          date = lines[1].trim();
+          contentStart = 2;
+        }
+      }
+
+      const contentMd = lines.slice(contentStart).join('\n');
+
+      // 渲染 Markdown
+      const dirtyHtml = marked.parse(contentMd);
+
+      // 【可选】净化 HTML（如果你信任内容，可直接用 dirtyHtml）
+      const cleanHtml = DOMPurify.sanitize(dirtyHtml, {
+        ADD_TAGS: ['math'],
+        ADD_ATTR: ['class', 'style', 'alt', 'src']
+      });
+
+      // 更新页面
+      document.getElementById('post-title').textContent = title;
+      document.getElementById('page-title').textContent = `${title} - 韩邦泽的小站`;
+      document.getElementById('post-meta').innerHTML = `<i class="far fa-calendar"></i> ${date}`;
+      document.getElementById('post-content').innerHTML = cleanHtml;
+
+      // 渲染 LaTeX 公式（此时 auto-render 已加载！）
+      renderMathInElement(document.getElementById('post-content'), {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "$", right: "$", display: false },
+          { left: "\\(", right: "\\)", display: false },
+          { left: "\\[", right: "\\]", display: true }
+        ],
+        throwOnError: false
+      });
+
+      // 高亮代码块
+      document.querySelectorAll('pre code').forEach(block => {
+        hljs.highlightElement(block);
+      });
+    })
+    .catch(err => {
+      console.error('文章加载失败:', err);
+      document.getElementById('post-content').innerHTML = 
+        `<p style="color:#e74c3c; text-align:center;">❌ 加载失败：${err.message}</p>`;
+    });
+
+  // === 设置背景图（与主页一致）===
+  function getCookie(name) {
+    return document.cookie.split('; ').reduce((r, v) => {
+      const parts = v.split('=');
+      return parts[0] === name ? decodeURIComponent(parts[1]) : r;
+    }, '');
+  }
+
+  const images = [
+        "bing-wallpaper/2025-10-10.jpg",
+        "bing-wallpaper/2025-10-11.jpg",
+        "bing-wallpaper/2025-10-12.jpg",
+        "bing-wallpaper/2025-10-13.jpg",
+        "bing-wallpaper/2025-10-14.jpg",
+        "bing-wallpaper/2025-10-15.jpg",
+        "bing-wallpaper/2025-10-16.jpg",
+        "bing-wallpaper/2025-10-17.jpg",
+        "bing-wallpaper/2025-10-18.jpg",
+        "bing-wallpaper/2025-10-19.jpg",
+        "bing-wallpaper/2025-10-1.jpg",
+        "bing-wallpaper/2025-10-20.jpg",
+        "bing-wallpaper/2025-10-21.jpg",
+        "bing-wallpaper/2025-10-22.jpg",
+        "bing-wallpaper/2025-10-23.jpg",
+        "bing-wallpaper/2025-10-24.jpg",
+        "bing-wallpaper/2025-10-25.jpg",
+        "bing-wallpaper/2025-10-26.jpg",
+        "bing-wallpaper/2025-10-27.jpg",
+        "bing-wallpaper/2025-10-28.jpg",
+        "bing-wallpaper/2025-10-29.jpg",
+        "bing-wallpaper/2025-10-2.jpg",
+        "bing-wallpaper/2025-10-30.jpg",
+        "bing-wallpaper/2025-10-31.jpg",
+        "bing-wallpaper/2025-10-3.jpg",
+        "bing-wallpaper/2025-10-4.jpg",
+        "bing-wallpaper/2025-10-5.jpg",
+        "bing-wallpaper/2025-10-6.jpg",
+        "bing-wallpaper/2025-10-7.jpg",
+        "bing-wallpaper/2025-10-8.jpg",
+        "bing-wallpaper/2025-10-9.jpg",
+        "bing-wallpaper/2025-11-10.jpg",
+        "bing-wallpaper/2025-11-11.jpg",
+        "bing-wallpaper/2025-11-12.jpg",
+        "bing-wallpaper/2025-11-13.jpg",
+        "bing-wallpaper/2025-11-14.jpg",
+        "bing-wallpaper/2025-11-15.jpg",
+        "bing-wallpaper/2025-11-16.jpg",
+        "bing-wallpaper/2025-11-17.jpg",
+        "bing-wallpaper/2025-11-18.jpg",
+        "bing-wallpaper/2025-11-19.jpg",
+        "bing-wallpaper/2025-11-1.jpg",
+        "bing-wallpaper/2025-11-20.jpg",
+        "bing-wallpaper/2025-11-21.jpg",
+        "bing-wallpaper/2025-11-22.jpg",
+        "bing-wallpaper/2025-11-23.jpg",
+        "bing-wallpaper/2025-11-24.jpg",
+        "bing-wallpaper/2025-11-25.jpg",
+        "bing-wallpaper/2025-11-26.jpg",
+        "bing-wallpaper/2025-11-27.jpg",
+        "bing-wallpaper/2025-11-28.jpg",
+        "bing-wallpaper/2025-11-29.jpg",
+        "bing-wallpaper/2025-11-2.jpg",
+        "bing-wallpaper/2025-11-30.jpg",
+        "bing-wallpaper/2025-11-3.jpg",
+        "bing-wallpaper/2025-11-4.jpg",
+        "bing-wallpaper/2025-11-5.jpg",
+        "bing-wallpaper/2025-11-6.jpg",
+        "bing-wallpaper/2025-11-7.jpg",
+        "bing-wallpaper/2025-11-8.jpg",
+        "bing-wallpaper/2025-11-9.jpg",
+        "bing-wallpaper/2025-12-10.jpg",
+        "bing-wallpaper/2025-12-11.jpg",
+        "bing-wallpaper/2025-12-12.jpg",
+        "bing-wallpaper/2025-12-13.jpg",
+        "bing-wallpaper/2025-12-14.jpg",
+        "bing-wallpaper/2025-12-15.jpg",
+        "bing-wallpaper/2025-12-16.jpg",
+        "bing-wallpaper/2025-12-17.jpg",
+        "bing-wallpaper/2025-12-18.jpg",
+        "bing-wallpaper/2025-12-19.jpg",
+        "bing-wallpaper/2025-12-1.jpg",
+        "bing-wallpaper/2025-12-20.jpg",
+        "bing-wallpaper/2025-12-21.jpg",
+        "bing-wallpaper/2025-12-22.jpg",
+        "bing-wallpaper/2025-12-23.jpg",
+        "bing-wallpaper/2025-12-24.jpg",
+        "bing-wallpaper/2025-12-25.jpg",
+        "bing-wallpaper/2025-12-26.jpg",
+        "bing-wallpaper/2025-12-27.jpg",
+        "bing-wallpaper/2025-12-28.jpg",
+        "bing-wallpaper/2025-12-29.jpg",
+        "bing-wallpaper/2025-12-2.jpg",
+        "bing-wallpaper/2025-12-3.jpg",
+        "bing-wallpaper/2025-12-4.jpg",
+        "bing-wallpaper/2025-12-5.jpg",
+        "bing-wallpaper/2025-12-6.jpg",
+        "bing-wallpaper/2025-12-7.jpg",
+        "bing-wallpaper/2025-12-8.jpg",
+        "bing-wallpaper/2025-12-9.jpg",
+        "bing-wallpaper/2025-5-30.jpg",
+        "bing-wallpaper/2025-5-31.jpg",
+        "bing-wallpaper/2025-6-10.jpg",
+        "bing-wallpaper/2025-6-11.jpg",
+        "bing-wallpaper/2025-6-12.jpg",
+        "bing-wallpaper/2025-6-13.jpg",
+        "bing-wallpaper/2025-6-14.jpg",
+        "bing-wallpaper/2025-6-15.jpg",
+        "bing-wallpaper/2025-6-16.jpg",
+        "bing-wallpaper/2025-6-17.jpg",
+        "bing-wallpaper/2025-6-18.jpg",
+        "bing-wallpaper/2025-6-19.jpg",
+        "bing-wallpaper/2025-6-1.jpg",
+        "bing-wallpaper/2025-6-20.jpg",
+        "bing-wallpaper/2025-6-21.jpg",
+        "bing-wallpaper/2025-6-22.jpg",
+        "bing-wallpaper/2025-6-23.jpg",
+        "bing-wallpaper/2025-6-24.jpg",
+        "bing-wallpaper/2025-6-25.jpg",
+        "bing-wallpaper/2025-6-26.jpg",
+        "bing-wallpaper/2025-6-27.jpg",
+        "bing-wallpaper/2025-6-28.jpg",
+        "bing-wallpaper/2025-6-29.jpg",
+        "bing-wallpaper/2025-6-2.jpg",
+        "bing-wallpaper/2025-6-30.jpg",
+        "bing-wallpaper/2025-6-3.jpg",
+        "bing-wallpaper/2025-6-4.jpg",
+        "bing-wallpaper/2025-6-5.jpg",
+        "bing-wallpaper/2025-6-6.jpg",
+        "bing-wallpaper/2025-6-7.jpg",
+        "bing-wallpaper/2025-6-8.jpg",
+        "bing-wallpaper/2025-6-9.jpg",
+        "bing-wallpaper/2025-7-10.jpg",
+        "bing-wallpaper/2025-7-11.jpg",
+        "bing-wallpaper/2025-7-12.jpg",
+        "bing-wallpaper/2025-7-13.jpg",
+        "bing-wallpaper/2025-7-14.jpg",
+        "bing-wallpaper/2025-7-15.jpg",
+        "bing-wallpaper/2025-7-16.jpg",
+        "bing-wallpaper/2025-7-17.jpg",
+        "bing-wallpaper/2025-7-18.jpg",
+        "bing-wallpaper/2025-7-19.jpg",
+        "bing-wallpaper/2025-7-1.jpg",
+        "bing-wallpaper/2025-7-20.jpg",
+        "bing-wallpaper/2025-7-21.jpg",
+        "bing-wallpaper/2025-7-22.jpg",
+        "bing-wallpaper/2025-7-23.jpg",
+        "bing-wallpaper/2025-7-24.jpg",
+        "bing-wallpaper/2025-7-25.jpg",
+        "bing-wallpaper/2025-7-26.jpg",
+        "bing-wallpaper/2025-7-27.jpg",
+        "bing-wallpaper/2025-7-28.jpg",
+        "bing-wallpaper/2025-7-29.jpg",
+        "bing-wallpaper/2025-7-2.jpg",
+        "bing-wallpaper/2025-7-30.jpg",
+        "bing-wallpaper/2025-7-31.jpg",
+        "bing-wallpaper/2025-7-3.jpg",
+        "bing-wallpaper/2025-7-4.jpg",
+        "bing-wallpaper/2025-7-5.jpg",
+        "bing-wallpaper/2025-7-6.jpg",
+        "bing-wallpaper/2025-7-7.jpg",
+        "bing-wallpaper/2025-7-8.jpg",
+        "bing-wallpaper/2025-7-9.jpg",
+        "bing-wallpaper/2025-8-10.jpg",
+        "bing-wallpaper/2025-8-11.jpg",
+        "bing-wallpaper/2025-8-12.jpg",
+        "bing-wallpaper/2025-8-13.jpg",
+        "bing-wallpaper/2025-8-14.jpg",
+        "bing-wallpaper/2025-8-15.jpg",
+        "bing-wallpaper/2025-8-16.jpg",
+        "bing-wallpaper/2025-8-17.jpg",
+        "bing-wallpaper/2025-8-18.jpg",
+        "bing-wallpaper/2025-8-19.jpg",
+        "bing-wallpaper/2025-8-1.jpg",
+        "bing-wallpaper/2025-8-20.jpg",
+        "bing-wallpaper/2025-8-21.jpg",
+        "bing-wallpaper/2025-8-22.jpg",
+        "bing-wallpaper/2025-8-23.jpg",
+        "bing-wallpaper/2025-8-24.jpg",
+        "bing-wallpaper/2025-8-25.jpg",
+        "bing-wallpaper/2025-8-26.jpg",
+        "bing-wallpaper/2025-8-27.jpg",
+        "bing-wallpaper/2025-8-28.jpg",
+        "bing-wallpaper/2025-8-29.jpg",
+        "bing-wallpaper/2025-8-2.jpg",
+        "bing-wallpaper/2025-8-30.jpg",
+        "bing-wallpaper/2025-8-31.jpg",
+        "bing-wallpaper/2025-8-3.jpg",
+        "bing-wallpaper/2025-8-4.jpg",
+        "bing-wallpaper/2025-8-5.jpg",
+        "bing-wallpaper/2025-8-6.jpg",
+        "bing-wallpaper/2025-8-7.jpg",
+        "bing-wallpaper/2025-8-8.jpg",
+        "bing-wallpaper/2025-8-9.jpg",
+        "bing-wallpaper/2025-9-10.jpg",
+        "bing-wallpaper/2025-9-11.jpg",
+        "bing-wallpaper/2025-9-12.jpg",
+        "bing-wallpaper/2025-9-13.jpg",
+        "bing-wallpaper/2025-9-14.jpg",
+        "bing-wallpaper/2025-9-15.jpg",
+        "bing-wallpaper/2025-9-16.jpg",
+        "bing-wallpaper/2025-9-17.jpg",
+        "bing-wallpaper/2025-9-18.jpg",
+        "bing-wallpaper/2025-9-19.jpg",
+        "bing-wallpaper/2025-9-1.jpg",
+        "bing-wallpaper/2025-9-20.jpg",
+        "bing-wallpaper/2025-9-21.jpg",
+        "bing-wallpaper/2025-9-22.jpg",
+        "bing-wallpaper/2025-9-23.jpg",
+        "bing-wallpaper/2025-9-24.jpg",
+        "bing-wallpaper/2025-9-25.jpg",
+        "bing-wallpaper/2025-9-26.jpg",
+        "bing-wallpaper/2025-9-27.jpg",
+        "bing-wallpaper/2025-9-28.jpg",
+        "bing-wallpaper/2025-9-29.jpg",
+        "bing-wallpaper/2025-9-2.jpg",
+        "bing-wallpaper/2025-9-30.jpg",
+        "bing-wallpaper/2025-9-3.jpg",
+        "bing-wallpaper/2025-9-4.jpg",
+        "bing-wallpaper/2025-9-5.jpg",
+        "bing-wallpaper/2025-9-6.jpg",
+        "bing-wallpaper/2025-9-7.jpg",
+        "bing-wallpaper/2025-9-8.jpg",
+        "bing-wallpaper/2025-9-9.jpg"
+      ];
+
+  let bg = getCookie('selectedBg');
+  if (!bg || !images.includes(bg)) {
+    bg = images[Math.floor(Math.random() * images.length)];
+  }
+  document.body.style.backgroundImage = `url('/${bg}')`;
+</script>
+
+</body>
+</html>
