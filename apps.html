@@ -156,6 +156,10 @@
       content: "📦";
     }
 
+    .website-icon::before {
+      content: "🌐";
+    }
+
     @media (max-width: 600px) {
       header {
         flex-direction: column;
@@ -429,14 +433,20 @@
 
     // === 应用数据 ===
     const apps = [
-        {
-          name: "局域网信息传输系统(LMTS)",
-          description: "该项目允许用户通过局域网向接收端发布用弹窗显示的通知。",
-          github: "https://github.com/hbzsoft/lan_message_transmission_system",
-          download: "/downloads/软件下载/LAN%20Message%20Transmission%20System（LMTS）/"
-        }
-        // 👉 添加更多应用时，请确保包含 download 字段
-      ];
+      {
+        name: "KaleidoTalk",
+        description: "端到端加密聊天软件，采用 Ed25519 身份密钥和 X25519 密钥交换协议，确保通信内容仅限通信双方读取。",
+        github: "https://github.com/hbzsoft/KaleidoTalk",
+        website: "https://kaleidotalk.hanbangze.tech"
+      },
+      {
+        name: "局域网信息传输系统(LMTS)",
+        description: "该项目允许用户通过局域网向接收端发布用弹窗显示的通知。",
+        github: "https://github.com/hbzsoft/lan_message_transmission_system",
+        download: "/downloads/软件下载/LAN%20Message%20Transmission%20System（LMTS）/",
+        website: null
+      }
+    ];
 
     // === 设置背景图（优先 Cookie）===
     let bg = getCookie('selectedBg');
@@ -451,16 +461,33 @@
     apps.forEach(app => {
       const card = document.createElement('div');
       card.className = 'app-card';
+      
+      let linksHtml = '';
+      
+      // GitHub 链接（两个应用都有）
+      linksHtml += `<a href="${app.github}" target="_blank" rel="noopener noreferrer" class="app-link">
+        <span class="github-icon"></span> GitHub 仓库
+      </a>`;
+      
+      // KaleidoTalk 显示项目官网
+      if (app.website) {
+        linksHtml += `<a href="${app.website}" target="_blank" rel="noopener noreferrer" class="app-link">
+          <span class="website-icon"></span> 项目官网
+        </a>`;
+      }
+      
+      // LMTS 显示站内下载
+      if (app.download) {
+        linksHtml += `<a href="${app.download}" class="app-link">
+          <span class="download-icon"></span> 站内下载
+        </a>`;
+      }
+      
       card.innerHTML = `
         <h2>${app.name}</h2>
         <p>${app.description}</p>
         <div class="app-links">
-          <a href="${app.github}" target="_blank" rel="noopener noreferrer" class="app-link">
-            <span class="github-icon"></span> GitHub 仓库
-          </a>
-          <a href="${app.download}" class="app-link">
-            <span class="download-icon"></span> 站内下载
-          </a>
+          ${linksHtml}
         </div>
       `;
       container.appendChild(card);
